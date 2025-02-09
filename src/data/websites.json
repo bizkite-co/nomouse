@@ -1,7 +1,7 @@
 [
   {
     "description": "CIDI is recognized as a leader for services and research in accessibility. We are dedicated to a better society through innovations in assistive and universally designed technologies, with a goal of addressing the full range of needs for accessibility. We are committed to the promotion of technological innovation and development of user-centered research, products, and services for individuals with disabilities.",
-    "favicon": "https://static.figma.com/app/icon/1/favicon.ico",
+    "favicon": "https://cidi.gatech.edu/themes/contrib/gt_theme/logo.svg",
     "image": "https://cidi.gatech.edu/sites/default/files/2025-01/Feature%20cover%20image.png",
     "title": "Center for Inclusive Design and Innovation",
     "url": "https://cidi.gatech.edu/",
@@ -16,8 +16,8 @@
   },
   {
     "description": "The first and last resource you’ll ever need for mechanical keyboards. Courses and content for newcomers and expert builders alike.",
-    "favicon": "https://static.canva.com/static/images/android-192x192-2.png",
-    "image": "https://images.squarespace-cdn.com/content/v1/6116b9604a8e6b639a58a447/1628879296964-EFXFQA56GS8T6ZZP7WB4/image-asset.jpeg?format=2500w",
+    "favicon": "/images/keyboard-university.png",
+    "image": "/images/keyboard-university.png",
     "title": "Keyboard University",
     "url": "https://www.keyboard.university/",
     "tags": [
