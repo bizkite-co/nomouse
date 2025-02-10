@@ -31,6 +31,8 @@ jobs:
           node-version: "20"
       - name: Install dependencies
         run: npm install
+      - name: Enrich data
+        run: node src/enrich.js
       - name: Build site
         run: npm run build
       - name: Upload artifact
