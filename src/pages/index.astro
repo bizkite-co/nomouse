@@ -8,6 +8,7 @@ import ListTags from "@/components/ListTags";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { Globe } from "lucide-react";
+import Giscus from "@/components/Giscus.astro";
 ---
 
 <Layout>
@@ -42,6 +43,9 @@ import { Globe } from "lucide-react";
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
       <ListWebsites client:load />
+    </section>
+    <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
+      <Giscus />
     </section>
 
     <footer class="pb-32 pt-4 md:pb-8 md:pt-8">
