@@ -30,9 +30,9 @@ export default function ListWebsites() {
         "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
       )}
     >
-      {filteredWebsites.map((website) => (
+      {filteredWebsites.map((website, index) => (
         <a
-          key={website.url}
+          key={index}
           className={cn(
             "rounded bg-background p-4 shadow",
             "flex flex-col gap-4",
@@ -47,12 +47,15 @@ export default function ListWebsites() {
                   website.favicon ||
                   "https://placehold.co/400?text=No%20Picture"
                 }
-                alt={website.title}
+                alt={website.title ?? "missing website title"}
                 className="aspect-square w-full rounded object-cover"
               />
             </div>
             <p className="flex-1 text-sm font-semibold">{website.title}</p>
           </div>
+          {website.desktopSnapshot &&
+            <img src={website.desktopSnapshot} alt="website screenshot"/>
+          }
           <div className="flex flex-1 flex-col justify-between gap-2">
             <div className="flex flex-col gap-1">
               <p className="line-clamp-3 text-xs text-muted-foreground">
