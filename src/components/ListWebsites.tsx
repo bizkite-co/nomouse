@@ -18,7 +18,7 @@ export default function ListWebsites() {
       ) {
         return false;
       }
-      if (!website.title.toLowerCase().includes(search)) return false;
+      if (website.title != null && !website.title.toLowerCase().includes(search)) return false;
       return true;
     });
   }, [search, tags]);

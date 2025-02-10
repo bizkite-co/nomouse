@@ -1,8 +1,25 @@
 import fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
+import { chromium } from 'playwright';
+import * as jsonpatch from 'json-patch';
 
 function normalizeUrl(url) {
   return url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
+}
+
+async function captureScreenshot(url, outputPath) {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  try {
+    await page.goto(url);
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await page.screenshot({ path: outputPath });
+  } catch (error) {
+    console.error(`Error capturing screenshot for ${url}:`, error);
+    return null; // Return null if screenshot capture fails
+  } finally {
+    await browser.close();
+  }
 }
 
 async function fetchPage(url) {
@@ -15,6 +32,7 @@ async function fetchPage(url) {
     return null;
   }
 }
+
 function extractData(html, url, currentDate) {
   const titleMatch = html.match(/<title>(.*?)<\/title>/);
   const title = titleMatch ? titleMatch[1] : null;
@@ -40,7 +58,7 @@ function extractData(html, url, currentDate) {
   };
 }
 
-async function enrichData() {
+async function enrichData(refresh = false) {
   try {
     // Read pages.csv
     const csvData = await fs.readFile('src/data/pages.csv', 'utf-8');
@@ -49,38 +67,67 @@ async function enrichData() {
     }).flat();
 
     // Read existing websites.json
-    const jsonData = await fs.readFile('src/data/websites.json', 'utf-8');
-    const existingData = JSON.parse(jsonData);
+    let jsonData = await fs.readFile('src/data/websites.json', 'utf-8');
+    let existingData = JSON.parse(jsonData);
 
     // Get current date
     const currentDate = new Date().toISOString();
 
     // Enrich data for each URL
-    const newData = [];
     for (const url of urls) {
       const normalizedUrl = normalizeUrl(url);
-      const existingEntry = existingData.find(
+      const existingEntryIndex = existingData.findIndex(
         (entry) => normalizeUrl(entry.url) === normalizedUrl
       );
+      const existingEntry = existingData[existingEntryIndex];
 
-      if (!existingEntry) {
+      if (!existingEntry || refresh) {
         const html = await fetchPage(url);
         if (html) {
           const extractedData = extractData(html, url, currentDate);
-          newData.push(extractedData);
+
+          // Capture screenshot
+          const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
+          const screenshotPath = `public/${screenshotFilename}`;
+          const captureResult = await captureScreenshot(url, screenshotPath);
+          if (captureResult !== null) {
+            extractedData.desktopSnapshot = screenshotFilename; // Store relative path
+          }
+
+          if (existingEntryIndex !== -1) {
+            // Update existing entry using JSON Patch
+            const patch = [
+              { op: 'replace', path: `/${existingEntryIndex}`, value: {...existingEntry, ...extractedData} }
+            ];
+            existingData = jsonpatch.apply(existingData, patch);
+
+          } else {
+            // Add new entry using JSON Patch
+            const patch = [
+              { op: 'add', path: '/-', value: extractedData }
+            ];
+            existingData = jsonpatch.apply(existingData, patch);
+          }
         }
       } else {
-        console.log(`Skipping duplicate URL: ${url}`);
+        console.log(`Skipping URL: ${url}`);
       }
     }
 
-    // Combine existing and new data, only adding new entries
-    const combinedData = [...existingData, ...newData];
+    // Create screenshots directory if it doesn't exist
+    try {
+      await fs.mkdir('public/screenshots');
+    } catch (error) {
+      if (error.code !== 'EEXIST') {
+        // Ignore if directory already exists
+        throw error;
+      }
+    }
 
     // Write updated websites.json
     await fs.writeFile(
       'src/data/websites.json',
-      JSON.stringify(combinedData, null, 2), // Pretty-print JSON
+      JSON.stringify(existingData, null, 2),
       'utf-8'
     );
 
@@ -90,4 +137,6 @@ async function enrichData() {
   }
 }
 
-enrichData();
+// Get refresh flag from command line arguments
+const refreshFlag = process.argv.includes('--refresh');
+enrichData(refreshFlag);

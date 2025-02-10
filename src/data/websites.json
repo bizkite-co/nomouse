@@ -32,7 +32,8 @@
     "image": "https://www.wikihow.com/images/thumb/f/f2/CommunityAvatar3.png/-crop-104-104-104px-CommunityAvatar3.png",
     "url": "https://www.wikihow.com/Use-Your-Computer-Without-a-Mouse",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:16:09.159Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_wikihow_com_use_your_computer_without_a_mouse.png"
   },
   {
     "title": "If You Know These Keyboard Shortcuts, You Won&#x27;t Need a Mouse | WIRED",
@@ -41,7 +42,8 @@
     "image": null,
     "url": "https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:16:09.159Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse.png"
   },
   {
     "title": "How to Use Keyboard Without Mouse in Windows 10: A Step-by-Step Guide - Support Your Tech",
@@ -50,7 +52,8 @@
     "image": null,
     "url": "https://www.supportyourtech.com/articles/how-to-use-keyboard-without-mouse-in-windows-10-a-step-by-step-guide/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_supportyourtech_com_articles_how_to_use_keyboard_without_mouse_in_windows_10_a_step_by_step_guide.png"
   },
   {
     "title": "keyboard-centric computing. - DEV Community",
@@ -59,7 +62,8 @@
     "image": "https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg",
     "url": "https://dev.to/nayetwolf/keyboard-centric-computing-m68",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/dev_to_nayetwolf_keyboard_centric_computing_m68.png"
   },
   {
     "title": null,
@@ -68,7 +72,8 @@
     "image": null,
     "url": "https://berkinakkaya.medium.com/keyboard-driven-workflow-1c3603b95cb3",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/berkinakkaya_medium_com_keyboard_driven_workflow_1c3603b95cb3.png"
   },
   {
     "title": "community : vim online",
@@ -77,7 +82,8 @@
     "image": "https://www.vim.org/images/spacer.gif",
     "url": "https://www.vim.org/community.php",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_vim_org_community_php.png"
   },
   {
     "title": "Reddit - Dive into anything",
@@ -86,7 +92,8 @@
     "image": "https://id.rlcdn.com/472486.gif",
     "url": "https://www.reddit.com/r/linuxquestions/comments/4xv18k/how_to_have_a_keyboardcentric_setup/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_reddit_com_r_linuxquestions_comments_4xv18k_how_to_have_a_keyboardcentric_setup.png"
   },
   {
     "title": "Keyboard Community &mdash; Keyboard University",
@@ -95,7 +102,8 @@
     "image": null,
     "url": "https://www.keyboard.university/100-courses/community-22xzn",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_keyboard_university_100_courses_community_22xzn.png"
   },
   {
     "title": null,
@@ -104,16 +112,18 @@
     "image": "https://support.apple.com/clientside/images/get-support-icon-person-2-fill.png",
     "url": "https://support.apple.com/en-us/102650",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/support_apple_com_en_us_102650.png"
   },
   {
     "title": "GitHub - SillyTavern/SillyTavern: LLM Frontend for Power Users.",
     "description": "LLM Frontend for Power Users. Contribute to SillyTavern/SillyTavern development by creating an account on GitHub.",
     "favicon": null,
-    "image": "https://private-user-images.githubusercontent.com/18619528/369641394-01a6ae9a-16aa-45f2-8bff-32b5dc587e44.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzkxNzY3MzksIm5iZiI6MTczOTE3NjQzOSwicGF0aCI6Ii8xODYxOTUyOC8zNjk2NDEzOTQtMDFhNmFlOWEtMTZhYS00NWYyLThiZmYtMzJiNWRjNTg3ZTQ0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjEwVDA4MzM1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA5YTNlZjU0YTk2NTBmOTkzZmNjOTYzZWI4ZjEwYTY4MGQ2YjllYTU3YmYzNWM4ZmI2MWVlMDdkZGE3MzMzNmQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.hDshTMsnFeQjkrjW4mTidcVNaWiFcXXMO3NI4vM0zJ4",
+    "image": "https://private-user-images.githubusercontent.com/18619528/369641394-01a6ae9a-16aa-45f2-8bff-32b5dc587e44.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzkyMTQzNjgsIm5iZiI6MTczOTIxNDA2OCwicGF0aCI6Ii8xODYxOTUyOC8zNjk2NDEzOTQtMDFhNmFlOWEtMTZhYS00NWYyLThiZmYtMzJiNWRjNTg3ZTQ0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjEwVDE5MDEwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY1MjVmYmU4Y2Y1ZDBhZGE5MjJhNzM4MmYwMTliMGNiM2JmMjk3NjBhM2Y2ODVhMGQyYzViMWM2ZWQ2OGNmNTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.kirOcUgp7tkNRe0HQUqBVwfZifl2KObVb8V-0Wit1SI",
     "url": "https://github.com/SillyTavern/SillyTavern",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/github_com_sillytavern_sillytavern.png"
   },
   {
     "title": "The Big List of 111+ Keyboard Shortcuts For The Most-Used Online Tools",
@@ -122,7 +132,8 @@
     "image": "https://buffer.com/library/assets/img/header/buffer.svg?v=1f3b27c39d",
     "url": "https://buffer.com/library/keyboard-shortcuts-ultimate-list/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/buffer_com_library_keyboard_shortcuts_ultimate_list.png"
   },
   {
     "title": "Accessibility - Community Commons",
@@ -131,7 +142,8 @@
     "image": null,
     "url": "https://www.communitycommons.org/entities/652330ad-5fcf-41c9-bf42-dc568a713311",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_communitycommons_org_entities_652330ad_5fcf_41c9_bf42_dc568a713311.png"
   },
   {
     "title": "Accessibility Communities Roundup &bull; DigitalA11Y",
@@ -140,7 +152,8 @@
     "image": null,
     "url": "https://www.digitala11y.com/accessibility-meetups-communities/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_digitala11y_com_accessibility_meetups_communities.png"
   },
   {
     "title": "Technology - ADAPT Community Network",
@@ -149,7 +162,8 @@
     "image": null,
     "url": "https://adaptcommunitynetwork.org/service-options/technology/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/adaptcommunitynetwork_org_service_options_technology.png"
   },
   {
     "title": "5 Ways Mobile Tech Gives Speed &amp; Accuracy to Field Inspectors",
@@ -158,7 +172,8 @@
     "image": "https://brothermobilesolutions.com/wp-content/uploads/2021/11/logo.svg",
     "url": "https://brothermobilesolutions.com/insights/article/mobile-building-inspection-accuracy/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy.png"
   },
   {
     "title": "Transform your field operations with Smart Mobile Forms",
@@ -167,7 +182,8 @@
     "image": "https://www.allgeo.com/newtemp/images/mob-desk-imgs/logos/allgeo-logo-mobile.webp",
     "url": "https://www.allgeo.com/apps/field-inspection-mobile-smart-forms",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_allgeo_com_apps_field_inspection_mobile_smart_forms.png"
   },
   {
     "title": "Mobile Inspector | Infotech",
@@ -176,7 +192,8 @@
     "image": "https://www.infotechinc.com/wp-content/uploads/01_Primary_RGB_Registered.svg",
     "url": "https://www.infotechinc.com/mobile-inspector/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_infotechinc_com_mobile_inspector.png"
   },
   {
     "title": "How Emergency Response Technology Can Help Enhance EMS Operations | Verizon Business",
@@ -185,7 +202,8 @@
     "image": null,
     "url": "https://www.verizon.com/business/resources/articles/s/how-emergency-response-technology-can-help-first-responders-and-enhance-EMS-operations/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_verizon_com_business_resources_articles_s_how_emergency_response_technology_can_help_first_responders_and_enhance_ems_operations.png"
   },
   {
     "title": "MCA Cellular First Responder Communications",
@@ -194,7 +212,8 @@
     "image": "https://lte.callmc.com/wp-content/uploads/2024/01/MCA-PNG-Bug-Logo-2023-White-and-Blue.png",
     "url": "https://lte.callmc.com/solutions/first-responder-networks/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/lte_callmc_com_solutions_first_responder_networks.png"
   },
   {
     "title": "Top 10 First Responder Software for Public Safety Agencies - Perimeter",
@@ -203,7 +222,8 @@
     "image": null,
     "url": "https://perimeterplatform.com/blog/first-responder-software",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/perimeterplatform_com_blog_first_responder_software.png"
   },
   {
     "title": "First responder mobile technology increases situational awareness - Samsung Business Insights",
@@ -212,7 +232,8 @@
     "image": null,
     "url": "https://insights.samsung.com/2024/09/20/first-responder-mobile-technology-increases-situational-awareness-2/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/insights_samsung_com_2024_09_20_first_responder_mobile_technology_increases_situational_awareness_2.png"
   },
   {
     "title": "GitHub - pluja/awesome-privacy: Awesome Privacy - A curated list of services and alternatives that respect your privacy because PRIVACY MATTERS.",
@@ -221,7 +242,8 @@
     "image": "https://camo.githubusercontent.com/3418ba3754faddfb88c5cbdc94c31ad670fc693c8caa59bc2806c9836acc04e4/68747470733a2f2f617765736f6d652e72652f62616467652e737667",
     "url": "https://github.com/pluja/awesome-privacy",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/github_com_pluja_awesome_privacy.png"
   },
   {
     "title": "Building a Keyboard-Driven Development Environment",
@@ -230,7 +252,8 @@
     "image": null,
     "url": "https://www.dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_dmitryanisov_com_blog_building_a_keyboard_driven_development_environment.png"
   },
   {
     "title": "Most efficient workflow, best keyboard, and how to avoid Repetitive Strain Injury. - YouTube",
@@ -239,7 +262,8 @@
     "image": null,
     "url": "https://www.youtube.com/watch?v=TKYiXG3-d8k",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_youtube_com_watch_v_tkyixg3_d8k.png"
   },
   {
     "title": "Reddit - Dive into anything",
@@ -248,7 +272,8 @@
     "image": null,
     "url": "https://www.reddit.com/r/linuxquestions/comments/nutmmc/are_there_studies_showing_that_keyboard_workflows/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_reddit_com_r_linuxquestions_comments_nutmmc_are_there_studies_showing_that_keyboard_workflows.png"
   },
   {
     "title": null,
@@ -257,7 +282,8 @@
     "image": "https://img.yfisher.com/m0/1670577908329-logo02/png100-t3-scale100.webp",
     "url": "https://www.meetion.com/the-ultimate-guide-to-the-one-handed-keyboard.html",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_meetion_com_the_ultimate_guide_to_the_one_handed_keyboard_html.png"
   },
   {
     "title": "ResearchGate - Temporarily Unavailable",
@@ -266,7 +292,8 @@
     "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiM3NzciIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQ3IDQ2TDI0IDYzIDEgNDZWMWwxMCA1IDMtNWgyMGwzIDUgMTAtNXoiLz48cGF0aCBkPSJNNSAzdjQxbDE5IDE0IDE5LTE0VjMiLz48L2c+PHBhdGggZD0iTTExIDZ2NW0yNi01djVtLTYgOGE3IDcgMCAxMS0xNCAwIDcgNyAwIDAxMTQgMHoiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMjYgMjZ2OWgzIi8+PHBhdGggZD0iTTI1IDM5aDN2NGgtMnYzaC00VjI2bTQtMTBoLTRtLTEyLTJoMm0tMiA0aDJtLTIgNGgybTI0LThoMm0tMiA0aDJtLTIgNGgyIi8+PC9nPjwvc3ZnPg==",
     "url": "https://www.researchgate.net/publication/308602298_Position_paper_Lack_of_keyboard_support_cripples_block-based_programming",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming.png"
   },
   {
     "title": "Solutions for one-handed typing on a regular keyboard - Super User",
@@ -275,7 +302,8 @@
     "image": "https://i.sstatic.net/ULwaG.jpg?s=64",
     "url": "https://superuser.com/questions/222893/solutions-for-one-handed-typing-on-a-regular-keyboard",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard.png"
   },
   {
     "title": "Reddit - Dive into anything",
@@ -284,7 +312,8 @@
     "image": null,
     "url": "https://www.reddit.com/r/ErgoMechKeyboards/comments/138jtq6/i_need_a_fully_capable_1_hand_keyboard/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/www_reddit_com_r_ergomechkeyboards_comments_138jtq6_i_need_a_fully_capable_1_hand_keyboard.png"
   },
   {
     "title": null,
@@ -293,6 +322,7 @@
     "image": "https://pmc.ncbi.nlm.nih.gov/static/img/usa-icons/close.svg",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9589473/",
     "tags": [],
-    "lastReviewAt": "2025-02-10T08:33:55.282Z"
+    "lastReviewAt": "2025-02-10T19:00:41.978Z",
+    "desktopSnapshot": "screenshots/pmc_ncbi_nlm_nih_gov_articles_pmc9589473.png"
   }
 ]
