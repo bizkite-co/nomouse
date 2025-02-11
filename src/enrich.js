@@ -40,6 +40,9 @@ function extractData(html, url, currentDate) {
   const descriptionMatch = html.match(/<meta name="description" content="(.*?)"/);
   const description = descriptionMatch ? descriptionMatch[1] : null;
 
+  const keywordsMatch = html.match(/<meta name="keywords" content="(.*?)"/);
+  const keywords = keywordsMatch ? keywordsMatch[1] : null;
+
   const faviconMatch = html.match(/<link rel="(?:shortcut )?icon" href="(.*?)"/);
   const favicon = faviconMatch ? new URL(faviconMatch[1], url).href : null;
 
@@ -53,7 +56,7 @@ function extractData(html, url, currentDate) {
     favicon,
     image,
     url,
-    tags: [], // Placeholder
+    tags: keywords ? keywords.split(',').map(keyword => keyword.trim()) : [],
     lastReviewAt: currentDate,
   };
 }
