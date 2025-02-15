@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import dataWebsites from '../../data/websites.json';
+import { normalizeUrl } from '../../enrich.js';
+
+interface Props {
+    website: typeof dataWebsites[0];
+}
+
+function generateFilename(url: string) {
+  const normalized = normalizeUrl(url);
+  return normalized.replace(/[^a-z0-9]/gi, '_') + '.png';
+}
+
+export async function getStaticPaths() {
+  return dataWebsites.map((website) => {
+    const filename = generateFilename(website.url);
+    return {
+      params: { filename },
+      props: { website },
+    };
+  });
+}
+
+const { filename } = Astro.params;
+const { website } = Astro.props as Props;
+
+if (!website) {
+  return Astro.redirect('/404'); // Or handle the missing website case appropriately
+}
+
+const expectedFilename = generateFilename(website.url);
+if (filename !== expectedFilename) {
+    return Astro.redirect('/404');
+}
+
+---
+
+<Layout title={website.title || 'Website Details'}>
+  <main class="container mx-auto px-4 md:px-0 py-8">
+    <h1 class="text-2xl font-bold mb-4">{website.title}</h1>
+    <div class="flex gap-4">
+      <div class="h-24 w-24 bg-muted p-2">
+        <img
+          src={website.favicon || 'https://placehold.co/400?text=No%20Picture'}
+          alt={website.title ?? 'missing website title'}
+          class="aspect-square w-full rounded object-cover"
+        />
+      </div>
+      {website.description && (
+        <p class="text-sm text-muted-foreground">{website.description}</p>
+      )}
+    </div>
+    {website.desktopSnapshot && (
+      <img src={`/` + website.desktopSnapshot} alt="website screenshot" class="my-4" />
+    )}
+    <div class="my-4">
+      <p class="text-sm">
+        <strong>Tags:</strong>
+        {website.tags.join(', ')}
+      </p>
+      <p class="text-sm">
+        <strong>Last Reviewed At:</strong>
+        {website.lastReviewAt}
+      </p>
+    </div>
+    <a
+      href={website.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-blue-500 hover:underline"
+    >
+      Visit Website
+    </a>
+  </main>
+</Layout>

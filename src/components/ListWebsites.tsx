@@ -4,6 +4,7 @@ import { filteredTags, searchKeyword } from '@/store';
 import { useStore } from '@nanostores/react';
 import { useMemo } from 'react';
 import WebsiteItem from '@/components/WebsiteItem.tsx';
+import { generateUrlPath } from '@/enrich.js';
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
@@ -32,7 +33,7 @@ export default function ListWebsites() {
       )}
     >
       {filteredWebsites.map((website, index) => (
-        <WebsiteItem key={index} website={website} />
+        <WebsiteItem key={index} website={website} id={website.uuid!} />
       ))}
     </div>
   );

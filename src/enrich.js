@@ -2,9 +2,20 @@ import fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
 import { chromium } from 'playwright';
 import * as jsonpatch from 'json-patch';
+import { v4 as uuidv4 } from 'uuid';
 
-function normalizeUrl(url) {
+export function normalizeUrl(url) {
   return url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
+}
+
+export function generateFilename(url) {
+    const normalized = normalizeUrl(url);
+    return normalized.replace(/[^a-z0-9]/gi, '_') + '.png';
+}
+
+export function generateUrlPath(url) {
+    const normalized = normalizeUrl(url);
+    return normalized.replace(/[^a-z0-9]/gi, '_');
 }
 
 async function captureScreenshot(url, outputPath) {
@@ -50,15 +61,16 @@ function extractData(html, url, currentDate) {
   const imageMatch = html.match(/<img src="(.*?)"/); // Very basic, just gets the first image
   const image = imageMatch ? new URL(imageMatch[1], url).href : null;
 
-  return {
-    title,
-    description,
-    favicon,
-    image,
-    url,
-    tags: keywords ? keywords.split(',').map(keyword => keyword.trim()) : [],
-    lastReviewAt: currentDate,
-  };
+    return {
+        title,
+        description,
+        favicon,
+        image,
+        url,
+        tags: keywords ? keywords.split(',').map((keyword) => keyword.trim()) : [],
+        lastReviewAt: currentDate,
+        uuid: uuidv4(), // Add UUID
+    };
 }
 
 async function enrichData(refresh = false) {

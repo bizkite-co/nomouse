@@ -11,14 +11,13 @@ interface Props {
     desktopSnapshot?: string;
     lastReviewAt: string;
   };
+  id: string;
 }
 
-export default function WebsiteItem({ website }: Props) {
+export default function WebsiteItem({ website, id }: Props) {
   return (
     <a
-      href={website.url}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={`/websites/${id}`}
       className={cn(
         'rounded bg-background p-4 shadow',
         'flex flex-col gap-4',
