@@ -1,58 +1,26 @@
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import type { CollectionEntry } from 'astro:content';
+import { Badge } from './ui/badge';
 
 interface Props {
-  website: {
-    url: string;
-    title: string | null;
-    description: string | null;
-    tags: string[];
-    favicon: string | null;
-    desktopSnapshot?: string;
-    lastReviewAt: string;
-  };
-  id: string;
+  website: CollectionEntry<'websites'>;
 }
 
-export default function WebsiteItem({ website, id }: Props) {
+export default function WebsiteItem({ website }: Props) {
   return (
-    <a
-      href={`/websites/${id}`}
-      className={cn("rounded bg-background p-4 shadow", "flex flex-col gap-4")}
-    >
-      <div className="flex gap-2">
-        <div className="h-12 w-12 bg-muted p-2">
-          <img
-            src={
-              website.favicon || "https://placehold.co/400?text=No%20Picture"
-            }
-            alt={website.title ?? "missing website title"}
-            className="aspect-square w-full rounded object-cover"
-          />
-        </div>
-        <p className="flex-1 text-sm font-semibold">{website.title}</p>
+    <div className="rounded-lg border p-4">
+      <h2 className="text-lg font-semibold">{website.data.title}</h2>
+      <p className="text-sm text-gray-500 dark:text-gray-400">{website.data.description}</p>
+      <div className="mt-2 flex flex-wrap gap-1">
+        {website.data.tags.map((tag) => (
+          <Badge key={tag}>{tag}</Badge>
+        ))}
       </div>
-      {website.desktopSnapshot && (
-        <img src={website.desktopSnapshot} alt="website screenshot" />
-      )}
-      <div className="flex flex-1 flex-col justify-between gap-2">
-        <div className="flex flex-col gap-1">
-          <p className="line-clamp-3 text-xs text-muted-foreground">
-            {website.description}
-          </p>
-          <div className="flex flex-wrap gap-1">
-            {website.tags.map((tag: string) => (
-              <Badge className="px-1 py-0">{tag}</Badge>
-            ))}
-          </div>
-        </div>
-        <div>
-          <span className="text-xs text-muted-foreground">
-            Last reviewed at{" "}
-            <span className="font-medium">{website.lastReviewAt}</span>
-          </span>
-        </div>
-      </div>
-    </a>
+      <a
+        href={`/source/${website.slug}`}
+        className="mt-4 inline-block text-blue-500 hover:underline"
+      >
+        View Details
+      </a>
+    </div>
   );
 }

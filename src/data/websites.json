@@ -4,7 +4,7 @@
     "favicon": "https://cidi.gatech.edu/themes/contrib/gt_theme/logo.svg",
     "image": "https://cidi.gatech.edu/sites/default/files/2025-01/Feature%20cover%20image.png",
     "title": "Center for Inclusive Design and Innovation",
-    "url": "https://cidi.gatech.edu/",
+    "url": "/source/cidi-inclusive-design",
     "tags": [
       "accessibility",
       "design",
@@ -27,7 +27,7 @@
   },
   {
     "title": "How to Use Your Computer Without a Mouse: Windows and Mac",
-    "description": "Enable Mouse Keys on your PC or Mac to use your keyboard like a mouse This wikiHow teaches you how to navigate your computer without using a mouse. You can easily move the cursor, click, and more by using the &quot;Mouse Keys&quot; feature on most...",
+    "description": "Enable Mouse Keys on your PC or Mac to use your keyboard like a mouse This wikiHow teaches you how to navigate your computer without using a mouse. You can easily move the cursor, click, and more by using the \"Mouse Keys\" feature on most...",
     "favicon": "https://www.wikihow.com/favicon_round.ico",
     "image": "https://www.wikihow.com/images/thumb/f/f2/CommunityAvatar3.png/-crop-104-104-104px-CommunityAvatar3.png",
     "url": "https://www.wikihow.com/Use-Your-Computer-Without-a-Mouse",
@@ -350,46 +350,7 @@
   {
     "title": "ResearchGate - Temporarily Unavailable",
     "description": null,
-    "favicon": null,
-    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiM3NzciIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQ3IDQ2TDI0IDYzIDEgNDZWMWwxMCA1IDMtNWgyMGwzIDUgMTAtNXoiLz48cGF0aCBkPSJNNSAzdjQxbDE5IDE0IDE5LTE0VjMiLz48L2c+PHBhdGggZD0iTTExIDZ2NW0yNi01djVtLTYgOGE3IDcgMCAxMS0xNCAwIDcgNyAwIDAxMTQgMHoiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMjYgMjZ2OWgzIi8+PHBhdGggZD0iTTI1IDM5aDN2NGgtMnYzaC00VjI2bTQtMTBoLTRtLTEyLTJoMm0tMiA0aDJtLTIgNGgybTI0LThoMm0tMiA0aDJtLTIgNGgyIi8+PC9nPjwvc3ZnPg==",
-    "url": "https://www.researchgate.net/publication/308602298_Position_paper_Lack_of_keyboard_support_cripples_block-based_programming",
-    "tags": [],
-    "lastReviewAt": "2025-02-12T00:48:15.948Z",
-    "desktopSnapshot": "screenshots/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming.png",
-    "uuid": "cf676d19-4195-45fa-a338-9790e79436f2"
-  },
-  {
-    "title": "Solutions for one-handed typing on a regular keyboard - Super User",
-    "description": null,
-    "favicon": "https://cdn.sstatic.net/Sites/superuser/Img/favicon.ico?v=4852d6fb3f5d",
-    "image": "https://i.sstatic.net/ULwaG.jpg?s=64",
-    "url": "https://superuser.com/questions/222893/solutions-for-one-handed-typing-on-a-regular-keyboard",
-    "tags": [],
-    "lastReviewAt": "2025-02-12T00:48:15.948Z",
-    "desktopSnapshot": "screenshots/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard.png",
-    "uuid": "b6f9237e-287e-42f7-a431-207475a9c91a"
-  },
-  {
-    "title": "Reddit - Dive into anything",
-    "description": null,
-    "favicon": null,
-    "image": "https://id.rlcdn.com/472486.gif",
-    "url": "https://www.reddit.com/r/ErgoMechKeyboards/comments/138jtq6/i_need_a_fully_capable_1_hand_keyboard/",
-    "tags": [],
-    "lastReviewAt": "2025-02-12T00:48:15.948Z",
-    "desktopSnapshot": "screenshots/www_reddit_com_r_ergomechkeyboards_comments_138jtq6_i_need_a_fully_capable_1_hand_keyboard.png",
-    "uuid": "6acdb2fa-7bd4-4eff-92d8-015c48d940de"
-  },
-  {
-    "title": null,
-    "description": "This study presents the evaluation of ability-based methods extended to keyboard generation for alternative communication in people with dexterity impairments due to motor disabilities. Our approach characterizes user-specific cursor control ...",
-    "favicon": null,
-    "image": "https://pmc.ncbi.nlm.nih.gov/static/img/usa-icons/close.svg",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9589473/",
-    "tags": [],
-    "lastReviewAt": "2025-02-12T00:48:15.948Z",
-    "desktopSnapshot": "screenshots/pmc_ncbi_nlm_nih_gov_articles_pmc9589473.png",
-    "uuid": "6c214e75-07f9-4fa1-8628-ac6929f6d506"
+    "favicon": null
   },
   {
     "title": "Don&#39;t Use a Mouse Anymore! VSCode Shortcuts Tips and Tricks - YouTube",

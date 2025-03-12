@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
-// import { chromium } from 'playwright';
-import * as jsonpatch from 'json-patch';
+import { chromium } from 'playwright';
+// import * as jsonpatch from 'json-patch'; // No longer needed
 import { v4 as uuidv4 } from 'uuid';
+// const cheerio = require('cheerio'); // Use dynamic import instead
+import cheerio from 'cheerio';
 
 export function normalizeUrl(url) {
   return url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
@@ -19,7 +21,7 @@ export function generateUrlPath(url) {
 }
 
 async function captureScreenshot(url, outputPath) {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ headless: true }); // Add headless: true
   const page = await browser.newPage();
   try {
     await page.goto(url);
@@ -45,35 +47,41 @@ async function fetchPage(url) {
 }
 
 function extractData(html, url, currentDate) {
-  const titleMatch = html.match(/<title>(.*?)<\/title>/);
-  const title = titleMatch ? titleMatch[1] : null;
+  const $ = cheerio.load(html);
 
-  const descriptionMatch = html.match(/<meta name="description" content="(.*?)"/);
-  const description = descriptionMatch ? descriptionMatch[1] : null;
+  const title = $('title').text() ?? '';
+  const description = $('meta[name="description"]').attr('content') ?? '';
+  let favicon = $('link[rel="icon"]').attr('href') ?? $('link[rel="shortcut icon"]').attr('href') ?? '';
+  const image = $('meta[property="og:image"]').attr('content') ?? $('img').first().attr('src') ?? ''; //og:image is better
+  const keywords = $('meta[name="keywords"]').attr('content');
 
-  const keywordsMatch = html.match(/<meta name="keywords" content="(.*?)"/);
-  const keywords = keywordsMatch ? keywordsMatch[1] : null;
+    // Handle relative favicon URLs
+    if (favicon && !favicon.startsWith('http')) {
+        favicon = new URL(favicon, url).href;
+    }
 
-  const faviconMatch = html.match(/<link rel="(?:shortcut )?icon" href="(.*?)"/);
-  const favicon = faviconMatch ? new URL(faviconMatch[1], url).href : null;
+      // Handle relative image URLs
+    let absoluteImage = '';
+    if (image && !image.startsWith('http')) {
+        absoluteImage = new URL(image, url).href;
+    } else {
+      absoluteImage = image;
+    }
 
-  // Image extraction is tricky.  We'll need a more robust solution later.
-  const imageMatch = html.match(/<img src="(.*?)"/); // Very basic, just gets the first image
-  const image = imageMatch ? new URL(imageMatch[1], url).href : null;
 
     return {
         title,
         description,
         favicon,
-        image,
+        image: absoluteImage,
         url,
         tags: keywords ? keywords.split(',').map((keyword) => keyword.trim()) : [],
         lastReviewAt: currentDate,
-        uuid: uuidv4(), // Add UUID
+        uuid: uuidv4(), //Keep generating UUID for internal use
     };
 }
 
-async function enrichData(refresh = false) {
+async function enrichData(refresh = false, targetUrl = null) { // Add targetUrl argument
   try {
     // Read pages.csv
     const csvData = await fs.readFile('src/data/pages.csv', 'utf-8');
@@ -81,51 +89,100 @@ async function enrichData(refresh = false) {
       skip_empty_lines: true,
     }).flat();
 
-    // Read existing websites.json
-    let jsonData = await fs.readFile('src/data/websites.json', 'utf-8');
-    let existingData = JSON.parse(jsonData);
-
     // Get current date
     const currentDate = new Date().toISOString();
 
-    // Enrich data for each URL
-    for (const url of urls) {
+    // Enrich data for each URL, or only the target URL if provided
+    for (const url of (targetUrl ? [targetUrl] : urls)) { // Filter URLs based on targetUrl
+      if (targetUrl && normalizeUrl(url) !== normalizeUrl(targetUrl)) {
+          continue; // Skip if we have a target URL and it doesn't match
+      }
       const normalizedUrl = normalizeUrl(url);
-      const existingEntryIndex = existingData.findIndex(
-        (entry) => normalizeUrl(entry.url) === normalizedUrl
-      );
-      const existingEntry = existingData[existingEntryIndex];
+      const urlPath = generateUrlPath(url); // Use generateUrlPath
+      const filePath = `src/content/websites/${urlPath}.md`; // Use urlPath for filename
 
-      if (!existingEntry || refresh) {
+      if (refresh) { // Always overwrite if refresh is true
         const html = await fetchPage(url);
         if (html) {
-          const extractedData = extractData(html, url, currentDate);
+          const extractedData = await extractData(html, url, currentDate);
+        //   extractedData.uuid = uuid; // Don't overwrite the uuid
 
           // Capture screenshot
-          const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
-          const screenshotPath = `public/${screenshotFilename}`;
-          const captureResult = await captureScreenshot(url, screenshotPath);
-          if (captureResult !== null) {
-            extractedData.desktopSnapshot = screenshotFilename; // Store relative path
-          }
+          // const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
+          // const screenshotPath = `public/${screenshotFilename}`;
+          // const captureResult = await captureScreenshot(url, screenshotPath);
+          // if (captureResult !== null) {
+          //   extractedData.desktopSnapshot = screenshotFilename; // Store relative path
+          // }
+          extractedData.desktopSnapshot = ''; // Temporarily set to empty string
 
-          if (existingEntryIndex !== -1) {
-            // Update existing entry using JSON Patch
-            const patch = [
-              { op: 'replace', path: `/${existingEntryIndex}`, value: {...existingEntry, ...extractedData} }
-            ];
-            existingData = jsonpatch.apply(existingData, patch);
 
-          } else {
-            // Add new entry using JSON Patch
-            const patch = [
-              { op: 'add', path: '/-', value: extractedData }
-            ];
-            existingData = jsonpatch.apply(existingData, patch);
+          // Create Markdown content with frontmatter
+          const markdownContent = `---
+title: "${extractedData.title.replace(/"/g, '\\"')}"
+description: "${extractedData.description.replace(/"/g, '\\"')}"
+url: "${extractedData.url}"
+favicon: "${extractedData.favicon}"
+image: "${extractedData.image}"
+tags: [${extractedData.tags.map(tag => `"${tag}"`).join(', ')}]
+lastReviewAt: "${extractedData.lastReviewAt}"
+desktopSnapshot: "${extractedData.desktopSnapshot || ''}"
+uuid: "${extractedData.uuid}"
+---
+`;
+
+          // Write to Markdown file
+          try {
+            await fs.writeFile(filePath, markdownContent, 'utf-8');
+          } catch (writeError) {
+            console.error(`Error writing to ${filePath}:`, writeError); // Debugging statement
           }
         }
       } else {
-        console.log(`Skipping URL: ${url}`);
+        let existingContent = null;
+        try {
+            existingContent = await fs.readFile(filePath, 'utf-8');
+        } catch (e) {
+            // File doesn't exist, which is fine
+        }
+        if (!existingContent) {
+            const html = await fetchPage(url);
+            if (html) {
+              const extractedData = await extractData(html, url, currentDate);
+            //   extractedData.uuid = uuid; // Ensure UUID is in extracted data. No!
+
+              // Capture screenshot
+              // const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
+              // const screenshotPath = `public/${screenshotFilename}`;
+              // const captureResult = await captureScreenshot(url, screenshotPath);
+              // if (captureResult !== null) {
+              //   extractedData.desktopSnapshot = screenshotFilename; // Store relative path
+              // }
+              extractedData.desktopSnapshot = '';
+
+              // Create Markdown content with frontmatter
+              const markdownContent = `---
+title: "${extractedData.title.replace(/"/g, '\\"')}"
+description: "${extractedData.description.replace(/"/g, '\\"')}"
+url: "${extractedData.url}"
+favicon: "${extractedData.favicon}"
+image: "${extractedData.image}"
+tags: [${extractedData.tags.map(tag => `"${tag}"`).join(', ')}]
+lastReviewAt: "${extractedData.lastReviewAt}"
+desktopSnapshot: "${extractedData.desktopSnapshot || ''}"
+uuid: "${extractedData.uuid}"
+---
+`;
+              // Write to Markdown file
+              try {
+                  await fs.writeFile(filePath, markdownContent, 'utf-8');
+              } catch(e) {
+                  console.error('Error writing file', e);
+              }
+            }
+        } else {
+          console.log(`Skipping URL: ${url}`);
+        }
       }
     }
 
@@ -139,19 +196,14 @@ async function enrichData(refresh = false) {
       }
     }
 
-    // Write updated websites.json
-    await fs.writeFile(
-      'src/data/websites.json',
-      JSON.stringify(existingData, null, 2),
-      'utf-8'
-    );
-
     console.log('Data enrichment complete.');
   } catch (error) {
     console.error('Error during enrichment:', error);
   }
 }
 
-// Get refresh flag from command line arguments
+// Get refresh flag and optional URL from command line arguments
 const refreshFlag = process.argv.includes('--refresh');
-enrichData(refreshFlag);
+const targetUrl = process.argv.find(arg => arg.startsWith('http')); // Find a URL argument
+
+enrichData(refreshFlag, targetUrl);

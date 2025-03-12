@@ -1,37 +1,33 @@
 ---
-import fs from 'node:fs/promises';
-import { generateUrlPath } from '../../enrich.js';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const websitesData = await fs.readFile('src/data/websites.json', 'utf-8');
-  const websites = JSON.parse(websitesData);
-
-    return websites.map((website) => {
-        const url = website.url;
-        const title = website.title
-        const normalized = url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
-        const abbreviatedSite = normalized.split('.')[0]; // Simplification, e.g., "cidi" from "cidi.gatech.edu"
-        const abbreviatedTitle = title.split(' ').slice(0, 3).join('-'); // First three words of title
-        const slug = `${abbreviatedSite}-${abbreviatedTitle}`.toLowerCase().replace(/[^a-z0-9]/gi, '-');
-
+  const websites = await getCollection('websites');
+  return websites.map((website: CollectionEntry<'websites'>) => {
     return {
-      params: { slug },
-      props: { website },
+      params: { slug: website.slug },
+      props: { website }, // Pass the entire website object
     };
   });
 }
 
-const { website } = Astro.props;
+interface Props {
+  website: CollectionEntry<'websites'>;
+}
+
+const { website } : Props = Astro.props;
+const { Content } = await website.render();
 ---
 
-<Layout title={website.title}>
-  <section>
-    <h1>{website.title}</h1>
-    <a href={website.url} target="_blank" rel="noopener noreferrer">
+<Layout title={website.data.title}>
+  <section class="p-4 border rounded-lg">
+    <h1>{website.data.title}</h1>
+    <a href={website.data.url} target="_blank" rel="noopener noreferrer">
       Visit Website
     </a>
-    <p>{website.description}</p>
-    <p>Tags: {website.tags.join(', ')}</p>
+    <p>{website.data.description}</p>
+    <p>Tags: {website.data.tags.join(', ')}</p>
+    <Content />
   </section>
 </Layout>

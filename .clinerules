@@ -1,5 +1,9 @@
 * USE SPACES INSTEAD OF TABS.
+* AVOID LONG LINES, which are any lines over 88 characters in length.
 * This Astro static website uses NPM and is deployed to GitHub Pages.
+* NEVER run `npm run dev`. That will leave you waiting forever for a response because it runs in "watch" mode and only returns a response when the web server stops.
+    * Assume it is already running.
+    * If the webserver appears not to be running, as the user to run `npm run dev`.
 * Try to limit file size to about 100 lines.
     * If they go over that size, parse functions out to other files.
 * use the repo remote address `github.com:bizkite-co/nomouse` to determine the repo name and owner.

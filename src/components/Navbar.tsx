@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { CirclePlus, Home } from "lucide-react";
 import ModalSubmitNew from "./ModalSubmitNew";
+import { getCollection } from 'astro:content';
 
 function NavIcon({
   icon,
@@ -49,7 +50,8 @@ function NavIcon({
   );
 }
 
-export default function Navbar() {
+export default async function Navbar() {
+    const websites = await getCollection('websites');
   return (
     <TooltipProvider>
       <div
@@ -100,6 +102,15 @@ export default function Navbar() {
             target="_blank"
           />
           <Separator orientation="vertical" className="my-2 h-full" />
+          {websites.map((website) => (
+            <NavIcon
+                key={website.slug}
+                icon={<CirclePlus />}
+                tooltip={website.data.title}
+                href={`/source/${website.slug}`}
+            />
+          ))}
+          <Separator orientation="vertical" className="my-2 h-full" />
           <ModalSubmitNew>
             <NavIcon icon={<CirclePlus />} tooltip="Submit a new website" />
           </ModalSubmitNew>
@@ -119,15 +130,6 @@ export default function Navbar() {
             href="https://buymeacoffee.com/lukenguyen_me"
             target="_blank"
           />
-          <Separator orientation="vertical" className="h-full py-2" />
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
         </div>
       </div>
     </TooltipProvider>

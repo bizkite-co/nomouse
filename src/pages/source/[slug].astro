@@ -1,0 +1,42 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const websites = await getCollection('websites');
+  return websites.map((website: CollectionEntry<'websites'>) => {
+    return {
+      params: { slug: website.slug },
+      props: { website: website.data,  body: website.body, collection: website.collection },
+    };
+  });
+}
+
+interface Props {
+  website: {
+    title: string;
+    description: string;
+    url: string;
+    favicon?: string;
+    image?: string;
+    tags: string[];
+    lastReviewAt: string;
+  };
+  body: string;
+  collection: string;
+}
+
+const { website,  body, collection } : Props = Astro.props;
+---
+
+<Layout title={website.title}>
+  <section>
+    <h1>{website.title}</h1>
+    <a href={website.url} target="_blank" rel="noopener noreferrer">
+      Visit Website
+    </a>
+    <p>{website.description}</p>
+    <p>Tags: {website.tags.join(', ')}</p>
+    <Fragment set:html={body} />
+  </section>
+</Layout>

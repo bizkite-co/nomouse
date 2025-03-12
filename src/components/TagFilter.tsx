@@ -1,4 +1,4 @@
-import dataWebsites from "@/data/websites.json";
+import { getCollection } from 'astro:content';
 import { cn } from "@/lib/utils";
 import { filteredTags } from "@/store";
 import { useStore } from "@nanostores/react";
@@ -6,15 +6,17 @@ import { X } from "lucide-react";
 import { useMemo } from "react";
 import { Button } from "./ui/button";
 
-export default function ListTags() {
+export default function TagFilter() {
   const selectedTags: string[] = useStore(filteredTags);
 
-  const tags = useMemo(() => {
-    const tags = new Set<string>();
-    dataWebsites.forEach((website) => {
-      website.tags.forEach((tag) => tags.add(tag));
-    });
-    return Array.from(tags).sort((a, b) => a.localeCompare(b));
+  const { tags } = useMemo(() => {
+      let allTags = new Set<string>();
+      getCollection('websites').then(websites => {
+        websites.forEach(website => {
+            website.data.tags.forEach(tag => allTags.add(tag));
+        });
+      });
+    return { tags: Array.from(allTags).sort() };
   }, []);
 
   return (
