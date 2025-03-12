@@ -1,10 +1,10 @@
-import dataWebsites from '@/data/websites.json';
-import { cn } from '@/lib/utils';
-import { filteredTags, searchKeyword } from '@/store';
-import { useStore } from '@nanostores/react';
-import { useMemo } from 'react';
-import WebsiteItem from '@/components/WebsiteItem.tsx';
-import { generateUrlPath } from '@/enrich.js';
+import WebsiteItem from "@/components/WebsiteItem.tsx";
+import dataWebsites from "@/data/websites.json";
+import { generateUrlPath } from "@/enrich.js";
+import { cn } from "@/lib/utils";
+import { filteredTags, searchKeyword } from "@/store";
+import { useStore } from "@nanostores/react";
+import { useMemo } from "react";
 
 export default function ListWebsites() {
   const search = useStore(searchKeyword);
@@ -19,7 +19,10 @@ export default function ListWebsites() {
       ) {
         return false;
       }
-      if (website.title != null && !website.title.toLowerCase().includes(search))
+      if (
+        website.title != null &&
+        !website.title.toLowerCase().includes(search)
+      )
         return false;
       return true;
     });
@@ -28,8 +31,8 @@ export default function ListWebsites() {
   return (
     <div
       className={cn(
-        'container mx-auto px-4 md:px-0',
-        'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4',
+        "container mx-auto px-4 md:px-0",
+        "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
       )}
     >
       {filteredWebsites.map((website, index) => (

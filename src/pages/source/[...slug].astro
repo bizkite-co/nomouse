@@ -1,0 +1,37 @@
+---
+import fs from 'node:fs/promises';
+import { generateUrlPath } from '../../enrich.js';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const websitesData = await fs.readFile('src/data/websites.json', 'utf-8');
+  const websites = JSON.parse(websitesData);
+
+    return websites.map((website) => {
+        const url = website.url;
+        const title = website.title
+        const normalized = url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
+        const abbreviatedSite = normalized.split('.')[0]; // Simplification, e.g., "cidi" from "cidi.gatech.edu"
+        const abbreviatedTitle = title.split(' ').slice(0, 3).join('-'); // First three words of title
+        const slug = `${abbreviatedSite}-${abbreviatedTitle}`.toLowerCase().replace(/[^a-z0-9]/gi, '-');
+
+    return {
+      params: { slug },
+      props: { website },
+    };
+  });
+}
+
+const { website } = Astro.props;
+---
+
+<Layout title={website.title}>
+  <section>
+    <h1>{website.title}</h1>
+    <a href={website.url} target="_blank" rel="noopener noreferrer">
+      Visit Website
+    </a>
+    <p>{website.description}</p>
+    <p>Tags: {website.tags.join(', ')}</p>
+  </section>
+</Layout>

@@ -1,5 +1,5 @@
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 interface Props {
   website: {
@@ -18,18 +18,15 @@ export default function WebsiteItem({ website, id }: Props) {
   return (
     <a
       href={`/websites/${id}`}
-      className={cn(
-        'rounded bg-background p-4 shadow',
-        'flex flex-col gap-4',
-      )}
+      className={cn("rounded bg-background p-4 shadow", "flex flex-col gap-4")}
     >
       <div className="flex gap-2">
         <div className="h-12 w-12 bg-muted p-2">
           <img
             src={
-              website.favicon || 'https://placehold.co/400?text=No%20Picture'
+              website.favicon || "https://placehold.co/400?text=No%20Picture"
             }
-            alt={website.title ?? 'missing website title'}
+            alt={website.title ?? "missing website title"}
             className="aspect-square w-full rounded object-cover"
           />
         </div>
@@ -50,8 +47,8 @@ export default function WebsiteItem({ website, id }: Props) {
           </div>
         </div>
         <div>
-          <span className="text-muted-foreground text-xs">
-            Last reviewed at{' '}
+          <span className="text-xs text-muted-foreground">
+            Last reviewed at{" "}
             <span className="font-medium">{website.lastReviewAt}</span>
           </span>
         </div>
