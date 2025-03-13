@@ -43,7 +43,14 @@ const websites = await getCollection("websites");
     >
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
-      {websites.map((website) => <WebsiteItem website={website} />)}
+      <div
+        class={cn(
+          "container mx-auto px-4 md:px-0",
+          "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
+        )}
+      >
+        {websites.map((website) => <WebsiteItem website={website} />)}
+      </div>
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
       <Giscus />
