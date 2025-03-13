@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
 import { chromium } from 'playwright';
 import { v4 as uuidv4 } from 'uuid';
-import { normalizeUrl, generateFilename } from './lib/utils'; // Import from utils
+import { normalizeUrl, generateFilename } from './lib/utils.js'; // Import from utils with .js extension
 
 export function generateUrlPath(url) {
     const normalized = normalizeUrl(url);

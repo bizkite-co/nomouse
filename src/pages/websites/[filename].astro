@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import dataWebsites from '../../data/websites.json';
-import { normalizeUrl, generateFilename } from '../../lib/utils'; // Import from utils
+import { normalizeUrl, generateFilename } from '../../lib/utils.js'; // Import from utils with .js extension
 
 interface Props {
     website: typeof dataWebsites[0];
