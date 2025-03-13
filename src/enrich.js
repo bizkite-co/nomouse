@@ -4,12 +4,7 @@ import { chromium } from 'playwright';
 import { v4 as uuidv4 } from 'uuid';
 // The .js extension is required for the Astro build process (using Vite),
 // even though it might seem redundant when running the script directly with Node.js.
-import { normalizeUrl, generateFilename } from './lib/utils.ts';
-
-export function generateUrlPath(url) {
-    const normalized = normalizeUrl(url);
-    return normalized.replace(/[^a-z0-9]/gi, '_');
-}
+import { normalizeUrl, generateFilename, generateUrlPath } from './lib/utils.ts';
 
 async function captureScreenshot(url, outputPath) {
   const browser = await chromium.launch({ headless: true });
@@ -106,7 +101,10 @@ con: "${data.favicon}"\nimage: "${data.image}"\ntags: [${data.tags.map(tag => `"
 async function processWebsite(url, refresh, currentDate) {
     const normalizedUrl = normalizeUrl(url);
     const urlPath = generateUrlPath(url);
-    const filePath = `src/content/websites/${urlPath}.md`;
+    const folderPath = `src/content/websites/${urlPath}`;
+    const filePath = `${folderPath}/index.md`; // Changed to index.md inside the folder
+    const htmlFilePath = `${folderPath}/raw.html`;
+
 
     if (refresh) {
         console.log(`Refreshing data for ${url}`);
@@ -130,10 +128,12 @@ async function processWebsite(url, refresh, currentDate) {
 
             const markdownContent = createMarkdownContent(extractedData);
             try {
+                await fs.mkdir(folderPath, { recursive: true }); // Create the directory
                 await fs.writeFile(filePath, markdownContent, 'utf-8');
-                console.log(`Successfully wrote to ${filePath}`);
+                await fs.writeFile(htmlFilePath, html, 'utf-8'); // Save the raw HTML
+                console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
             } catch (writeError) {
-                console.error(`Error writing to ${filePath}:`, writeError);
+                console.error(`Error writing to ${filePath} or ${htmlFilePath}:`, writeError);
             }
         }
     } else {
@@ -165,8 +165,10 @@ async function processWebsite(url, refresh, currentDate) {
 
               const markdownContent = createMarkdownContent(extractedData);
               try {
+                  await fs.mkdir(folderPath, { recursive: true }); // Create the directory
                   await fs.writeFile(filePath, markdownContent, 'utf-8');
-                  console.log(`Successfully wrote to ${filePath}`);
+                  await fs.writeFile(htmlFilePath, html, 'utf-8'); // Save the raw HTML
+                  console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
               } catch(e) {
                   console.error('Error writing file', e);
               }
