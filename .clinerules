@@ -18,7 +18,7 @@
     5       TextNav      open   PVT_kwDOBVBs1c4AzFGJ
     ```
 * Use the GitHub CLI for GitHub actions not available in the MCP.
-* When the Issue is complete and the user agrees, create commit with a multi-line commit message starting with `fix #<issue number>`. That will close the issue.
+* When the Issue is complete and the user agrees, create commit with a multi-line commit message starting with `fix #<issue number> <issue-title>`. That will close the issue.
 * Use industry standard best practice coding standards and file structure and naming conventions.
 * Prefer unit tests over logging wherever possible.
 * Break problems down into smaller problems until you can find the tiny problem that's causeing the bigger problems.
