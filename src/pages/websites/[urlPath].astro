@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import dataWebsites from '../../data/websites.json';
-import { generateFilename, generateUrlPath } from '../../enrich.js';
+import { generateFilename, generateUrlPath, normalizeUrl } from '../../lib/utils'; // Import from utils
 
 interface Props {
   website: typeof dataWebsites[0];

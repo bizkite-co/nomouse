@@ -2,15 +2,7 @@ import fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
 import { chromium } from 'playwright';
 import { v4 as uuidv4 } from 'uuid';
-
-export function normalizeUrl(url) {
-  return url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
-}
-
-export function generateFilename(url) {
-    const normalized = normalizeUrl(url);
-    return normalized.replace(/[^a-z0-9]/gi, '_') + '.png';
-}
+import { normalizeUrl, generateFilename } from './lib/utils'; // Import from utils
 
 export function generateUrlPath(url) {
     const normalized = normalizeUrl(url);

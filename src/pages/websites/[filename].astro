@@ -1,15 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import dataWebsites from '../../data/websites.json';
-import { normalizeUrl } from '../../enrich.js';
+import { normalizeUrl, generateFilename } from '../../lib/utils'; // Import from utils
 
 interface Props {
     website: typeof dataWebsites[0];
-}
-
-function generateFilename(url: string) {
-  const normalized = normalizeUrl(url);
-  return normalized.replace(/[^a-z0-9]/gi, '_') + '.png';
 }
 
 export async function getStaticPaths() {
