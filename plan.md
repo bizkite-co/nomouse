@@ -1,54 +1,26 @@
-# Refactoring Plan for `src/enrich.js`
+# Plan to Improve Title Extraction
 
-This plan outlines the steps to refactor `src/enrich.js` to improve its modularity, error handling, and Markdown generation, addressing the requirements of GitHub issue #7.
+This plan addresses a subtask of GitHub issue #8: "Improve Web Scraping to Handle Sites with Missing Text Content" ([https://github.com/bizkite-co/nomouse/issues/8](https://github.com/bizkite-co/nomouse/issues/8)).
 
-## 1. Modularization
+The `src/enrich.js` script is extracting overly long titles from some websites, causing issues with display and potentially SEO. For example, the title for the Wired article "https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/" is currently:
 
-The following functions will be created or modified:
+```
+If You Know These Keyboard Shortcuts, You Won't Need a Mouse | WIREDMenuSearchSave this storySave this storyTriangleXLargeChevronFacebookXPinterestYouTubeInstagramTiktok
+```
 
-*   **`normalizeUrl(url)`:** (Existing) - Stays as is.
-*   **`generateFilename(url)`:** (Existing) - Stays as is.
-*   **`generateUrlPath(url)`:** (Existing) - Stays as is.
-*   **`captureScreenshot(url, outputPath)`:** (Existing) - Improve error handling by throwing an error instead of returning `null`.
-*   **`fetchPage(url)`:** (Existing) - Improve error handling by throwing an error instead of returning `null`.
-*   **`extractData(html, url, currentDate)`:** (Existing) - Improve error handling: return `null` if the title cannot be extracted.
-*   **`createMarkdownContent(data)`:** (New) - Takes the extracted data object and returns the Markdown string with frontmatter.
-*   **`processWebsite(url, refresh, currentDate)`:** (New) - Handles the logic for a single URL, including fetching, extracting, capturing screenshot, and writing the Markdown file.
-*   **`enrichData(refresh = false, targetUrl = null)`:** (Modified) - Reads `pages.csv`, iterates through URLs, calls `processWebsite`, handles `refresh` and `targetUrl` logic, and creates the `screenshots` directory.
+This is causing the title to overflow on the index page.
 
-## 2. Improved Error Handling
+This issue is a subtask of #8 ("Improve Web Scraping to Handle Sites with Missing Text Content").
 
-*   In `fetchPage` and `captureScreenshot`, errors will be thrown instead of returning `null`.
-*   In `extractData`, `null` will be returned if the title cannot be extracted.
-*   In `processWebsite`, if `extractData` returns `null`, the Markdown file will not be written, and an error will be logged.
-*   `try...catch` blocks will be used to handle potential errors gracefully.
+**Goal:** Modify `src/enrich.js` to extract concise and accurate titles, preventing excessively long titles and removing extraneous text.
 
-## 3. Markdown Generation
+**Plan:**
 
-*   `createMarkdownContent` will correctly format the frontmatter, escaping double quotes in the title and description.
-*   Cases where `desktopSnapshot` might be empty will be handled.
-
-## 4. GitHub Issue #7
-
-*   The modularization and error handling directly address the main points of the issue.
-*   Checking for website changes (using ETags or Last-Modified headers) is a more complex task and is considered a potential future enhancement.
-
-## Workflow
-
-1.  Read `src/data/pages.csv`.
-2.  Parse CSV data to get URLs.
-3.  Iterate through URLs:
-    *   For each URL, call `processWebsite`.
-4.  `processWebsite` function:
-    *   Check if `refresh` is true or if the file doesn't exist.
-    *   Call `fetchPage` to get HTML.
-    *   Call `extractData` to extract data.
-    *   If `extractData` returns `null` (title missing), log an error and skip.
-    *   Call `captureScreenshot`.
-    *   Call `createMarkdownContent` to generate Markdown.
-    *   Write Markdown to file.
-5. Create the `public/screenshots` directory if it doesn't exist.
-
-## Potential Future Enhancement
-
-*   Implement a mechanism to check for website changes (using ETags or Last-Modified headers) to avoid unnecessary scraping. This could be added to the `processWebsite` function.
+1.  **Analyze `extractData`:** Examine the `extractData` function in `src/enrich.js` to understand how the title is currently being extracted using Cheerio. Specifically, look at the line `const title = $('title').text() ?? '';`.
+2.  **Identify the Problem:** Determine why the title extraction is including extra text (e.g., menu items, social media links) from the Wired page. This might involve inspecting the HTML structure of the Wired page using browser developer tools or `curl`.
+3.  **Implement a Solution:** Modify the Cheerio selector or add post-processing logic to extract only the desired title text. This could involve:
+    *   Using a more specific CSS selector (e.g., targeting a specific `<h1>` tag or a meta tag like `<meta property="og:title">`).
+    *   Using JavaScript string manipulation to clean up the extracted title (e.g., splitting the string by a delimiter like "|" and taking the first part).
+    *   Adding a maximum length check and truncating the title if necessary.
+4.  **Test:** After modifying `src/enrich.js`, run the script with the `--refresh` flag and the Wired URL as the target (`--refresh https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/`) to verify that the title is extracted correctly.
+5. **Address index page overflow:** Once we have clean titles, investigate the index page overflow.
