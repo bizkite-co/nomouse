@@ -3,8 +3,6 @@ import { parse } from 'csv-parse/sync';
 import { chromium } from 'playwright';
 // import * as jsonpatch from 'json-patch'; // No longer needed
 import { v4 as uuidv4 } from 'uuid';
-// const cheerio = require('cheerio'); // Use dynamic import instead
-import cheerio from 'cheerio';
 
 export function normalizeUrl(url) {
   return url.toLowerCase().replace(/^https?:\/\//, '').replace(/\/$/, '');
@@ -46,7 +44,8 @@ async function fetchPage(url) {
   }
 }
 
-function extractData(html, url, currentDate) {
+async function extractData(html, url, currentDate) {
+  const cheerio = await import('cheerio');
   const $ = cheerio.load(html);
 
   const title = $('title').text() ?? '';
@@ -82,6 +81,7 @@ function extractData(html, url, currentDate) {
 }
 
 async function enrichData(refresh = false, targetUrl = null) { // Add targetUrl argument
+  console.log(`Running enrichData with refresh = ${refresh}, targetUrl = ${targetUrl}`); // Debugging statement
   try {
     // Read pages.csv
     const csvData = await fs.readFile('src/data/pages.csv', 'utf-8');
@@ -100,22 +100,25 @@ async function enrichData(refresh = false, targetUrl = null) { // Add targetUrl 
       const normalizedUrl = normalizeUrl(url);
       const urlPath = generateUrlPath(url); // Use generateUrlPath
       const filePath = `src/content/websites/${urlPath}.md`; // Use urlPath for filename
+      console.log(`Processing URL: ${url}, File Path: ${filePath}`); // Debugging statement
+
 
       if (refresh) { // Always overwrite if refresh is true
+        console.log(`Refreshing data for ${url}`); // Debugging statement
         const html = await fetchPage(url);
         if (html) {
           const extractedData = await extractData(html, url, currentDate);
         //   extractedData.uuid = uuid; // Don't overwrite the uuid
+          console.log(`Extracted Data for ${url}:`, extractedData); // Debugging statement
+
 
           // Capture screenshot
-          // const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
-          // const screenshotPath = `public/${screenshotFilename}`;
-          // const captureResult = await captureScreenshot(url, screenshotPath);
-          // if (captureResult !== null) {
-          //   extractedData.desktopSnapshot = screenshotFilename; // Store relative path
-          // }
-          extractedData.desktopSnapshot = ''; // Temporarily set to empty string
-
+          const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
+          const screenshotPath = `public/${screenshotFilename}`;
+          const captureResult = await captureScreenshot(url, screenshotPath);
+          if (captureResult !== null) {
+            extractedData.desktopSnapshot = screenshotFilename; // Store relative path
+          }
 
           // Create Markdown content with frontmatter
           const markdownContent = `---
@@ -134,6 +137,7 @@ uuid: "${extractedData.uuid}"
           // Write to Markdown file
           try {
             await fs.writeFile(filePath, markdownContent, 'utf-8');
+            console.log(`Successfully wrote to ${filePath}`); // Debugging statement
           } catch (writeError) {
             console.error(`Error writing to ${filePath}:`, writeError); // Debugging statement
           }
@@ -146,19 +150,19 @@ uuid: "${extractedData.uuid}"
             // File doesn't exist, which is fine
         }
         if (!existingContent) {
+          console.log(`Creating new file for ${url}`); // Debugging statement
             const html = await fetchPage(url);
             if (html) {
               const extractedData = await extractData(html, url, currentDate);
             //   extractedData.uuid = uuid; // Ensure UUID is in extracted data. No!
 
               // Capture screenshot
-              // const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
-              // const screenshotPath = `public/${screenshotFilename}`;
-              // const captureResult = await captureScreenshot(url, screenshotPath);
-              // if (captureResult !== null) {
-              //   extractedData.desktopSnapshot = screenshotFilename; // Store relative path
-              // }
-              extractedData.desktopSnapshot = '';
+              const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
+              const screenshotPath = `public/${screenshotFilename}`;
+              const captureResult = await captureScreenshot(url, screenshotPath);
+              if (captureResult !== null) {
+                extractedData.desktopSnapshot = screenshotFilename; // Store relative path
+              }
 
               // Create Markdown content with frontmatter
               const markdownContent = `---
@@ -176,6 +180,7 @@ uuid: "${extractedData.uuid}"
               // Write to Markdown file
               try {
                   await fs.writeFile(filePath, markdownContent, 'utf-8');
+                  console.log(`Successfully wrote to ${filePath}`);
               } catch(e) {
                   console.error('Error writing file', e);
               }

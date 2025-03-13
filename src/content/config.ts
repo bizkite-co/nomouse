@@ -5,7 +5,7 @@ const websitesCollection = defineCollection({
   type: 'content', // Important: 'content' for Markdown/MDX
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    description: z.string().optional(), // Make description optional
     url: z.string(),
     favicon: z.string().optional(),
     image: z.string().optional(),

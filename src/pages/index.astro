@@ -1,12 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import WebsiteList from "@/components/WebsiteList";
+import { getCollection } from 'astro:content';
+import WebsiteItem from "@/components/WebsiteItem.astro";
 import { Image } from "astro:assets";
 import background from "@/assets/background.svg";
-import ModeToggle from "@/components/ModeToggle";
-import { getCollection } from 'astro:content';
-import WebsiteItem from "@/components/WebsiteItem";
-import Spinner from "@/components/common/Spinner";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const websites = await getCollection('websites');
 ---
@@ -30,15 +28,18 @@ const websites = await getCollection('websites');
       <h1 class="text-center text-8xl font-black">No Mouse</h1>
       <p>Navigate, operate, and master your digital world, mouse-free.</p>
     </div>
-      <WebsiteList client:visible></WebsiteList>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-    {
-      <Suspense fallback={<Spinner />}>
-        {websites.map((website) => (
-          <WebsiteItem website={website} />
-        ))}
-      </Suspense>
-    }
-    </div>
+
+      {websites.map((website) => (
+        <WebsiteItem website={website} />
+      ))}
+
   </div>
 </Layout>
+
+<style>
+  .website-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>

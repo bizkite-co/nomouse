@@ -1,13 +1,16 @@
 ---
 interface Props {
   website: {
-    url: string;
-    title: string;
-    description: string;
-    tags: string[];
-    favicon: string;
-    desktopSnapshot?: string;
-    lastReviewAt: string;
+    data: {
+      url: string;
+      title: string;
+      description?: string;
+      tags: string[];
+      favicon?: string;
+      image?: string;
+      desktopSnapshot?: string;
+      lastReviewAt: string | Date;
+    };
   };
 }
 
@@ -17,7 +20,7 @@ import {cn} from "@/lib/utils"
 ---
 
 <a
-  href={website.url}
+  href={website.data.url}
   target="_blank"
   class={cn(
     'rounded bg-background p-4 shadow',
@@ -28,24 +31,24 @@ import {cn} from "@/lib/utils"
     <div class="h-12 w-12 bg-muted p-2">
       <img
         src={
-          website.favicon || 'https://placehold.co/400?text=No%20Picture'
+          website.data.favicon || 'https://placehold.co/400?text=No%20Picture'
         }
-        alt={website.title ?? 'missing website title'}
+        alt={website.data.title ?? 'missing website title'}
         class="aspect-square w-full rounded object-cover"
       />
     </div>
-    <p class="flex-1 text-sm font-semibold">{website.title}</p>
+    <p class="flex-1 text-sm font-semibold">{website.data.title}</p>
   </div>
-  {website.desktopSnapshot && (
-    <img src={website.desktopSnapshot} alt="website screenshot" />
+  {website.data.desktopSnapshot && (
+    <img src={website.data.desktopSnapshot} alt="website screenshot" />
   )}
   <div class="flex flex-1 flex-col justify-between gap-2">
     <div class="flex flex-col gap-1">
       <p class="line-clamp-3 text-xs text-muted-foreground">
-        {website.description}
+        {website.data.description}
       </p>
       <div class="flex flex-wrap gap-1">
-        {website.tags.map((tag: string) => (
+        {website.data.tags.map((tag: string) => (
           <Badge className="px-1 py-0">{tag}</Badge>
         ))}
       </div>
@@ -53,7 +56,7 @@ import {cn} from "@/lib/utils"
     <div>
       <span class="text-muted-foreground text-xs">
         Last reviewed at{' '}
-        <span class="font-medium">{website.lastReviewAt}</span>
+        <span class="font-medium">{website.data.lastReviewAt}</span>
       </span>
     </div>
   </div>
