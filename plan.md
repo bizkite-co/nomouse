@@ -1,137 +1,54 @@
-# Website Refactoring Plan
+# Refactoring Plan for `src/enrich.js`
 
-This plan outlines the steps to refactor the website to use Astro's content collections and Markdown files for data management, addressing the current error and aligning with the requirements of GitHub Issue #3.
+This plan outlines the steps to refactor `src/enrich.js` to improve its modularity, error handling, and Markdown generation, addressing the requirements of GitHub issue #7.
 
-## Current Situation
+## 1. Modularization
 
-- The website is currently experiencing a `TypeError` because `src/components/ListTags.tsx` is attempting to read from `websites.json`, which is no longer the primary data source.
-- `src/enrich.js` has been modified to generate Markdown files in `src/content/websites/`.
-- The goal is to leverage Astro's content collections and routing based on these Markdown files.
-- GitHub Issue #3 details the requirements for this refactoring.
+The following functions will be created or modified:
 
-## Plan
+*   **`normalizeUrl(url)`:** (Existing) - Stays as is.
+*   **`generateFilename(url)`:** (Existing) - Stays as is.
+*   **`generateUrlPath(url)`:** (Existing) - Stays as is.
+*   **`captureScreenshot(url, outputPath)`:** (Existing) - Improve error handling by throwing an error instead of returning `null`.
+*   **`fetchPage(url)`:** (Existing) - Improve error handling by throwing an error instead of returning `null`.
+*   **`extractData(html, url, currentDate)`:** (Existing) - Improve error handling: return `null` if the title cannot be extracted.
+*   **`createMarkdownContent(data)`:** (New) - Takes the extracted data object and returns the Markdown string with frontmatter.
+*   **`processWebsite(url, refresh, currentDate)`:** (New) - Handles the logic for a single URL, including fetching, extracting, capturing screenshot, and writing the Markdown file.
+*   **`enrichData(refresh = false, targetUrl = null)`:** (Modified) - Reads `pages.csv`, iterates through URLs, calls `processWebsite`, handles `refresh` and `targetUrl` logic, and creates the `screenshots` directory.
 
-1.  **Address the Immediate Error (Quick Fix):**
+## 2. Improved Error Handling
 
-    - Modify `src/components/ListTags.tsx` to temporarily use a hardcoded array of tags. This will allow the website to load without relying on `websites.json`, resolving the `TypeError`.
+*   In `fetchPage` and `captureScreenshot`, errors will be thrown instead of returning `null`.
+*   In `extractData`, `null` will be returned if the title cannot be extracted.
+*   In `processWebsite`, if `extractData` returns `null`, the Markdown file will not be written, and an error will be logged.
+*   `try...catch` blocks will be used to handle potential errors gracefully.
 
-    ```typescript
-    // src/components/ListTags.tsx
-    // ... other imports
-    import { useMemo } from 'react';
+## 3. Markdown Generation
 
-    export default function ListTags() {
-      const selectedTags: string[] = useStore(filteredTags);
+*   `createMarkdownContent` will correctly format the frontmatter, escaping double quotes in the title and description.
+*   Cases where `desktopSnapshot` might be empty will be handled.
 
-      // TEMPORARY FIX: Use hardcoded tags
-      const tags = useMemo(() => [
-        "accessibility",
-        "design",
-        "community",
-        "keyboard",
-        "shortcuts",
-        "productivity"
-      ], []);
+## 4. GitHub Issue #7
 
-      // ... rest of the component
-    }
-    ```
+*   The modularization and error handling directly address the main points of the issue.
+*   Checking for website changes (using ETags or Last-Modified headers) is a more complex task and is considered a potential future enhancement.
 
-2.  **Confirm Astro Content Collection Setup:**
+## Workflow
 
-    - Inspect `src/content/config.ts` and ensure a `websites` content collection is defined. If not, add it:
+1.  Read `src/data/pages.csv`.
+2.  Parse CSV data to get URLs.
+3.  Iterate through URLs:
+    *   For each URL, call `processWebsite`.
+4.  `processWebsite` function:
+    *   Check if `refresh` is true or if the file doesn't exist.
+    *   Call `fetchPage` to get HTML.
+    *   Call `extractData` to extract data.
+    *   If `extractData` returns `null` (title missing), log an error and skip.
+    *   Call `captureScreenshot`.
+    *   Call `createMarkdownContent` to generate Markdown.
+    *   Write Markdown to file.
+5. Create the `public/screenshots` directory if it doesn't exist.
 
-    ```typescript
-    // src/content/config.ts
-    import { defineCollection, z } from 'astro:content';
+## Potential Future Enhancement
 
-    const websites = defineCollection({
-      type: 'content', // Assuming 'content' type for Markdown
-      schema: z.object({
-        title: z.string(),
-        description: z.string().optional(),
-        favicon: z.string().optional(),
-        image: z.string().optional(),
-        url: z.string(),
-        tags: z.array(z.string()),
-        lastReviewAt: z.string().or(z.date()), // Handle both string and date
-        desktopSnapshot: z.string().optional(),
-        uuid: z.string(),
-      }),
-    });
-
-    export const collections = { websites };
-    ```
-
-3.  **Dynamic Routing Implementation:**
-
-    - Verify that `src/pages/source/[...slug].astro` uses `getStaticPaths` to generate pages based on the `websites` collection. The file should look something like this:
-
-    ```astro
-    ---
-    // src/pages/source/[...slug].astro
-    import { getCollection } from 'astro:content';
-    import Layout from '@/layouts/Layout.astro';
-
-    export async function getStaticPaths() {
-      const websites = await getCollection('websites');
-      return websites.map(website => ({
-        params: { slug: website.slug },
-        props: { website },
-      }));
-    }
-
-    const { website } = Astro.props;
-    const { Content } = await website.render();
-    ---
-
-    <Layout title={website.data.title}>
-      <article>
-        <h1>{website.data.title}</h1>
-        <Content />
-        {/* Display other data from website.data */}
-      </article>
-    </Layout>
-    ```
-
-4.  **Refactor `ListTags.tsx` (or Create `TagFilter.tsx`):**
-
-    - Create a new component, `src/components/TagFilter.tsx`, to handle tag filtering. This promotes better component organization.
-    - Use `getCollection('websites')` to fetch all website entries.
-    - Extract all unique tags from the `websites` collection.
-    - Implement the filtering logic using the `filteredTags` store (as currently done in `ListTags.tsx`).
-
-5.  **Update `Navbar.tsx`:**
-
-    - Modify `src/components/Navbar.tsx` to include links to the generated website pages.
-    - Fetch the `websites` collection and generate links based on the `slug` of each entry.
-
-6.  **Address GitHub Issue #3:**
-
-    - The provided issue details confirm the overall plan.
-    - Add comments to the issue as progress is made, marking tasks as completed.
-
-7.  **Deployment (Confirmation):**
-
-    - Confirm that the Astro build process is correctly configured for GitHub Pages deployment (as specified in `.clinerules`). This usually involves setting the correct `base` path in `astro.config.mjs`.
-
-## Mermaid Diagram
-
-```mermaid
-graph LR
-    subgraph Data Source
-        A[Markdown Files] --> B(Astro Content Collection)
-    end
-    subgraph Routing
-        B --> C[getStaticPaths]
-        C --> D[src/pages/source/[...slug].astro]
-    end
-    subgraph Components
-        D --> E[Display Content]
-        B --> F[TagFilter.tsx]
-        B --> G[Navbar.tsx]
-    end
-    subgraph GitHub
-        H[Issue #3]
-    end
-    B -- Updates --> H
+*   Implement a mechanism to check for website changes (using ETags or Last-Modified headers) to avoid unnecessary scraping. This could be added to the `processWebsite` function.
