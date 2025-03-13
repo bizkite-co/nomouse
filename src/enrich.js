@@ -4,7 +4,7 @@ import { chromium } from 'playwright';
 import { v4 as uuidv4 } from 'uuid';
 // The .js extension is required for the Astro build process (using Vite),
 // even though it might seem redundant when running the script directly with Node.js.
-import { normalizeUrl, generateFilename } from './lib/utils.js';
+import { normalizeUrl, generateFilename } from './lib/utils.ts';
 
 export function generateUrlPath(url) {
     const normalized = normalizeUrl(url);
@@ -37,15 +37,36 @@ async function fetchPage(url) {
   }
 }
 
-async function extractData(html, url, currentDate) {
+async function getShortestTitle(html) {
   const cheerio = await import('cheerio');
   const $ = cheerio.load(html);
 
-  const title = $('title').text() ?? '';
+  const titles = [
+    $('meta[property="og:title"]').attr('content'),
+    $('title').text(),
+    $('h1').first().text(),
+  ];
+
+  let shortestTitle = '';
+  for (const title of titles) {
+    if (title && (shortestTitle === '' || title.length < shortestTitle.length)) {
+      shortestTitle = title;
+    }
+  }
+  return shortestTitle;
+}
+
+async function extractData(html, url, currentDate) {
+  const title = await getShortestTitle(html);
+
   if (!title) {
     console.error(`Error: Could not extract title for ${url}`);
     return null; // Return null if title is missing
   }
+
+  const cheerio = await import('cheerio');
+  const $ = cheerio.load(html);
+
   const description = $('meta[name="description"]').attr('content') ?? '';
   let favicon = $('link[rel="icon"]').attr('href') ?? $('link[rel="shortcut icon"]').attr('href') ?? '';
   const image = $('meta[property="og:image"]').attr('content') ?? $('img').first().attr('src') ?? '';
@@ -78,18 +99,8 @@ async function extractData(html, url, currentDate) {
 }
 
 function createMarkdownContent(data) {
-    return `---
-title: "${data.title.replace(/"/g, '\\"')}"
-description: "${data.description.replace(/"/g, '\\"')}"
-url: "${data.url}"
-favicon: "${data.favicon}"
-image: "${data.image}"
-tags: [${data.tags.map(tag => `"${tag}"`).join(', ')}]
-lastReviewAt: "${data.lastReviewAt}"
-desktopSnapshot: "${data.desktopSnapshot || ''}"
-uuid: "${data.uuid}"
----
-`;
+    return `---\ntitle: "${data.title.replace(/"/g, '\\"')}"\ndescription: "${data.description.replace(/"/g, '\\"')}"\nurl: "${data.url}"\nfavi
+con: "${data.favicon}"\nimage: "${data.image}"\ntags: [${data.tags.map(tag => `"${tag.replace(/"/g, '\\"')}"`).join(', ')}]\nlastReviewAt: "${data.lastReviewAt}"\ndesktopSnapshot: "${data.desktopSnapshot || ''}"\nuuid: "${data.uuid}"\n---\n`;
 }
 
 async function processWebsite(url, refresh, currentDate) {
