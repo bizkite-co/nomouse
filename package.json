@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "enrich": "npx tsx src/enrich.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -44,6 +45,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-merge": "^0.7.2",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tsx": "^4.19.3"
   }
 }
