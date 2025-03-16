@@ -6,6 +6,31 @@
       "name": "Development server",
       "request": "launch",
       "type": "node-terminal"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Run Enrich Script",
+      "command": "npx",
+      "args": [
+        "tsx",
+        "src/enrich.ts",
+        "--refresh",
+        "--url",
+        "${input:url}"
+      ],
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+          "tsx"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "url",
+      "type": "promptString",
+      "description": "Enter the URL to process:",
+      "default": "https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/"
     }
   ]
 }

@@ -7,8 +7,8 @@ exports.generateUrlPath = generateUrlPath;
 exports.createRawMarkdown = createRawMarkdown;
 var clsx_1 = require("clsx");
 var tailwind_merge_1 = require("tailwind-merge");
-var fs = require("fs");
 var turndown_1 = require("turndown");
+var turndown_plugin_gfm_1 = require("turndown-plugin-gfm");
 function cn() {
     var inputs = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -27,16 +27,26 @@ function generateUrlPath(url) {
     var normalized = normalizeUrl(url);
     return normalized.replace(/[^a-z0-9]/gi, '_');
 }
-function createRawMarkdown(websiteFolderPath) {
-    var htmlFilePath = "".concat(websiteFolderPath, "/raw.html");
-    var markdownFilePath = "".concat(websiteFolderPath, "/raw.md");
-    try {
-        var htmlContent = fs.readFileSync(htmlFilePath, 'utf-8');
-        var turndownService = new turndown_1.default();
-        var markdownContent = turndownService.turndown(htmlContent);
-        fs.writeFileSync(markdownFilePath, markdownContent, 'utf-8');
-    }
-    catch (error) {
-        console.error("Error processing ".concat(websiteFolderPath, ":"), error);
-    }
+function createRawMarkdown(htmlContent) {
+    console.log("createRawMarkdown called");
+    console.log("Input HTML Content:", htmlContent.substring(0, 500)); // Log first 500 chars
+    var turndownService = new turndown_1({
+        headingStyle: 'atx',
+        codeBlockStyle: 'fenced'
+    });
+    // Use the GFM plugin
+    turndownService.use(turndown_plugin_gfm_1.gfm);
+
+    turndownService.addRule('emphasis', {
+      filter: ['em', 'i'],
+      replacement: function (content) {
+        return '*' + content + '*'
+      }
+    })
+
+    turndownService.remove(['style', 'script']); // Removed div and span
+    // turndownService.keep('a');
+    var markdownContent = turndownService.turndown(htmlContent);
+    console.log("Markdown Content:", markdownContent.substring(0, 500)); // Log first 500 chars of output
+    return markdownContent;
 }

@@ -5,7 +5,7 @@ url: "https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/"
 favicon: "https://www.wired.com/verso/static/wired-us/assets/favicon.ico"
 image: "https://media.wired.com/photos/61f44e67cdd4f18de04f5b22/191:100/w_1280,c_limit/Gear-Keyboard-Shortcuts-1159555273.jpg"
 tags: ["operating systems", "software", "tips", "how-to"]
-lastReviewAt: "2025-03-13T22:10:18.995Z"
+lastReviewAt: "2025-03-16T16:08:49.084Z"
 desktopSnapshot: "screenshots/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse.png"
-uuid: "bb41148c-06ad-4273-939d-904f856cfa7d"
+uuid: "7ffbfca0-4c6f-4ccb-b005-b0283c31b865"
 ---

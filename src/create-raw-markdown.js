@@ -1,9 +1,26 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var utils_js_1 = require("./lib/utils.js");
-var websiteFolderPath = process.argv[2];
-if (!websiteFolderPath) {
-    console.error('Please provide the website folder path as an argument.');
-    process.exit(1);
+import { createRawMarkdown } from './lib/utils.js';
+import * as fs from 'fs/promises';
+
+async function run() {
+    try {
+        const htmlFilePath = 'src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/raw.html';
+        const htmlContent = await fs.readFile(htmlFilePath, 'utf-8');
+
+        console.log('HTML content read successfully:'); // Log to validate
+        // console.log(htmlContent); // Log the content - commented out to reduce output length
+
+        const markdownContent = createRawMarkdown(htmlContent);
+
+        console.log('Markdown content generated:'); // Log to validate
+        // console.log(markdownContent); // Log the content - commented out to reduce output length
+
+        const markdownFilePath = 'src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/output.md';
+        await fs.writeFile(markdownFilePath, markdownContent, 'utf-8');
+
+        console.log(`Markdown content written to ${markdownFilePath}`);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
-(0, utils_js_1.createRawMarkdown)(websiteFolderPath);
+
+run();

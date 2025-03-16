@@ -83,10 +83,6 @@ export async function processWebsite(url: string, refresh: boolean, currentDate:
                 await fs.writeFile(htmlFilePath, html, 'utf-8');
                 console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
 
-                // Create raw.md from raw.html
-                const markdownContentRaw = createRawMarkdown(html);
-                await fs.writeFile(markdownFilePath, markdownContentRaw, 'utf-8');
-                console.log(`Successfully created ${markdownFilePath}`);
             } catch (writeError) {
                 console.error(`Error writing to ${filePath} or ${htmlFilePath}:`, writeError);
             }
@@ -125,10 +121,6 @@ export async function processWebsite(url: string, refresh: boolean, currentDate:
                   await fs.writeFile(htmlFilePath, html, 'utf-8');
                   console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
 
-                  // Create raw.md from raw.html
-                  const markdownContentRaw = createRawMarkdown(html);
-                  await fs.writeFile(markdownFilePath, markdownContentRaw, 'utf-8');
-                  console.log(`Successfully created ${markdownFilePath}`);
               } catch(e) {
                   console.error('Error writing file', e);
               }

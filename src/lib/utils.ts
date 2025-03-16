@@ -2,6 +2,7 @@ import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import * as fs from 'fs/promises';
 import TurndownService from 'turndown';
+import { gfm } from 'turndown-plugin-gfm';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -22,14 +23,48 @@ export function generateUrlPath(url: string) {
 }
 
 export function createRawMarkdown(htmlContent: string) {
+    console.log("createRawMarkdown called");
+    console.log("Input HTML Content:", htmlContent.substring(0, 500)); // Log first 500 chars
     const turndownService = new TurndownService({
         headingStyle: 'atx',
         codeBlockStyle: 'fenced'
     });
 
-    turndownService.remove(['style', 'script','div', 'span']);
-    turndownService.keep('a');
+    // Use the GFM plugin
+    turndownService.use(gfm);
+
+    turndownService.addRule('emphasis', {
+      filter: ['em', 'i'],
+      replacement: function (content) {
+        return '*' + content + '*'
+      }
+    });
+
+    turndownService.addRule('strikethrough', {
+      filter: function (node) {
+        return node.nodeName === 'DEL' || node.nodeName === 'S'
+      },
+      replacement: function (content) {
+        return '~~' + content + '~~'
+      }
+    });
+
+    turndownService.remove(['style', 'script']); // Removed div and span
+    // turndownService.keep('a');
 
     const markdownContent = turndownService.turndown(htmlContent);
+    console.log("Markdown Content:", markdownContent.substring(0, 500)); // Log first 500 chars of output
     return markdownContent;
 }
+
+// export async function createAndSaveMarkdown(htmlFilePath: string) {
+//     try {
+//         const htmlContent = await fs.readFile(htmlFilePath, 'utf-8');
+//         const markdownContent = createRawMarkdown(htmlContent);
+//         const markdownFilePath = htmlFilePath.replace(/\.html$/, '.md');
+//         await fs.writeFile(markdownFilePath, markdownContent, 'utf-8');
+//         console.log(`Markdown saved to: ${markdownFilePath}`);
+//     } catch (error) {
+//         console.error('Error in createAndSaveMarkdown:', error);
+//     }
+// }

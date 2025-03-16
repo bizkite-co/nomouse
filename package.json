@@ -7,7 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "enrich": "npx tsx src/enrich.js"
+    "enrich": "npx tsx src/enrich.js",
+    "test": "mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log",
+    "test:unit-json": "mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --reporter=json --outputFile=./vitest-output/vitest.json"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -36,6 +38,7 @@
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "turndown": "^7.2.0",
+    "turndown-plugin-gfm": "^1.0.2",
     "typescript": "^5.7.2",
     "uuid": "^9.0.1",
     "vaul": "^1.1.2"
@@ -49,6 +52,7 @@
     "prettier-plugin-merge": "^0.7.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "vitest": "^3.0.8"
   }
 }
