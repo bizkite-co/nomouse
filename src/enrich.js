@@ -1,215 +1,102 @@
-import fs from 'node:fs/promises';
-import { parse } from 'csv-parse/sync';
-import { chromium } from 'playwright';
-import { v4 as uuidv4 } from 'uuid';
-// The .js extension is required for the Astro build process (using Vite),
-// even though it might seem redundant when running the script directly with Node.js.
-import { normalizeUrl, generateFilename, generateUrlPath } from './lib/utils.ts';
-
-async function captureScreenshot(url, outputPath) {
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
-  try {
-    await page.goto(url);
-    await page.setViewportSize({ width: 1280, height: 720 });
-    await page.screenshot({ path: outputPath });
-  } catch (error) {
-    console.error(`Error capturing screenshot for ${url}:`, error);
-    throw error; // Throw error instead of returning null
-  } finally {
-    await browser.close();
-  }
-}
-
-async function fetchPage(url) {
-  try {
-    const response = await fetch(url);
-    const html = await response.text();
-    return html;
-  } catch (error) {
-    console.error(`Error fetching ${url}:`, error);
-    throw error; // Throw error instead of returning null
-  }
-}
-
-async function getShortestTitle(html) {
-  const cheerio = await import('cheerio');
-  const $ = cheerio.load(html);
-
-  const titles = [
-    $('meta[property="og:title"]').attr('content'),
-    $('title').text(),
-    $('h1').first().text(),
-  ];
-
-  let shortestTitle = '';
-  for (const title of titles) {
-    if (title && (shortestTitle === '' || title.length < shortestTitle.length)) {
-      shortestTitle = title;
-    }
-  }
-  return shortestTitle;
-}
-
-async function extractData(html, url, currentDate) {
-  const title = await getShortestTitle(html);
-
-  if (!title) {
-    console.error(`Error: Could not extract title for ${url}`);
-    return null; // Return null if title is missing
-  }
-
-  const cheerio = await import('cheerio');
-  const $ = cheerio.load(html);
-
-  const description = $('meta[name="description"]').attr('content') ?? '';
-  let favicon = $('link[rel="icon"]').attr('href') ?? $('link[rel="shortcut icon"]').attr('href') ?? '';
-  const image = $('meta[property="og:image"]').attr('content') ?? $('img').first().attr('src') ?? '';
-  const keywords = $('meta[name="keywords"]').attr('content');
-
-    // Handle relative favicon URLs
-    if (favicon && !favicon.startsWith('http')) {
-        favicon = new URL(favicon, url).href;
-    }
-
-      // Handle relative image URLs
-    let absoluteImage = '';
-    if (image && !image.startsWith('http')) {
-        absoluteImage = new URL(image, url).href;
-    } else {
-      absoluteImage = image;
-    }
-
-
-    return {
-        title,
-        description,
-        favicon,
-        image: absoluteImage,
-        url,
-        tags: keywords ? keywords.split(',').map((keyword) => keyword.trim()) : [],
-        lastReviewAt: currentDate,
-        uuid: uuidv4(), //Keep generating UUID for internal use
-    };
-}
-
-function createMarkdownContent(data) {
-    return `---\ntitle: "${data.title.replace(/"/g, '\\"')}"\ndescription: "${data.description.replace(/"/g, '\\"')}"\nurl: "${data.url}"\nfavi
-con: "${data.favicon}"\nimage: "${data.image}"\ntags: [${data.tags.map(tag => `"${tag.replace(/"/g, '\\"')}"`).join(', ')}]\nlastReviewAt: "${data.lastReviewAt}"\ndesktopSnapshot: "${data.desktopSnapshot || ''}"\nuuid: "${data.uuid}"\n---\n`;
-}
-
-async function processWebsite(url, refresh, currentDate) {
-    const normalizedUrl = normalizeUrl(url);
-    const urlPath = generateUrlPath(url);
-    const folderPath = `src/content/websites/${urlPath}`;
-    const filePath = `${folderPath}/index.md`; // Changed to index.md inside the folder
-    const htmlFilePath = `${folderPath}/raw.html`;
-
-
-    if (refresh) {
-        console.log(`Refreshing data for ${url}`);
-        const html = await fetchPage(url);
-        if (html) {
-            const extractedData = await extractData(html, url, currentDate);
-            if (!extractedData) {
-                console.error(`Skipping ${url} due to missing data.`);
-                return;
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
             }
-
-            const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
-            const screenshotPath = `public/${screenshotFilename}`;
-            try {
-                await captureScreenshot(url, screenshotPath);
-                extractedData.desktopSnapshot = screenshotFilename;
-            } catch (error) {
-                // Error is already logged in captureScreenshot, but we still continue
-                extractedData.desktopSnapshot = ''; // Set to empty string if capture fails
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var promises_1 = require("node:fs/promises");
+var sync_1 = require("csv-parse/sync");
+var website_js_1 = require("./lib/website.js");
+function enrichData() {
+    return __awaiter(this, arguments, void 0, function (refresh, targetUrl) {
+        var csvData, urls, currentDate, error_1, _i, _a, url, error_2;
+        if (refresh === void 0) { refresh = false; }
+        if (targetUrl === void 0) { targetUrl = null; }
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    console.log("Running enrichData with refresh = ".concat(refresh, ", targetUrl = ").concat(targetUrl));
+                    _b.label = 1;
+                case 1:
+                    _b.trys.push([1, 11, , 12]);
+                    return [4 /*yield*/, promises_1.default.readFile('src/data/pages.csv', 'utf-8')];
+                case 2:
+                    csvData = _b.sent();
+                    urls = (0, sync_1.parse)(csvData, {
+                        skip_empty_lines: true,
+                    }).flat();
+                    currentDate = new Date().toISOString();
+                    _b.label = 3;
+                case 3:
+                    _b.trys.push([3, 5, , 6]);
+                    return [4 /*yield*/, promises_1.default.mkdir('public/screenshots', { recursive: true })];
+                case 4:
+                    _b.sent(); // Use recursive: true
+                    return [3 /*break*/, 6];
+                case 5:
+                    error_1 = _b.sent();
+                    if (error_1.code !== 'EEXIST') {
+                        throw error_1;
+                    }
+                    return [3 /*break*/, 6];
+                case 6:
+                    _i = 0, _a = (targetUrl ? [targetUrl] : urls);
+                    _b.label = 7;
+                case 7:
+                    if (!(_i < _a.length)) return [3 /*break*/, 10];
+                    url = _a[_i];
+                    return [4 /*yield*/, (0, website_js_1.processWebsite)(url, refresh, currentDate)];
+                case 8:
+                    _b.sent();
+                    _b.label = 9;
+                case 9:
+                    _i++;
+                    return [3 /*break*/, 7];
+                case 10:
+                    console.log('Data enrichment complete.');
+                    return [3 /*break*/, 12];
+                case 11:
+                    error_2 = _b.sent();
+                    console.error('Error during enrichment:', error_2);
+                    return [3 /*break*/, 12];
+                case 12: return [2 /*return*/];
             }
-
-            const markdownContent = createMarkdownContent(extractedData);
-            try {
-                await fs.mkdir(folderPath, { recursive: true }); // Create the directory
-                await fs.writeFile(filePath, markdownContent, 'utf-8');
-                await fs.writeFile(htmlFilePath, html, 'utf-8'); // Save the raw HTML
-                console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
-            } catch (writeError) {
-                console.error(`Error writing to ${filePath} or ${htmlFilePath}:`, writeError);
-            }
-        }
-    } else {
-      let existingContent = null;
-      try {
-          existingContent = await fs.readFile(filePath, 'utf-8');
-      } catch (e) {
-          // File doesn't exist, which is fine
-      }
-      if (!existingContent) {
-        console.log(`Creating new file for ${url}`);
-          const html = await fetchPage(url);
-          if (html) {
-              const extractedData = await extractData(html, url, currentDate);
-              if (!extractedData) {
-                console.error(`Skipping ${url} due to missing data.`);
-                return;
-              }
-
-              const screenshotFilename = `screenshots/${normalizedUrl.replace(/[^a-z0-9]/gi, '_')}.png`;
-              const screenshotPath = `public/${screenshotFilename}`;
-              try {
-                await captureScreenshot(url, screenshotPath);
-                extractedData.desktopSnapshot = screenshotFilename;
-              } catch (error) {
-                // Error is already logged in captureScreenshot, but we still continue
-                extractedData.desktopSnapshot = ''; // Set to empty string if capture fails
-              }
-
-              const markdownContent = createMarkdownContent(extractedData);
-              try {
-                  await fs.mkdir(folderPath, { recursive: true }); // Create the directory
-                  await fs.writeFile(filePath, markdownContent, 'utf-8');
-                  await fs.writeFile(htmlFilePath, html, 'utf-8'); // Save the raw HTML
-                  console.log(`Successfully wrote to ${filePath} and ${htmlFilePath}`);
-              } catch(e) {
-                  console.error('Error writing file', e);
-              }
-          }
-      } else {
-        console.log(`Skipping URL: ${url}`);
-      }
-    }
+        });
+    });
 }
-
-async function enrichData(refresh = false, targetUrl = null) {
-  console.log(`Running enrichData with refresh = ${refresh}, targetUrl = ${targetUrl}`);
-  try {
-    const csvData = await fs.readFile('src/data/pages.csv', 'utf-8');
-    const urls = parse(csvData, {
-      skip_empty_lines: true,
-    }).flat();
-
-    const currentDate = new Date().toISOString();
-
-    // Create screenshots directory if it doesn't exist
-    try {
-      await fs.mkdir('public/screenshots', { recursive: true }); // Use recursive: true
-    } catch (error) {
-      if (error.code !== 'EEXIST') {
-        throw error;
-      }
-    }
-
-    for (const url of (targetUrl ? [targetUrl] : urls)) {
-        await processWebsite(url, refresh, currentDate);
-    }
-
-    console.log('Data enrichment complete.');
-  } catch (error) {
-    console.error('Error during enrichment:', error);
-  }
-}
-
 // Get refresh flag and optional URL from command line arguments
-const refreshFlag = process.argv.includes('--refresh');
-const targetUrl = process.argv.find(arg => arg.startsWith('http'));
-
-enrichData(refreshFlag, targetUrl);
+var refreshFlag = process.argv.includes('--refresh');
+var targetUrl = process.argv.find(function (arg) { return arg.startsWith('http'); });
+enrichData(refreshFlag, targetUrl !== null && targetUrl !== void 0 ? targetUrl : null);

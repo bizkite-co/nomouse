@@ -1,26 +1,34 @@
-# Plan to Improve Title Extraction
+# Plan to Create raw.md from raw.html
 
-This plan addresses a subtask of GitHub issue #8: "Improve Web Scraping to Handle Sites with Missing Text Content" ([https://github.com/bizkite-co/nomouse/issues/8](https://github.com/bizkite-co/nomouse/issues/8)).
+This plan addresses a subtask of GitHub issue #11: "Improve Web Scraping to Handle Sites with Missing Text Content" ([https://github.com/bizkite-co/nomouse/issues/11](https://github.com/bizkite-co/nomouse/issues/11)).
 
-The `src/enrich.js` script is extracting overly long titles from some websites, causing issues with display and potentially SEO. For example, the title for the Wired article "https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/" is currently:
+As part of the new data storage structure (issue #10), each scraped website now has a dedicated folder containing its data, including the raw HTML (`raw.html`). This issue focuses on creating a new function to generate a Markdown version of this raw HTML (`raw.md`) within the same folder.
 
-```
-If You Know These Keyboard Shortcuts, You Won't Need a Mouse | WIREDMenuSearchSave this storySave this storyTriangleXLargeChevronFacebookXPinterestYouTubeInstagramTiktok
-```
-
-This is causing the title to overflow on the index page.
+**Goal:** Create a new function (e.g., `createRawMarkdown`) in `src/enrich.js` (or a separate module) that takes the path to a website's folder as input and generates a `raw.md` file from the `raw.html` file within that folder. This function should be callable independently, allowing for selective processing of websites.
 
 This issue is a subtask of #8 ("Improve Web Scraping to Handle Sites with Missing Text Content").
 
-**Goal:** Modify `src/enrich.js` to extract concise and accurate titles, preventing excessively long titles and removing extraneous text.
-
 **Plan:**
 
-1.  **Analyze `extractData`:** Examine the `extractData` function in `src/enrich.js` to understand how the title is currently being extracted using Cheerio. Specifically, look at the line `const title = $('title').text() ?? '';`.
-2.  **Identify the Problem:** Determine why the title extraction is including extra text (e.g., menu items, social media links) from the Wired page. This might involve inspecting the HTML structure of the Wired page using browser developer tools or `curl`.
-3.  **Implement a Solution:** Modify the Cheerio selector or add post-processing logic to extract only the desired title text. This could involve:
-    *   Using a more specific CSS selector (e.g., targeting a specific `<h1>` tag or a meta tag like `<meta property="og:title">`).
-    *   Using JavaScript string manipulation to clean up the extracted title (e.g., splitting the string by a delimiter like "|" and taking the first part).
-    *   Adding a maximum length check and truncating the title if necessary.
-4.  **Test:** After modifying `src/enrich.js`, run the script with the `--refresh` flag and the Wired URL as the target (`--refresh https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/`) to verify that the title is extracted correctly.
-5. **Address index page overflow:** Once we have clean titles, investigate the index page overflow.
+1.  **Create `createRawMarkdown` Function:**  Create a new function (either in `src/enrich.js` or a new module) that:
+    *   Takes the website folder path as an argument.
+    *   Reads the `raw.html` file from the folder.
+    *   Converts the HTML to Markdown. Consider using a library like `turndown` or `html-to-markdown`.
+    *   Writes the resulting Markdown to a `raw.md` file in the same folder.
+2.  **Test:**
+    * Create a test, or modify the existing enrich script to call the function on at least one site.
+    *   Verify that the `raw.md` file is created correctly and contains the expected Markdown content.
+3. **Commit and Close:**
+    * Commit the changes with a message that closes the new issue, and does not use backticks. Wait until the git push deploys properly.
+
+# Refactoring src/enrich.js
+
+Due to module resolution issues and conflicts between CommonJS and ES Modules, the following refactoring steps will be taken:
+
+1.  **Convert `src/enrich.js` to TypeScript (`src/enrich.ts`):** This will ensure consistency in the use of TypeScript throughout the project.
+2.  **Separate Concerns:** Break down the large `enrichData` and `processWebsite` functions into smaller, more manageable functions with specific responsibilities. Create separate files for these functions within a new `src/lib/` subdirectory (e.g., `src/lib/website.ts`, `src/lib/data.ts`).
+3.  **Use Explicit Types:** Add type annotations to all function parameters and return values.
+4.  **Use `import type` where appropriate:** For type-only imports, use `import type` to avoid potential circular dependencies.
+5. **Use top-level await:** Simplify asynchronous code with top-level await (requires `"module": "NodeNext"` or similar in `tsconfig.json`).
+6.  **Address remaining TypeScript errors:** After making these changes, compile the code and address any remaining TypeScript errors.
+7. **Update imports:** Update any files that import from `src/enrich.js` or `src/lib/utils.ts` to use the new file names and paths.
