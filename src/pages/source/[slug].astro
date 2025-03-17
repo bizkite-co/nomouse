@@ -1,8 +1,8 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Navbar from "@/components/Navbar";
-import "@/styles/globals.css";
+import Navbar from "../../components/Navbar.tsx";
+import "../../styles/globals.css";
 
 export async function getStaticPaths() {
   const websites = await getCollection("websites");

@@ -2,12 +2,16 @@ import { chromium } from 'playwright';
 import { normalizeUrl, generateUrlPath, createRawMarkdown } from './utils.js';
 import * as fs from 'fs/promises';
 import { extractData, createMarkdownContent } from './data.js';
+import util from 'util';
+import { exec as execCallback } from 'child_process';
+
+const exec = util.promisify(execCallback);
 
 export async function captureScreenshot(url: string, outputPath: string): Promise<void> {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   try {
-    await page.goto(url);
+    await page.goto(url, { timeout: 60000 }); // Increased timeout to 60 seconds
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.screenshot({ path: outputPath });
   } catch (error) {
@@ -46,6 +50,32 @@ export async function getShortestTitle(html: string): Promise<string> {
     }
   }
   return shortestTitle;
+}
+
+async function processWithCrawl4AI(url: string, currentDate: string) {
+    const urlPath = generateUrlPath(url); // Use existing utility function
+    const outputPath = `src/content/websites/${urlPath}/_c4ai.md`; // Changed output path
+
+    const crawl4aiCommand = `uvx --from crawl4ai crwl "${url}" -o markdown`;
+
+    try {
+        const { stdout, stderr } = await exec(crawl4aiCommand);
+        console.log('crawl4ai stdout:', stdout);
+        if (stderr) {
+            console.error('crawl4ai stderr:', stderr);
+        }
+
+        // Write the stdout to the output file
+        try {
+          await fs.writeFile(outputPath, stdout, 'utf-8');
+          console.log(`Successfully wrote crawl4ai output to ${outputPath}`);
+        } catch (writeError) {
+          console.error(`Error writing crawl4ai output to ${outputPath}:`, writeError);
+        }
+
+    } catch (error) {
+        console.error('crawl4ai execution error:', error);
+    }
 }
 
 export async function processWebsite(url: string, refresh: boolean, currentDate: string): Promise<void> {
@@ -129,4 +159,5 @@ export async function processWebsite(url: string, refresh: boolean, currentDate:
         console.log(`Skipping URL: ${url}`);
       }
     }
+    await processWithCrawl4AI(url, currentDate);
 }

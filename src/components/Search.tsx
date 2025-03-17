@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-import { searchKeyword } from "@/store";
+import { Button } from "./ui/button.tsx";
+import { Input } from "./ui/input.tsx";
+import { cn } from "../lib/utils.ts";
+import { searchKeyword } from "../store.ts";
 import { Search as SearchIcon, XCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 

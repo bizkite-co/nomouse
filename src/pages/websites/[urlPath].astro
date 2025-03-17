@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import dataWebsites from '../../data/websites.json';
-import { generateFilename, generateUrlPath, normalizeUrl } from '../../lib/utils.js'; // Import from utils with .js extension
+import { generateFilename, generateUrlPath, normalizeUrl } from '../../lib/utils.ts'; // Import from utils with .ts extension
 
 interface Props {
   website: typeof dataWebsites[0];
@@ -22,7 +22,7 @@ const { website } = Astro.props as Props;
 
 
 if (!website) {
-  return Astro.redirect('/404');
+  return Astro.redirect('/404'); // Or handle the missing website case appropriately
 }
 
 const expectedFilename = generateFilename(website.url);

@@ -1,7 +1,7 @@
 import { ModeToggle } from "./ModeToggle.tsx";
 import { Button, buttonVariants } from "./ui/button.tsx";
 import { Separator } from "./ui/separator.tsx";
-import { cn } from "../lib/utils.js";
+import { cn } from "../lib/utils.ts";
 import Search from "./Search.tsx"; // Assuming Search.tsx exists
 import {
   Tooltip,

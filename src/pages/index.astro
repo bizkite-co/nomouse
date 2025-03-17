@@ -1,16 +1,16 @@
 ---
-import Search from "@/components/Search";
-import Navbar from "@/components/Navbar";
-import Layout from "@/layouts/Layout.astro";
-import { Button } from "@/components/ui/button.tsx";
-import "@/styles/globals.css";
-import { cn } from "@/lib/utils";
+import Search from "../components/Search.tsx";
+import Navbar from "../components/Navbar.tsx";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "../components/ui/button.tsx";
+import "../styles/globals.css";
+import { cn } from "../lib/utils.ts";
 import { Globe } from "lucide-react";
-import Giscus from "@/components/Giscus.astro";
+import Giscus from "../components/Giscus.astro";
 
 import { getCollection } from "astro:content";
-import WebsiteItem from "@/components/WebsiteItem.astro";
-import { ModeToggle } from "@/components/ModeToggle";
+import WebsiteItem from "../components/WebsiteItem.astro";
+import { ModeToggle } from "../components/ModeToggle.tsx";
 
 const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md'));
 ---
@@ -123,4 +123,3 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
     </footer>
   </main>
 </Layout>
-
