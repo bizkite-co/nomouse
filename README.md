@@ -49,10 +49,18 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## ➕ Additional Dependencies
 
-This project uses `crawl4ai` to enhance the scraping process.  You'll need to install it separately using pip:
+This project uses `uv` and `crawl4ai` to enhance the scraping process.  You'll need to install `uv` with:
 
 ```bash
-pip install crawl4ai
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
+or, one of the other methods here: (https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_1)[https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_1]
+
 Make sure `crawl4ai` is accessible in your system's PATH.
+
+### Theme
+
+The site theme is derived from https://github.com/lukenguyen-me/astro-template-directory-website
+
+I think that might be derived from the one used here: https://astro.build/themes/
