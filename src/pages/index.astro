@@ -20,7 +20,8 @@ const websiteData = websites.map(website => {
         description: website.data.description,
         url: website.data.url,
         favicon: website.data.favicon,
-        slug: slug
+        slug: slug,
+        desktopSnapshot: '/' + website.data.desktopSnapshot
     }
 });
 ---

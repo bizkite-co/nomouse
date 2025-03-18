@@ -7,13 +7,19 @@ interface Props {
     url: string;
     favicon?: string;
     slug: string;
+    desktopSnapshot: string;
 }
 
-const { title, description, url, favicon, slug } = Astro.props as Props;
+const { title, description, url, favicon, slug, desktopSnapshot } = Astro.props as Props;
 
 ---
 <div class="website-item border rounded p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
     <a href={`/websites/${slug}`} class="block">
+        <img
+            src={desktopSnapshot}
+            alt={`Screenshot of ${title}`}
+            class="w-full mb-4 rounded"
+        />
         <div class="flex items-center gap-4">
             <div class="h-16 w-16 bg-muted p-2 flex-shrink-0">
                 {favicon ? (
