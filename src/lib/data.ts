@@ -83,6 +83,5 @@ export function createMarkdownContent(data: {
     desktopSnapshot?: string;
     uuid: string;
 }) {
-    return `---\ntitle: "${data.title.replace(/"/g, '\\"')}"\ndescription: "${data.description.replace(/"/g, '\\"')}"\nurl: "${data.url}"\nfavi
-con: "${data.favicon}"\nimage: "${data.image}"\ntags: [${data.tags.map(tag => `"${tag.replace(/"/g, '\\"')}"`).join(', ')}]\nlastReviewAt: "${data.lastReviewAt}"\ndesktopSnapshot: "${data.desktopSnapshot || ''}"\nuuid: "${data.uuid}"\n---\n`;
+    return `---\ntitle: "${data.title.replace(/"/g, '\\"')}"\ndescription: "${data.description.replace(/"/g, '\\"')}"\nurl: "${data.url}"\nfavicon: "${data.favicon}"\nimage: "${data.image}"\ntags: [${data.tags.map(tag => `"${tag.replace(/"/g, '\\"')}"`).join(', ')}]\nlastReviewAt: "${data.lastReviewAt}"\ndesktopSnapshot: "${data.desktopSnapshot || ''}"\nuuid: "${data.uuid}"\n---\n`;
 }
