@@ -1,71 +1,86 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import dataWebsites from '../../data/websites.json';
-import { normalizeUrl, generateFilename } from '../../lib/utils.ts'; // Import from utils with .ts extension
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 interface Props {
-    website: typeof dataWebsites[0];
+    content: string;
+    data: {
+        title?: string;
+        description?: string;
+        favicon?: string;
+        desktopSnapshot?: string;
+        tags?: string[];
+        lastReviewAt?: string;
+        url?:string;
+    };
 }
 
 export async function getStaticPaths() {
-  return dataWebsites.map((website) => {
-    const filename = generateFilename(website.url);
+  const websitesDir = path.join(process.cwd(), 'src/content/websites');
+  const websiteFolders = fs.readdirSync(websitesDir).filter(item => fs.statSync(path.join(websitesDir, item)).isDirectory());
+
+  return websiteFolders.map(folder => {
+    const indexPath = path.join(websitesDir, folder, 'index.md');
+    const fileContent = fs.readFileSync(indexPath, 'utf-8');
+    const { data, content } = matter(fileContent);
+
     return {
-      params: { filename },
-      props: { website },
+      params: { filename: folder }, // Use the folder name as the filename
+      props: { data, content },
     };
   });
 }
 
 const { filename } = Astro.params;
-const { website } = Astro.props as Props;
+const { data, content } = Astro.props as Props;
 
-if (!website) {
+if (!data) {
   return Astro.redirect('/404'); // Or handle the missing website case appropriately
 }
 
-const expectedFilename = generateFilename(website.url);
-if (filename !== expectedFilename) {
-    return Astro.redirect('/404');
-}
 
 ---
 
-<Layout title={website.title || 'Website Details'}>
+<Layout title={data.title || 'Website Details'}>
   <main class="container mx-auto px-4 md:px-0 py-8">
-    <h1 class="text-2xl font-bold mb-4">{website.title}</h1>
+    <h1 class="text-2xl font-bold mb-4">{data.title}</h1>
     <div class="flex gap-4">
       <div class="h-24 w-24 bg-muted p-2">
         <img
-          src={website.favicon || 'https://placehold.co/400?text=No%20Picture'}
-          alt={website.title ?? 'missing website title'}
+          src={data.favicon || 'https://placehold.co/400?text=No%20Picture'}
+          alt={data.title ?? 'missing website title'}
           class="aspect-square w-full rounded object-cover"
         />
       </div>
-      {website.description && (
-        <p class="text-sm text-muted-foreground">{website.description}</p>
+      {data.description && (
+        <p class="text-sm text-muted-foreground">{data.description}</p>
       )}
     </div>
-    {website.desktopSnapshot && (
-      <img src={`/` + website.desktopSnapshot} alt="website screenshot" class="my-4" />
+    {data.desktopSnapshot && (
+      <img src={`/` + data.desktopSnapshot} alt="website screenshot" class="my-4" />
     )}
     <div class="my-4">
       <p class="text-sm">
         <strong>Tags:</strong>
-        {website.tags.join(', ')}
+        {/* Handle tags being potentially undefined */}
+        {data.tags ? data.tags.join(', ') : 'No tags'}
       </p>
       <p class="text-sm">
         <strong>Last Reviewed At:</strong>
-        {website.lastReviewAt}
+        {data.lastReviewAt}
       </p>
     </div>
     <a
-      href={website.url}
+      href={data.url}
       target="_blank"
       rel="noopener noreferrer"
       class="text-blue-500 hover:underline"
     >
       Visit Website
     </a>
+    {/* Render the Markdown content */}
+    <div class="prose mt-8" set:html={content} />
   </main>
 </Layout>

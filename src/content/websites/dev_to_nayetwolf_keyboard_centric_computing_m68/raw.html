@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>keyboard-centric computing. - DEV Community</title>
+      <meta name="last-updated" content="2025-03-17 19:55:30 UTC">
+      <meta name="user-signed-in" content="false">
+      <meta name="head-cached-at" content="1742241330">
+      <meta name="environment" content="production">
+      <link rel="stylesheet" href="https://assets.dev.to/assets/minimal-0a971eb021d2dc2b145c1df786e1b97f418c6b2d066e79802fea980acb513937.css" media="all" id="main-minimal-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/views-1c703342dce6eac414f19ca7fd07bcf83cbe44088659758144e52e7fa1e92dd3.css" media="all" id="main-views-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/crayons-0f2fc85bc159498f8ae6fba58c460e6deba863d02d59dfa994c1954976ddb6cc.css" media="all" id="main-crayons-stylesheet" />
+
+      <script src="https://assets.dev.to/assets/base-9d03ab7d486c2d56295834be6b93884d407a19243c89f39e58c14c9828e0a144.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/application-7258612fccf5d56314a6e4ad1898b4f818f474c4bb3485e302428d489a769a17.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/baseInitializers-b74902d56433062a87f5f1ce74769baf2a1a698772f46952b0ac72bc95c4abfd.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/baseTracking-b6bf73e5ee66633e151e7d5b7c6bbccedfa4c59e3615be97b98c4c0f543ddae7.js" defer="defer"></script>
+
+        <meta name="search-script" content="https://assets.dev.to/assets/Search-7dcdad3172ab4501a4598fe8b716c7a88146e79fd42256d36fb1b83e27bf77cf.js">
+      
+    <link rel="canonical" href="https://dev.to/nayetwolf/keyboard-centric-computing-m68" />
+    <meta name="description" content="A Guide to Mogg Your Mouse-Dependent Colleagues.   Keyboard-centric computing Or... Tagged with tutorial, archlinux, programming, learning.">
+    <meta name="keywords" content="tutorial, archlinux, programming, learning, software, coding, development, engineering, inclusive, community">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dev.to/nayetwolf/keyboard-centric-computing-m68" />
+    <meta property="og:title" content="keyboard-centric computing." />
+    <meta property="og:description" content="A Guide to Mogg Your Mouse-Dependent Colleagues.   Keyboard-centric computing Or..." />
+    <meta property="og:site_name" content="DEV Community" />
+    <meta name="twitter:site" content="@thepracticaldev">
+    <meta name="twitter:creator" content="@Nayetwolf">
+    <meta name="twitter:title" content="keyboard-centric computing.">
+    <meta name="twitter:description" content="A Guide to Mogg Your Mouse-Dependent Colleagues.   Keyboard-centric computing Or...">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:new-embed-design" content="on">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+      <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif" />
+      <meta name="twitter:image:src" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      <link rel="icon" type="image/x-icon" href="https://media2.dev.to/dynamic/image/width=32,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" />
+      <link rel="apple-touch-icon" href="https://media2.dev.to/dynamic/image/width=180,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://media2.dev.to/dynamic/image/width=152,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://media2.dev.to/dynamic/image/width=180,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://media2.dev.to/dynamic/image/width=167,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png">
+      <link href="https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" rel="icon" sizes="192x192" />
+      <link href="https://media2.dev.to/dynamic/image/width=128,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" rel="icon" sizes="128x128" />
+      <meta name="apple-mobile-web-app-title" content="dev.to">
+      <meta name="application-name" content="dev.to">
+      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+      <link rel="search" href="https://dev.to/open-search.xml" type="application/opensearchdescription+xml" title="DEV Community" />
+
+      <meta property="forem:name" content="DEV Community" />
+      <meta property="forem:logo" content="https://media2.dev.to/dynamic/image/width=512,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" />
+      <meta property="forem:domain" content="dev.to" />
+    
+  </head>
+      <body
+        class="sans-serif-article-body default-header"
+        data-user-status="logged-out"
+        data-community-name="DEV Community"
+        data-subscription-icon="https://assets.dev.to/assets/subscription-icon-805dfa7ac7dd660f07ed8d654877270825b07a92a03841aa99a1093bd00431b2.png"
+        data-locale="en"
+        data-honeybadger-key="hbp_nqu4Y66HuEKlD6YRGssZuRQnPOjDm50J8Zkr"
+        data-deployed-at="2025-03-14T22:51:52Z"
+        data-latest-commit-id="fe623cde81343b350fcff8c80f9debf504906706"
+        data-ga-tracking="UA-71991109-1"
+        data-cookie-banner-user-context="logged_out_only"
+        data-cookie-banner-platform-context="off"
+        data-algolia-id="PRSOBFP46H"
+        data-algolia-search-key="9aa7d31610cba78851c9b1f63776a9dd"
+        data-algolia-display="true"
+        data-dynamic-url-component="bmar11"
+        data-ga4-tracking-id="G-TYEM8Y3JN3">
+        
+        <script>
+          if (navigator.userAgent === 'ForemWebView/1' || window.frameElement) {
+            document.body.classList.add("hidden-shell");
+          }
+        </script>
+
+        <link rel="stylesheet" href="https://assets.dev.to/assets/minimal-0a971eb021d2dc2b145c1df786e1b97f418c6b2d066e79802fea980acb513937.css" media="all" id="secondary-minimal-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/views-1c703342dce6eac414f19ca7fd07bcf83cbe44088659758144e52e7fa1e92dd3.css" media="all" id="secondary-views-stylesheet" />
+<link rel="stylesheet" href="https://assets.dev.to/assets/crayons-0f2fc85bc159498f8ae6fba58c460e6deba863d02d59dfa994c1954976ddb6cc.css" media="all" id="secondary-crayons-stylesheet" />
+
+        <div id="body-styles">
+          <style>
+            :root {
+              --accent-brand-lighter-rgb: 80, 99, 301;
+              --accent-brand-rgb: 59, 73, 223;
+              --accent-brand-darker-rgb: 47, 58, 178;
+            }
+          </style>
+        </div>
+        <div id="audiocontent" data-podcast="">
+          
+        </div>
+        <div class="navigation-progress" id="navigation-progress"></div>
+
+<header id="topbar" class="crayons-header topbar print-hidden">
+  <span id="route-change-target" tabindex="-1"></span>
+  <a href="#main-content" class="skip-content-link">Skip to content</a>
+  <div class="crayons-header__container">
+    <span class="inline-block m:hidden ">
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ahowl1vpra8ihnje2c1u22mlk08g7xtk" class="crayons-icon"><title id="ahowl1vpra8ihnje2c1u22mlk08g7xtk">Navigation menu</title>
+    <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+</svg>
+
+      </button>
+    </span>
+    <a href="/" class="site-logo" aria-label="DEV Community Home">
+    <img class="site-logo__img"
+         src="https://media2.dev.to/dynamic/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+         style="aspect-ratio: 10 / 8"
+         alt="DEV Community">
+</a>
+
+
+    <div class="crayons-header--search js-search-form" id="header-search">
+      <form accept-charset="UTF-8" method="get" action="/search" role="search">
+        <div class="crayons-fields crayons-fields--horizontal">
+          <div class="crayons-field flex-1 relative">
+            <input id="search-input" class="crayons-header--search-input crayons-textfield js-search-input" type="text" id="nav-search" name="q" placeholder="Find related posts..." autocomplete="off" />
+            <button type="submit" aria-label="Search" class="c-btn c-btn--icon-alone absolute inset-px right-auto mt-0 py-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ai5dd272t0av0lqs3r3lsv8nwtzojrk6" aria-hidden="true" class="crayons-icon"><title id="ai5dd272t0av0lqs3r3lsv8nwtzojrk6">Search</title>
+    <path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z"></path>
+</svg>
+
+            </button>
+
+            <a class="crayons-header--search-brand-indicator" href="https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral" target="_blank" rel="noopener noreferrer">
+                Powered by
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="24" height="24" viewBox="0 0 500 500.34" role="img" aria-labelledby="aipiavj2iddvgam5jhiul7j3vmlihgas" aria-hidden="true" class="crayons-icon"><title id="aipiavj2iddvgam5jhiul7j3vmlihgas">Search</title>
+  <defs></defs><path class="cls-1" d="M250,0C113.38,0,2,110.16,.03,246.32c-2,138.29,110.19,252.87,248.49,253.67,42.71,.25,83.85-10.2,120.38-30.05,3.56-1.93,4.11-6.83,1.08-9.52l-23.39-20.74c-4.75-4.22-11.52-5.41-17.37-2.92-25.5,10.85-53.21,16.39-81.76,16.04-111.75-1.37-202.04-94.35-200.26-206.1,1.76-110.33,92.06-199.55,202.8-199.55h202.83V407.68l-115.08-102.25c-3.72-3.31-9.43-2.66-12.43,1.31-18.47,24.46-48.56,39.67-81.98,37.36-46.36-3.2-83.92-40.52-87.4-86.86-4.15-55.28,39.65-101.58,94.07-101.58,49.21,0,89.74,37.88,93.97,86.01,.38,4.28,2.31,8.28,5.53,11.13l29.97,26.57c3.4,3.01,8.8,1.17,9.63-3.3,2.16-11.55,2.92-23.6,2.07-35.95-4.83-70.39-61.84-127.01-132.26-131.35-80.73-4.98-148.23,58.18-150.37,137.35-2.09,77.15,61.12,143.66,138.28,145.36,32.21,.71,62.07-9.42,86.2-26.97l150.36,133.29c6.45,5.71,16.62,1.14,16.62-7.48V9.49C500,4.25,495.75,0,490.51,0H250Z"></path>
+</svg>
+
+                Algolia
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex items-center h-100 ml-auto">
+        <div class="flex" id="authentication-top-nav-actions">
+          <span class="hidden m:block">
+            <a href="https://dev.to/enter" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant>
+              Log in
+            </a>
+          </span>
+
+          <a href="https://dev.to/enter?state=new-user" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+            Create account
+          </a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="hamburger">
+  <div class="hamburger__content">
+    <header class="hamburger__content__header">
+      <h2 class="fs-l fw-bold flex-1 break-word lh-tight">DEV Community</h2>
+
+      <button class="c-btn c-btn--icon-alone js-hamburger-trigger shrink-0" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="agmvjx37zea0c035gvng4sb4orx5otok" aria-hidden="true" class="crayons-icon c-btn__icon"><title id="agmvjx37zea0c035gvng4sb4orx5otok">Close</title><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z"></path></svg>
+
+      </button>
+    </header>
+
+    <div class="p-2 js-navigation-links-container" id="authentication-hamburger-actions">
+    </div>
+  </div>
+  <div class="hamburger__overlay js-hamburger-trigger"></div>
+</div>
+
+
+        <div id="active-broadcast" class="broadcast-wrapper"></div>
+<div id="page-content" class="wrapper stories stories-show articletag-tutorial articletag-archlinux articletag-programming articletag-learning articleuser-1191471" data-current-page="stories-show">
+  <div id="page-content-inner" data-internal-nav="false">
+    <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+
+    
+<link rel="prefetch" href="/reactions?article_id=1986860">
+
+<style>
+  .html-variant-wrapper { display: none}
+</style>
+
+
+
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.js"
+        integrity="sha384-3HK5hxQbkFqOIxMbpROlRmRtYl2LBZ52t+tqcjzsmr9NJuOWQxl8RgQSyFvq2lhy"
+        crossorigin="anonymous" defer></script>
+
+  <script src="https://assets.dev.to/assets/webShare-0686f0b9ac40589694ef6ae6a6202c44119bc781c254f6cf6d52d8a008461156.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/articlePage-e91bed0487621b06608474cfabffa186165e1f43f05b24581203ccc21e7aa45d.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/commentDropdowns-7a28d130e5b78d38b30a9495a964003a66bd64fa455fc70b766d69cf06b9ba24.js" defer="defer"></script>
+
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://dev.to/nayetwolf/keyboard-centric-computing-m68"},"url":"https://dev.to/nayetwolf/keyboard-centric-computing-m68","image":["https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif","https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif","https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif"],"publisher":{"@context":"http://schema.org","@type":"Organization","name":"DEV Community","logo":{"@context":"http://schema.org","@type":"ImageObject","url":"https://media2.dev.to/dynamic/image/width=192,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png","width":"192","height":"192"}},"headline":"keyboard-centric computing.","author":{"@context":"http://schema.org","@type":"Person","url":"https://dev.to/nayetwolf","name":"Ilyas Filali"},"datePublished":"2024-09-04T14:36:43Z","dateModified":"2024-09-04T14:36:43Z"}
+    </script>
+
+  
+<div class="crayons-layout crayons-layout--3-cols crayons-layout--article">
+  <aside class="crayons-layout__sidebar-left" aria-label="Article actions">
+    <div class="crayons-article-actions print-hidden">
+  <div class="crayons-article-actions__inner">
+
+    
+<div class="reaction-drawer__outer hoverdown" style="">
+  <button
+    id="reaction-drawer-trigger"
+    aria-label="reaction-drawer-trigger"
+    aria-pressed="false"
+    class="hoverdown-trigger crayons-reaction pseudo-reaction crayons-tooltip__activator relative">
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction--like crayons-reaction__icon--inactive" style="width: 40px; height: 40px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-hidden="true" class="crayons-icon">
+    <g clip-path="url(#clip0_988_3276)">
+        <path d="M19 14V17H22V19H18.999L19 22H17L16.999 19H14V17H17V14H19ZM20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.992L19.059 11.574C20.39 10.05 20.32 7.65998 18.827 6.16998C17.324 4.67098 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09103 4.60598 6.67503 4.66798 5.17203 6.17198C3.68203 7.66198 3.60703 10.047 4.98003 11.623L13.412 20.069L12 21.485L3.52003 12.993C1.41603 10.637 1.49503 7.01898 3.75603 4.75698C6.02103 2.49298 9.64403 2.41698 12 4.52898C14.349 2.41998 17.979 2.48998 20.242 4.75698H20.243Z" fill="#525252"></path>
+    </g>
+    <defs>
+        <clipPath id="clip0_988_3276">
+        <rect width="24" height="24" fill="white"></rect>
+        </clipPath>
+    </defs>
+</svg>
+
+      </span>
+      <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--active" style="width: 40px; height: 40px">
+        <img aria_hidden="true" height="24" width="24" src="https://assets.dev.to/assets/heart-plus-active-9ea3b22f2bc311281db911d416166c5f430636e76b15cd5df6b3b841d830eefa.svg" />
+      </span>
+      <span class="crayons-reaction__count" id="reaction_total_count">
+        <span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span>
+      </span>
+      <span class="crayons-tooltip__content">
+        Add reaction
+      </span>
+  </button>
+
+  <div class="reaction-drawer" aria-expanded="false">
+    <div class="reaction-drawer__container">
+        <button
+  id="reaction-butt-like"
+  name="Like"
+  aria-label="Like"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="like">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-like"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Like
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-unicorn"
+  name="Unicorn"
+  aria-label="Unicorn"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="unicorn">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-unicorn"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Unicorn
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-exploding_head"
+  name="Exploding Head"
+  aria-label="Exploding Head"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="exploding_head">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-exploding_head"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Exploding Head
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-raised_hands"
+  name="Raised Hands"
+  aria-label="Raised Hands"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="raised_hands">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-raised_hands"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Raised Hands
+    </span>
+</button>
+
+        <button
+  id="reaction-butt-fire"
+  name="Fire"
+  aria-label="Fire"
+  aria-pressed="false"
+  class="crayons-reaction crayons-tooltip__activator relative pt-2 pr-2 pb-1 pl-2"
+  data-category="fire">
+    <span class="crayons-reaction__icon crayons-reaction__icon--inactive p-0">
+      <img aria_hidden="true" height="32" width="32" src="https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" />
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-fire"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Fire
+    </span>
+</button>
+
+    </div>
+  </div>
+</div>
+
+<button
+  id="reaction-butt-comment"
+  aria-label="Jump to Comments"
+  aria-pressed="false"
+  class="crayons-reaction crayons-reaction--comment crayons-tooltip__activator relative"
+  data-category="comment">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M10 3h4a8 8 0 010 16v3.5c-5-2-12-5-12-11.5a8 8 0 018-8zm2 14h2a6 6 0 000-12h-4a6 6 0 00-6 6c0 3.61 2.462 5.966 8 8.48V17z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-comment" data-count="0">
+      <span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span>
+    </span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Jump to Comments
+    </span>
+</button>
+
+<button
+  id="reaction-butt-readinglist"
+  aria-label="Add to reading list"
+  aria-pressed="false"
+  class="crayons-reaction crayons-reaction--readinglist crayons-tooltip__activator relative"
+  data-category="readinglist">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+    <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+</svg>
+
+    </span>
+    <span class="crayons-reaction__count" id="reaction-number-readinglist"><span class="bg-base-40 opacity-25 p-2 inline-block radius-default"></span></span>
+
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Save
+    </span>
+</button>
+
+
+<button
+  id="reaction-butt-boost"
+  aria-label="Boost"
+  aria-pressed="false"
+  class="crayons-reaction crayons-reaction--boost crayons-tooltip__activator relative">
+    <span class="crayons-reaction__icon crayons-reaction__icon--borderless crayons-reaction__icon--inactive">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true" class="crayons-icon" width="24" height="24">
+  <path transform="translate(24,0) scale(-1,1)" d="M6 4H21C21.5523 4 22 4.44772 22 5V12H20V6H6V9L1 5L6 1V4ZM18 20H3C2.44772 20 2 19.5523 2 19V12H4V18H18V15L23 19L18 23V20Z"></path>
+</svg>
+
+    </span>
+    <span data-testid="tooltip" class="crayons-tooltip__content">
+      Boost
+    </span>
+</button>
+
+
+    <div class="only-sidebar-menu-item">
+      <div id="mod-actions-menu-btn-area" class="print-hidden trusted-visible-block align-center">
+      </div>
+    </div>
+    <div class="align-center m:relative">
+      <button id="article-show-more-button" aria-controls="article-show-more-dropdown" aria-expanded="false" aria-haspopup="true" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Share post options">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="ak0nk0t1rnwps0inuqxtiygf1q6fha6k" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="ak0nk0t1rnwps0inuqxtiygf1q6fha6k">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+
+      </button>
+
+      <div id="article-show-more-dropdown" class="crayons-dropdown side-bar left-2 right-2 m:right-auto m:left-100 s:left-auto mb-1 m:mb-0 top-unset bottom-100 m:top-0 m:bottom-unset">
+        <div class="only-mobile-menu-item">
+          <button class="mod-actions-menu-btn crayons-link crayons-link--block w-100 bg-transparent border-0 fw-bold">
+            Moderate
+          </button>
+        </div>
+        <div>
+          <button
+            id="copy-post-url-button"
+            class="flex justify-between crayons-link crayons-link--block w-100 bg-transparent border-0"
+            data-postUrl="https://dev.to/nayetwolf/keyboard-centric-computing-m68">
+            <span class="fw-bold">Copy link</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="article-copy-icon" role="img" aria-labelledby="acp9ing25bf4b7ih5srk6uvuhxk9tkhm" aria-hidden="true" class="crayons-icon mx-2 shrink-0"><title id="acp9ing25bf4b7ih5srk6uvuhxk9tkhm">Copy link</title>
+    <path d="M7 6V3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1 1 0 013 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2zm-2 5v2h6v-2H7zm0 4v2h6v-2H7z"></path>
+</svg>
+
+          </button>
+          <div id="article-copy-link-announcer" aria-live="polite" class="crayons-notice crayons-notice--success my-2 p-1" aria-live="polite" hidden>Copied to Clipboard</div>
+        </div>
+
+        <div class="Desktop-only">
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href='https://twitter.com/intent/tweet?text=%22keyboard-centric%20computing.%22%20by%20%40Nayetwolf%20%23DEVCommunity%20https%3A%2F%2Fdev.to%2Fnayetwolf%2Fkeyboard-centric-computing-m68'>
+            Share to X
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdev.to%2Fnayetwolf%2Fkeyboard-centric-computing-m68&title=keyboard-centric%20computing.&summary=A%20Guide%20to%20Mogg%20Your%20Mouse-Dependent%20Colleagues.%20%20%20Keyboard-centric%20computing%20Or...&source=DEV%20Community">
+            Share to LinkedIn
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdev.to%2Fnayetwolf%2Fkeyboard-centric-computing-m68">
+            Share to Facebook
+          </a>
+          <a
+            target="_blank"
+            class="crayons-link crayons-link--block"
+            rel="noopener"
+            href="https://toot.kytta.dev/?text=https%3A%2F%2Fdev.to%2Fnayetwolf%2Fkeyboard-centric-computing-m68">
+            Share to Mastodon
+          </a>
+        </div>
+
+        <web-share-wrapper shareurl="https://dev.to/nayetwolf/keyboard-centric-computing-m68" sharetitle="keyboard-centric computing." sharetext="A Guide to Mogg Your Mouse-Dependent Colleagues.   Keyboard-centric computing Or..." template="web-share-button">
+        </web-share-wrapper>
+        <template id="web-share-button">
+          <a href="#" class="dropdown-link-row crayons-link crayons-link--block">Share Post via...</a>
+        </template>
+
+        <a href="/report-abuse" class="crayons-link crayons-link--block">Report Abuse</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </aside>
+
+  <main id="main-content" class="crayons-layout__content grid gap-4">
+    <div class="article-wrapper">
+
+
+      <article class="crayons-card crayons-article mb-4"
+        id="article-show-container"
+        data-article-id="1986860"
+        data-article-slug="keyboard-centric-computing-m68"
+        data-author-id="1191471"
+        data-author-name="Ilyas Filali"
+        data-author-username="nayetwolf"
+        data-co-author-ids=""
+        data-path="/nayetwolf/keyboard-centric-computing-m68"
+        data-pin-path="/stories/feed/pinned_article"
+        data-pinned-article-id=""
+        data-published="true"
+        data-scheduled="false"
+        lang=en
+         >
+        <header class="crayons-article__header" id="main-title">
+            <a class="crayons-article__cover" href="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif">
+              <img
+                src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ygx6vx1zvh092vw4pjl.gif"
+                style="aspect-ratio: auto 1000 / 420;"
+                width="1000" height="420"
+                class="crayons-article__cover__image" alt="Cover image for keyboard-centric computing.">
+            </a>
+
+          <div class="crayons-article__header__meta">
+            <div class="flex s:items-start flex-col s:flex-row">
+              <div id="action-space" class="crayons-article__actions mb-4 s:mb-0 s:order-last"></div>
+              <div class="flex flex-1 mb-5 items-start">
+                <div class="relative">
+                    <a href="/nayetwolf"><img class="radius-full align-middle" src="https://media2.dev.to/dynamic/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1191471%2F20a8a50f-d252-449e-93c9-c018e800e1a4.jpeg" width="40" height="40" alt="Ilyas Filali" /></a>
+                </div>
+                <div class="pl-3 flex-1">
+                  <a href="/nayetwolf" class="crayons-link fw-bold">Ilyas Filali</a>
+                  
+                  <p class="fs-xs color-base-60">
+                      Posted on <time datetime="2024-09-04T14:36:43Z" class="date">Sep 4, 2024</time>
+
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="multiple_reactions_engagement">
+    <span class="reaction_engagement_like hidden">
+      <img src="https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="24" height="24" />
+      <span id="reaction_engagement_like_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_unicorn hidden">
+      <img src="https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="24" height="24" />
+      <span id="reaction_engagement_unicorn_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_exploding_head hidden">
+      <img src="https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24" />
+      <span id="reaction_engagement_exploding_head_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_raised_hands hidden">
+      <img src="https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="24" height="24" />
+      <span id="reaction_engagement_raised_hands_count">&nbsp;</span>
+    </span>
+    <span class="reaction_engagement_fire hidden">
+      <img src="https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="24" height="24" />
+      <span id="reaction_engagement_fire_count">&nbsp;</span>
+    </span>
+</div>
+
+
+            <h1 class=" fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 medium">
+              keyboard-centric computing.
+            </h1>
+            
+                <div class="spec__tags flex flex-wrap">
+                    <a class="crayons-tag   " style="
+        --tag-bg: rgba(254, 255, 165, 0.10);
+        --tag-prefix: #FEFFA5;
+        --tag-bg-hover: rgba(254, 255, 165, 0.10);
+        --tag-prefix-hover: #FEFFA5;
+      " href="/t/tutorial"><span class="crayons-tag__prefix">#</span>tutorial</a>
+                    <a class="crayons-tag   " style="
+        --tag-bg: rgba(0, 153, 189, 0.10);
+        --tag-prefix: #0099bd;
+        --tag-bg-hover: rgba(0, 153, 189, 0.10);
+        --tag-prefix-hover: #0099bd;
+      " href="/t/archlinux"><span class="crayons-tag__prefix">#</span>archlinux</a>
+                    <a class="crayons-tag   " style="
+        --tag-bg: rgba(137, 6, 6, 0.10);
+        --tag-prefix: #890606;
+        --tag-bg-hover: rgba(137, 6, 6, 0.10);
+        --tag-prefix-hover: #890606;
+      " href="/t/programming"><span class="crayons-tag__prefix">#</span>programming</a>
+                    <a class="crayons-tag   " style="
+        --tag-bg: rgba(255, 102, 237, 0.10);
+        --tag-prefix: #ff66ed;
+        --tag-bg-hover: rgba(255, 102, 237, 0.10);
+        --tag-prefix-hover: #ff66ed;
+      " href="/t/learning"><span class="crayons-tag__prefix">#</span>learning</a>
+                </div>
+          </div>
+        </header>
+
+        <div class="crayons-article__main ">
+
+          <div class="crayons-article__body text-styles spec__body" data-article-id="1986860" id="article-body">
+              <h2>
+  <a name="a-guide-to-mogg-your-mousedependent-colleagues" href="#a-guide-to-mogg-your-mousedependent-colleagues">
+  </a>
+  A Guide to Mogg Your Mouse-Dependent Colleagues.
+</h2>
+
+<p>Keyboard-centric computing Or "keyboard-driven workflow" It's a way of navigating and interacting with your computer primarily or exclusively using the keyboard, which can greatly enhance productivity and reduce reliance on a mouse, therefore making you faster. When you think about opening a program or switching to a browser tab, you'll do that right away, rather than picking up your mouse, visually searching for the thing you will click like a lost grandma trying to figure out Facebook, moving your cursor on top of it and clicking.</p>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ful6gartbqkpy3g8zen7k.jpg" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ful6gartbqkpy3g8zen7k.jpg" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<h3>
+  <a name="1-ditch-the-mouse-its-a-crutch-for-the-weak" href="#1-ditch-the-mouse-its-a-crutch-for-the-weak">
+  </a>
+  <strong>1. Ditch the Mouse – It’s a Crutch for the Weak</strong>
+</h3>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fftibdc3aqxdgswp6vsy3.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fftibdc3aqxdgswp6vsy3.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>First things first, toss that mouse. Seriously, get it out of here. Nothing says, “I have no idea what I’m doing,” like flailing around with a mouse trying to close a tab. Real programmers navigate their digital domain with nothing but their keyboard, like a conductor leading a symphony—or a dictator ruling with an iron fist. Same thing, really.</p>
+
+<p><strong>How to Mogg:</strong></p>
+
+<ul>
+<li>The next time you see someone reaching for their mouse, give them a pitying look and say, “Still using training wheels, huh?” Then, open 20 tabs, close half of them, and switch between the remaining ones—all without touching a mouse. Bonus points if you do it while making eye contact.</li>
+</ul>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqlx6e7i9o46ou21gkzqw.jpeg" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqlx6e7i9o46ou21gkzqw.jpeg" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<h3>
+  <a name="2-master-the-shortcuts-because-efficiency-is-sexy" href="#2-master-the-shortcuts-because-efficiency-is-sexy">
+  </a>
+  <strong>2. Master the Shortcuts – Because Efficiency is Sexy</strong>
+</h3>
+
+<p>You know what’s sexy? Efficiency. You know what’s not? Watching some guy stumble through menus trying to find where to paste his code. Learn your keyboard shortcuts, and learn them well. It’s like having cheat codes for life, and who doesn’t love cheating? Wait, don’t answer that. The point is, shortcuts are the key to looking like you’re always in control, even when your code’s about to crash and burn.</p>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk2kr65lh1j5k7s1bg0ig.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk2kr65lh1j5k7s1bg0ig.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p><strong>Essential Shortcuts to Learn:</strong></p>
+
+<ul>
+<li>
+<strong>Ctrl + C / Ctrl + V</strong> – Yeah, yeah, you already know these, but do you know how to do it without moving your pinky? Work on that finger dexterity, champ.</li>
+<li>
+<strong>Alt + Tab</strong> – Switch between open applications faster than your manager can switch their opinion on whether or not you should use tabs or spaces.</li>
+<li><p><strong>Ctrl + Shift + T</strong> – Reopen that tab you closed when you panicked after accidentally deleting half your project. And do it like you meant to.</p></li>
+<li><p>When someone asks how you managed to refactor that code so quickly, just smirk and say, “It’s all in the fingers, pal.” Leave them guessing if you’re talking about coding or something else entirely.</p></li>
+</ul>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5l1w5mqhf8ypb58di0p3.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5l1w5mqhf8ypb58di0p3.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<h3>
+  <a name="3-learn-a-tiling-window-manager-because-real-men-dont-manually-resize-windows" href="#3-learn-a-tiling-window-manager-because-real-men-dont-manually-resize-windows">
+  </a>
+  <strong>3. Learn a Tiling Window Manager – Because Real Men Don’t Manually Resize Windows</strong>
+</h3>
+
+<p>You ever see those guys who are dragging windows around the screen, trying to get everything just right? Amateurs. Real programmers use tiling window managers that automatically arrange their workspace. i3wm, XMonad, bspwm—these are the tools of the pros. You don’t arrange windows; windows arrange themselves around you.</p>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0820o6mxcnbbsnb6po3o.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0820o6mxcnbbsnb6po3o.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p><strong>How to look the coolest, and get the girl you always wanted:</strong></p>
+
+<ul>
+<li>This is your chance Challenge your coworkers to a race. Tell them to open five programs, arrange them perfectly, and switch between them. While they’re still struggling with their mouse, you’re already halfway through your workday. When they ask how you did it, just say, “What, you don’t use a tiling window manager? What is this, 1995?”</li>
+</ul>
+
+<h3>
+  <a name="4-embrace-the-command-line-because-clicking-is-for-the-birds" href="#4-embrace-the-command-line-because-clicking-is-for-the-birds">
+  </a>
+  <strong>4. Embrace the Command Line – Because Clicking is for the Birds</strong>
+</h3>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwyin4pzr5ua4q0c6t2ic.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwyin4pzr5ua4q0c6t2ic.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>If you’re still opening files and running scripts by clicking icons, you might as well be playing Minesweeper. The command line is where the real action happens. Want to compile your code? Run tests? Launch a nuclear missile? Do it all from the terminal. (Okay, maybe not the missile part…unless you’re working on some <em>really</em> interesting projects.)</p>
+
+<h3>
+  <a name="5-use-vim-or-emacs-because-real-programmers-love-pain" href="#5-use-vim-or-emacs-because-real-programmers-love-pain">
+  </a>
+  <strong>5. Use Vim (or Emacs) – Because Real Programmers Love Pain</strong>
+</h3>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx1q450kslgs5ve56qxpt.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx1q450kslgs5ve56qxpt.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>Let’s get one thing straight: Vim is hard. It’s confusing, unintuitive, and sometimes feels like it was designed by someone who hates you. But once you master it, it’s like learning how to fight blindfolded—you’re just that much more badass. If you’re feeling particularly masochistic, go for Emacs. Either way, you’re in for a world of hurt…which is exactly why it’s so satisfying.</p>
+
+<p><strong>For when that holy moment comes:</strong></p>
+
+<ul>
+<li>When someone asks what text editor you use, scoff and say, “Vim, obviously.” If they don’t get it, just shake your head and mutter something about amateurs. Then, casually exit Vim without Googling how to do it first.</li>
+</ul>
+
+<h3>
+  <a name="6-customize-your-split-keyboard-because-youre-not-just-a-programmer-youre-an-artistein-french" href="#6-customize-your-split-keyboard-because-youre-not-just-a-programmer-youre-an-artistein-french">
+  </a>
+  <strong>6. Customize Your Split Keyboard – Because You’re Not Just a Programmer, You’re an artiste(in French)</strong>
+</h3>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxwufrly0qaoh3nlafzqv.png" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxwufrly0qaoh3nlafzqv.png" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>Look, anyone can buy a keyboard off the shelf. But a real programmer builds their own. A split keyboard isn’t just a tool—it’s an extension of your soul. Customize those keys, program macros, and make it so you can navigate your entire computer without ever lifting your hands. By the time you’re done, your keyboard should look more like the cockpit of a fighter jet than something you type emails on.</p>
+
+<p><strong>Tips:</strong></p>
+
+<ul>
+<li>When someone asks why your keyboard looks like it was made by a mad scientist, tell them, “It’s customized for efficiency. You wouldn’t understand.” Then proceed to do something insane like close 10 tabs, resize your windows, and push code to GitHub—all in 10 seconds.</li>
+</ul>
+
+<h3>
+  <a name="conclusion-the-path-to-keyboardonly-domination" href="#conclusion-the-path-to-keyboardonly-domination">
+  </a>
+  <strong>Conclusion: The Path to Keyboard-Only Domination</strong>
+</h3>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvw77ffy81xexoyvee3p4.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvw77ffy81xexoyvee3p4.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>Here’s the thing: Being a keyboard-only programmer isn’t just about looking cool (though it does make you look cool as hell). It’s about taking control of your environment and working as efficiently as possible. The less you rely on a mouse, the more you’ll be in command of your workflow. And when you’re in command, you’re the alpha—plain and simple.</p>
+
+<p>So, go ahead. Toss that mouse, learn those shortcuts, and start mogging the hell out of your colleagues. Because at the end of the day, nothing says “I’m the boss” like navigating your entire digital world with nothing but your fingers and a smirk.</p>
+
+<p><a href="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7lmkadiwv88ft27z6ejh.gif" class="article-body-image-wrapper"><img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7lmkadiwv88ft27z6ejh.gif" alt="Image description" loading="lazy" width="" height=""></a></p>
+
+<p>And hey, if anyone asks how you got so good at it, just tell them, “I’m not here to click. I’m here to code.”</p>
+
+<p>Now, go forth and conquer.</p>
+
+
+          </div>
+
+            <div class="js-billboard-container body-billboard-container" data-async-url="/nayetwolf/keyboard-centric-computing-m68/bmar11/post_body_bottom"></div>
+        </div>
+          <section id="comments" data-follow-button-container="true" data-updated-at="2025-03-17 19:55:30 UTC" class="text-padding mb-4 border-t-1 border-0 border-solid border-base-10">
+      <header class="relative flex justify-between items-center mb-6">
+        <div class="flex items-center">
+          <h2 class="crayons-subtitle-1">
+            Top comments <span class="js-comments-count" data-comments-count="0">(0)</span>
+          </h2>
+        </div>
+
+
+        <div id="comment-subscription" class="print-hidden">
+          <div class="crayons-btn-group">
+            <span class="crayons-btn crayons-btn--outlined">Subscribe</span>
+          </div>
+        </div>
+      </header>
+      <div id="billboard_delay_trigger"></div>
+      <div
+        id="comments-container"
+        data-testid="comments-container"
+        data-commentable-id="1986860"
+        data-commentable-type="Article"
+        data-has-recent-comment-activity="false">
+
+          <div id="response-templates-data" class="hidden"></div>
+
+
+<form class="comment-form print-hidden" id="new_comment" action="/comments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+
+  <input type="hidden" name="authenticity_token" value="NOTHING" id="new_comment_authenticity_token">
+
+    <input value="1986860" autocomplete="off" type="hidden" name="comment[commentable_id]" id="comment_commentable_id" />
+    <input value="Article" autocomplete="off" type="hidden" name="comment[commentable_type]" id="comment_commentable_type" />
+    
+
+  <span class="crayons-avatar m:crayons-avatar--l mr-2 shrink-0">
+    <img src="https://media2.dev.to/dynamic/image/width=256,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png" width="32" height="32" alt="pic" class="crayons-avatar__image overflow-hidden" id="comment-primary-user-profile--avatar" loading="lazy" />
+  </span>
+  <div class="comment-form__inner">
+    <div class="comment-form__field" data-tracking-name="comment_form_textfield">
+      <textarea placeholder="Add to the discussion" onfocus="handleFocus(event)" onkeyup="handleKeyUp(event)" onkeydown="handleKeyDown(event)" oninput="handleChange(event)" id="text-area" required="required" class="crayons-textfield comment-textarea crayons-textfield--ghost" aria-label="Add a comment to the discussion" name="comment[body_markdown]">
+</textarea>
+
+    </div>
+
+    <div class="response-templates-container crayons-card crayons-card--secondary p-4 mb-4 comment-form__templates fs-base hidden">
+      <header class="mb-3">
+        <button type="button" class="crayons-btn personal-template-button active" data-target-type="personal" data-form-id="new_comment">Personal</button>
+        <button type="button" class="crayons-btn moderator-template-button hidden" data-target-type="moderator" data-form-id="new_comment">Trusted User</button>
+      </header>
+
+      <div class="personal-responses-container">
+      </div>
+      <div class="moderator-responses-container hidden">
+      </div>
+
+      <a target="_blank" rel="noopener nofollow" href="/settings/response-templates">
+        Create template
+      </a>
+      <p>Templates let you quickly answer FAQs or store snippets for re-use.</p>
+    </div>
+
+    <div class="comment-form__preview text-styles text-styles--secondary" id="preview-div"></div>
+
+    <div class="comment-form__buttons mb-4">
+      <button type="submit" class="crayons-btn mr-2 js-btn-enable" onclick="validateField(event)" data-tracking-name="comment_submit_button" disabled>Submit</button>
+      <button type="button" class="preview-toggle crayons-btn crayons-btn--secondary comment-action-preview js-btn-enable mr-2" data-tracking-name="comment_preview_button" disabled>Preview</button>
+      <a href="/404.html" class="dismiss-edit-comment crayons-btn crayons-btn--ghost js-btn-dismiss hidden">Dismiss</a>
+    </div>
+  </div>
+
+  <div class="code-of-conduct" id="toggle-code-of-conduct-checkbox"></div>
+</form>
+
+
+        <div class="comments" id="comment-trees-container">
+        </div>
+      </div>
+
+      <div class="align-center">
+
+
+  <nav class="fs-s align-center block" aria-label="Conduct controls">
+  <a href="/code-of-conduct" class="crayons-link crayons-link--secondary">Code of Conduct</a>
+  <span class="opacity-25 px-2" role="presentation">&bull;</span>
+  <a href="/report-abuse" class="crayons-link crayons-link--secondary">Report abuse</a>
+</nav>
+
+</div>
+
+  </section>
+  <div id="hide-comments-modal" class="hidden">
+  <form id="hide-comments-modal__form" class="hide-comments-modal__form" data-type="json" action="/comments/hide" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="XqknweLy2aLPkESOMLVl7PL7HVe0GzhdNVEGIfAKuwbskM2uWhr0x-fN_ObJQT1w5M0AsHCQAH6ykBdxczqYTw" autocomplete="off" />
+    <div class="hide-comments-modal__content">
+      <p class="pb-2">
+        Are you sure you want to hide this comment? It will become hidden in your post, but will still be visible via the comment's <a id="hide-comments-modal__comment-permalink" href="#">permalink</a>.
+      </p>
+      <label class="crayons-field crayons-field--checkbox my-2">
+        <input name="hide_children" type="hidden" value="0" autocomplete="off" /><input class="hide_children crayons-checkbox" type="checkbox" value="1" name="hide_children" id="hide_children" />
+        <p class="crayons-field__label">Hide child comments as well</p>
+      </label>
+      <p class="pb-4 pt-2">
+        <button type="submit" class="crayons-btn">
+          Confirm
+        </button>
+      </p>
+    </div>
+</form>  <p class="fs-s color-base-60">For further actions, you may consider blocking this person and/or <a id="hide-comments-modal__report-link" href="/report-abuse">reporting abuse</a></p>
+</div>
+
+
+
+      </article>
+
+      <div class="pb-4 crayons-layout__comments-billboard">
+        <div class="js-billboard-container pb-4 crayons-layout__comments-billboard" data-async-url="/nayetwolf/keyboard-centric-computing-m68/bmar11/post_comments"></div>
+      </div>
+
+          <section class="crayons-card crayons-card--secondary text-padding mb-4 print-hidden" id="bottom-content-read-next">
+    <h2 class="crayons-subtitle-1">Read next</h2>
+      <a href="/dpc/daily-javascript-challenge-js-79-find-the-majority-element-in-an-array-1m6k" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="dpc profile image" class="crayons-avatar__image" width="100" height="100" src="https://media2.dev.to/dynamic/image/width=100,height=100,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2488802%2F41f37128-98c4-4c18-a30a-daa00225f14c.png" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">Daily JavaScript Challenge #JS-79: Find the Majority Element in an Array</h3>
+            <p class="opacity-75 pt-1">
+              DPC  - <time datetime="2025-01-21T00:00:57Z">Jan 21</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/draexx/menu-desplegable-con-icono-5fo1" data-preload-image="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3ej8uz117hi4ho8pb4vm.png" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="draexx profile image" class="crayons-avatar__image" width="100" height="100" src="https://media2.dev.to/dynamic/image/width=100,height=100,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1136219%2F12f10052-bd73-44d1-a51d-f6b904cfe3ff.jpeg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">menu desplegable con icono</h3>
+            <p class="opacity-75 pt-1">
+              Draexx - <time datetime="2024-12-18T00:30:00Z">Dec 18 &#39;24</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/pawanimadushika/database-optimization-essential-tips-and-tricks-for-developers-2e5c" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="pawanimadushika profile image" class="crayons-avatar__image" width="100" height="100" src="https://media2.dev.to/dynamic/image/width=100,height=100,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2735703%2Fc4212c79-3e5b-449e-b45c-953a51a44f5b.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">🚀 Database Optimization: Essential Tips and Tricks for Developers</h3>
+            <p class="opacity-75 pt-1">
+              Pawani Madushika - <time datetime="2025-01-20T05:15:12Z">Jan 20</time>
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="/sagar25/tdoc-2024-day-3-introduction-to-machine-learning-kdk" data-preload-image="" class="crayons-link mt-6 block">
+        <div class="flex items-center">
+          <span class="crayons-avatar crayons-avatar--xl m:crayons-avatar--2xl mr-4 shrink-0">
+              <img loading="lazy" alt="sagar25 profile image" class="crayons-avatar__image" width="100" height="100" src="https://media2.dev.to/dynamic/image/width=100,height=100,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1358036%2F857a2c40-0930-442d-8845-51a2fbbffc36.jpg" />
+          </span>
+          <div>
+            <h3 class="fs-xl mb-0 lh-tight">TDoC 2024 - Day 3: Introduction to Machine Learning</h3>
+            <p class="opacity-75 pt-1">
+              Sagar Das - <time datetime="2024-12-17T16:20:20Z">Dec 17 &#39;24</time>
+            </p>
+          </div>
+        </div>
+      </a>
+  </section>
+
+    </div>
+  </main>
+
+  <aside class="crayons-layout__sidebar-right" aria-label="Author details">
+    <div class="crayons-article-sticky grid gap-4 pb-4 break-word" id="article-show-primary-sticky-nav">
+  <div class="crayons-card crayons-card--secondary branded-7 p-4 pt-0 gap-4 grid" style="border-top-color: #6d2178;">
+    <div class="-mt-4">
+  <a href="/nayetwolf" class="flex">
+    <span class="crayons-avatar crayons-avatar--xl  mr-2 shrink-0">
+      <img src="https://media2.dev.to/dynamic/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1191471%2F20a8a50f-d252-449e-93c9-c018e800e1a4.jpeg" class="crayons-avatar__image" alt="" loading="lazy" />
+    </span>
+    <span class="crayons-link crayons-subtitle-2 mt-5">
+      Ilyas Filali
+      
+    </span>
+  </a>
+</div>
+
+<div class="print-hidden">
+  <button name="button" type="button" data-info="{&quot;className&quot;:&quot;User&quot;,&quot;style&quot;:&quot;&quot;,&quot;id&quot;:1191471,&quot;name&quot;:&quot;Ilyas Filali&quot;}" class="crayons-btn follow-action-button whitespace-nowrap w-100 follow-user" aria-label="Follow user: Ilyas Filali" aria-pressed="false">Follow</button>
+</div>
+  <div class="color-base-70">
+    .NET Csharp Dev Mainly - Cybersecurity enthusiast and a self-taught programmer | Red team |
+Sharing as learning
+  </div>
+
+  <div class="user-metadata-details">
+    <ul class="user-metadata-details-inner">
+        <li>
+          <div class="key">
+            Location
+          </div>
+          <div class="value">
+            Kalamazoo, Michigan
+          </div>
+        </li>
+      <li>
+        <div class="key">
+          Joined
+        </div>
+        <div class="value">
+          <time datetime="2023-10-22T18:08:29Z" class="date">Oct 22, 2023</time>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+      <div class="crayons-card crayons-card--secondary">
+        <header class="crayons-card__header">
+          <h3 class="crayons-subtitle-2">
+            More from <a href="/nayetwolf">Ilyas Filali</a>
+          </h3>
+        </header>
+        <div>
+            <a class="crayons-link crayons-link--contentful" href="/nayetwolf/subnetting-basics-guide-3d6m">
+              Subnetting Basics Guide
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>cybersecurity</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>network</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>beginners</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/nayetwolf/common-ports-and-protocols-2nb9">
+              Common Ports and Protocols
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>network</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>cybersecurity</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>portsandprotocols</span>
+              </div>
+            </a>
+            <a class="crayons-link crayons-link--contentful" href="/nayetwolf/how-does-https-works-35mh">
+              How Does HTTPS Works?
+              <div class="crayons-link__secondary -ml-1">
+                  <span class="mr-1"><span class="opacity-50">#</span>tutorial</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>cybersecurity</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>web3</span>
+                  <span class="mr-1"><span class="opacity-50">#</span>webdev</span>
+              </div>
+            </a>
+        </div>
+      </div>
+</div>
+
+<div class="crayons-article-sticky grid gap-4 break-word js-billboard-container" data-async-url="/nayetwolf/keyboard-centric-computing-m68/bmar11/post_sidebar"></div>
+
+  </aside>
+</div>
+
+
+<div class="mod-actions-menu print-hidden"></div>
+<div data-testid="unpublish-post-modal-container" class="unpublish-post-modal-container hidden"></div>
+
+<div class="fullscreen-code js-fullscreen-code"></div>
+<script src="https://assets.dev.to/assets/followButtons-f2455d1f50a862b83fa006b1953e3a1644598781243cae25d3e75b13c04184fd.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/billboard-f7c8c27ea139e85e7eb2a1adec43d4757a9edf002f434e8ba0eca486c39a6e60.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/localizeArticleDates-70147c5c6bfe350b42e020ebb2a3dd37419d83978982b5a67b6389119bf162ac.js" defer="defer"></script>
+<script src="https://assets.dev.to/assets/articleReactions-79a44d82fb34a91c3987c24cfd3bcf2b0d38a02730b69ae6da297387d185f015.js" defer="defer"></script>
+
+<script>
+  function activateRunkitTags() {
+  if (!areAnyRunkitTagsPresent())
+    return
+
+  var checkRunkit = setInterval(function() {
+    try {
+      dynamicallyLoadRunkitLibrary()
+
+      if (typeof(RunKit) === 'undefined') {
+        return
+      }
+
+      replaceTagContentsWithRunkitWidget()
+      clearInterval(checkRunkit);
+    } catch(e) {
+      console.error(e);
+      clearInterval(checkRunkit);
+    }
+  }, 200);
+}
+
+function isRunkitTagAlreadyActive(runkitTag) {
+  return runkitTag.querySelector("iframe") !== null;
+};
+
+function areAnyRunkitTagsPresent() {
+  var presentRunkitTags = document.getElementsByClassName("runkit-element");
+
+  return presentRunkitTags.length > 0
+}
+
+function replaceTagContentsWithRunkitWidget() {
+  var targets = document.getElementsByClassName("runkit-element");
+  for (var i = 0; i < targets.length; i++) {
+    if (isRunkitTagAlreadyActive(targets[i])) {
+      continue;
+    }
+
+    var wrapperContent = targets[i].textContent;
+    if (/^(<iframe src)/.test(wrapperContent) === false) {
+      if (targets[i].children.length > 0) {
+        var preamble = targets[i].children[0].textContent;
+        var content = targets[i].children[1].textContent;
+        targets[i].innerHTML = "";
+        var notebook = RunKit.createNotebook({
+          element: targets[i],
+          source: content,
+          preamble: preamble
+        });
+      }
+    }
+  }
+};
+
+function dynamicallyLoadRunkitLibrary() {
+  if (typeof(dynamicallyLoadScript) === "undefined")
+    return
+
+  dynamicallyLoadScript("//embed.runkit.com")
+}
+
+activateRunkitTags();
+
+</script>
+<div class="js-billboard-container pb-4 crayons-layout__comments-billboard" data-async-url="/nayetwolf/keyboard-centric-computing-m68/bmar11/post_fixed_bottom"></div>
+
+
+    <div id="runtime-banner-container"></div>
+  </div>
+</div>
+    
+
+<footer id="footer" class="crayons-footer print-hidden">
+  <div id="footer-container" class="crayons-footer__container">
+
+
+
+    <p class="fs-s crayons-footer__description">
+      <a class="c-link c-link--branded fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+    </p>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/">
+      Home
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/++">
+      DEV++
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/pod">
+      Podcasts
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/videos">
+      Videos
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/tags">
+      Tags
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/help">
+      DEV Help
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="https://shop.forem.com/">
+      Forem Shop
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/advertise">
+      Advertise on DEV
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/challenges">
+      DEV Challenges
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/showcase">
+      DEV Showcase
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/about">
+      About
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/contact">
+      Contact
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/free-postgres-database-tier">
+      Free Postgres Database
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/software-comparisons">
+      Software comparisons
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <ul class="footer__nav-links flex gap-2 justify-center flex-wrap fs-s p-0" style="" />
+        <li class="footer__nav-link flex items-center">
+    <a href="/code-of-conduct">
+      Code of Conduct
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/privacy">
+      Privacy Policy
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+  <li class="footer__nav-link flex items-center">
+    <a href="/terms">
+      Terms of use
+    </a>
+    <span class="dot ml-2"></span>
+  </li>
+
+    </ul>
+
+    <div class="fs-s">
+      <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href="https://www.forem.com">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/opensource">open source</a> software that powers <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+      <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded" href="https://dev.to/t/rails">Ruby on Rails</a>. DEV Community <span title="copyright">&copy;</span> 2016 - 2025.</p>
+    </div>
+  </div>
+</footer>
+<div id="snack-zone"></div>
+
+    <div id="global-signup-modal" class="authentication-modal hidden">
+  <div class="authentication-modal__container">
+    <figure class="authentication-modal__image-container">
+      <img class="authentication-modal__image" src="https://media2.dev.to/dynamic/image/width=190,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png"
+        alt="DEV Community" loading="lazy" />
+    </figure>
+    <div class="authentication-modal__content">
+      <p class="authentication-modal__description">
+          We&#39;re a place where coders share, stay up-to-date and grow their careers.
+      </p>
+    </div>
+    <div class="authentication-modal__actions">
+      <a href="/enter" class="crayons-btn" aria-label="Log in" data-no-instant>
+        Log in
+      </a>
+      <a href="/enter?state=new-user" class="crayons-btn crayons-btn--ghost-brand js-global-signup-modal__create-account" aria-label="Create new account" data-no-instant>
+        Create account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://assets.dev.to/assets/signupModalShortcuts-0b25469b985100a01e94cbd7fccaf7f0a4d776e129aac65c766aa32cb28ab29a.js" defer="defer"></script>
+
+    <div id="cookie-consent"></div>
+  <div id="i18n-translations" data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;,&quot;counted_organization&quot;:{&quot;one&quot;:&quot;%{count} organization&quot;,&quot;other&quot;:&quot;%{count} organizations&quot;},&quot;counted_user&quot;:{&quot;one&quot;:&quot;%{count} person&quot;,&quot;other&quot;:&quot;%{count} people&quot;},&quot;not_following&quot;:&quot;You&#39;re not following anyone&quot;,&quot;following_everyone&quot;:&quot;You&#39;re following %{details} (everyone)&quot;,&quot;you_are_following&quot;:&quot;You&#39;re following&quot;,&quot;and&quot;:&quot;and&quot;}}}"></div>
+  <div id="reaction-category-resources" class="hidden" aria-hidden="true">
+    <img data-name="Like" data-slug="like" data-position="1" src="https://assets.dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg" width="18" height="18" />
+    <img data-name="Unicorn" data-slug="unicorn" data-position="2" src="https://assets.dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg" width="18" height="18" />
+    <img data-name="Exploding Head" data-slug="exploding_head" data-position="3" src="https://assets.dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="18" height="18" />
+    <img data-name="Raised Hands" data-slug="raised_hands" data-position="4" src="https://assets.dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg" width="18" height="18" />
+    <img data-name="Fire" data-slug="fire" data-position="5" src="https://assets.dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg" width="18" height="18" />
+</div>
+
+    <script>
+  var userSignedIn = false;
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initAuth();
+  } else {
+    document.addEventListener('DOMContentLoaded', initAuth);
+  }
+
+  function initAuth() {
+    var paramToken = new URLSearchParams(window.location.search).get('jwt');
+
+    if (paramToken && !userSignedIn) {
+      authenticateUser(paramToken);
+    } else {
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = 'https://forem.com/auth_pass/iframe';
+  
+      document.body.appendChild(iframe);
+  
+      window.addEventListener('message', function(event) {
+        if (event.origin !== 'https://forem.com' && event.origin !== window.location.origin) {
+          return;
+        }
+  
+        var data = event.data;
+  
+        if (data.authenticated && !userSignedIn) {
+          authenticateUser(data.token);
+        } else if(data.authenticated && window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+          window.ReactNativeWebView.postMessage(JSON.stringify({
+            action: 'login',
+            token: data.token,
+          }));
+        }
+      });  
+    }
+
+    function authenticateUser(token) {
+      fetch('/auth_pass/token_login', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': getMetaContent('csrf-token'),
+        },
+        body: JSON.stringify({ token: token }),
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          if (document.head.querySelector('meta[name="user-signed-in"][content="false"]')) {
+            // Reload the page to update the user's state
+            location.reload();
+          }
+        }
+      })
+      .catch(function(error) {
+        console.error('Error during authentication:', error);
+      });
+    }
+
+    function getMetaContent(name) {
+      var element = document.querySelector('meta[name="' + name + '"]');
+      return element ? element.getAttribute('content') : '';
+    }
+  }
+</script>
+
+  
+  </body>
+  </html>

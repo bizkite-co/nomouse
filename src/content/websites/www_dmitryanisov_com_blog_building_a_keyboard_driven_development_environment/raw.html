@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="Dmitry Anisov" href="https://dmitryanisov.com/rss.xml"><meta name="generator" content="Astro v4.5.4"><!-- Canonical URL --><link rel="canonical" href="https://dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/"><!-- Primary Meta Tags --><title>Building a Keyboard-Driven Development Environment</title><meta name="title" content="Building a Keyboard-Driven Development Environment"><meta name="description" content="One of the single most powerful boosters for my productivity as a developer was ditching the mouse. In this article I talk about how and why a keyboard driven development approach can make you a more productive and happier developer."><meta property="article:published_time" content="2024-03-22T00:00:00.000Z"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/"><meta property="og:title" content="Building a Keyboard-Driven Development Environment"><meta property="og:description" content="One of the single most powerful boosters for my productivity as a developer was ditching the mouse. In this article I talk about how and why a keyboard driven development approach can make you a more productive and happier developer."><meta property="og:image" content="https://dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/og.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/"><meta property="twitter:title" content="Building a Keyboard-Driven Development Environment"><meta property="twitter:description" content="One of the single most powerful boosters for my productivity as a developer was ditching the mouse. In this article I talk about how and why a keyboard driven development approach can make you a more productive and happier developer."><meta property="twitter:image" content="https://dmitryanisov.com/blog/building-a-keyboard-driven-development-environment/og.png"><!-- Client side JS to detect/set theme --><script>
+    const storageKey = "theme-preference";
+
+    const onClick = () => {
+      theme.value = theme.value === "light" ? "dark" : "light";
+
+      setPreference();
+    };
+
+    const getColorPreference = () => {
+      const themeValue = localStorage.getItem(storageKey);
+      if (themeValue) {
+        return themeValue;
+      }
+
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    };
+
+    const setPreference = () => {
+      localStorage.setItem(storageKey, theme.value);
+      reflectPreference();
+    };
+
+    const theme = {
+      value: getColorPreference(),
+    };
+
+    const reflectPreference = () => {
+      document.firstElementChild?.setAttribute("class", theme.value);
+      document
+        .querySelector("#theme-toggle")
+        ?.setAttribute("aria-label", theme.value);
+    };
+
+    reflectPreference();
+
+    window.onload = () => {
+      reflectPreference();
+
+      document
+        .querySelector("#theme-toggle")
+        ?.addEventListener("click", onClick);
+    };
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", ({ matches: isDark }) => {
+        theme.value = isDark ? "dark" : "light";
+        setPreference();
+      });
+  </script><link rel="stylesheet" href="/_astro/_slug_.o-4hICW4.css" /></head><body class="min-h-screen bg-background font-sans antialiased"> <div class="flex min-h-screen flex-col"> <header class="container"> <a href="#main-content" class="absolute top-0 left-2 translate-y-[-120%] transition-transform py-2 px-6 border-none focus:translate-y-0 bg-primary text-primary-foreground">skip navigation</a> <div class="flex justify-between items-center h-20 py-6"> <div class="flex items-center gap-6 md:gap-10"> <a href="/"> <span class="font-bold">Dmitry Anisov</span> </a> <nav> <ul class="flex gap-4 md:gap-6"> <li class="text-muted-foreground hover:text-foreground transition-colors text-sm"> <a href="/"> Home </a> </li><li class="text-muted-foreground hover:text-foreground transition-colors text-sm"> <a href="/blog"> Blog </a> </li><li class="text-muted-foreground hover:text-foreground transition-colors text-sm"> <a href="https://github.com/dim-anis"> GitHub </a> </li><li class="text-muted-foreground hover:text-foreground transition-colors text-sm"> <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=anis.dim@gmail.com"> Email </a> </li> </ul> </nav> </div> <button aria-label="auto" id="theme-toggle" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-muted hover:text-accent-foreground h-9 py-2 w-9 px-0" title="Toggles light and dark mode"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="h-4 w-4">  <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path>  </svg> </button> </div> </header>  <main id="main-content" class="container flex-1 relative py-10 lg:gap-10 xl:grid xl:grid-cols-[1fr_300px]"> <article class="prose dark:prose-invert">  <h1>Building a Keyboard-Driven Development Environment</h1> <div class="italic text-sm">
+Published on <time class="text-sm text-muted-foreground" datetime="2024-03-22T00:00:00.000Z"> Mar 22, 2024 </time> </div>    <p>After switching to <a href="https://neovim.io/">Neovim</a> as my primary code editor and realizing the benefits of being able to manipulate code without ever touching the pointing device I started asking myself if the same keyboard-centric workflow can be achieved outside of the editor. Turns out it is possible and there are plenty of apps, tools and extensions built with heavy keyboard shortcut use in mind.</p>
+<p>In this article I will talk about why and how to migrate to a more keyboard centric workflow. Towards the end I’ll share a list of helpful tools that greatly enhance my productivity and, more importantly, make the process of working a lot more fun.</p>
+<h2 id="why">Why?</h2>
+<p>But why, you may ask? Why would I give up using the mouse? I love using my mouse. I love the clickety-click sounds it makes. And that’s a totally fair point. To be clear I’m not arguing that you should throw away the mouse or stop using the touchpad for good. It is the right tool for a significant number of tasks. Besides there are tons of apps that are at best inconvenient and at worst simply unusable without a pointing device (AutoCAD or Photoshop come to mind).</p>
+<p>My main argument is that you should consider a more keyboard oriented workflow because it can make all of these hours you spend in front of your computer more fulfilling and fun while at the same time improving your productivity.</p>
+<p>I write for devs primarily. If you’re not one - congratulations, looks like you might be able to keep your job a little longer until our AI overlords completely take over. All jokes aside, if you too primarily work with text you will still find most of the advice applicable. Here are some reasons to at least consider a keyboard oriented workflow.</p>
+<h3 id="state-of-flow">State of Flow</h3>
+<p>There is no better feeling than being in the flow state. One of the largest obstacles to reaching this state is losing focus. In fact being able to maintain an intense focus is the most important requirement in reaching flow, everything else stems from it.</p>
+<p>What happens when you’re in your editor and let’s say you want to go to a definition of a function. You might perform the following set of steps:</p>
+<ol>
+<li>Reach for the mouse or touchpad</li>
+<li>Navigate the cursor to the function</li>
+<li>Right click the symbol</li>
+<li>Find ‘Go to definition’</li>
+<li>Click ‘Go to definition’</li>
+</ol>
+<p>Compare this to a keyboard-first workflow:</p>
+<ol>
+<li><code>gd</code> in Neovim with telescope and you’re there (if your cursor is on the symbol)</li>
+</ol>
+<p>How many more opportunities to lose focus did you count in the former approach?</p>
+<p><video loop muted controls title="go to definition in vscode vs neovim" src="/building-a-keyboard-driven-development-environment/vscode-vs-vim-gd.mp4"></video></p>
+<blockquote>
+<p>Yes, I have explicitly written out some steps that could be counted as parts of one for a more impressive ‘wow’ effect, but still. Don’t forget you also have to navigate back to the keyboard and make sure you’ve placed your fingers on the home row, while in the latter case the fingers had to travel at most a couple of keys. And I’m not even talking about navigating back to where you started from (psst, it’s <code>Ctrl - O</code> in Vim).</p>
+</blockquote>
+<p>Having that immediate feedback just feels so good. You feel more efficient. You ARE more efficient.</p>
+<p>Every time you shift your attention from one task to another you’re hurting your focus. Moving your hand from the keyboard to the mouse creates an opportunity to hurt the flow state. Moving your fingers away from the home row and then bringing them back takes a little bit of effort. This adds up. It also breaks that feeling of having your keyboard as an extension of your hands.</p>
+<p>It’s much easier to stay completely concentrated on a task if you can feel the feedback and see the results instantaneously. Keyboard-first interface allows to minimize the time between thinking of performing an action on your computer and actually doing it.</p>
+<p>This of course is a question of practice. Someone might say that they can achieve similar results using a mouse or a touchpad as fast as you can with your shortcuts and that may be true depending on your skill level with either one, but I just have a really hard time believing that hitting a <code>Cmd - S</code> is not faster than opening a menu and clicking on ‘Save’ using a mouse given that you’re used to using shortcuts.</p>
+<h3 id="keymap-ubiquity-learning-hotkeys-might-be-easier-than-you-think">Keymap Ubiquity (Learning Hotkeys Might Be Easier Than You Think)</h3>
+<p>It’s not a coincidence that a lot of the tools use similar keymaps by default. For example you’ll find that opening and closing a tab in say VSCode or Obsidian works the same way it does in the browser. We’ll leave behind the fact that both of the previously mentioned tools are essentially browsers. It’s besides the point.</p>
+<blockquote>
+<p>Fun fact: if opening a new tab with <code>Cmd - T</code> makes sense because [T]ab, then the one used for closing a tab… well, not so much. <a href="https://superuser.com/a/721652">This stackexchange user</a> argues that <code>Cmd - W</code> comes from back in time when the concept of tabs in the browser didn’t yet exist and the hotkey meant “Close the current [W]indow”.</p>
+</blockquote>
+<p>What this means for us is that there aren’t that many keymaps to learn. A lot of them repeat between different pieces of software. It also means that thrown in an unfamiliar environment you’ll most likely be able to guess the most common hotkeys intuitively.</p>
+<p>As we saw earlier we can often use mnemonics and associate the hotkey with a verb or a noun (e.g. <code>W</code> - window, <code>T</code> - tab). It doesn’t always work, but when it does it really sticks in your memory. You may employ other associations that make sense to you.</p>
+<p>But wait there is more. If you’re using or have tried using Vim you’ll find that it’s key bindings are fairly ubiquitous and are natively supported by many applications or can be added with third party extensions (browser extensions, VSCode extensions). Same applies to other commonly used editor key bindings like Emacs.</p>
+<p>And it goes beyond just working with code in the editor. Most popular browsers will have an extension or several centered around the idea of Vim key bindings. I’m sure the same exists for Emacs and other popular tools.</p>
+<h3 id="feels-good-man">Feels Good, Man</h3>
+<p>It may be subjective but pressing a keyboard button feels much more satisfying to me compared to clicking a mouse. Besides isn’t it how they portray all of the hackers in movies? I mean the most typical movie scene showing a hacker at work is a person intensely bashing the keys of their laptop with borderline autistic levels of concentration. Now you can look like that too! If that’s what you’re after of course.</p>
+<p>It also feels liberating not being dependent on your pointing device as much. A lot of people prefer using a mouse to a trackpad and what this means is that you need one less device in your carry bag because for these few times when you must use a pointing device you can probably get away with just a touchpad.</p>
+<blockquote>
+<p>Net change in the number of devices in your backpack is zero if you (inevitably) fall into the mechanical keyboard rabbit hole.</p>
+</blockquote>
+<h2 id="how">How?</h2>
+<p>Ok, I’m sold. So how do I start using my keyboard more?</p>
+<p>As with many drastic changes to your routine I’d suggest to start small. Perhaps the app you’re using daily already has some built-in shortcuts. If yes then start by learning hotkeys for the most commonly used operations. For example if you open and close new browser tabs using a mouse try using hotkeys for that.</p>
+<blockquote>
+<p>&#x3C;Cmd - T> - to open a new tab
+&#x3C;Cmd - W> - to close a tab</p>
+</blockquote>
+<p>In general my advice would be to think of the actions you perform most often and see if there is a shortcut for that. If there isn’t a hotkey perhaps there is an extension that will allow you to map this action to a hotkey. These most common actions will give you the highest return on your investment and you’ll quickly start seeing the benefits.</p>
+<p>Stick to performing those actions only using your keyboard. Every time you reach for the mouse or the touchpad, make a mental note of it. At first your natural instinct will be to reach for the mouse, but you have to be conscious of that and choose to use the hotkey instead. With time it’ll become second nature. As a more extreme measure consider disabling the touchpad or hiding the mouse.</p>
+<p>Another piece of advice would be to try to create similar mappings across different applications if the custom key bindings are allowed. If not see if you can mentally map the available keymaps to hotkeys that you already know. The goal is to minimize the number of key combinations you have to memorize.</p>
+<p>Be prepared that your productivity will take a hit at first. It’ll take you some time to remember which hotkey you need to use for a particular action, but the more you use them the easier it gets. For that reason I wouldn’t recommend making the switch during a particularly eventful week at work or when you have responsibilities that rely on you bringing your usual level of productivity. You don’t need any extra stress on top of learning a new behavior and making new neural connections. Longer holidays are a perfect time to start the transition.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This post isn’t meant to completely denounce the use of a pointing device. There are plenty of uses for a mouse or a touchpad, but I’d also argue that a lot of the interactions are much faster, more efficient and simply more enjoyable with a keyboard instead. And sure, it takes effort to relearn the habits you’ve had for most of your life, but think of all of the benefits you may be missing out on. If any of the arguments I’ve made sound even remotely interesting, just give it a try. You can always go back. But you won’t, I promise.</p>
+<h2 id="keyboard-centric-software">Keyboard-Centric Software</h2>
+<p>A lot of the tools you’re already using have predefined shortcuts. Sometimes you can even remap them. Some tools can be extended with third party add-ons. Some tools were created with heavy keyboard users in mind in the first place.</p>
+<p>Here is a list of tools I use on a daily basis split in categories. I use these on macOS, but even if some of the tools mentioned below aren’t available for your OS, there is definitely an alternative. Yes, even on Windows.</p>
+<h3 id="text-editors-ides">Text Editors, IDEs</h3>
+<p>Some of these are ment to be used with a keyboard only. That’s how much developers like to use their keyboards. In fact that’s how many other pieces of software got their hotkeys.</p>
+<ul>
+<li><a href="https://Neovim.io/">Neovim</a>, the one and only. An immensely popular text editor developed to be used with only a keyboard.</li>
+<li><a href="https://code.visualstudio.com/">VSCode</a> has built-in hotkeys and can be extended with a Vim-like keybindings.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-Neovim">VSCode Neovim</a> is a VSCode extension that brings Vim keybinding to VSCode. The best one currently as far I know.</li>
+</ul>
+<h3 id="tiling-window-managers">Tiling Window Managers</h3>
+<p>Switch between workspaces using hotkeys, move windows across the screen and between workspaces, resize windows and automatically open them in a predefined layout all with just a few key strokes.</p>
+<ul>
+<li><a href="https://github.com/koekeishiya/yabai/blob/c5d3b271c6e122b770088adf6a1118559989f596/examples/skhdrc">yabai</a> + <a href="https://github.com/koekeishiya/skhd">skhd</a></li>
+<li><a href="https://i3wm.org/">i3 - improved tiling wm</a></li>
+</ul>
+<p>I also wrote about it in <a href="https://www.dmitryanisov.com/blog/developer-setup-on-macos/#window-management">My Developer Setup on MacOS > Window Management</a>.</p>
+<h3 id="browser-extensions">Browser Extensions</h3>
+<p>Browsers too natively support hotkeys, but there are extensions that allow you to greatly increase the amount of things you can do in the browser with just a keyboard. I’m talking about things like copying (yanking) text, clicking links and buttons, copying links in markdown format with just a couple of keys pressed and more.</p>
+<ul>
+<li><a href="https://github.com/philc/Vimium">Vimium</a> - brings vim motions to the browser</li>
+<li><a href="https://github.com/brookhong/Surfingkeys">Surfingkeys</a> - same, but a lot more extendable
+<ul>
+<li><a href="https://github.com/b0o/surfingkeys-conf">b0o/surfingkeys-conf</a> - config that you can use as an inspiration for what is possible with Surfingkeys</li>
+</ul>
+</li>
+</ul>
+<h3 id="pdf-viewers">PDF Viewers</h3>
+<p>You can view PDFs in the browser and use the previously mentioned browser extensions to interact with the built-in viewer, however I prefer using a standalone application.</p>
+<ul>
+<li><a href="https://github.com/ahrm/sioyek">sioyek</a> - a tool I’ve found while looking for a PDF viewer for reading technical literature on the laptop. I’ll usually have my terminal open next to it for taking notes and writing code. Switching between the two windows and using same keys for navigating is just amazing.</li>
+</ul>
+<h3 id="web-versions-of-the-tools-youre-already-using">Web Versions of the Tools You’re Already Using</h3>
+<p>Don’t forget that a lot of the tools you’re using as standalone apps can also be used on the web. What that means for us is that we can again use browser extensions to bring in keyboard control over the UI. It works with varying success, but it’s better than nothing.</p>
+<ul>
+<li><a href="https://web.telegram.org/">Telegram Web</a> - the UI is very rich, using it with Vim keybindings is tough</li>
+<li><a href="https://open.spotify.com/">Spotify Web</a> - better, but still too many navs and scrolling them with the keyboard is tough</li>
+</ul>
+<hr>
+<p>Please share your favorite keyboard-first applications, tools and workflows! You can reach out to me using any of the links below in the footer.</p>  </article> <div class="hidden xl:block"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="Zcpzb0" prefix="r0" component-url="/_astro/toc.BaqgUREv.js" component-export="default" renderer-url="/_astro/client.DURhWcR2.js" props="{&quot;toc&quot;:[1,[[0,{&quot;depth&quot;:[0,2],&quot;slug&quot;:[0,&quot;why&quot;],&quot;text&quot;:[0,&quot;Why?&quot;],&quot;subheadings&quot;:[1,[[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;state-of-flow&quot;],&quot;text&quot;:[0,&quot;State of Flow&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;keymap-ubiquity-learning-hotkeys-might-be-easier-than-you-think&quot;],&quot;text&quot;:[0,&quot;Keymap Ubiquity (Learning Hotkeys Might Be Easier Than You Think)&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;feels-good-man&quot;],&quot;text&quot;:[0,&quot;Feels Good, Man&quot;],&quot;subheadings&quot;:[1,[]]}]]]}],[0,{&quot;depth&quot;:[0,2],&quot;slug&quot;:[0,&quot;how&quot;],&quot;text&quot;:[0,&quot;How?&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,2],&quot;slug&quot;:[0,&quot;final-thoughts&quot;],&quot;text&quot;:[0,&quot;Final Thoughts&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,2],&quot;slug&quot;:[0,&quot;keyboard-centric-software&quot;],&quot;text&quot;:[0,&quot;Keyboard-Centric Software&quot;],&quot;subheadings&quot;:[1,[[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;text-editors-ides&quot;],&quot;text&quot;:[0,&quot;Text Editors, IDEs&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;tiling-window-managers&quot;],&quot;text&quot;:[0,&quot;Tiling Window Managers&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;browser-extensions&quot;],&quot;text&quot;:[0,&quot;Browser Extensions&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;pdf-viewers&quot;],&quot;text&quot;:[0,&quot;PDF Viewers&quot;],&quot;subheadings&quot;:[1,[]]}],[0,{&quot;depth&quot;:[0,3],&quot;slug&quot;:[0,&quot;web-versions-of-the-tools-youre-already-using&quot;],&quot;text&quot;:[0,&quot;Web Versions of the Tools You’re Already Using&quot;],&quot;subheadings&quot;:[1,[]]}]]]}]]]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:true}"></astro-island> </div> </main>  <footer> <div class="container flex flex-col items-center justify-between gap-4 py-5"> <ul class="flex gap-2"> <li> <a href="https://github.com/dim-anis" aria-label="Github" target="_blank" rel="nofollow noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="hover:text-primary">  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path> <path d="M9 18c-4.51 2-5-2-7-2"></path>  </svg> </a> </li> <li> <a href="https://www.linkedin.com/in/dmitry-anisov-4b62b872/" aria-label="LinkedIn" target="_blank" rel="nofollow noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="hover:text-primary">  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path> <rect width="4" height="12" x="2" y="9"></rect> <circle cx="4" cy="4" r="2"></circle>  </svg> </a> </li> <li> <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=anis.dim@gmail.com" aria-label="Email" target="_blank" rel="nofollow noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="hover:text-primary">  <rect width="20" height="16" x="2" y="4" rx="2"></rect> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>  </svg> </a> </li> <li> <a href="https://dmitryanisov.com/rss.xml" aria-label="RSS" target="_blank" rel="nofollow noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="hover:text-primary">  <path d="M4 11a9 9 0 0 1 9 9"></path> <path d="M4 4a16 16 0 0 1 16 16"></path> <circle cx="5" cy="19" r="1"></circle>  </svg> </a> </li> <li> <a href="https://twitter.com/DmitryAnisov" aria-label="Twitter" target="_blank" rel="nofollow noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" class="hover:text-primary">  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>  </svg> </a> </li> </ul> <p class="text-center text-sm leading-loose">
+&copy; 2024 Dmitry Anisov. All rights reserved.
+</p> </div> </footer> </div> </body></html>

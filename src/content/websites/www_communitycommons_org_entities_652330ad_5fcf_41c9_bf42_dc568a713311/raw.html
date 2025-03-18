@@ -1,0 +1,6457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Accessibility - Community Commons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+  
+    
+    <meta property="og:title" content="Accessibility" />
+    <meta property="og:description" content="Accessibility is the practice of eliminating barriers so that all people can access opportunities, services, information, physical locations, and technologies." />
+    <meta id="metaDescription" content="Accessibility is the practice of eliminating barriers so that all people can access opportunities, services, information, physical locations, and technologies." />
+    <meta id="metaOgDescription" property="og:description" content="Accessibility is the practice of eliminating barriers so that all people can access opportunities, services, information, physical locations, and technologies." />
+    
+      <meta id="metaOgImage" property="og:image" content="https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Topic-Banner_Accessibility.png" />
+    
+  
+  <!-- plugin css -->
+  <link href="/assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/app.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <link href="/assets/libs/select2/select2.min.css" rel="stylesheet">
+  <script src="/assets/js/vendor.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+  <style>
+  .btn-theme {
+    color: #fff;
+    background-color: #008EAA;
+    border-color: #008EAA;
+  }
+  </style>
+</head>
+
+
+<style>
+  /* Help Scout wraps everything in <p>...</p> */
+  #suggest > p {
+    display: inline;
+    margin: 0 0.5rem 0 0;
+  }
+</style>
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+
+    <!-- Topbar Start -->
+<div class="navbar-custom">
+  <ul class="list-unstyled topnav-menu float-right mb-0">
+
+    <li class="d-none d-sm-block">
+      <form class="app-search" action="/search" method="get">
+        <div class="app-search-box">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." name="q">
+            <div class="input-group-append">
+              <button class="btn" type="submit">
+                <i class="fe-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </li>
+    
+    <li class="dropdown notification-list">
+      <a href="/login" class="nav-link right-bar-toggle waves-effect">
+        <i class="fe-log-in noti-icon text-white"></i>
+      </a>
+    </li>
+    
+
+  </ul>
+
+  <!-- LOGO -->
+  <div class="logo-box">
+    <a href="/" class="logo text-center">
+      <span class="logo-lg">
+        <img loading="lazy" src="/assets/images/cc-logo.svg" alt="" height="35" style="padding-left: 15px;">
+        <!-- <span class="logo-lg-text-light">Xeria</span> -->
+      </span>
+      <span class="logo-sm">
+        <!-- <span class="logo-sm-text-dark">X</span> -->
+        <img loading="lazy" src="/assets/images/CCLogo_MarkOnly.png" alt="" height="35">
+      </span>
+    </a>
+  </div>
+  <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+    <li>
+      <button class="button-menu-mobile waves-effect">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </li>
+
+  </ul>
+</div>
+<!-- end Topbar -->
+
+
+    <!-- ========== Left Sidebar Start ========== -->
+<div class="left-side-menu">
+
+    <div class="slimscroll-menu">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+
+            <ul class="metismenu" id="side-menu">
+
+                <li>
+                    <a href="/">
+                        <i class="la la-home"></i>
+                        <span> Home </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/Maps-and-Data">
+                        <i class="la la-database"></i>
+                        <span> Maps &amp Data </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/collections/Priority-Populations-Channel">
+                        <i class="la la-street-view"></i>
+                        <span> Priority Populations </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/connect-and-share">
+                        <i class="la la-plus-square-o"></i>
+                        <span> Connect &amp; Share </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.communitycommons.org/collections/In-Common-Newsletter/#subscribe">
+                        <i class="la la-newspaper-o"></i>
+                        <span> Newsletter </span>
+                    </a>
+                </li>
+                <li class="menu-title mt-2">Discover</li>
+                <li>
+                    <a href="/search?q=Economy">
+                        <i class="la la-money"></i>
+                        <span> Economy </span>
+                    </a>
+                    <a href="/search?q=Education">
+                        <i class="la la-book"></i>
+                        <span> Education </span>
+                    </a>
+                    <a href="/search?q=Environment">
+                        <i class="la la-tree"></i>
+                        <span> Environment </span>
+                    </a>
+                    <a href="/search?q=Equity">
+                        <i class="la la-users"></i>
+                        <span> Equity </span>
+                    </a>
+                    <a href="/search?q=Food">
+                        <i class="la la-cutlery"></i>
+                        <span> Food </span>
+                    </a>
+                    <a href="/search?q=Health">
+                        <i class="la la-heart-o"></i>
+                        <span> Health </span>
+                    </a>
+                    <a href="/search?q=Housing">
+                        <i class="la la-home"></i>
+                        <span> Housing </span>
+                    </a>
+                    <a href="/search?q=Mental%20Health">
+                        <i class="la la-smile-o"></i>
+                        <span> Mental Health </span>
+                    </a>
+                    <a href="/search?q=Transportation">
+                        <i class="la la-car"></i>
+                        <span> Transportation </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/collections/About-Community-Commons" class="mt-3">
+                        <i class="la la-info"></i>
+                        <span> About Us </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/entities/suggest">
+                        <i class="la la-comments-o"></i>
+                        <span> Suggest a Resource </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://communitycommons.helpscoutdocs.com">
+                        <i class="la la-life-buoy"></i>
+                        <span> Help &amp Support </span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End Sidebar -->
+
+        <div class="clearfix" style="margin-bottom: 200px;"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+</div>
+<!-- Left Sidebar End -->
+
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <!-- Blue CTA box for suggesting resources. Uncomment to enable -->
+        <!-- < % if ((typeof suggestMessage !== 'undefined') && suggestMessage) { % >
+        <div id="suggest" class="alert alert-success bg-info text-white border-0 my-3 mx-2" role="alert">
+          < %- // suggestMessage % >
+<a class="btn btn-styled btn-primary btn-rounded" href="/entities/suggest"><i class="fa fa-comments"></i> Recommend it</a>
+        </div>
+        < % } % > -->
+        <!-- Start Content-->
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                  
+                    
+
+
+                  
+                </div>
+                <h1 class="page-title">Accessibility</h1>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="mb-4">
+  
+<div class="card-text" style="">
+  
+    <a href="#" data-id='652330ad-5fcf-41c9-bf42-dc568a713311' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-info" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/652330ad-5fcf-41c9-bf42-dc568a713311" data-title="Accessibility" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/652330ad-5fcf-41c9-bf42-dc568a713311">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('652330ad-5fcf-41c9-bf42-dc568a713311')" class="card-link text-custom mx-1 text-info"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-652330ad-5fcf-41c9-bf42-dc568a713311" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/652330ad-5fcf-41c9-bf42-dc568a713311&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+</div>
+<div class="row">
+  <div class="col-md-12">
+    
+<div class="outer-container" style="width: 100%; height: 500px;">
+  <div class="inner-container" style="background-image: url('https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Topic-Banner_Accessibility.png'); width: 100%; height: 500px;background-position: top;background-size: cover;">
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 my-3">
+    <p class="text-muted"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><br></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><i>Accessibility is the practice of eliminating barriers so that all people can access opportunities, services, information, physical locations, and technologies. While accessibility should prioritize improving access for people with disabilities, it can also include eliminating language, socioeconomic, geographic, cultural, and other barriers to improve access for all people.&nbsp;</i></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><br></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">More than </span><a href="https://www.cdc.gov/ncbddd/disabilityandhealth/disability.html" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">1 in 4 adults</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"> live with a disability in the U.S. </span><a href="https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">One in 5 adults</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"> experience a mental health condition each year, </span><a href="https://www.hearingloss.org/wp-content/uploads/HLAA_HearingLoss_Facts_Statistics.pdf" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">48 million people</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"> have hearing loss, </span><a href="https://nfb.org/resources/blindness-statistics" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">7.7 million people</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"> have a visual disability, and </span><a href="https://www.disabled-world.com/disability/statistics/mobility-stats.php" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">6.8 million people</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"> use mobility devices. </span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">Improving accessibility means eliminating barriers that routinely prevent these groups, and millions of others, from accessing what they need. </span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">Historically, inaccessibility has been baked into the fabric of our society through systems, spaces, technology, and culture designed by and for able-bodied people. Driven by ableism and its intersections with racism, sexism, and other forms of marginalization, inaccessibility by design permeates all aspects of life. </span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">All people are impacted by inaccessibility, but people with disabilities are most significantly impacted. Disabled people who are living in poverty, located in rural communities, LGBTQ+, Black, Indigenous, and/or of color often struggle the most to thrive due to compounding marginalizations.</span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"><br></span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">Thanks to centuries of self-advocacy and movement-building by the disabled community, accessibility has come a long way. Recently, COVID-19 magnified both the society-wide need for accessibility and the dire lack of accessibility for disabled people. </span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">While disabled and abled people alike celebrated the explosion of accessibility apps, contactless shopping, telehealth, and </span><a href="https://www.vox.com/science-and-health/22272237/flu-cases-down-historic-what-does-it-mean" style=""><span style="font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-skip-ink: none; vertical-align: baseline;">reduced flu seasons</span></a><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">, many disabled people were left out of the advances. As public transportation faltered, waiting lines lengthened, services abruptly moved online, and medical facilities shut down entire programs to make space for COVID-19 patients, large parts of the world became less accessible for many people with disabilities. Disabled people who struggle with mobility, service access, healthcare continuity, internet access, verbal phone communication, and technological skills—especially those living in rural areas—are still struggling to recover from the upheaval.</span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"><br></span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;">Improving accessibility for all people means prioritizing accessibility for people with disabilities. It means ensuring disabled people have equitable access to opportunities, services, information, places, technologies, and everything else they need to thrive. Institutionalizing and operationalizing these practices throughout all leadership levels and all sectors will require organizations, allies, and systems to deeply center and follow the leadership of disabled people, especially disabled people of color and LGBTQ+ disabled people. Allies should start by recognizing that disability is a complex, deeply-personal experience, and that implementing genuine, lasting accessibility will require many diverse disabled voices in collaborative co-leadership. Community-led processes, self-representation, and centering the voices of people with disabilities—including invisible disabilities—are a few effective tactics communities can leverage to advance accessibility.</span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"><br></span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"></span></p><p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline;"><i>See also: people with disabilities, <a href="https://www.communitycommons.org/entities/922e9d70-b239-4693-b124-4d90e8e7bfad" target="_blank">mental and behavioral health</a>, <a href="https://www.communitycommons.org/collections/What-the-Neurodiversity-Movement-Means-for-Public-Health-and-Equity" target="_blank">neurodiversity</a>, universal design, trauma-informed practices</i></span></p><p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; background-color: transparent; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><br></span></p></p>
+  </div>
+</div>
+
+
+
+
+  <div class="card">
+  <div class="card-body">
+<h3><i class="la la-file header-icon"></i> Resources &amp; Tools</h3>
+<hr/>
+<div class="card-columns">
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/PPC.png" alt="Bold letters "Priority Populations" in Community Commons colors with images of diverse people embedded in the letters." style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/172d89c1-acd5-40df-8d17-7df8a5045505" >Priority Populations Channel</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Data Bank/repository
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Community Commons
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+  
+    <span class="text-danger"><i class="fa fa-sun" style="; font-size: .75em;"></i>
+</span>  
+
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='172d89c1-acd5-40df-8d17-7df8a5045505' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/economic-development-infrastructure-community-organizing.png" alt="The Relationship Between Community Development and Health infographic" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/2a6dcb83-4090-40a1-9b4d-f5a7a4320680" >The Relationship Between Community Development and Health</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Health Impact Project
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+  
+    <span class="text-danger"><i class="fa fa-sun" style="; font-size: .75em;"></i>
+</span>  
+
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='2a6dcb83-4090-40a1-9b4d-f5a7a4320680' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/CC-Original_Neurodiversity-Movement-Public-Health-Equity.png" alt="Illustration of a brain with black and white symbols and numbers on the left, and colorful abstract paint on the right" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/f2956a8f-7d52-4eff-a001-9364227316cf" >Reframing Neurocognitive Differences: What the Neurodiversity Movement Means for Public Health and Equity</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+       <img loading="lazy" src="/assets/images/CCLogo_MarkOnly.png" style="width: 30px; display: inline;" /> Original
+       
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Community Commons
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+  
+    <span class="text-danger"><i class="fa fa-sun" style="; font-size: .75em;"></i>
+</span>  
+
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='f2956a8f-7d52-4eff-a001-9364227316cf' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Newsletter/New-Accessibility-Standards-and-Neurodiversity.png" alt="Screen shot of photo in handbook: Neurodiversity and New Accessibility Standards" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/07af942f-a06f-4801-8073-1372df4ff864" >Neurodiversity and New Accessibility Standards</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='07af942f-a06f-4801-8073-1372df4ff864' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Accessible-Health-Care.png" alt="PDF Cover: Accessible Health Care" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/09654aa5-93f5-4b30-acfd-7f8e781b6344" >Accessible Health Care</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='09654aa5-93f5-4b30-acfd-7f8e781b6344' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Increasing-the-Physical-Accessibility-of-Health-Care-Facilities.png" alt="PDF Cover: Increasing the Physical Accessibility of Health Care Facilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/09d8d662-a6ef-4a67-94b0-3ad88495565a" >Increasing the Physical Accessibility of Health Care Facilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CMS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='09d8d662-a6ef-4a67-94b0-3ad88495565a' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/WIN-with-business-humane-housing.png" alt="First page of The Role of Business in Supporting Humane Housing business brief" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/118ef3de-303d-459d-8729-fa4409f94500" >The Role of Business in Supporting Humane Housing</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Policy Brief
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by WIN Network
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='118ef3de-303d-459d-8729-fa4409f94500' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Getting-the-Care-You-Need-Guide-for-People-with-Disabilities.png" alt="PDF Cover: Getting the Care You Need: Guide for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/1c6ba2f7-2b5b-49ac-8792-bd11ac149000" >Getting the Care You Need: Guide for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CMS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='1c6ba2f7-2b5b-49ac-8792-bd11ac149000' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/best-world-map-accessibility.png" alt="Screen capture of The Best World Map for Accessibility webpage" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/230feb75-78de-40be-ae33-aea775017fbe" >The Best World Map for Accessibility</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='230feb75-78de-40be-ae33-aea775017fbe' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/us-drinking-water-quality-exposure.png" alt="First page of US Drinking Water Quality: Exposure Risk Profiles for Seven Legacy and Emerging Contaminants" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/2a154dde-c849-4485-86b7-508b78430ee1" >US Drinking Water Quality: Exposure Risk Profiles for Seven Legacy and Emerging Contaminants</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='2a154dde-c849-4485-86b7-508b78430ee1' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/physicians-attitudes-caring-people-disabilities.png" alt="First page of ‘I Am Not The Doctor For You’: Physicians’ Attitudes About Caring For People With Disabilities journal article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/2cdf2c91-572d-4778-adb6-ee92d309ac6e" >‘I Am Not The Doctor For You’: Physicians’ Attitudes About Caring For People With Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Health Affairs
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='2cdf2c91-572d-4778-adb6-ee92d309ac6e' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Disability-Competent-Care.png" alt="Screen capture of website: Disability-Competent Care" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/339ba21a-9299-4ef1-9642-d69b31c2bb71" >Disability-Competent Care</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='339ba21a-9299-4ef1-9642-d69b31c2bb71' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/understanding-impact-equitable-collaboration-between.jpg" alt="First page of Understanding the Impact of Equitable Collaborations Between Science Institutions and Community-Based Organizations: Improving Science through Community-Led Research" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/34f02608-f20f-48db-9a4f-9964c58fc70f" >Understanding the Impact of Equitable Collaborations Between Science Institutions and Community-Based Organizations: Improving Science through Community-Led Research</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='34f02608-f20f-48db-9a4f-9964c58fc70f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/covid-19-continues-highlight-gaps-accessibility.png" alt="Screen capture of Covid-19 Continues to Highlight Gaps in Accessibility for People With Disabilities articles" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/3ab6c1a8-864c-446c-bc36-78bd83a379af" >COVID-19 Continues to Highlight Gaps in Accessibility for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Blog
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Johns Hopkins University
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='3ab6c1a8-864c-446c-bc36-78bd83a379af' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/5-Actions-Nonprofits-Can-Take-to-Embrace-Disability-Rights-and-Access-min.png" alt="Screen capture of article cover photo: 5 Actions Nonprofits Can Take to Embrace Disability Rights and Access" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/3b4d0f97-437e-473d-afbb-1f311638f0f4" >5 Actions Nonprofits Can Take to Embrace Disability Rights and Access</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='3b4d0f97-437e-473d-afbb-1f311638f0f4' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/How-To-Improve-Physical-Accessibility-at-Your-Health-Care-Facility.png" alt="PDF Cover: How to Improve Physical Accessibility at your Health Care Facility" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/3d0ce20a-d8f8-416b-b897-1911719a914d" >How to Improve Physical Accessibility at your Health Care Facility</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CMS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='3d0ce20a-d8f8-416b-b897-1911719a914d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Accessibility-of-Covid-19-Information-Sharing-and-Public-Communications-for-People-with-Disabilities.png" alt="Screen capture of top of article: Accessibility of Covid-19 Information-Sharing and Public Communications for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/3dbd6fc8-983f-4f01-a182-0175d4918ede" >Accessibility of COVID-19 Information-Sharing and Public Communications for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Case Study
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='3dbd6fc8-983f-4f01-a182-0175d4918ede' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/improving-access-health-care-for.jpg" alt="Screen capture of Improving Access to Health Care for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/41b21d8b-2ef4-41c6-a609-e76e970c83dd" >Improving Access to Health Care for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='41b21d8b-2ef4-41c6-a609-e76e970c83dd' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/queer-disabled-people-like-me.png" alt="Screen capture of Queer, Disabled People Like Me Are Excluded From LGBTQ+ Spaces – It Is Dividing Our Community article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/4cdcc919-55bd-4527-9ab3-813f953f892e" >Queer, Disabled People Like Me Are Excluded From LGBTQ+ Spaces – It Is Dividing Our Community</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='4cdcc919-55bd-4527-9ab3-813f953f892e' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/Disability-Inclusion-Strategies.jpg" alt="Screen capture of cover image: Disability and Health Inclusion Strategies" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/4eaf5bb1-2d6b-4757-8dbe-a40456836570" >Disability Inclusion Strategies</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CDC
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='4eaf5bb1-2d6b-4757-8dbe-a40456836570' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Health-Care-and-the-Americans-with-Disabilities-Act.png" alt="PDF Cover: Health Care and the Americans with Disabilities Act" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/59e993e7-3aee-4968-9881-f1a247fc676d" >Health Care and the Americans With Disabilities Act</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='59e993e7-3aee-4968-9881-f1a247fc676d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/disability-justice-groups-demand-more.jpg" alt="Screen shot of Disability Justice Groups Demand More Resources in Detroit’s Budget" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/5e22dab6-b2c2-4078-9645-3080ad847f34" >Disability Justice Groups Demand More Resources in Detroit’s Budget</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='5e22dab6-b2c2-4078-9645-3080ad847f34' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/turning-wheels-build-biking-infrastructure.jpg" alt="First page of Turning the Wheels: To Build Biking Infrastructure and Access" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/603b1296-c3f1-4555-a141-c38f6ccb691f" >Turning the Wheels: To Build Biking Infrastructure and Access</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by APHA
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='603b1296-c3f1-4555-a141-c38f6ccb691f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Types-of-Accessibility-Aids.png" alt="Shutterstock image: Types of Accessibility Aids" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/69a4b2c7-593a-4c23-9bd8-3fbfdc2b2407" >Types of Accessibility Aids</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='69a4b2c7-593a-4c23-9bd8-3fbfdc2b2407' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/healthy-people-2030-people-disabilities.png" alt="Screen capture of Healthy People 2030: People With Disabilities webpage" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/6e67e77f-e539-412a-8ef6-b4915685d844" >Healthy People 2030: People With Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Assessment
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by U.S. Department of Health and Human Services
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='6e67e77f-e539-412a-8ef6-b4915685d844' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Minding-the-Gap.png" alt="Screen capture of cover photo: Minding the Access Gap: Addressing Both the Digital and Transportation Divides to Improve Outcomes" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/6f03e95f-6a1d-4db6-8e08-3f44e89988bd" >Minding The Access Gap: Addressing Both The Digital And Transportation Divides To Improve Outcomes</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Health Affairs
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='6f03e95f-6a1d-4db6-8e08-3f44e89988bd' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Accommodating-Seniors-and-People-with-Disabilities.png" alt="PDF Cover: Accommodating Seniors and People with Disabilities: Model Policies and Procedures for Primary Care Practices" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/70e97682-188d-4720-baac-f3e725af0ce0" >Accommodating Seniors and People With Disabilities: Model Policies and Procedures for Primary Care Practices</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='70e97682-188d-4720-baac-f3e725af0ce0' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Newsletter/The-John-Hopkins-Disability-Health-Research-Center-University-Disability-Inclusion-Dashboard.png" alt="Screen capture of Dashboard cover: University Disability Inclusion Dashboard" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/76ffcf9f-02dd-4fc9-aa06-41abe0a9f0ee" >University Disability Inclusion Dashboard</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Assessment
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Johns Hopkins University
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='76ffcf9f-02dd-4fc9-aa06-41abe0a9f0ee' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/9-Ways-We-Can-Make-Social-Justice-Movements-Less-Elitist-and-More-Accessible-min.png" alt="Screen capture of article photo: 9 Ways We Can Make Social Justice Movements Less Elitist and More Accessible" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7998a1fd-d14b-45da-a06b-cfdca02f803e" >9 Ways We Can Make Social Justice Movements Less Elitist and More Accessible</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7998a1fd-d14b-45da-a06b-cfdca02f803e' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Improving-Communication-Access-For-Individuals-Who-Are-Deaf-Or-Hard-Of-Hearing-min.png" alt="PDF Cover: Improving Communication Access for Individuals Who Are Deaf of Hard of Hearing" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7af3ec11-b201-4d38-9ad5-8f9967a4321a" >Improving Communication Access for Individuals Who Are Deaf or Hard of Hearing</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by OMH
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7af3ec11-b201-4d38-9ad5-8f9967a4321a' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/removing-stumbling-block.png" alt="Screen capture of Removing the Stumbling Block" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7b17b997-71cb-4609-964c-e6927315be71" >Removing the Stumbling Block</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7b17b997-71cb-4609-964c-e6927315be71' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Experiences-of-LGBTIQA-People-with-Disability-in-Healthcare-and-Community-Services-Towards-Embracing-Multiple-Identities.png" alt="PDF Cover: Experiences of LGBTIQA+ People with Disability in Healthcare and Community Services: Towards Embracing Multiple Identities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7f34b410-beff-4aee-9856-c632d3090c42" >Experiences of LGBTIQA+ People with Disability in Healthcare and Community Services: Towards Embracing Multiple Identities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7f34b410-beff-4aee-9856-c632d3090c42' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/How-Steep-Is-That-Sidewalk-min.png" alt="Screen capture of cover photo: How Steep is That Sidewalk? A Digital Map for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/8ac551fa-e15d-4610-ae21-66f1fb2fe72f" >How Steep Is That Sidewalk? A Digital Map for People With Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Yes! Magazine
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='8ac551fa-e15d-4610-ae21-66f1fb2fe72f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/included-disability-equity-podcast.png" alt="Screen capture of Included: The Disability Equity Podcast webpage" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/955d4269-4a48-470b-bc82-54aa2e822b51" >Included: The Disability Equity Podcast</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Podcast
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='955d4269-4a48-470b-bc82-54aa2e822b51' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/The-Pandemics-Silver-Linings-Moving-Toward-a-More-Inclusive-New-Normal-for-People-with-Disabilities-min.png" alt="Screen capture of article photo: The Pandemic's Silver Linings: Moving Toward a More Inclusive New Normal for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/99f6bbe0-4880-4265-8ae0-038c2ef48898" >The Pandemic’s Silver Linings: Moving Toward a More Inclusive New Normal for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Network for Public Health Law
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='99f6bbe0-4880-4265-8ae0-038c2ef48898' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Improving-Health-Care-for-Adults-with-Disabilities-An-Overview-of-Federal-Data-Sources.png" alt="PDF Cover: Improving Health Care for Adults With Disabilities: An Overview of Federal Data Sources" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/9d61a450-2bd4-47e1-840c-620badd2f77d" >Improving Health Care for Adults With Disabilities: An Overview of Federal Data Sources</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Report
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CMS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='9d61a450-2bd4-47e1-840c-620badd2f77d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/health-note-metro-dc-amendment.png" alt="First page of District of Columbia B24-0429: Metro for D.C. Amendment Act of 2021 Health Note" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/9dd1fa15-9958-4d43-86d9-60014714e263" >District of Columbia B24-0429: Metro for D.C. Amendment Act of 2021</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Report
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Health Impact Project
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='9dd1fa15-9958-4d43-86d9-60014714e263' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/disability-rights-timeline.png" alt="Screen capture of Disability Rights Timeline article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/a384f4ba-fd89-4258-833e-ab4c07833cb8" >Disability Rights Timeline</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='a384f4ba-fd89-4258-833e-ab4c07833cb8' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/The-ADA-at-30-Looking-Back-and-Ahead.png" alt="PDF Cover: The ADA at 30: Looking Back and Ahead" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/a4d55927-765c-4a34-9846-011e9c3bb996" >The ADA at 30: Looking Back and Ahead</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='a4d55927-765c-4a34-9846-011e9c3bb996' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Improving-Communication-Access-For-Individuals-Who-Are-Blind-Or-Have-Low-Vision-min.png" alt="PDF Cover: Improving Communication Access for Individuals Who are Blind or Have Low Vision" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/a55d3125-f50f-4d64-9c71-0ecfa05a04eb" >Improving Communication Access for Individuals Who are Blind or Have Low Vision</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CMS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='a55d3125-f50f-4d64-9c71-0ecfa05a04eb' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/A-Guide-to-Disability-Rights-Laws.png" alt="Screen capture of website: A Guide to Disability Rights Laws" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/b45a3c6b-a003-439c-9f54-44007b2819e0" >A Guide to Disability Rights Laws</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='b45a3c6b-a003-439c-9f54-44007b2819e0' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/water-insecurity-population-health-implications.jpg" alt="Screen grab of Water Insecurity and Population Health: Implications for Health Equity and Policy" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/b93730db-3850-4cc3-a764-c71f9ff98d83" >Water Insecurity and Population Health: Implications for Health Equity and Policy</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Policy Brief
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Health Affairs
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='b93730db-3850-4cc3-a764-c71f9ff98d83' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/involvement-criminal-justice-system-affects.png" alt="First page of How Involvement in the Criminal Justice System Affects Health" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/b96c0b1c-10ec-4268-8f7e-6566f72d0812" >How Involvement in the Criminal Justice System Affects Health</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by The Pew Charitable Trusts
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='b96c0b1c-10ec-4268-8f7e-6566f72d0812' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/COVID-19-and-Digital-Accessibility-Fact-Sheet-.png" alt="PDF Cover: Covid-19 and Digital Accessibility: The Importance of Digital Accessibility" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/bd65fea2-2ee9-4edc-9c6b-751f0f3960f0" >Covid-19 and Digital Accessibility: The Importance of Digital Accessibility</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Fact Sheet
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='bd65fea2-2ee9-4edc-9c6b-751f0f3960f0' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/DDPs-city-budget-campaign-wins.jpg" alt="Screen shot of DDP's City Budget Campaign Wins" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/c1a88b01-3e09-4e52-a6c3-341a5fe1c6e9" >DDP's City Budget Campaign Wins</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='c1a88b01-3e09-4e52-a6c3-341a5fe1c6e9' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/ADA-Requirements-Wheelchairs-Mobility-Aids.png" alt="PDF Cover: ADA Requirements: Wheelchairs, Mobility Aids,
+and Other Power-Driven Mobility Devices" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/c9a89d7f-31da-42f2-9668-164b64cd96e7" >ADA Requirements: Wheelchairs, Mobility Aids,
+and Other Power-Driven Mobility Devices</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='c9a89d7f-31da-42f2-9668-164b64cd96e7' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/United-by-Hope-Divided-by-Access-Country-Mapping-of-COVID-19-Information-Accessibility-and-Its-Consequences-on-Pandemic-Eradication.png" alt="PDF Cover: United by Hope, Divided by Access: Country Mapping of Covid-19 Information Accessibility and Its Consequences on Pandemic Eradication" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/cd32f7b8-4df6-47d4-b57b-33ba25f29dc7" >United by Hope, Divided by Access: Country Mapping of COVID-19 Information Accessibility and Its Consequences on Pandemic Eradication</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='cd32f7b8-4df6-47d4-b57b-33ba25f29dc7' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/right-community-integration-people-disabilities.png" alt="Screen capture of website logo: The Right to Community Integration for People with Disabilities Under United States and International Law" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/cef708d7-7506-4e37-9e9f-fb448587b518" >The Right to Community Integration for People with Disabilities Under United States and International Law</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Book
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='cef708d7-7506-4e37-9e9f-fb448587b518' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Disability-Justice-min.png" alt="Shutterstock image: What is Disability Justice?" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/cfdd604a-bd85-4eec-a5af-510d2028d3f7" >What is Disability Justice?</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='cfdd604a-bd85-4eec-a5af-510d2028d3f7' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Fact-Sheet-Disability-Discrimination-US-Equal-Employment-Opportunity-Commission.png" alt="PDF Cover: Fact Sheet: Disability Discrimination" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/d01d96bc-c68c-478f-942e-c95f76e951e6" >Fact Sheet: Disability Discrimination</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Policy Brief
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='d01d96bc-c68c-478f-942e-c95f76e951e6' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/art-flourishing-conversations-disability.png" alt="Screen capture of The Art of Flourishing: Conversations on Disability webpage" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/d3f7c129-6f2b-4255-9a14-a69b59c9b831" >The Art of Flourishing: Conversations on Disability</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by The Hastings Center
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='d3f7c129-6f2b-4255-9a14-a69b59c9b831' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/disability-neurodiversity-digital-technology.png" alt="Screen capture of Disability, Neurodiversity: How Can Digital Technology Become More Inclusive? article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/d8b92b05-6ace-4bce-9f5f-07740d8343ab" >Disability, Neurodiversity: How Can Digital Technology Become More Inclusive?</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Data Bank/repository
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='d8b92b05-6ace-4bce-9f5f-07740d8343ab' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/trauma-ableism-social-determinant-health.png" alt="Screen capture of Trauma and Ableism as Social Determinant of Health for People with IDD webinar" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/dfa1e6b8-822e-4073-a246-47c70253bb0f" >Trauma and Ableism as Social Determinant of Health for People with Intellectual and Developmental Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Webinar
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by YouTube
+    </h6>
+    
+
+    
+      <h6 class="text-muted">
+          Published on 03/08/2023
+      </h6>
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='dfa1e6b8-822e-4073-a246-47c70253bb0f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/despite-25-MI-residents-being.jpg" alt="Screen shot of Despite 25% of MI Residents Being Disabled, 84% of Polling Locations in Metro Detroit Are Not Accessible" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/dfc1cc6d-ab28-46ea-9bcf-d3985bfa6200" >Despite 25% of MI Residents Being Disabled, 84% of Polling Locations in Metro Detroit Are Not Accessible</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Report
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='dfc1cc6d-ab28-46ea-9bcf-d3985bfa6200' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/5-Ways-to-Include-Disability-in-Equity-Work-min.png" alt="Screen capture of article photo: 5 Ways to Include Disabiltiy in Equity Work" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/e9343e1d-1bbe-418a-9dbd-8fd6240421dc" >5 Ways to Include Disability in Equity Work</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='e9343e1d-1bbe-418a-9dbd-8fd6240421dc' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Transportation-Access-For-Everyone.png" alt="Screen capture of article cover photo: Transportation Access for Everyone Storymap" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/ee2a266d-2bca-44d4-874f-2f72b7f04e9c" >Transportation Access For Everyone Storymap</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Map
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='ee2a266d-2bca-44d4-874f-2f72b7f04e9c' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/health-note-fy-workers-compensation.jpg" alt="Screen grab of Health Note: FY 2020-21 Workers’ Compensation Budget (House Bill 80)" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/fc622c42-b5e0-4135-bc3f-8555a56ee288" >Health Note: FY 2020-21 Workers’ Compensation Budget (House Bill 80)</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Report
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Policy Matters Ohio
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='fc622c42-b5e0-4135-bc3f-8555a56ee288' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Understanding-the-Policing-Black-Disabled-Bodies-min.png" alt="Screen capture of article cover photo: Understanding the Policing of Black, Disabled Bodies" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/fcdf6401-d8f1-4dd3-94b0-f7ede03840dd" >Understanding the Policing of Black, Disabled Bodies</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Journal Article
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Center for American Progress
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='fcdf6401-d8f1-4dd3-94b0-f7ede03840dd' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/What-is-the-Difference-Between-Accessible-Useable-and-Universal-Design.png" alt="Shutterstock image: What is the Difference Between Accessible, Usable, and Universal Design?" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/fef2074a-c603-4b61-9d41-0fed5549b762" >What is the Difference Between Accessible, Usable, and Universal Design?</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Website/webpage
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='fef2074a-c603-4b61-9d41-0fed5549b762' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/ADA-Standards-Book.png" alt="PDF Cover: Guide to the ADA Accessibility Standards" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/ffc50cc5-cb57-4be5-9690-5d991abb5087" >Guide to the ADA Accessibility Standards</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Resource
+    
+     - 
+     Guide/handbook
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='ffc50cc5-cb57-4be5-9690-5d991abb5087' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Why-is-it-So-Hard-to-Find-a-Therapist-These-Barriers-Stop-Washingtonians-From-Getting-Help-min.png" alt="Screen capture of article photo: Why is it So Hard to Find a Therapist? These Barriers Stop Washingtonians From Getting Help" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/08dca9d0-582f-46c6-bdb3-6c52bb1fdec0" >Why Is It So Hard To Find a Therapist? These Barriers Stop Washingtonians From Getting Help</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by The Seattle Times
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='08dca9d0-582f-46c6-bdb3-6c52bb1fdec0' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/churches-dont-have-be-accessible.png" alt="Screen capture of Churches Don’t Have to Be Accessible. That’s Bad News for Voters. article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/1128787b-8048-4854-a88e-6cc0187fc787" >Churches Don’t Have to Be Accessible. That’s Bad News for Voters.</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Mother Jones
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='1128787b-8048-4854-a88e-6cc0187fc787' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/what-would-truly-disabled-accessible-city.png" alt="Screen capture of What Would a Truly Disabled-Accessible City Look Like? article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/127e7e42-ff12-4c32-8257-ed6e5c8579d6" >What Would a Truly Disabled-Accessible City Look Like?</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='127e7e42-ff12-4c32-8257-ed6e5c8579d6' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/CC_Banner_Originals_Traumatic-Stress-Disability-Inaccessibility.png" alt="Photo of person in a powerchair looking at a set of stairs with no ramp" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/163c41c8-5ede-4a6f-a87a-20c88cbe49c3" >Disability-Related Stress and Inaccessibility as Trauma</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+       <img loading="lazy" src="/assets/images/CCLogo_MarkOnly.png" style="width: 30px; display: inline;" /> Original
+       
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Community Commons
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='163c41c8-5ede-4a6f-a87a-20c88cbe49c3' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Covid-19-Accessibility-and-Libraries.png" alt="PDF Cover: Covid-19, Accessibility, and Libraries: A Call to Action" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/458845ac-7ae4-429b-ba6a-9c4529e48ff5" >COVID-19, Accessibility, and Libraries: A Call to Action</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='458845ac-7ae4-429b-ba6a-9c4529e48ff5' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/creating-more-accessible-inclusive-buildings.png" alt="Screen capture of Creating More Accessible, Inclusive Buildings" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/4b1acb50-74c3-4edc-a81e-26a9d396eaa6" >Creating More Accessible, Inclusive Buildings</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CityLab
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='4b1acb50-74c3-4edc-a81e-26a9d396eaa6' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/elections-have-gotten-more-accessible.png" alt="Screen capture of Elections Have Gotten More Accessible for Disabled Voters, but Gaps Remain article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/5faa52da-9188-4a82-87f0-1521a8f6a9d7" >Elections Have Gotten More Accessible for Disabled Voters, but Gaps Remain</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by NYT
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='5faa52da-9188-4a82-87f0-1521a8f6a9d7' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/autism-friendly-apartments-open-phoenix.png" alt="Screen capture of Autism-Friendly Apartments Open in Phoenix" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/5fb81e6e-6310-4c91-8a39-9999d5cdf35d" >Autism-Friendly Apartments Open in Phoenix</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by CityLab
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='5fb81e6e-6310-4c91-8a39-9999d5cdf35d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/whats-michigans-push-expand-voting.png" alt="Screen capture of What’s in Michigan’s Push To Expand Voting Rights article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/6298cc77-5ef6-460b-bdd0-193c7db77fd1" >What’s in Michigan’s Push To Expand Voting Rights</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by PBS
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='6298cc77-5ef6-460b-bdd0-193c7db77fd1' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://stories.communitycommons.org/wp-content/uploads/2016/12/apple-693995_1280.jpg" alt="" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/65011706-b5fc-4b75-ab3d-a5b4b5ed9539" >Vitamin P:  Tapping the Power of Place to Keep Us All Healthy</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Community Commons
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='65011706-b5fc-4b75-ab3d-a5b4b5ed9539' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/georgias-separate-unequal-special-education.png" alt="Screen capture of Georgia's Separate and Unequal Special-Education System" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7110b186-5e97-4c98-b2ad-8d8e0e8d43c8" >Georgia's Separate and Unequal Special-Education System</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by TNY
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7110b186-5e97-4c98-b2ad-8d8e0e8d43c8' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/how-disabled-voters-accessing-democracy.png" alt="Screen capture of How Disabled Voters Are Accessing Democracy article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/86d5007c-2a19-424a-aeba-51551cf3955f" >How Disabled Voters Are Accessing Democracy</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Written
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Yes! Magazine
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='86d5007c-2a19-424a-aeba-51551cf3955f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/disability-justice-lgbt-justice-conversation.png" alt="Screen capture of Disability Justice Is LGBT Justice: A Conversation with Movement Leaders article" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/958255fe-e810-4548-9124-11da29c2006d" >Disability Justice Is LGBT Justice: A Conversation With Movement Leaders</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Audio
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Center for American Progress
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='958255fe-e810-4548-9124-11da29c2006d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/how-does-inaccessibility-impact-health.png" alt="Screen capture of How Does Inaccessibility Impact Your Health webpage" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/aade0600-00c0-4957-a212-8a05de4613db" >018: “How Does Inaccessibility Impact Your Health?”</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Audio
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='aade0600-00c0-4957-a212-8a05de4613db' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Navigating-Health-Care-With-A-Disability-Our-Stories-a-Focus-on-People-With-Disabilities-min.png" alt="Screen capture of YouTube cover: Navigating Health Care with a Disability: Our Stories, a Focus on People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/e26791b6-ac7c-4b86-a044-64602723b150" >Navigating Health Care with a Disability: Our Stories, a Focus on People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+     Video
+     
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by YouTube
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='e26791b6-ac7c-4b86-a044-64602723b150' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://stories.communitycommons.org/wp-content/uploads/2017/09/business-2717066_1920.jpg" alt="Photo of a laptop and a notebook on a table" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/faa26490-5b6f-4772-a7eb-1da46f6ddfb5" >Data Viz: Broadband Access and Usage</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Story
+    
+     - 
+       <img loading="lazy" src="/assets/images/CCLogo_MarkOnly.png" style="width: 30px; display: inline;" /> Original
+       
+    
+    </h6>
+    
+    <h6 class="text-muted">
+        Brought to you by Community Commons
+    </h6>
+    
+
+    
+      <h6 class="text-muted">
+          Published on 09/28/2017
+      </h6>
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='faa26490-5b6f-4772-a7eb-1da46f6ddfb5' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Covid-19-Response-Accessible-Tools-and-Content.png" alt="Screen capture of article photo cover: Covid-19 Response: Digital Accessibility and Other Best Practices for Remote Work" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/300dd8c7-b042-4b11-96e8-05ba7f3a48b5" >COVID-19 Response: Digital Accessibility and Other Best Practices for Remote Work</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Toolkit/toolbox
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='300dd8c7-b042-4b11-96e8-05ba7f3a48b5' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Advocating-to-Your-School-Board.png" alt="Screen capture of toolkit image: School Board Disability Advocacy Toolkit" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/3f7c1be5-1733-4e7d-a04e-65d05c263ec2" >School Board Disability Advocacy Toolkit</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Toolkit/toolbox
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='3f7c1be5-1733-4e7d-a04e-65d05c263ec2' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/AASPIRE-Healthcare-Toolkit.png" alt="Screen capture of website: Healthcare Toolkit: Patient Centered Primary Care Tools for Autistic Adults and their Primary Care Providers" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/45f27bd7-37b2-4490-827e-6d45477d5331" >Healthcare Toolkit: Patient Centered Primary Care Tools for Autistic Adults and their Primary Care Providers</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Toolkit/toolbox
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='45f27bd7-37b2-4490-827e-6d45477d5331' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/disability-integration-toolkit.jpg" alt="Screen capture of Disability Integration Toolkit" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/5b924dcb-82f7-4e46-b119-08f28ee13a3d" >Disability Integration Toolkit</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Toolkit/toolbox
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='5b924dcb-82f7-4e46-b119-08f28ee13a3d' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Vaccine-Website-Accessibility.jpg" alt="Shutterstock image: Vaccine Website Accessbility Dashboard" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/712db450-2884-46ad-bc63-75f790073424" >Vaccine Website Accessibility Dashboard</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Data/mapping Tool
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='712db450-2884-46ad-bc63-75f790073424' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/metro-accessible.jpg" alt="Screen shot of Is the Metro Accessible?" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/73dca0ed-6bf9-4be5-8637-4e5aaca5fef8" >Is the Metro Accessible?</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Data/mapping Tool
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='73dca0ed-6bf9-4be5-8637-4e5aaca5fef8' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Improving-Access.png" alt="Screen capture article photo: Improving Access to Care for People with Disabilities" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/8fff7f40-fc5c-4c63-bfe6-5a6828142467" >Improving Access to Care for People with Disabilities</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Toolkit/toolbox
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='8fff7f40-fc5c-4c63-bfe6-5a6828142467' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/Enhancing-Care-for-People-with-Disabilities-min.png" alt="Shutterstock image: Practical Recommendations for Enhancing the Care of Patients with Disability" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/b7749230-850b-4f38-97d2-bcd06006badb" >Practical Recommendations for Enhancing the Care of Patients with Disability</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Tool
+    
+     - 
+     Workshop/training
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='b7749230-850b-4f38-97d2-bcd06006badb' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  
+</div>
+</div>
+</div>
+
+
+
+  <div class="card">
+  <div class="card-body">
+<h3><i class="la la-map header-icon"></i> Data &amp; Metrics</h3>
+<hr/>
+<div class="card-columns">
+  
+  <div class="">
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Banner_Library_Accessibility-Disability-Health-Equity.png" alt="Banner graphic reads "Accessibility & Disability Health Equity Library" in white block text with icons and images underneath representing different types of accessibility" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/56d641e3-2014-4b1c-bb9e-5917b3afd25b" >Accessibility and Disability Equity Library</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Library
+    
+    </h6>
+    
+
+    
+      <h6 class="text-muted">
+          Published on 09/01/2022
+      </h6>
+    
+
+    <div class="card-text">
+      
+  
+    <span class="text-danger"><i class="fa fa-sun" style="; font-size: .75em;"></i>
+</span>  
+
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='56d641e3-2014-4b1c-bb9e-5917b3afd25b' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  </div>
+  
+  <div class="">
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/california-department-health-care-access.jpg" alt="Screen grab of California Department of Health Care Access and Information: Inpatient Discharges" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/20a15a9f-c144-4b8c-9c50-561c41d4ea48" >California Department of Health Care Access and Information: Inpatient Discharges</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Dataset
+    
+     - 
+     Clinical Health
+     
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='20a15a9f-c144-4b8c-9c50-561c41d4ea48' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  </div>
+  
+  <div class="">
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/fixed-broadband-deployment-data.jpg" alt="Screen grab of Fixed Broadband Deployment Data" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/360394f3-11bd-4861-a756-31fbc004c3fb" >Fixed Broadband Deployment Data</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Dataset
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='360394f3-11bd-4861-a756-31fbc004c3fb' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  </div>
+  
+  <div class="">
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/national-survey-childrens-health.jpg" alt="Screen grab of The National Survey of Children's Health" style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/7d844101-2eeb-4e8b-89c8-e302c957519f" >The National Survey of Children's Health</a>
+      
+    </h5>
+    <h6 class="card-subtitle">Dataset
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='7d844101-2eeb-4e8b-89c8-e302c957519f' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  </div>
+  
+  <div class="">
+    
+<div class="card" style="border: 1px solid #ccc; border-radius: 5px;">
+  
+  
+  
+    <div class="text-center">
+    <div style="max-height: 150px; overflow: hidden;">
+    <img loading="lazy" class="img-fluid" src="https://communitycommons.s3.amazonaws.com/images/civil-rights-data-collection.jpg" alt="Screen grab of Civil Rights Data Collection " style="margin: 0 auto;">
+    </div>
+    </div>
+  
+  <div class="card-body">
+    <h5 class="card-title">
+      
+      <a href="/entities/c2e9a4a5-23eb-4d59-87c9-70e9feb31043" >Civil Rights Data Collection </a>
+      
+    </h5>
+    <h6 class="card-subtitle">Dataset
+    
+    </h6>
+    
+
+    
+
+    <div class="card-text">
+      
+
+    </div>
+  </div>
+
+  
+
+    
+    <div class="card-body p-1 px-3" style="border-top: 1px solid rgba(0,0,0,.125);">
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='c2e9a4a5-23eb-4d59-87c9-70e9feb31043' class="add-favorite-link card-link text-custom text-info mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  
+</div>
+
+
+
+
+    </div>
+    
+
+  
+  
+</div>
+
+  </div>
+  
+</div>
+</div>
+</div>
+
+
+
+
+  <div class="card">
+  <div class="card-body">
+<h3><i class="la la-lightbulb-o header-icon"></i> &nbsp;Related Topics </h3>
+<hr/>
+<div class="card-columns">
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Topic-Banner_People-with-Disabilities.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/2874f239-b508-48b8-b882-c409a47afcf5">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">People with Disabilities</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='2874f239-b508-48b8-b882-c409a47afcf5' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/2874f239-b508-48b8-b882-c409a47afcf5" data-title="People with Disabilities" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/2874f239-b508-48b8-b882-c409a47afcf5">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('2874f239-b508-48b8-b882-c409a47afcf5')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-2874f239-b508-48b8-b882-c409a47afcf5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/2874f239-b508-48b8-b882-c409a47afcf5&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC_Colored-Banners_Topics-Mental-Behavioral.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/922e9d70-b239-4693-b124-4d90e8e7bfad">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Mental and Behavioral Health</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='922e9d70-b239-4693-b124-4d90e8e7bfad' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/922e9d70-b239-4693-b124-4d90e8e7bfad" data-title="Mental and Behavioral Health" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/922e9d70-b239-4693-b124-4d90e8e7bfad">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('922e9d70-b239-4693-b124-4d90e8e7bfad')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-922e9d70-b239-4693-b124-4d90e8e7bfad" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/922e9d70-b239-4693-b124-4d90e8e7bfad&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/CC_Topic_Autism.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/c4b116ec-42b2-4d75-8ac2-485d503818b6">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Autism</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='c4b116ec-42b2-4d75-8ac2-485d503818b6' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/c4b116ec-42b2-4d75-8ac2-485d503818b6" data-title="Autism" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/c4b116ec-42b2-4d75-8ac2-485d503818b6">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('c4b116ec-42b2-4d75-8ac2-485d503818b6')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-c4b116ec-42b2-4d75-8ac2-485d503818b6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/c4b116ec-42b2-4d75-8ac2-485d503818b6&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Banner_Topics-Libraries_Veterans.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/e891873d-abee-4095-a02a-99a8f7805229">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Veterans</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='e891873d-abee-4095-a02a-99a8f7805229' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/e891873d-abee-4095-a02a-99a8f7805229" data-title="Veterans" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/e891873d-abee-4095-a02a-99a8f7805229">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('e891873d-abee-4095-a02a-99a8f7805229')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-e891873d-abee-4095-a02a-99a8f7805229" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/e891873d-abee-4095-a02a-99a8f7805229&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC_Colored-Banners_Topics-transportation.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/008f818d-dc51-4be9-af60-50a3279771fe">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Transportation</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='008f818d-dc51-4be9-af60-50a3279771fe' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/008f818d-dc51-4be9-af60-50a3279771fe" data-title="Transportation" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/008f818d-dc51-4be9-af60-50a3279771fe">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('008f818d-dc51-4be9-af60-50a3279771fe')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-008f818d-dc51-4be9-af60-50a3279771fe" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/008f818d-dc51-4be9-af60-50a3279771fe&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/universal-design.jpg" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/4dae4ee8-0eef-4b8a-9107-4815fccf09ef">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Universal Design</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='4dae4ee8-0eef-4b8a-9107-4815fccf09ef' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/4dae4ee8-0eef-4b8a-9107-4815fccf09ef" data-title="Universal Design" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/4dae4ee8-0eef-4b8a-9107-4815fccf09ef">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('4dae4ee8-0eef-4b8a-9107-4815fccf09ef')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-4dae4ee8-0eef-4b8a-9107-4815fccf09ef" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/4dae4ee8-0eef-4b8a-9107-4815fccf09ef&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Topic-Pages/CC_Topic-Banner_Older-Adults.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/68be1cfd-02ce-4d96-9b60-46853511bb09">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Older Adults</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='68be1cfd-02ce-4d96-9b60-46853511bb09' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/68be1cfd-02ce-4d96-9b60-46853511bb09" data-title="Older Adults" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/68be1cfd-02ce-4d96-9b60-46853511bb09">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('68be1cfd-02ce-4d96-9b60-46853511bb09')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-68be1cfd-02ce-4d96-9b60-46853511bb09" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/68be1cfd-02ce-4d96-9b60-46853511bb09&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+    <div class="card card-inverse text-white">
+  
+    
+    <img loading="lazy" class="card-img img-fluid" src="https://communitycommons.s3.amazonaws.com/images/CC-Images-Original-Stories/CC_TopicPages_HealthEquity.png" alt="Card image">
+    
+    <div class="card-img-overlay p-0">
+      <a href="/entities/c6fb267e-cb18-4b9e-8e55-8490c3ad82b2">
+
+      <h5 class="card-title text-white p-3" style="background: rgba(0,0,0,0.5);">Health Equity</h5>
+      <p class="card-text"></p>
+      
+
+      <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); width: 100%;" class="text-center p-1">
+      
+      
+<div class="card-text" style="">
+  
+    <a href="#" data-id='c6fb267e-cb18-4b9e-8e55-8490c3ad82b2' class="add-favorite-link card-link text-custom text-secondary mx-1"><i class="la la-heart-o"></i></a>
+  
+
+  
+  <div class="dropdown mx-1" style="display: inline-block;">
+    <a class="dropdown-toggle card-link text-custom text-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="la la-share"></i>
+    </a>
+    <div class="dropdown-menu share-btn" aria-labelledby="dropdownMenuButton" data-url="http://www.communitycommons.org/entities/c6fb267e-cb18-4b9e-8e55-8490c3ad82b2" data-title="Health Equity" data-desc="See this card on Community Commons http://www.communitycommons.org/entities/c6fb267e-cb18-4b9e-8e55-8490c3ad82b2">
+      <a class="btn-facebook dropdown-item" data-id="fb" style="font-size: 20px;"><i class="la la-facebook"></i> Facebook</a>
+      <a class="btn-twitter dropdown-item" data-id="tw" style="font-size: 20px;"><i class="la la-twitter"></i> Twitter</a>
+      <a class="btn-linkedin dropdown-item" data-id="in" style="font-size: 20px;"><i class="la la-linkedin"></i> LinkedIn</a>
+      <a class="btn-mail dropdown-item" data-id="mail" style="font-size: 20px;"><i class="la la-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="javascript: embedCard('c6fb267e-cb18-4b9e-8e55-8490c3ad82b2')" class="card-link text-custom mx-1 text-secondary"><i class="la la-code"></i></a>
+  
+</div>
+
+
+<div class="modal fade bs-example-modal-lg show" id="card-embed-modal-c6fb267e-cb18-4b9e-8e55-8490c3ad82b2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-modal="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myLargeModalLabel">Embed Card</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="la la-times"></i></button>
+      </div>
+      <div class="modal-body">
+        You can use the following link to embed this card into another website.
+        <br />
+        <textarea editable="false" class="form-control">&lt;iframe src=&quot;//www.communitycommons.org/embed/card/c6fb267e-cb18-4b9e-8e55-8490c3ad82b2&quot; scrolling=&quot;no&quot; style=&quot;border: none; width: 300px; height: 410px;&quot;&gt;&lt;/iframe&gt;
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </a>
+
+    </div>
+</div>
+
+  
+</div>
+</div>
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://communitycommons.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div> <!-- container -->
+
+
+      </div> <!-- content -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+  </div>
+  <!-- END wrapper -->
+
+  
+
+  
+<!-- Footer Start -->
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <p>Questions? Reach out:</p>
+        <ul class="footer__social">
+          <li>
+            <a href="/cdn-cgi/l/email-protection#d5bcbbb3ba95b6bab8b8a0bbbca1acb6bab8b8babba6fbbaa7b2">
+              <img loading="lazy" src="/assets/images/social/mail.svg" width="18" height="18" alt="email icon" />
+              <span class="__cf_email__" data-cfemail="e1888f878ea1828e8c8c948f889598828e8c8c8e8f92cf8e9386">[email&#160;protected]</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/CommunityCommon" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" src="/assets/images/social/twitter.svg" width="18" height="18" alt="Twitter logo" />
+              @CommunityCommon
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/CommunityCommons" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" src="/assets/images/social/facebook.svg" width="18" height="18" alt="Facebook logo" />
+              @CommunityCommons
+            </a>
+          </li>
+        </ul>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.instagram.com/community_commons/" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" src="/assets/images/social/instagram.svg" width="18" height="18" alt="Instagram logo" />
+              @community_commons
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/communitycommons" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" src="/assets/images/social/linkedin.svg" width="18" height="18" alt="LinkedIn logo" />
+              Community Commons
+            </a>
+          </li>
+        </ul>
+        <p>Learn about the hearts and minds behind Community Commons</p>
+        <p><a href="//www.i-p3.org">Institute for People, Place and Possibility</a></p>
+      </div>
+      <div class="offset-2 col-md-3 hubspot-form">
+        <h3>Sign up for our newsletter</h3>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          const id = setInterval(function() {
+            if (typeof hbspt !== 'undefined') {
+              // Unstyled form
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "3077813",
+                formId: "6c168482-ea00-4f0f-bd25-098ef47b7966"
+              });
+              // Styled form
+              // hbspt.forms.create({
+              //   region: "na1",
+              //   portalId: "3077813",
+              //   formId: "6c168482-ea00-4f0f-bd25-098ef47b7966"
+              // });
+              clearInterval(id);
+            }
+          }, 1000);
+        </script>
+        <!-- <a href="https://lp.constantcontactpages.com/su/Z1Qe3iD" target="_blank" rel="noopener"><p text='h4'>Sign up for our newsletter</p></a> -->
+        <div class="text-md-right footer-links d-none d-sm-block">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end Footer -->
+
+
+  <!-- Vendor js -->
+
+<!-- Third Party js-->
+<script src="/assets/libs/peity/jquery.peity.min.js"></script>
+<script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="/assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/assets/libs/jquery-vectormap/jquery-jvectormap-us-merc-en.js"></script>
+
+<!-- Dashboard init -->
+<script src="/assets/js/pages/dashboard-1.init.js"></script>
+
+<!-- App js -->
+     
+       
+     <script src="/assets/clientjs/embed.js"></script>
+       
+     <script src="/assets/clientjs/favorites.js"></script>
+       
+     
+
+<script src="/assets/libs/jquery-countdown/jquery.countdown.min.js"></script>
+<script src="/assets/libs/jquery-knob/jquery.knob.min.js"></script>
+<!-- <script src="/assets/libs/peity/jquery.peity.min.js"></script> -->
+<script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="/assets/libs/datatables/jquery.dataTables.min.js"></script>
+<script src="/assets/libs/datatables/dataTables.bootstrap4.js"></script>
+<script src="/assets/libs/datatables/dataTables.responsive.min.js"></script>
+<script src="/assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+<script src="/assets/libs/select2/select2.min.js"></script>
+<script src="/assets/js/app.min.js"></script>
+
+ <script src="/assets/js/pages/dashboard-2.init.js"></script>
+ <script src="/assets/js/pages/coming-soon.init.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-22609831-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-22609831-1');
+</script>
+<script src="/assets/share-buttons/dist/share-buttons.js"></script>
+<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">window.Beacon('init', '8897dd46-a869-4413-a6e7-892574f33107')</script>
+<!-- Fathom Analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="VXHMPNMU" defer></script>
+<!-- Temporary SurveyMonkey CC Survey -->
+<script>(function(t,e,s,o){var n,a,c;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),a=n[n.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=o,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd25CqPug1DQUJJt_2Bv2LouJIqXdPYtkQRnsCp9IYpncv_2B.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
+
+  <div class="modal fade favoritesModal" tabindex="-1" role="dialog" aria-labelledby="myCenterModalLabel" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myCenterModalLabel"><i class="fa fa-heart"></i> Added!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <p>Item has been added to your favorites!</p>
+        <a href="/user/favorites" class="btn btn-primary">View Your Favorites</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+</body>
+
+</html>

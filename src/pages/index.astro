@@ -12,7 +12,17 @@ import { getCollection } from "astro:content";
 import WebsiteItem from "../components/WebsiteItem.astro";
 import { ModeToggle } from "../components/ModeToggle.tsx";
 
-const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md'));
+const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));
+const websiteData = websites.map(website => {
+    const slug = website.id.replace('/index.md', '');
+    return {
+        title: website.data.title,
+        description: website.data.description,
+        url: website.data.url,
+        favicon: website.data.favicon,
+        slug: slug
+    }
+});
 ---
 
 <Layout title="No Mouse">
@@ -49,7 +59,7 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
           "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
         )}
       >
-        {websites.map((website) => <WebsiteItem website={website} />)}
+        {websiteData.map((website) => <WebsiteItem {...website} />)}
       </div>
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
