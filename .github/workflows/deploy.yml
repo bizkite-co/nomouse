@@ -5,10 +5,12 @@ on:
     branches:
       - master
       - main
+      - nomouse
   pull_request:
     branches:
       - master
       - main
+      - nomouse
 
 permissions:
   contents: read
