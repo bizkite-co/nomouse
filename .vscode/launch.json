@@ -23,6 +23,13 @@
       "runtimeArgs": [
           "tsx"
       ]
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Debug Vitest Tests",
+      "command": "npx vitest run --inspect-brk --no-file-parallelism",
+      "console": "integratedTerminal"
     }
   ],
   "inputs": [
