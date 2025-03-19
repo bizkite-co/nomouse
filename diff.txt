@@ -41,7 +41,7 @@ index fdaf393..235b7ac 100644
 +        <div class="col-span-2 flex flex-1 flex-col">
 +          <h1 class="mb-6 text-4xl leading-tight">
 +            <strong>Up to date</strong><br />
-+            <span class="font-light">No Mouse UIs</span>
++            <span class="font-light">Text Nav UIs</span>
 +          </h1>
 +          <Search client:load className="w-full" />
          </div>
@@ -112,7 +112,7 @@ index fdaf393..235b7ac 100644
 +                </svg>
 +              </Button>
 +            </a>
-+            <a href="https://x.com/nomouse" target="_blank">
++            <a href="https://x.com/textnav" target="_blank">
 +              <Button variant="ghost" size="icon">
 +                <svg
 +                  role="img"
@@ -127,7 +127,7 @@ index fdaf393..235b7ac 100644
 +                </svg>
 +              </Button>
 +            </a>
-+            <a href="https://buymeacoffee.com/nomouse" target="_blank">
++            <a href="https://buymeacoffee.com/textnav" target="_blank">
 +              <Button variant="ghost" size="icon">
 +                <svg
 +                  role="img"

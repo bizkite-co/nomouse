@@ -2,13 +2,13 @@ Debugger listening on ws://127.0.0.1:53312/4ba40478-aec7-40cd-9adb-27dc307ba103
 For help, see: https://nodejs.org/en/docs/inspector
 Debugger attached.
 Waiting for the debugger to disconnect...
-file:///home/mstouffer/repos/nomouse/src/enrich.js:38
+file:///home/mstouffer/repos/textnav/src/enrich.js:38
 Object.defineProperty(exports, "__esModule", { value: true });
                       ^
 
 ReferenceError: exports is not defined in ES module scope
-This file is being treated as an ES module because it has a '.js' file extension and '/home/mstouffer/repos/nomouse/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
-    at file:///home/mstouffer/repos/nomouse/src/enrich.js:38:23
+This file is being treated as an ES module because it has a '.js' file extension and '/home/mstouffer/repos/textnav/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///home/mstouffer/repos/textnav/src/enrich.js:38:23
     at ModuleJob.run (node:internal/modules/esm/module_job:234:25)
     at async ModuleLoader.import (node:internal/modules/esm/loader:473:24)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:122:5)

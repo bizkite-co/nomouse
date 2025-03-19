@@ -51,7 +51,7 @@ Look in 'package.json' (see below for file content) for Vitest scripts you can u
 
 <file_content path="package.json">
  1 | {
- 2 |   "name": "nomouse",
+ 2 |   "name": "textnav",
  3 |   "type": "module",
  4 |   "version": "0.0.1",
  5 |   "scripts": {
@@ -127,7 +127,7 @@ plan.md,src/lib/__tests__/utils.test.ts
 <name>Code</name>
 
 
-# Current Working Directory (/home/mstouffer/repos/nomouse) Files
+# Current Working Directory (/home/mstouffer/repos/textnav) Files
 .clinerules
 .envrc
 .gitignore
@@ -321,14 +321,14 @@ Finally, I'll use `attempt_completion` to report that the tests have been run, a
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -340,14 +340,14 @@ Output:
 stderr | src/lib/__tests__/utils.test.ts > createRawMarkdown > should handle empty input
 Error processing : Error: ENOENT: no such file or directory, open '/raw.html'
     at Object.readFileSync (node:fs:448:20)
-    at createRawMarkdown (/home/mstouffer/repos/nomouse/src/lib/utils.js:34:30)
-    at /home/mstouffer/repos/nomouse/src/lib/__tests__/utils.test.ts:6:12
-    at file:///home/mstouffer/repos/nomouse/node_modules/@vitest/runner/dist/index.js:174:14
-    at file:///home/mstouffer/repos/nomouse/node_modules/@vitest/runner/dist/index.js:563:28
-    at file:///home/mstouffer/repos/nomouse/node_modules/@vitest/runner/dist/index.js:61:24
+    at createRawMarkdown (/home/mstouffer/repos/textnav/src/lib/utils.js:34:30)
+    at /home/mstouffer/repos/textnav/src/lib/__tests__/utils.test.ts:6:12
+    at file:///home/mstouffer/repos/textnav/node_modules/@vitest/runner/dist/index.js:174:14
+    at file:///home/mstouffer/repos/textnav/node_modules/@vitest/runner/dist/index.js:563:28
+    at file:///home/mstouffer/repos/textnav/node_modules/@vitest/runner/dist/index.js:61:24
     at new Promise (<anonymous>)
-    at runWithTimeout (file:///home/mstouffer/repos/nomouse/node_modules/@vitest/runner/dist/index.js:41:12)
-    at runTest (file:///home/mstouffer/repos/nomouse/node_modules/@vitest/runner/dist/index.js:1149:17)
+    at runWithTimeout (file:///home/mstouffer/repos/textnav/node_modules/@vitest/runner/dist/index.js:41:12)
+    at runTest (file:///home/mstouffer/repos/textnav/node_modules/@vitest/runner/dist/index.js:1149:17)
     at processTicksAndRejections (node:internal/process/task_queues:95:5) {
   errno: -2,
   code: 'ENOENT',
@@ -701,14 +701,14 @@ I've corrected `src/lib/utils.js`. Now I need to run the tests again to confirm 
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -880,14 +880,14 @@ I've fixed the `turndown_1.default` issue in `src/lib/utils.js`. Now I'll run th
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 0
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 0
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -1140,14 +1140,14 @@ I've added the new test cases to `src/lib/__tests__/utils.test.ts`. Now I'll run
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -1432,14 +1432,14 @@ I've added the `emphasis: '*'` option to the `TurndownService` constructor in `s
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -1816,14 +1816,14 @@ I've added the `addRule` call to force emphasis with asterisks. Now I'll rerun t
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -2113,14 +2113,14 @@ I've updated the expected Markdown for the "complex HTML" test. Now I'll rerun t
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -2404,14 +2404,14 @@ I've added a newline before the image tag in the expected Markdown for the "basi
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -2674,14 +2674,14 @@ I've added `.trim()` to both the expected and actual Markdown strings in all the
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -2954,14 +2954,14 @@ I've added the debugging code to compare lengths and characters. Now I'll rerun 
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -3218,14 +3218,14 @@ I've added the final newline to the expected Markdown and removed the debugging 
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -3489,14 +3489,14 @@ I've changed `toBe` to `toEqual`. Now I'll rerun the tests.
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -3867,14 +3867,14 @@ I've removed the `alt` attribute and reverted the extra newline. Now I'll rerun 
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -4244,14 +4244,14 @@ I've put the `alt` attribute back in the input HTML and added a newline. Now I'l
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -4686,14 +4686,14 @@ I've added the new test cases. Now I'll run the tests again.
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -5575,14 +5575,14 @@ I've updated the expected Markdown for the strikethrough test. Now I'll rerun th
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -5962,14 +5962,14 @@ I've changed `toBe` to `toEqual` and added `.trim()` for the "GitHub Flavored Ma
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -6286,23 +6286,23 @@ I need to figure out *why* the changes aren't being reflected in the compiled co
 **User:**
 
 [execute_command for 'npm run build'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 build
+> textnav@0.0.1 build
 > astro build
 
 12:42:34 [vite] Re-optimizing dependencies because lockfile has changed
 12:42:34 [content] Syncing content
 can not read a block mapping entry; a multiline key may not be an implicit key
   Location:
-    /home/mstouffer/repos/nomouse/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3
+    /home/mstouffer/repos/textnav/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3
   Stack trace:
-    at generateError (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
-    at readBlockMapping (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2235:9)
-    at readDocument (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
-    at load$1 (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
-    at safeParseFrontmatter (file:///home/mstouffer/repos/nomouse/node_modules/astro/dist/content/utils.js:330:12)
+    at generateError (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
+    at readBlockMapping (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2235:9)
+    at readDocument (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
+    at load$1 (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
+    at safeParseFrontmatter (file:///home/mstouffer/repos/textnav/node_modules/astro/dist/content/utils.js:330:12)
 ⠙Error on line 19
 
 <environment_details>
@@ -6329,7 +6329,7 @@ plan.md,src/lib/utils.js,src/lib/utils.ts,src/lib/__tests__/utils.test.ts,src/co
 
 ```typescript
 <thinking>
-The `npm run build` command failed with a YAML parsing error in `/home/mstouffer/repos/nomouse/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md`. The error message is: `can not read a block mapping entry; a multiline key may not be an implicit key`. This suggests a problem with the frontmatter in that Markdown file.
+The `npm run build` command failed with a YAML parsing error in `/home/mstouffer/repos/textnav/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md`. The error message is: `can not read a block mapping entry; a multiline key may not be an implicit key`. This suggests a problem with the frontmatter in that Markdown file.
 
 I need to examine the `index.md` file to fix the YAML error.
 </thinking>
@@ -6445,10 +6445,10 @@ I've fixed the typo in `index.md`. Now I'll try running `npm run build` again.
 **User:**
 
 [execute_command for 'npm run build'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 build
+> textnav@0.0.1 build
 > astro build
 
 12:43:39 [content] Syncing content
@@ -6464,10 +6464,10 @@ lastReviewAt: Did not match union.
   Error reference:
     https://docs.astro.build/en/reference/errors/invalid-content-entry-data-error/
   Location:
-    /home/mstouffer/repos/nomouse/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/raw.md:0:0
+    /home/mstouffer/repos/textnav/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/raw.md:0:0
   Stack trace:
-    at getEntryDataAndImages (file:///home/mstouffer/repos/nomouse/node_modules/astro/dist/content/utils.js:151:26)
-    at async syncData (file:///home/mstouffer/repos/nomouse/node_modules/astro/dist/content/loaders/glob.js:94:28)
+    at getEntryDataAndImages (file:///home/mstouffer/repos/textnav/node_modules/astro/dist/content/utils.js:151:26)
+    at async syncData (file:///home/mstouffer/repos/textnav/node_modules/astro/dist/content/loaders/glob.js:94:28)
 ⠙Error on line 20
 
 <environment_details>
@@ -6781,7 +6781,7 @@ I'm in "Code" mode. I'll rename `raw.md` to `_raw.md` and then run `npm run buil
 **User:**
 
 [execute_command for 'mv src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/raw.md src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/_raw.md'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 0
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 0
 Output:
 
 <environment_details>
@@ -6820,10 +6820,10 @@ I've renamed the file. Now I'll run `npm run build`.
 **User:**
 
 [execute_command for 'npm run build'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 build
+> textnav@0.0.1 build
 > astro build
 
 13:04:21 [content] Syncing content
@@ -6831,21 +6831,21 @@ Output:
 13:04:21 [types] Generated 800ms
 13:04:21 [build] output: "static"
 13:04:21 [build] mode: "static"
-13:04:21 [build] directory: /home/mstouffer/repos/nomouse/dist/
+13:04:21 [build] directory: /home/mstouffer/repos/textnav/dist/
 13:04:21 [build] Collecting build info...
 13:04:21 [build] ✓ Completed in 998ms.
 13:04:21 [build] Building static entrypoints...
 13:04:22 [ERROR] [vite] ✗ Build failed in 945ms
-[vite]: Rollup failed to resolve import "@/components/Search" from "/home/mstouffer/repos/nomouse/src/pages/index.astro".
+[vite]: Rollup failed to resolve import "@/components/Search" from "/home/mstouffer/repos/textnav/src/pages/index.astro".
 This is most likely unintended because it can break your application at runtime.
 If you do want to externalize this module explicitly add it to
 `build.rollupOptions.external`
   Stack trace:
-    at viteLog (file:///home/mstouffer/repos/nomouse/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:51583:15)
-    at onwarn (file:///home/mstouffer/repos/nomouse/node_modules/@vitejs/plugin-react/dist/index.mjs:282:9)
-    at onRollupLog (file:///home/mstouffer/repos/nomouse/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:51631:5)
-    at file:///home/mstouffer/repos/nomouse/node_modules/rollup/dist/es/shared/node-entry.js:20496:32
-    at ModuleLoader.handleInvalidResolvedId (file:///home/mstouffer/repos/nomouse/node_modules/rollup/dist/es/shared/node-entry.js:21122:26)
+    at viteLog (file:///home/mstouffer/repos/textnav/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:51583:15)
+    at onwarn (file:///home/mstouffer/repos/textnav/node_modules/@vitejs/plugin-react/dist/index.mjs:282:9)
+    at onRollupLog (file:///home/mstouffer/repos/textnav/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:51631:5)
+    at file:///home/mstouffer/repos/textnav/node_modules/rollup/dist/es/shared/node-entry.js:20496:32
+    at ModuleLoader.handleInvalidResolvedId (file:///home/mstouffer/repos/textnav/node_modules/rollup/dist/es/shared/node-entry.js:21122:26)
 ⠙Error on line 22
 
 <environment_details>
@@ -6875,7 +6875,7 @@ plan.md,src/lib/utils.js,src/lib/utils.ts,src/lib/__tests__/utils.test.ts,src/co
 The `npm run build` command failed again, but with a *different* error this time. This is progress! The new error is:
 
 ```
-[vite]: Rollup failed to resolve import "@/components/Search" from "/home/mstouffer/repos/nomouse/src/pages/index.astro".
+[vite]: Rollup failed to resolve import "@/components/Search" from "/home/mstouffer/repos/textnav/src/pages/index.astro".
 ```
 
 This indicates a problem with an import statement in `src/pages/index.astro`. The `@` symbol in the import path `@/components/Search` is an alias, usually configured in `tsconfig.json` or `jsconfig.json`. It seems like this alias is not correctly configured, or the `Search` component is not in the expected location.
@@ -6909,7 +6909,7 @@ I'll examine `src/pages/index.astro` to see the import statement, and then I'll 
  15 | const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md'));
  16 | ---
  17 | 
- 18 | <Layout title="No Mouse">
+ 18 | <Layout title="Text Nav">
  19 |   <main class="flex min-h-screen flex-col">
  20 |     <Navbar />
  21 |     <section
@@ -6919,7 +6919,7 @@ I'll examine `src/pages/index.astro` to see the import statement, and then I'll 
  25 |         <div class="col-span-2 flex flex-1 flex-col">
  26 |           <h1 class="mb-6 text-4xl leading-tight">
  27 |             <strong>Up to date</strong><br />
- 28 |             <span class="font-light">No Mouse UIs</span>
+ 28 |             <span class="font-light">Text Nav UIs</span>
  29 |           </h1>
  30 |           <Search client:load className="w-full" />
  31 |         </div>
@@ -6981,7 +6981,7 @@ I'll examine `src/pages/index.astro` to see the import statement, and then I'll 
  87 |                 </svg>
  88 |               </Button>
  89 |             </a>
- 90 |             <a href="https://x.com/nomouse" target="_blank">
+ 90 |             <a href="https://x.com/textnav" target="_blank">
  91 |               <Button variant="ghost" size="icon">
  92 |                 <svg
  93 |                   role="img"
@@ -6996,7 +6996,7 @@ I'll examine `src/pages/index.astro` to see the import statement, and then I'll 
 102 |                 </svg>
 103 |               </Button>
 104 |             </a>
-105 |             <a href="https://buymeacoffee.com/nomouse" target="_blank">
+105 |             <a href="https://buymeacoffee.com/textnav" target="_blank">
 106 |               <Button variant="ghost" size="icon">
 107 |                 <svg
 108 |                   role="img"
@@ -7063,7 +7063,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md'));
 ---
 
-<Layout title="No Mouse">
+<Layout title="Text Nav">
   <main class="flex min-h-screen flex-col">
     <Navbar />
     <section
@@ -7073,7 +7073,7 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
         <div class="col-span-2 flex flex-1 flex-col">
           <h1 class="mb-6 text-4xl leading-tight">
             <strong>Up to date</strong><br />
-            <span class="font-light">No Mouse UIs</span>
+            <span class="font-light">Text Nav UIs</span>
           </h1>
           <Search client:load className="w-full" />
         </div>
@@ -7135,7 +7135,7 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
                 </svg>
               </Button>
             </a>
-            <a href="https://x.com/nomouse" target="_blank">
+            <a href="https://x.com/textnav" target="_blank">
               <Button variant="ghost" size="icon">
                 <svg
                   role="img"
@@ -7150,7 +7150,7 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
                 </svg>
               </Button>
             </a>
-            <a href="https://buymeacoffee.com/nomouse" target="_blank">
+            <a href="https://buymeacoffee.com/textnav" target="_blank">
               <Button variant="ghost" size="icon">
                 <svg
                   role="img"
@@ -7165,7 +7165,7 @@ const websites = await getCollection("websites", (entry) => !entry.id.endsWith('
                 </svg>
               </Button>
             </a>
-            <a href="https://buymeacoffee.com/nomouse" target="_blank">
+            <a href="https://buymeacoffee.com/textnav" target="_blank">
               <Button variant="ghost" size="icon">
                 <svg
                   role="img"
@@ -7273,14 +7273,14 @@ I've updated the expected Markdown for the strikethrough test. Now I'll rerun th
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  Test Files 0 passed (1)
@@ -7645,14 +7645,14 @@ I've changed the `filter` option for the `strikethrough` rule to use a function 
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -7887,7 +7887,7 @@ I'll try updating both `turndown` and `turndown-plugin-gfm` to the latest versio
 **User:**
 
 [execute_command for 'npm update turndown turndown-plugin-gfm'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 0
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 0
 Output:
 ⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏⠋⠙⠹⠸⠼⠴
 up to date, audited 545 packages in 3s
@@ -7938,14 +7938,14 @@ I've updated `turndown` and `turndown-plugin-gfm`. Now I'll rerun the tests to s
 **User:**
 
 [execute_command for 'npm run test'] Result:
-Command executed in terminal 1 from '/home/mstouffer/repos/nomouse'. Exit code: 1
+Command executed in terminal 1 from '/home/mstouffer/repos/textnav'. Exit code: 1
 Output:
 
-> nomouse@0.0.1 test
+> textnav@0.0.1 test
 > mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --outputFile=./vitest-output/vitest.log
 
 
- RUN  v3.0.8 /home/mstouffer/repos/nomouse
+ RUN  v3.0.8 /home/mstouffer/repos/textnav
 
 
  ❯ src/lib/__tests__/utils.test.ts [queued]
@@ -8157,7 +8157,7 @@ plan.md,src/lib/utils.js,src/lib/__tests__/utils.test.ts,src/content/websites/ww
 <slug>code</slug>
 <name>Code</name>
 </environment_details>
-[TASK RESUMPTION] This task was interrupted just now. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. The current working directory is now '/home/mstouffer/repos/nomouse'. If the task has not been completed, retry the last step before interruption and proceed with completing the task.
+[TASK RESUMPTION] This task was interrupted just now. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. The current working directory is now '/home/mstouffer/repos/textnav'. If the task has not been completed, retry the last step before interruption and proceed with completing the task.
 
 Note: If you previously attempted a tool use that the user did not provide a result for, you should assume the tool use was not successful and assess whether you should retry. If the last tool was a browser_action, the browser has been closed and you must launch a new browser if needed.
 
@@ -8183,7 +8183,7 @@ plan.md,src/lib/utils.js,src/lib/__tests__/utils.test.ts,src/content/websites/ww
 <name>Code</name>
 
 
-# Current Working Directory (/home/mstouffer/repos/nomouse) Files
+# Current Working Directory (/home/mstouffer/repos/textnav) Files
 .clinerules
 .envrc
 .gitignore
@@ -8503,7 +8503,7 @@ plan.md,src/lib/utils.js,src/content/websites/www_wired_com_story_quick_select_k
 <slug>code</slug>
 <name>Code</name>
 </environment_details>
-[TASK RESUMPTION] This task was interrupted 4 hours ago. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. The current working directory is now '/home/mstouffer/repos/nomouse'. If the task has not been completed, retry the last step before interruption and proceed with completing the task.
+[TASK RESUMPTION] This task was interrupted 4 hours ago. It may or may not be complete, so please reassess the task context. Be aware that the project state may have changed since then. The current working directory is now '/home/mstouffer/repos/textnav'. If the task has not been completed, retry the last step before interruption and proceed with completing the task.
 
 Note: If you previously attempted a tool use that the user did not provide a result for, you should assume the tool use was not successful and assess whether you should retry. If the last tool was a browser_action, the browser has been closed and you must launch a new browser if needed.
 
@@ -8539,7 +8539,7 @@ src/lib/utils.js,src/content/websites/www_wired_com_story_quick_select_keyboard_
 <name>Architect</name>
 
 
-# Current Working Directory (/home/mstouffer/repos/nomouse) Files
+# Current Working Directory (/home/mstouffer/repos/textnav) Files
 .clinerules
 .envrc
 .gitignore
@@ -9022,20 +9022,20 @@ Yes, and while you're creating tests, I should let you know that this is happeni
 ```
  ❯ npm run dev
 
-> nomouse@0.0.1 dev
+> textnav@0.0.1 dev
 > astro dev
 
 17:25:18 [types] Generated 1ms
 17:25:19 [content] Syncing content
 can not read a block mapping entry; a multiline key may not be an implicit key
   Location:
-    /home/mstouffer/repos/nomouse/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3
+    /home/mstouffer/repos/textnav/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3
   Stack trace:
-    at generateError (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
-    at readBlockMapping (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2235:9)
-    at readDocument (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
-    at load$1 (file:///home/mstouffer/repos/nomouse/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
-    at safeParseFrontmatter (file:///home/mstouffer/repos/nomouse/node_modules/astro/dist/content/utils.js:330:12)
+    at generateError (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
+    at readBlockMapping (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2235:9)
+    at readDocument (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
+    at load$1 (file:///home/mstouffer/repos/textnav/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
+    at safeParseFrontmatter (file:///home/mstouffer/repos/textnav/node_modules/astro/dist/content/utils.js:330:12)
 Error on line 28
 Error on line 28
 Error on line 28
@@ -9069,7 +9069,7 @@ src/lib/utils.js,src/content/websites/www_wired_com_story_quick_select_keyboard_
 
 ```typescript
 <thinking>
-The user is reporting a YAML parsing error during `npm run dev`, similar to the one I encountered earlier during `npm run build`. The error message points to `/home/mstouffer/repos/nomouse/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3`. This is the same file and line number as the previous YAML error, which I fixed by correcting the `favicon` key.
+The user is reporting a YAML parsing error during `npm run dev`, similar to the one I encountered earlier during `npm run build`. The error message points to `/home/mstouffer/repos/textnav/src/content/websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.md:5:3`. This is the same file and line number as the previous YAML error, which I fixed by correcting the `favicon` key.
 
 I'll re-examine the `index.md` file to see if there are any other YAML errors. It's possible I missed something, or that a new error was introduced.
 </thinking>

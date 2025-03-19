@@ -1,16 +1,16 @@
 # Key Points
 It seems likely that finding an available domain name in the .org or .com TLD for your niche directory will require creative combinations of keywords related to keyboard shortcuts, accessibility, and text-based gaming.
-Research suggests that shorter, memorable names like "keyhub" or "textnav" might be available, but popular terms like "textonly" or "nomouse" are likely taken.
+Research suggests that shorter, memorable names like "keyhub" or "textnav" might be available, but popular terms like "textonly" or "textnav" are likely taken.
 The evidence leans toward using variations like "kbgaming" or "textquest" to increase chances of availability, though checking each domain is necessary.
 Domain Name Suggestions
 Given your focus on a directory for keyboard shortcut enthusiasts, accessibility needs, and text-based gaming, here are some potential domain names to consider:
 Single Word Options: keyhub, textnav, shortkey, cmdgame, termtext, a11ytext, inclkey, retrotext, nostalgiakey, efftype, prodkey, textadv, roguetext, mudhub, textrpg, kbgaming, a11ygaming, kbfirstgaming.
 Phrase Options: shortcutcentral, keycommand, textgamer, keyboardmastery, efficientgaming, productivitygamer, inclusivegaming, keyboardnavigators, mousefreelife, keystrokegaming, cmdgamer, termgamer, textquest, keyventure, textexplore, wordworld, letterland, charactertown, textopia, keydomain.
-These suggestions aim to capture the essence of your niche while keeping names concise and memorable. Note that availability must be verified, as some variations (e.g., those similar to "textonly" or "nomouse") may already be taken.
+These suggestions aim to capture the essence of your niche while keeping names concise and memorable. Note that availability must be verified, as some variations (e.g., those similar to "textonly" or "textnav") may already be taken.
 Unexpected Detail
 You might not expect that combining niche-specific terms like "a11y" (a common abbreviation for accessibility) with "gaming" could create unique, available domains, potentially appealing to a tech-savvy audience.
 Survey Note: Exploring Domain Names for a Keyboard-Centric Niche Directory
-This note provides a comprehensive exploration of potential domain names for a directory catering to individuals who prefer keyboard shortcuts over mouse manipulation, those requiring keyboard navigation for accessibility, and enthusiasts of text-based gaming. The focus is on finding short, memorable names within the .org or .com top-level domains (TLDs), given that options like "testfirst," "textbased," "textonly," and "nomouse" are already taken.
+This note provides a comprehensive exploration of potential domain names for a directory catering to individuals who prefer keyboard shortcuts over mouse manipulation, those requiring keyboard navigation for accessibility, and enthusiasts of text-based gaming. The focus is on finding short, memorable names within the .org or .com top-level domains (TLDs), given that options like "testfirst," "textbased," "textonly," and "textnav" are already taken.
 Background and Niche Analysis
 The directory targets an underserved niche, encompassing:
 Users who prefer keyboard shortcuts for efficiency, often seen in productivity communities.

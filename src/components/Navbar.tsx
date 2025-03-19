@@ -24,7 +24,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <a href="/" className="flex items-center gap-2 mr-6">
                 <img src="/favicon.svg" alt="Logo" className="h-6 w-6" />
-                <p className="font-heading text-xl">NoMouse</p>
+                <p className="font-heading text-xl">textnav</p>
               </a>
               <Search />
             </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
               <Tooltip delayDuration={0}>
                 <TooltipTrigger asChild>
                   <a
-                    href="https://github.com/bizkite-co/nomouse"
+                    href="https://github.com/bizkite-co/textnav"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={buttonVariants({ variant: "ghost", size: "icon" })}
