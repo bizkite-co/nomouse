@@ -21,7 +21,17 @@
       ],
       "runtimeExecutable": "npx",
       "runtimeArgs": [
-          "tsx"
+        "tsx"
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome (Incognito) and Attach",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--incognito"
       ]
     },
     {
