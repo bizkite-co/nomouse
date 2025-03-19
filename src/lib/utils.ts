@@ -57,14 +57,30 @@ export function createRawMarkdown(htmlContent: string) {
     return markdownContent;
 }
 
-// export async function createAndSaveMarkdown(htmlFilePath: string) {
-//     try {
-//         const htmlContent = await fs.readFile(htmlFilePath, 'utf-8');
-//         const markdownContent = createRawMarkdown(htmlContent);
-//         const markdownFilePath = htmlFilePath.replace(/\.html$/, '.md');
-//         await fs.writeFile(markdownFilePath, markdownContent, 'utf-8');
-//         console.log(`Markdown saved to: ${markdownFilePath}`);
-//     } catch (error) {
-//         console.error('Error in createAndSaveMarkdown:', error);
-//     }
-// }
+interface WebsiteData {
+  url: string;
+  title: string;
+  tags: string[];
+  favicon?: string;
+  description?: string;
+}
+
+export function filterWebsites(websites: { data: WebsiteData }[], search: string, tags: string[]): { data: WebsiteData }[] {
+  const searchTerm = search.toLowerCase();
+
+  return websites.filter((website) => {
+    let matchesSearch = true;
+    let matchesTags = true;
+
+    if (searchTerm.length > 0) {
+      matchesSearch = website.data.title.toLowerCase().includes(searchTerm) ||
+                       website.data.url.toLowerCase().includes(searchTerm);
+    }
+
+    if (tags.length > 0) {
+      matchesTags = tags.every((tag: string) => website.data.tags.includes(tag));
+    }
+
+    return matchesSearch && matchesTags;
+  });
+}

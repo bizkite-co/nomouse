@@ -1,21 +1,33 @@
 import { getCollection } from 'astro:content';
-import { cn } from "@/lib/utils";
-import { filteredTags } from "@/store";
+import { cn } from "@/lib/utils.js";
+import { filteredTags } from "@/store.js";
 import { useStore } from "@nanostores/react";
 import { X } from "lucide-react";
 import { useMemo } from "react";
-import { Button } from "./ui/button";
+import { Button } from "./ui/button.js"; // Fixed import
+
+interface WebsiteData {
+  url: string;
+  title: string;
+  tags: string[];
+  favicon?: string;
+  description?: string;
+}
+
+interface WebsiteEntry {
+  data: WebsiteData;
+}
 
 export default function TagFilter() {
   const selectedTags: string[] = useStore(filteredTags);
 
   const { tags } = useMemo(() => {
-      let allTags = new Set<string>();
-      getCollection('websites').then(websites => {
-        websites.forEach(website => {
-            website.data.tags.forEach(tag => allTags.add(tag));
-        });
+    let allTags = new Set<string>();
+    getCollection('websites').then((websites: WebsiteEntry[]) => { // Added type
+      websites.forEach((website: WebsiteEntry) => { // Added type
+        website.data.tags.forEach((tag: string) => allTags.add(tag)); // Added type
       });
+    });
     return { tags: Array.from(allTags).sort() };
   }, []);
 

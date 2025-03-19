@@ -52,7 +52,7 @@ export async function getShortestTitle(html: string): Promise<string> {
   return shortestTitle;
 }
 
-async function processWithCrawl4AI(url: string, currentDate: string) {
+export async function processWithCrawl4AI(url: string, currentDate: string) {
     const urlPath = generateUrlPath(url); // Use existing utility function
     const outputPath = `src/content/websites/${urlPath}/_c4ai.md`; // Changed output path
 

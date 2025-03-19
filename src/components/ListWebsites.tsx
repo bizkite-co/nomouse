@@ -2,12 +2,14 @@ import { cn } from "../lib/utils.js";
 import { filteredTags, searchKeyword } from "../store.js";
 import Spinner from "./common/Spinner.tsx";
 import { useStore } from "@nanostores/react";
+import WebsiteItem from "./WebsiteItem.astro";
+import { generateFilename, generateUrlPath, filterWebsites } from "../lib/utils.js"; // Import filterWebsites
 
 export default function ListWebsites({
   websites,
 }: {
   websites: {
-    data: { url: string; title: string; tags: string[]; favicon?: string };
+    data: { url: string; title: string; tags: string[]; favicon?: string, description?: string };
   }[];
 }) {
   const $filteredTags = useStore(filteredTags);
@@ -21,22 +23,8 @@ export default function ListWebsites({
 
   const search = $searchKeyword.toLowerCase();
 
-  const filtered = websites.filter((website) => {
-    if (
-      search.length > 0 &&
-      !website.data.title.toLowerCase().includes(search) &&
-      !website.data.url.toLowerCase().includes(search)
-    ) {
-      return false;
-    }
-    if (tags.length > 0) {
-      if (!tags.every((tag: string) => website.data.tags.includes(tag))) {
-        return false;
-      }
-    }
-
-    return true;
-  });
+  // Use the filterWebsites function
+  const filtered = filterWebsites(websites, search, tags);
 
   if (filtered.length === 0) {
     return (
@@ -50,22 +38,20 @@ export default function ListWebsites({
 
   return (
     <>
-      {filtered.length > 0 && (
-        <div className="flex flex-col gap-2">
-          <Spinner className="mx-auto" />
-          <p className="text-center text-sm text-gray-500">Loading...</p>
-        </div>
-      )}
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-        style={{
-          opacity: filtered.length > 0 ? 1 : 0,
-          transition: "opacity 0.5s ease-in-out",
-        }}
       >
-        {/* {filtered.map((website) => (
-          <WebsiteItem key={website.data.url} website={website.data} />
-        ))} */}
+        {filtered.map((website) => (
+          <WebsiteItem
+            key={website.data.url}
+            title={website.data.title}
+            description={website.data.description}
+            url={website.data.url}
+            favicon={website.data.favicon}
+            slug={generateUrlPath(website.data.url)}
+            desktopSnapshot={'/screenshots/' + generateFilename(website.data.url)}
+          />
+        ))}
       </div>
     </>
   );
