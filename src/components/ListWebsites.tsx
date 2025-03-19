@@ -42,15 +42,15 @@ export default function ListWebsites({
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
         {filtered.map((website) => (
-          <WebsiteItem
-            key={website.data.url}
-            title={website.data.title}
-            description={website.data.description}
-            url={website.data.url}
-            favicon={website.data.favicon}
-            slug={generateUrlPath(website.data.url)}
-            desktopSnapshot={'/screenshots/' + generateFilename(website.data.url)}
-          />
+            <astro-island key={website.data.url} client:load component-url="./WebsiteItem.astro" component-export="default" props={{
+                title: website.data.title,
+                description: website.data.description,
+                url: website.data.url,
+                favicon: website.data.favicon,
+                slug: generateUrlPath(website.data.url),
+                desktopSnapshot: '/screenshots/' + generateFilename(website.data.url)
+              }}>
+            </astro-island>
         ))}
       </div>
     </>

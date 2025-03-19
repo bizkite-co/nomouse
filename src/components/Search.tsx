@@ -45,6 +45,7 @@ export default function Search({ className }: { className?: string }) {
               onSearch();
             }
           }}
+          data-testid="search-input"
         />
         <a
           onClick={onClear}

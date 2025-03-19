@@ -11,6 +11,7 @@ import Giscus from "../components/Giscus.astro";
 import { getCollection } from "astro:content";
 import WebsiteItem from "../components/WebsiteItem.astro";
 import { ModeToggle } from "../components/ModeToggle.tsx";
+import ListWebsites from "../components/ListWebsites.tsx";
 
 const websites = await getCollection("websites", (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));
 const websiteData = websites.map(website => {
@@ -21,7 +22,14 @@ const websiteData = websites.map(website => {
         url: website.data.url,
         favicon: website.data.favicon,
         slug: slug,
-        desktopSnapshot: '/' + website.data.desktopSnapshot
+        desktopSnapshot: '/' + website.data.desktopSnapshot,
+        data: {
+          url: website.data.url,
+          title: website.data.title,
+          tags: website.data.tags,
+          favicon: website.data.favicon,
+          description: website.data.description
+        }
     }
 });
 ---
@@ -57,10 +65,9 @@ const websiteData = websites.map(website => {
       <div
         class={cn(
           "container mx-auto px-4 md:px-0",
-          "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
         )}
       >
-        {websiteData.map((website) => <WebsiteItem {...website} />)}
+        <ListWebsites websites={websiteData} client:load />
       </div>
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
