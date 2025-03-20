@@ -6,9 +6,10 @@ import { searchKeyword } from "../store.ts";
 import { Search as SearchIcon, XCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export default function Search({ className }: { className?: string }) {
+export default function Search({ className, "data-search-query": initialSearchQuery }: { className?: string, "data-search-query"?: string }) {
   console.log("Rendering Search component");
-  const [search, setSearch] = useState("");
+  console.log("initialSearchQuery:", initialSearchQuery);
+  const [search, setSearch] = useState(initialSearchQuery || "");
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {

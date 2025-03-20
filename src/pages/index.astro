@@ -40,7 +40,7 @@ const urlParams = new URLSearchParams(Astro.url.search);
 const searchQuery = urlParams.get('q') || '';
 
 // Filter websites based on the search keyword
-const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
+// const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
 
 ---
 
@@ -79,7 +79,7 @@ const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
         )}
         id="source-list"
       >
-        {filteredWebsiteData.map((website) => (
+        {websiteData.map((website) => (
             <WebsiteItem
               title={website.title}
               description={website.description}
@@ -151,6 +151,14 @@ const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
   }
 
   // Initial filter on page load
-  // const initialSearchQuery = document.querySelector('search[data-search-query]')?.getAttribute('data-search-query') || '';
+  const initialSearchQuery = document.querySelector('search[data-search-query]')?.getAttribute('data-search-query') || '';
+  if (initialSearchQuery) {
+    const searchInput = document.querySelector('input[data-testid="search-input"]') as HTMLInputElement | null;
+    if (searchInput) {
+      searchInput.value = initialSearchQuery;
+      searchInput.blur();
+      console.log("blur triggered");
+    }
+  }
   // filterWebsiteItems(initialSearchQuery);
 </script>
