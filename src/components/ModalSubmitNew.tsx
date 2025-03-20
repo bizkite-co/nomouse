@@ -22,11 +22,14 @@ import {
 import { Input } from "./ui/input.tsx";
 import { Label } from "./ui/label.tsx";
 import { Textarea } from "./ui/textarea.tsx";
+import type { WebsiteData } from '../types.js';
 
 export default function ModalSubmitNew({
   children,
+  websiteData
 }: {
   children: React.ReactNode;
+  websiteData?: WebsiteData
 }) {
   const title = "Submit a new website";
   const description = "Request us to list your website on this website";
@@ -42,11 +45,19 @@ export default function ModalSubmitNew({
           </DrawerHeader>
           <div>
             <Label htmlFor="inputUrl">Website URL</Label>
-            <Input id="inputUrl" name="url" placeholder="https://example.com" />
+            <Input id="inputUrl" name="url" placeholder="https://example.com" defaultValue={websiteData?.url} />
           </div>
           <div>
-            <Label htmlFor="comment">Comment</Label>
-            <Textarea id="comment" placeholder="Leave some notes here ..." />
+            <Label htmlFor="inputTitle">Title</Label>
+            <Input id="inputTitle" name="title" placeholder="Example Website" defaultValue={websiteData?.title} />
+          </div>
+          <div>
+            <Label htmlFor="inputTags">Tags (comma-separated)</Label>
+            <Input id="inputTags" name="tags" placeholder="tag1, tag2, tag3" defaultValue={websiteData?.tags.join(', ')} />
+          </div>
+          <div>
+            <Label htmlFor="inputDescription">Description</Label>
+            <Textarea id="inputDescription" name="description" placeholder="Enter a brief description..." defaultValue={websiteData?.description} />
           </div>
           <DrawerFooter className="my-2 space-y-2 px-0">
             <DrawerClose asChild>
@@ -67,11 +78,19 @@ export default function ModalSubmitNew({
           </DialogHeader>
           <div>
             <Label htmlFor="inputUrl">Website URL</Label>
-            <Input id="inputUrl" name="url" placeholder="https://example.com" />
+            <Input id="inputUrl" name="url" placeholder="https://example.com" defaultValue={websiteData?.url} />
           </div>
           <div>
-            <Label htmlFor="comment">Comment</Label>
-            <Textarea id="comment" placeholder="Leave some notes here ..." />
+            <Label htmlFor="inputTitle">Title</Label>
+            <Input id="inputTitle" name="title" placeholder="Example Website" defaultValue={websiteData?.title} />
+          </div>
+          <div>
+            <Label htmlFor="inputTags">Tags (comma-separated)</Label>
+            <Input id="inputTags" name="tags" placeholder="tag1, tag2, tag3" defaultValue={websiteData?.tags.join(', ')} />
+          </div>
+          <div>
+            <Label htmlFor="inputDescription">Description</Label>
+            <Textarea id="inputDescription" name="description" placeholder="Enter a brief description..." defaultValue={websiteData?.description} />
           </div>
           <DialogFooter className="flex items-center pt-1">
             <DialogClose asChild>

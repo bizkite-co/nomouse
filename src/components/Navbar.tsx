@@ -2,7 +2,6 @@ import { ModeToggle } from "./ModeToggle.tsx";
 import { Button, buttonVariants } from "./ui/button.tsx";
 import { Separator } from "./ui/separator.tsx";
 import { cn } from "../lib/utils.ts";
-import Search from "./Search.tsx"; // Assuming Search.tsx exists
 import {
   Tooltip,
   TooltipContent,
@@ -26,7 +25,6 @@ export default function Navbar() {
                 <img src="/favicon.svg" alt="Logo" className="h-6 w-6" />
                 <p className="font-heading text-xl">textnav</p>
               </a>
-              <Search />
             </div>
             <div className="flex items-center gap-4">
               <ModalSubmitNew>

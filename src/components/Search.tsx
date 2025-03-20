@@ -1,3 +1,4 @@
+// Modified by Roo to fix search functionality.  Do not overwrite.
 import { Button } from "./ui/button.tsx";
 import { Input } from "./ui/input.tsx";
 import { cn } from "../lib/utils.ts";
@@ -6,6 +7,7 @@ import { Search as SearchIcon, XCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Search({ className }: { className?: string }) {
+  console.log("Rendering Search component");
   const [search, setSearch] = useState("");
   const [isDark, setIsDark] = useState(false);
 
@@ -14,17 +16,25 @@ export default function Search({ className }: { className?: string }) {
     setIsDark(isDark);
   }, []);
 
+  const onSearch = () => {
+    // Dispatch a custom event with the search term
+    const searchEvent = new CustomEvent('search-updated', {
+      detail: { searchTerm: search },
+    });
+    document.dispatchEvent(searchEvent);
+  };
+
   const onClickSearch = () => {
     onSearch();
   };
 
   const onClear = () => {
     if (search !== "") setSearch("");
-    searchKeyword.set("");
-  };
-
-  const onSearch = () => {
-    searchKeyword.set(search);
+    searchKeyword.set(""); // Still clear the store
+     const searchEvent = new CustomEvent('search-updated', {
+      detail: { searchTerm: "" },
+    });
+    document.dispatchEvent(searchEvent);
   };
 
   return (
@@ -33,6 +43,7 @@ export default function Search({ className }: { className?: string }) {
         "flex w-full items-center justify-center gap-2 md:gap-4",
         className,
       )}
+      data-test-search-container
     >
       <div className={cn("relative flex w-full")}>
         <Input

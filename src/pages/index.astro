@@ -8,18 +8,21 @@ import { cn } from "../lib/utils.ts";
 import { Globe } from "lucide-react";
 import Giscus from "../components/Giscus.astro";
 
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import WebsiteItem from "../components/WebsiteItem.astro";
 import { ModeToggle } from "../components/ModeToggle.tsx";
 import BuyCoffee from "../components/BuyCoffee.astro";
 import GitHubRepo from "../components/GitHubRepo.astro";
 import XButton from "../components/XButton.astro";
+import { filterWebsites } from "../lib/utils.ts";
+import { searchKeyword } from "../store";
+import type { WebsiteData } from '../types.js';
 
 const websites = await getCollection(
   "websites",
-  (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'),
+  (entry: CollectionEntry<'websites'>) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'),
 );
-const websiteData = websites.map(website => {
+const websiteData: WebsiteData[] = websites.map((website: CollectionEntry<'websites'>) => {
   const slug = website.id.replace('/index.md', '');
   return {
     title: website.data.title,
@@ -28,18 +31,20 @@ const websiteData = websites.map(website => {
     favicon: website.data.favicon,
     slug: slug,
     desktopSnapshot: '/' + website.data.desktopSnapshot,
-    data: {
-      url: website.data.url,
-      title: website.data.title,
-      tags: website.data.tags || [],
-      favicon: website.data.favicon,
-      description: website.data.description
-    }
+    tags: website.data.tags || [],
   };
 });
+
+// Get the search query from the URL
+const urlParams = new URLSearchParams(Astro.url.search);
+const searchQuery = urlParams.get('q') || '';
+
+// Filter websites based on the search keyword
+const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
+
 ---
 
-<Layout title="Text Nav">
+<Layout title="TextNav">
   <main class="flex min-h-screen flex-col">
     <Navbar />
     <section
@@ -73,7 +78,7 @@ const websiteData = websites.map(website => {
           "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
         )}
       >
-        {websiteData.map((website) => (
+        {filteredWebsiteData.map((website) => (
             <WebsiteItem
               title={website.title}
               description={website.description}
@@ -114,3 +119,17 @@ const websiteData = websites.map(website => {
     </footer>
   </main>
 </Layout>
+
+<script>
+  document.addEventListener('search-updated', (event: Event) => {
+    const customEvent = event as CustomEvent;
+    const searchTerm = customEvent.detail.searchTerm;
+    const url = new URL(window.location.href);
+    if (searchTerm) {
+      url.searchParams.set('q', searchTerm);
+    } else {
+      url.searchParams.delete('q');
+    }
+    window.history.pushState({}, '', url.toString());
+  });
+</script>

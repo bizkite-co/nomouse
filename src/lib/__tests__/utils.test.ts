@@ -1,34 +1,35 @@
 import { describe, it, expect } from 'vitest';
 import { filterWebsites } from '../utils.js';
+import type { WebsiteData } from '../../types.js';
 
 describe('filterWebsites', () => {
-  const websites = [
+  const websites: WebsiteData[] = [
     {
-      data: {
-        url: 'https://example.com',
-        title: 'Example Website',
-        tags: ['example', 'test'],
-        favicon: 'favicon.ico',
-        description: 'An example website',
-      },
+      url: 'https://example.com',
+      title: 'Example Website',
+      tags: ['example', 'test'],
+      favicon: 'favicon.ico',
+      description: 'An example website',
+      slug: 'example-com',
+      desktopSnapshot: 'example.png',
     },
     {
-      data: {
-        url: 'https://test.com',
-        title: 'Test Website',
-        tags: ['test'],
-        favicon: 'favicon.ico',
-        description: 'A test website',
-      },
+      url: 'https://test.com',
+      title: 'Test Website',
+      tags: ['test'],
+      favicon: 'favicon.ico',
+      description: 'A test website',
+      slug: 'test-com',
+      desktopSnapshot: 'test.png',
     },
     {
-      data: {
-        url: 'https://another.com',
-        title: 'Another Website',
-        tags: ['another'],
-        favicon: 'favicon.ico',
-        description: 'Another website',
-      },
+      url: 'https://another.com',
+      title: 'Another Website',
+      tags: ['another'],
+      favicon: 'favicon.ico',
+      description: 'Another website',
+      slug: 'another-com',
+      desktopSnapshot: 'another.png',
     },
   ];
 

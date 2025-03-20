@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge"
 import * as fs from 'fs/promises';
 import TurndownService from 'turndown';
 import { gfm } from 'turndown-plugin-gfm';
+import type { WebsiteData } from '../types.js';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -57,15 +58,7 @@ export function createRawMarkdown(htmlContent: string) {
     return markdownContent;
 }
 
-interface WebsiteData {
-  url: string;
-  title: string;
-  tags: string[];
-  favicon?: string;
-  description?: string;
-}
-
-export function filterWebsites(websites: { data: WebsiteData }[], search: string, tags: string[]): { data: WebsiteData }[] {
+export function filterWebsites(websites: WebsiteData[], search: string, tags: string[]): WebsiteData[] {
   const searchTerm = search.toLowerCase();
 
   return websites.filter((website) => {
@@ -73,12 +66,12 @@ export function filterWebsites(websites: { data: WebsiteData }[], search: string
     let matchesTags = true;
 
     if (searchTerm.length > 0) {
-      matchesSearch = website.data.title.toLowerCase().includes(searchTerm) ||
-                       website.data.url.toLowerCase().includes(searchTerm);
+      matchesSearch = website.title.toLowerCase().includes(searchTerm) ||
+                       website.url.toLowerCase().includes(searchTerm);
     }
 
     if (tags.length > 0) {
-      matchesTags = tags.every((tag: string) => website.data.tags.includes(tag));
+      matchesTags = tags.every((tag: string) => website.tags.includes(tag));
     }
 
     return matchesSearch && matchesTags;
