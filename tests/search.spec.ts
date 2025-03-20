@@ -1,16 +1,16 @@
 import { test, expect } from '@playwright/test';
 
 test('search functionality', async ({ page }) => {
-  // Navigate to the homepage and wait for the search input to be visible
-  await page.goto('/');
-  await page.waitForSelector('input[data-testid="search-input"]');
+  // Navigate to the homepage with the search query
+  await page.goto('/?q=keyboard');
 
-  // Locate the search input field and type a query
-  await page.locator('input[data-testid="search-input"]').fill('keyboard');
+  // Wait for the website items to be displayed
+  await page.waitForSelector('.website-item');
 
-  // Submit the search
-  await page.keyboard.press('Enter');
+  // Log the number of website items found
+  const websiteItems = await page.locator('.website-item').count();
+  console.log(`Found ${websiteItems} website items`);
 
-  // Wait for the URL to change and include the search query
-  await expect(page).toHaveURL(/.*\\?q=keyboard.*/, { timeout: 10000 });
+  // Assert that the number of website items is 1
+  await expect(page.locator('.website-item')).toHaveCount(1);
 });

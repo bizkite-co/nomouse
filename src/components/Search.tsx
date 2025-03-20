@@ -56,6 +56,7 @@ export default function Search({ className }: { className?: string }) {
               onSearch();
             }
           }}
+          onBlur={onSearch}
           data-testid="search-input"
         />
         <a

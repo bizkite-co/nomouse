@@ -56,7 +56,7 @@ const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
             <strong>Up to date</strong><br />
             <span class="font-light">Text Nav UIs</span>
           </h1>
-          <Search client:load className="w-full" />
+          <Search client:load className="w-full" data-search-query={searchQuery} />
         </div>
         <div
           class="flex aspect-video w-96 max-w-full items-center justify-center rounded border border-dashed bg-background shadow"
@@ -77,6 +77,7 @@ const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
           "container mx-auto px-4 md:px-0",
           "grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4",
         )}
+        id="source-list"
       >
         {filteredWebsiteData.map((website) => (
             <WebsiteItem
@@ -131,5 +132,25 @@ const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
       url.searchParams.delete('q');
     }
     window.history.pushState({}, '', url.toString());
+    filterWebsiteItems(searchTerm);
   });
+
+  function filterWebsiteItems(searchTerm: string) {
+    console.log("filterWebsiteItems called with:", searchTerm);
+    const websiteItems = document.querySelectorAll('#source-list .website-item');
+    websiteItems.forEach((item) => {
+      const title = (item as HTMLElement).querySelector('h3')?.textContent?.toLowerCase() || '';
+      const description = (item as HTMLElement).querySelector('p')?.textContent?.toLowerCase() || '';
+      const searchTermLower = searchTerm.toLowerCase();
+      if (searchTermLower && !(title.includes(searchTermLower) || description.includes(searchTermLower))) {
+        (item as HTMLElement).style.display = 'none';
+      } else {
+        (item as HTMLElement).style.display = '';
+      }
+    });
+  }
+
+  // Initial filter on page load
+  // const initialSearchQuery = document.querySelector('search[data-search-query]')?.getAttribute('data-search-query') || '';
+  // filterWebsiteItems(initialSearchQuery);
 </script>
