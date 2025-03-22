@@ -16,32 +16,34 @@ import GitHubRepo from "../components/GitHubRepo.astro";
 import XButton from "../components/XButton.astro";
 import { filterWebsites } from "../lib/utils.ts";
 import { searchKeyword } from "../store";
-import type { WebsiteData } from '../types.js';
+import type { WebsiteData } from "../types.js";
 
 const websites = await getCollection(
   "websites",
-  (entry: CollectionEntry<'websites'>) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'),
+  (entry: CollectionEntry<"websites">) =>
+    !entry.id.endsWith("raw.md") && entry.id.endsWith("index.md"),
 );
-const websiteData: WebsiteData[] = websites.map((website: CollectionEntry<'websites'>) => {
-  const slug = website.id.replace('/index.md', '');
-  return {
-    title: website.data.title,
-    description: website.data.description,
-    url: website.data.url,
-    favicon: website.data.favicon,
-    slug: slug,
-    desktopSnapshot: '/' + website.data.desktopSnapshot,
-    tags: website.data.tags || [],
-  };
-});
+const websiteData: WebsiteData[] = websites.map(
+  (website: CollectionEntry<"websites">) => {
+    const slug = website.id.replace("/index.md", "");
+    return {
+      title: website.data.title,
+      description: website.data.description,
+      url: website.data.url,
+      favicon: website.data.favicon,
+      slug: slug,
+      desktopSnapshot: "/" + website.data.desktopSnapshot,
+      tags: website.data.tags || [],
+    };
+  },
+);
 
 // Get the search query from the URL
 const urlParams = new URLSearchParams(Astro.url.search);
-const searchQuery = urlParams.get('q') || '';
+const searchQuery = urlParams.get("q") || "";
 
 // Filter websites based on the search keyword
 // const filteredWebsiteData = filterWebsites(websiteData, searchQuery, []);
-
 ---
 
 <Layout title="TextNav">
@@ -56,7 +58,11 @@ const searchQuery = urlParams.get('q') || '';
             <strong>Up to date</strong><br />
             <span class="font-light">Text Nav UIs</span>
           </h1>
-          <Search client:load className="w-full" data-search-query={searchQuery} />
+          <Search
+            client:load
+            className="w-full"
+            data-search-query={searchQuery}
+          />
         </div>
         <div
           class="flex aspect-video w-96 max-w-full items-center justify-center rounded border border-dashed bg-background shadow"
@@ -79,7 +85,8 @@ const searchQuery = urlParams.get('q') || '';
         )}
         id="source-list"
       >
-        {websiteData.map((website) => (
+        {
+          websiteData.map((website) => (
             <WebsiteItem
               title={website.title}
               description={website.description}
@@ -88,7 +95,8 @@ const searchQuery = urlParams.get('q') || '';
               slug={website.slug}
               desktopSnapshot={website.desktopSnapshot}
             />
-        ))}
+          ))
+        }
       </div>
     </section>
     <section class={cn("flex-1 bg-muted pb-4 md:pb-12")}>
@@ -112,7 +120,7 @@ const searchQuery = urlParams.get('q') || '';
               <Button variant="ghost" size="icon"><Globe /></Button>
             </a>
             <GitHubRepo />
-           <XButton /> 
+            <XButton />
             <BuyCoffee />
           </div>
         </div>
@@ -122,43 +130,60 @@ const searchQuery = urlParams.get('q') || '';
 </Layout>
 
 <script>
-  document.addEventListener('search-updated', (event: Event) => {
+  const url = new URL(window.location.href);
+  document.addEventListener("search-updated", (event: Event) => {
     const customEvent = event as CustomEvent;
     const searchTerm = customEvent.detail.searchTerm;
-    const url = new URL(window.location.href);
-    if (searchTerm) {
-      url.searchParams.set('q', searchTerm);
-    } else {
-      url.searchParams.delete('q');
-    }
-    window.history.pushState({}, '', url.toString());
     filterWebsiteItems(searchTerm);
+    // if (searchTerm) {
+    //   url.searchParams.set("q", searchTerm);
+    // } else {
+    //   url.searchParams.delete("q");
+    // }
+    window.history.pushState({}, "", url.toString());
   });
+
+  function setSearchInput(searchTerm: string) {
+    const searchInput = document.querySelector(
+      'input[data-testid="search-input"]',
+    ) as HTMLInputElement | null;
+
+  if(searchInput == null) return;
+    searchInput.value = searchTerm;
+    searchInput.blur();
+    console.log("blur triggered");
+  }
 
   function filterWebsiteItems(searchTerm: string) {
     console.log("filterWebsiteItems called with:", searchTerm);
-    const websiteItems = document.querySelectorAll('#source-list .website-item');
+    const websiteItems = document.querySelectorAll(
+      "#source-list .website-item",
+    );
     websiteItems.forEach((item) => {
-      const title = (item as HTMLElement).querySelector('h3')?.textContent?.toLowerCase() || '';
-      const description = (item as HTMLElement).querySelector('p')?.textContent?.toLowerCase() || '';
+      const title =
+        (item as HTMLElement).querySelector("h3")?.textContent?.toLowerCase() ||
+        "";
+      const description =
+        (item as HTMLElement).querySelector("p")?.textContent?.toLowerCase() ||
+        "";
       const searchTermLower = searchTerm.toLowerCase();
-      if (searchTermLower && !(title.includes(searchTermLower) || description.includes(searchTermLower))) {
-        (item as HTMLElement).style.display = 'none';
+      if (
+        searchTermLower &&
+        !(
+          title.includes(searchTermLower) ||
+          description.includes(searchTermLower)
+        )
+      ) {
+        (item as HTMLElement).style.display = "none";
       } else {
-        (item as HTMLElement).style.display = '';
+        (item as HTMLElement).style.display = "";
       }
     });
   }
 
   // Initial filter on page load
-  const initialSearchQuery = document.querySelector('search[data-search-query]')?.getAttribute('data-search-query') || '';
+  const initialSearchQuery = url.searchParams.get("q");
   if (initialSearchQuery) {
-    const searchInput = document.querySelector('input[data-testid="search-input"]') as HTMLInputElement | null;
-    if (searchInput) {
-      searchInput.value = initialSearchQuery;
-      searchInput.blur();
-      console.log("blur triggered");
-    }
+    setSearchInput(initialSearchQuery);
   }
-  // filterWebsiteItems(initialSearchQuery);
 </script>
