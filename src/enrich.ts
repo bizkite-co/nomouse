@@ -2,6 +2,7 @@ import * as fs from 'node:fs/promises';
 import { parse } from 'csv-parse/sync';
 import { normalizeUrl, generateUrlPath, createRawMarkdown } from './lib/utils.ts';
 import { processWebsite } from './lib/website.ts';
+import { updateWebsiteSummaries } from './lib/updateWebsiteSummaries.js'; // Import updateWebsiteSummaries
 
 export async function enrichData(refresh: boolean = false, targetUrl: string | null = null): Promise<void> {
   console.log(`Running enrichData with refresh = ${refresh}, targetUrl = ${targetUrl}`);
@@ -23,10 +24,12 @@ export async function enrichData(refresh: boolean = false, targetUrl: string | n
     }
 
     for (const url of (targetUrl ? [targetUrl] : urls)) {
-        await processWebsite(url, refresh, currentDate);
+      await processWebsite(url, refresh, currentDate);
     }
 
     console.log('Data enrichment complete.');
+    await updateWebsiteSummaries(); // Call updateWebsiteSummaries after processing websites
+    console.log('Website summaries updated.');
   } catch (error) {
     console.error('Error during enrichment:', error);
   }

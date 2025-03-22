@@ -8,8 +8,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "enrich": "npx tsx src/enrich.js",
-    "test": "npm cache clean --force; rm -rf dist; npx playwright test --timeout=30000",
-    "test:unit-json": "mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run --reporter=json --outputFile=./vitest-output/vitest.json"
+    "test": "npm cache clean --force; rm -rf dist; vitest --run",
+    "test:e2e": "npx playwright test --headed --timeout=30000",
+    "test:unit-json": "mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run",
+    "update-summaries": "DEBUG_ONCE=true tsx src/lib/updateWebsiteSummaries.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
