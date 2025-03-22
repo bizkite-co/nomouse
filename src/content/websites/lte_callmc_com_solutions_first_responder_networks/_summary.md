@@ -1,0 +1,1 @@
+This website, 'First Responder Networks', provides information about dedicated high-speed nationwide networks for first responders, offered by MCA, a licensed dealer of AT&T FirstNet and Verizon Frontline.

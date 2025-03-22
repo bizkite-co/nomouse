@@ -1,0 +1,1 @@
+This website, 'Mobile Inspector®', is a tool for collecting data in the field and interfacing with construction management systems to streamline daily reporting.

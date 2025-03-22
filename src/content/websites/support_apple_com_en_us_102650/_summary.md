@@ -1,0 +1,1 @@
+This Apple Support article, 'Mac keyboard shortcuts', provides information about keyboard shortcuts on a Mac, enabling users to perform actions typically done with a mouse or trackpad.

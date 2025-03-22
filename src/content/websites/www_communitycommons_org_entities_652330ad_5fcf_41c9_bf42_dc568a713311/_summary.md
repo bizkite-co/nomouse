@@ -1,0 +1,1 @@
+This Community Commons page, 'Accessibility', provides information about accessibility.

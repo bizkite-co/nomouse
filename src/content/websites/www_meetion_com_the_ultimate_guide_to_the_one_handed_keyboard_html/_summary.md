@@ -1,0 +1,1 @@
+This guide, 'The Ultimate Guide to the One-Handed Keyboard', explores the different types, specifications, and ergonomics of one-handed keyboards.

@@ -1,0 +1,1 @@
+This website, 'Accessibility Communities Roundup', provides a list of meet-up communities focused on accessibility and inclusive design.

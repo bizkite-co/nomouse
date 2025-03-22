@@ -1,0 +1,1 @@
+This website, 'Technology - ADAPT Community Network', provides information about technology services offered by ADAPT Community Network. It includes a description, URL, favicon, image, tags, and other metadata.

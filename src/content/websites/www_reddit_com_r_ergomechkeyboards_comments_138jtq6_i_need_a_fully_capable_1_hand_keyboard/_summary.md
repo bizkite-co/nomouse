@@ -1,0 +1,1 @@
+This Reddit post, 'I need a fully capable 1 hand keyboard', is a discussion on the r/ErgoMechKeyboards subreddit about the need for a fully capable one-handed keyboard.

@@ -1,0 +1,1 @@
+This ResearchGate publication, 'Position paper: Lack of keyboard support cripples block-based programming', discusses the limitations of block-based programming due to a lack of keyboard support.

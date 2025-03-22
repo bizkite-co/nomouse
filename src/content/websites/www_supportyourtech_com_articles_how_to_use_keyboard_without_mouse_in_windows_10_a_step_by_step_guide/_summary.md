@@ -1,0 +1,1 @@
+This article, 'How to Use Keyboard Without Mouse in Windows 10: A Step-by-Step Guide', provides a step-by-step guide on how to navigate Windows 10 using only the keyboard.

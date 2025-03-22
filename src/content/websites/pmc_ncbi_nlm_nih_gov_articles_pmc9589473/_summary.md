@@ -1,0 +1,1 @@
+This study, 'Ability-based Keyboards for Augmentative and Alternative Communication', evaluates ability-based methods for generating keyboards for alternative communication in individuals with dexterity impairments.

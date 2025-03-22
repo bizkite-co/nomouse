@@ -1,0 +1,1 @@
+This website, 'Transform your field operations with Smart Mobile Forms', promotes smart mobile forms for field employees to capture data, photos, signatures, and upload documents. It offers a 14-day free trial.

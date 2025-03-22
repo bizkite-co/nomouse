@@ -1,0 +1,1 @@
+This Reddit post, 'How to have a keyboard-centric setup', is a discussion on the r/linuxquestions subreddit about setting up a keyboard-centric environment.

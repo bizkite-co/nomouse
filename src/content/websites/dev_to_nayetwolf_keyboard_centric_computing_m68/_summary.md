@@ -1,0 +1,1 @@
+This article, 'keyboard-centric computing.', is a guide to keyboard-centric computing, aimed at helping users reduce their reliance on the mouse. It covers topics related to Arch Linux, programming, and learning, and includes relevant tags.

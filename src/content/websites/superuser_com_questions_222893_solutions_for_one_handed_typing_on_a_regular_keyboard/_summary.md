@@ -1,0 +1,1 @@
+This Super User question, 'Solutions for one-handed typing on a regular keyboard', discusses solutions for typing with one hand on a standard keyboard.

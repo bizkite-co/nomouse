@@ -1,0 +1,1 @@
+This website, 'SillyTavern', is an LLM frontend for power users, hosted on GitHub.

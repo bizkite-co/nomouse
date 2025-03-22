@@ -1,0 +1,1 @@
+This Verizon article, 'How Emergency Response Technology Can Help Enhance EMS Operations', discusses how emergency response technology can help first responders and enhance EMS operations.d

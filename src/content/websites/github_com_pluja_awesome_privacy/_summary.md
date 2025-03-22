@@ -1,0 +1,1 @@
+This website, 'Awesome Privacy', is a curated list of privacy-respecting services and alternatives. It is hosted on GitHub and maintained by pluja.

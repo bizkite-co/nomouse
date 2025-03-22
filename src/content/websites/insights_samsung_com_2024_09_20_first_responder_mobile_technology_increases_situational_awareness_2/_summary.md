@@ -1,0 +1,1 @@
+This article, 'First responder mobile technology increases situational awareness', discusses how Samsung rugged devices with ATAK improve real-time communication, GPS tracking, and data sharing for emergency responders.
