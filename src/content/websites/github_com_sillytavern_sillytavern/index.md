@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/github_com_sillytavern_sillytavern.png"
 uuid: "8f7d5e40-d091-4c96-b576-f6239ea7eee1"
 ---
+This website, 'SillyTavern', is an LLM frontend for power users, hosted on GitHub.

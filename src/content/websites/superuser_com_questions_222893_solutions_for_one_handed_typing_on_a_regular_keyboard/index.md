@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard.png"
 uuid: "4a4944ed-d3f4-4130-9e03-5132042139e1"
 ---
+This Super User question, 'Solutions for one-handed typing on a regular keyboard', discusses solutions for typing with one hand on a standard keyboard.

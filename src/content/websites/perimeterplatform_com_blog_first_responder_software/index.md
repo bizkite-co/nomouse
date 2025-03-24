@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/perimeterplatform_com_blog_first_responder_software.png"
 uuid: "296e6742-d1fe-41cb-99d0-6522972bd77d"
 ---
+This blog post, 'Top 10 First Responder Software for Public Safety Agencies', compares top first responder software solutions and their essential features for managing crises.

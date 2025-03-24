@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/adaptcommunitynetwork_org_service_options_technology.png"
 uuid: "ec157d2d-7772-479c-bbd4-d2543480c919"
 ---
+This website, 'Technology - ADAPT Community Network', provides information about technology services offered by ADAPT Community Network. It includes a description, URL, favicon, image, tags, and other metadata.

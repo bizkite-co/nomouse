@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/support_apple_com_en_us_102650.png"
 uuid: "95e3baed-66bd-484e-af50-425e2feb82ae"
 ---
+This Apple Support article, 'Mac keyboard shortcuts', provides information about keyboard shortcuts on a Mac, enabling users to perform actions typically done with a mouse or trackpad.

@@ -12,3 +12,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_keyboard_university_100_courses_community_22xzn.png"
 uuid: "c804900a-4b97-41a1-a01a-0e0da97a57da"
 ---
+This page, 'Keyboard Community', discusses the Mechanical Keyboards community, highlighting tools, forums, and platforms for learning and getting involved.

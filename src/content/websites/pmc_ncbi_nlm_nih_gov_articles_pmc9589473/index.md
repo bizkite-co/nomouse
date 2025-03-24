@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/pmc_ncbi_nlm_nih_gov_articles_pmc9589473.png"
 uuid: "d1165e06-199c-46f0-95ec-25957328b205"
 ---
+This study, 'Ability-based Keyboards for Augmentative and Alternative Communication', evaluates ability-based methods for generating keyboards for alternative communication in individuals with dexterity impairments.

@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/github_com_pluja_awesome_privacy.png"
 uuid: "984aa0b5-e0a7-47c4-8fed-e89454a8971c"
 ---
+This website, 'Awesome Privacy', is a curated list of privacy-respecting services and alternatives. It is hosted on GitHub and maintained by pluja.

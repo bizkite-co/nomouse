@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_communitycommons_org_entities_652330ad_5fcf_41c9_bf42_dc568a713311.png"
 uuid: "ac595450-48f8-4622-b052-85ef2136e984"
 ---
+This Community Commons page, 'Accessibility', provides information about accessibility.

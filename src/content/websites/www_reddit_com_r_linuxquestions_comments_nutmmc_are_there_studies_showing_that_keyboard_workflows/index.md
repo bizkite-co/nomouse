@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_reddit_com_r_linuxquestions_comments_nutmmc_are_there_studies_showing_that_keyboard_workflows.png"
 uuid: "2b431961-eeda-488d-8517-b3c1f046ddbd"
 ---
+This Reddit post, 'Are there studies showing that keyboard workflows...', is a discussion on the r/linuxquestions subreddit about studies on keyboard workflows.

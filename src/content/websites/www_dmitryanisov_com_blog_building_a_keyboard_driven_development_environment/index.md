@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_dmitryanisov_com_blog_building_a_keyboard_driven_development_environment.png"
 uuid: "4296948c-bc39-4969-bb2f-42eba4dfde13"
 ---
+This blog post, 'Building a Keyboard-Driven Development Environment', discusses how and why a keyboard-driven development approach can increase developer productivity and happiness.

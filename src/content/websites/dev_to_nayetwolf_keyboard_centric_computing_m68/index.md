@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/dev_to_nayetwolf_keyboard_centric_computing_m68.png"
 uuid: "6818699a-f273-4706-a66d-e1d0c7b2125c"
 ---
+This article, 'keyboard-centric computing.', is a guide to keyboard-centric computing, aimed at helping users reduce their reliance on the mouse. It covers topics related to Arch Linux, programming, and learning, and includes relevant tags.

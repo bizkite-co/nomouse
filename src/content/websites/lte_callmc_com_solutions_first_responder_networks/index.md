@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/lte_callmc_com_solutions_first_responder_networks.png"
 uuid: "70f7adaa-2e0f-4cbb-9cd3-02b1d639b8fc"
 ---
+This website, 'First Responder Networks', provides information about dedicated high-speed nationwide networks for first responders, offered by MCA, a licensed dealer of AT&T FirstNet and Verizon Frontline.

@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/buffer_com_library_keyboard_shortcuts_ultimate_list.png"
 uuid: "9b4b1d2d-32de-4e28-97ff-77c332f7da56"
 ---
+This article, 'The Big List of 111+ Keyboard Shortcuts For The Most-Used Online Tools', provides a comprehensive list of keyboard shortcuts for various online tools, aiming to help users work faster and save time. It covers shortcuts for Gmail, Twitter, Facebook, YouTube, and more.

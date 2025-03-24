@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_digitala11y_com_accessibility_meetups_communities.png"
 uuid: "16aff770-572d-4bff-ba6d-007134e05e6f"
 ---
+This website, 'Accessibility Communities Roundup', provides a list of meet-up communities focused on accessibility and inclusive design.

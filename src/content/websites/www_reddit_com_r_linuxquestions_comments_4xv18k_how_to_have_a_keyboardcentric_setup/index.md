@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_reddit_com_r_linuxquestions_comments_4xv18k_how_to_have_a_keyboardcentric_setup.png"
 uuid: "9f0fbd4a-9061-42ab-be76-4721c63b648b"
 ---
+This Reddit post, 'How to have a keyboard-centric setup', is a discussion on the r/linuxquestions subreddit about setting up a keyboard-centric environment.

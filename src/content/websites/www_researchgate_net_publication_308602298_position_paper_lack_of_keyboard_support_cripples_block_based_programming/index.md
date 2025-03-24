@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming.png"
 uuid: "5134f66e-7b8c-4d2f-b1be-16d154ada192"
 ---
+This ResearchGate publication, 'Position paper: Lack of keyboard support cripples block-based programming', discusses the limitations of block-based programming due to a lack of keyboard support.

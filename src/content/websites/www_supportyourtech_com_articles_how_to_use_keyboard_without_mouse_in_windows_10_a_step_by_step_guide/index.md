@@ -9,3 +9,4 @@ lastReviewAt: "2025-03-18T04:51:09.976Z"
 desktopSnapshot: "screenshots/www_supportyourtech_com_articles_how_to_use_keyboard_without_mouse_in_windows_10_a_step_by_step_guide.png"
 uuid: "9cef9eae-39b0-4475-981e-c19b41843c7e"
 ---
+This article, 'How to Use Keyboard Without Mouse in Windows 10: A Step-by-Step Guide', provides a step-by-step guide on how to navigate Windows 10 using only the keyboard.
