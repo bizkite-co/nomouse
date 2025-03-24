@@ -35,10 +35,67 @@
       ]
     },
     {
+      "type": "node",
+      "request": "launch",
+      "name": "Update Website Summaries - Debug",
+      "runtimeArgs": [
+        "--loader",
+        "ts-node/esm"
+      ],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/src/lib/updateWebsiteSummaries.ts",
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Update Website Summaries",
+      "runtimeArgs": [
+        "--import",
+        "tsx"
+      ],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/src/lib/updateWebsiteSummaries.ts",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
       "type": "node-terminal",
       "request": "launch",
       "name": "Debug Vitest Tests",
       "command": "npx vitest run --inspect-brk --no-file-parallelism",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Playwright: Headed Mode",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--inspect-brk"
+      ],
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": [
+        "test:e2e",
+        "--headed"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Run Update Summaries Script",
+      "command": "npm run update-summaries",
       "console": "integratedTerminal"
     }
   ],
