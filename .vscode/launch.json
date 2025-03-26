@@ -10,7 +10,7 @@
     {
       "type": "node-terminal",
       "request": "launch",
-      "name": "Run Enrich Script",
+      "name": "Run Enrich refresh on URL",
       "command": "npx",
       "args": [
         "tsx",
