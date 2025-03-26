@@ -1,5 +1,5 @@
 ---
-import { cn } from "../lib/utils.ts";
+import { cn } from "../lib/utils";
 import GoogleTag from "@/components/GoogleTag.astro";
 
 interface Props {
@@ -21,6 +21,8 @@ const image = "/public/preview.webp";
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    {/* Link global stylesheet directly - REMOVED */}
 
     <title>
       {title}

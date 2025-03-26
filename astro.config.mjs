@@ -10,6 +10,7 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind({
+      // Revert applyBaseStyles back to false
       applyBaseStyles: false,
     }),
   ],

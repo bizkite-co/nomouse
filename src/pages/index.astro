@@ -1,22 +1,22 @@
 ---
-import Search from "../components/Search.tsx";
-import Navbar from "../components/Navbar.tsx";
+import Search from "../components/Search"; // Removed .tsx
+import Navbar from "../components/Navbar"; // Removed .tsx
 import Layout from "../layouts/Layout.astro";
-import { Button } from "../components/ui/button.tsx";
-import "../styles/globals.css";
-import { cn } from "../lib/utils.ts";
+import { Button } from "../components/ui/button"; // Removed .tsx
+import "../styles/globals.css"; // Added back per task.md
+import { cn } from "../lib/utils"; // Removed .ts
 import { Globe } from "lucide-react";
 import Giscus from "../components/Giscus.astro";
 
 import { getCollection, type CollectionEntry } from "astro:content";
 import WebsiteItem from "../components/WebsiteItem.astro";
-import { ModeToggle } from "../components/ModeToggle.tsx";
+import { ModeToggle } from "../components/ModeToggle"; // Removed .tsx
 import BuyCoffee from "../components/BuyCoffee.astro";
 import GitHubRepo from "../components/GitHubRepo.astro";
 import XButton from "../components/XButton.astro";
-import { filterWebsites } from "../lib/utils.ts";
+import { filterWebsites } from "../lib/utils"; // Removed .ts
 import { searchKeyword } from "../store";
-import type { WebsiteData } from "../types.js";
+import type { WebsiteData } from "../types"; // Removed .js
 
 const websites = await getCollection(
   "websites",

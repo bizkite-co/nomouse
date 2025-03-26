@@ -1,7 +1,7 @@
 [INIT].... → Crawl4AI 0.5.0.post4
-[FETCH]... ↓ https://www.supportyourtech.com/articles/how-to-us... | Status: True | Time: 1.84s
-[SCRAPE].. ◆ https://www.supportyourtech.com/articles/how-to-us... | Time: 0.211s
-[COMPLETE] ● https://www.supportyourtech.com/articles/how-to-us... | Status: True | Total: 2.07s
+[FETCH]... ↓ https://www.supportyourtech.com/articles/how-to-us... | Status: True | Time: 1.48s
+[SCRAPE].. ◆ https://www.supportyourtech.com/articles/how-to-us... | Time: 0.082s
+[COMPLETE] ● https://www.supportyourtech.com/articles/how-to-us... | Status: True | Total: 1.56s
 [Skip to content](https://www.supportyourtech.com/articles/how-to-use-keyboard-without-mouse-in-windows-10-a-step-by-step-guide/#content)
 [ ![Support Your Tech](https://www.supportyourtech.com/wp-content/uploads/2023/05/supportyourtech-logo-350.png) ](https://www.supportyourtech.com/)
 Menu
@@ -163,7 +163,7 @@ info@supportyourtech.com48429315131 E Broad StSte 130 - 1107Bethlehem, PA 18018U
 
 
 Close
-Search for:
-![](https://pixel.wp.com/g.gif?v=ext&blog=123500056&post=55529&tz=-4&srv=www.supportyourtech.com&j=1%3A14.4.1&host=www.supportyourtech.com&ref=&fcp=0&rand=0.5910271345811273)
 DO NOT SELL OR SHARE MY INFORMATION
+Search for:
+![](https://pixel.wp.com/g.gif?v=ext&blog=123500056&post=55529&tz=-4&srv=www.supportyourtech.com&j=1%3A14.4.1&host=www.supportyourtech.com&ref=&fcp=852&rand=0.24816174363754984)
 

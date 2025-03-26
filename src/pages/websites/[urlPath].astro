@@ -1,67 +1,62 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import dataWebsites from '../../data/websites.json';
-import { generateFilename, generateUrlPath, normalizeUrl } from '../../lib/utils.ts'; // Import from utils with .ts extension
-
-interface Props {
-  website: typeof dataWebsites[0];
-}
+import { getCollection } from 'astro:content';
+import "../../styles/globals.css"; // Added back per task.md
 
 export async function getStaticPaths() {
-  return dataWebsites.map((website) => {
-    const urlPath = generateUrlPath(website.url);
+  const websiteEntries = await getCollection('websites', (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));
+  return websiteEntries.map((entry) => {
+    // Correctly derive urlPath from entry.id
+    const urlPath = entry.id.replace('/index.md', '');
     return {
       params: { urlPath },
-      props: { website },
+      props: { entry }, // Pass the full entry object
     };
   });
 }
 
-const { urlPath } = Astro.params;
-const { website } = Astro.props as Props;
+const { entry } = Astro.props; // entry is passed via props
 
-
-if (!website) {
-  return Astro.redirect('/404'); // Or handle the missing website case appropriately
+if (!entry) {
+  // If entry is somehow missing, redirect (shouldn't happen with getStaticPaths)
+  return Astro.redirect('/404');
 }
 
-const expectedFilename = generateFilename(website.url);
-if (generateUrlPath(website.url) !== urlPath) {
-    return Astro.redirect('/404');
-}
+// Use entry.render() - Ignore potential TS error, assuming runtime is correct
+const { Content } = await entry.render();
 
 ---
 
-<Layout title={website.title || 'Website Details'}>
+<Layout title={entry.data.title || 'Website Details'}>
   <main class="container mx-auto px-4 md:px-0 py-8">
-    <h1 class="text-2xl font-bold mb-4">{website.title}</h1>
+    <h1 class="text-2xl font-bold mb-4">{entry.data.title}</h1>
     <div class="flex gap-4">
       <div class="h-24 w-24 bg-muted p-2">
         <img
-          src={website.favicon || 'https://placehold.co/400?text=No%20Picture'}
-          alt={website.title ?? 'missing website title'}
+          src={entry.data.favicon || 'https://placehold.co/400?text=No%20Picture'}
+          alt={entry.data.title ?? 'missing website title'}
           class="aspect-square w-full rounded object-cover"
         />
       </div>
-      {website.description && (
-        <p class="text-sm text-muted-foreground">{website.description}</p>
+      {entry.data.description && (
+        <p class="text-sm text-muted-foreground">{entry.data.description}</p>
       )}
     </div>
-    {website.desktopSnapshot && (
-      <img src={`/` + website.desktopSnapshot} alt="website screenshot" class="my-4" />
+    {entry.data.desktopSnapshot && (
+      <img src={`/` + entry.data.desktopSnapshot} alt="website screenshot" class="my-4" />
     )}
     <div class="my-4">
       <p class="text-sm">
         <strong>Tags:</strong>
-        {website.tags.join(', ')}
+        {entry.data.tags ? entry.data.tags.join(', ') : 'No tags'}
       </p>
-      <p class="text-sm">
-        <strong>Last Reviewed At:</strong>
-        {website.lastReviewAt}
-      </p>
+      {/* Render the main content from the Markdown file */}
+      <div class="prose mt-8 dark:prose-invert max-w-none"> {/* Added max-w-none for prose */}
+         <Content />
+      </div>
     </div>
     <a
-      href={website.url}
+      href={entry.data.url}
       target="_blank"
       rel="noopener noreferrer"
       class="text-blue-500 hover:underline"

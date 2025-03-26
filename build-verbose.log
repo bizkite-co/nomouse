@@ -1,0 +1,3486 @@
+2025-03-26T22:22:53.079Z astro:cli --verbose flag enabled! Enabling: DEBUG="astro:*,vite:*"
+2025-03-26T22:22:53.080Z astro:cli Tip: Set the DEBUG env variable directly for more control. Example: "DEBUG=astro:*,vite:* astro build".
+2025-03-26T22:22:53.999Z astro:telemetry [notify] last notified on 1734507119331
+2025-03-26T22:22:54.621Z astro:telemetry {
+  context: {
+    isGit: true,
+    anonymousProjectId: 'b1a34746b10217a72b1e623c215e448d8e1e144b7e0524ae41d569f5ec1f910f',
+    packageManager: 'npm',
+    packageManagerVersion: '11.0.0',
+    anonymousId: 'e779c388ac271f354a6a9deea63da7c3411e8fe47ea6dc622666b80a997ecfda',
+    anonymousSessionId: '136f3ecefc924d5df179d3d781ad6073d5f4ee5e2926cb9c376804d36bf91dae'
+  },
+  meta: {
+    nodeVersion: '20.18.1',
+    viteVersion: '6.2.3',
+    astroVersion: '5.5.4',
+    systemPlatform: 'linux',
+    systemRelease: '5.15.167.4-microsoft-standard-WSL2',
+    systemArchitecture: 'x64',
+    cpuCount: 8,
+    cpuModel: 'Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz',
+    cpuSpeed: 0,
+    memoryInMb: 15792,
+    isDocker: false,
+    isTTY: undefined,
+    isWSL: true,
+    isCI: false,
+    ciName: null
+  }
+}
+2025-03-26T22:22:54.622Z astro:telemetry [
+  {
+    "eventName": "ASTRO_CLI_SESSION_STARTED",
+    "payload": {
+      "cliCommand": "build",
+      "config": {
+        "integrations": [
+          "@astrojs/react",
+          "@astrojs/tailwind"
+        ],
+        "build": {},
+        "server": true,
+        "image": {},
+        "markdown": {},
+        "experimental": {},
+        "legacy": {}
+      }
+    }
+  }
+]
+2025-03-26T22:22:54.635Z astro:build Initial setup...
+2025-03-26T22:22:54.705Z vite:env loading env files: [
+  '/home/mstouffer/repos/textnav/.env',
+  '/home/mstouffer/repos/textnav/.env.local',
+  '/home/mstouffer/repos/textnav/.env.production',
+  '/home/mstouffer/repos/textnav/.env.production.local'
+]
+2025-03-26T22:22:54.706Z vite:env env files loaded in 0.96ms
+2025-03-26T22:22:54.707Z vite:env using resolved env: {
+  HISTFILESIZE: '10000',
+  OPENROUTER_API_KEY: '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',
+  USER: 'mstouffer',
+  npm_config_user_agent: 'npm/11.0.0 node/v20.18.1 linux x64 workspaces/false',
+  STARSHIP_SHELL: 'bash',
+  GIT_ASKPASS: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass.sh',
+  npm_node_execpath: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node',
+  SHLVL: '2',
+  WT_PROFILE_ID: '{51855cb2-8cce-5362-8f54-464b92b32386}',
+  npm_config_noproxy: '',
+  HOME: '/home/mstouffer',
+  TERM_PROGRAM_VERSION: '1.98.2',
+  NVM_BIN: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin',
+  VSCODE_IPC_HOOK_CLI: '/run/user/1000/vscode-ipc-592681c0-c509-4dab-b558-34b23b650b60.sock',
+  npm_package_json: '/home/mstouffer/repos/textnav/package.json',
+  NVM_INC: '/home/mstouffer/.nvm/versions/node/v20.18.1/include/node',
+  NODE_OPTIONS: ' --require /home/mstouffer/.vscode-server/data/User/workspaceStorage/70990cc2e83c47d6ea74399bf7c9e38c/ms-vscode.js-debug/bootloader.js ',
+  OPENAI_API_KEY: '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',
+  DIRENV_DIFF: 'eJx8y8kSmjAAANB_yVkKmrIMMx4iiyAoyiZ4YQQTpTYQ2dHx33vq9Nb7ex_AgPr5LkAF1A_Qbd84xJlu-0AFHP-oKeZp29U9IbjhG8zqlu_w1FXXASz-atN2DaCC_2r-B66GpviXzijULCMAKsC7SXi3S2fS0Ql5GzjnVStb4dxmeR8R1Fs0pdGS1VuBzrfIVG4cV7qZPg3JSow5yaXT2F5Ckp7nDOI8dZah6NxX0pEMaGe-B-9FxdGdE3gLC5gS-xf2FaZjWWzzHMND2MBcsohSuTE7wSvqkrs8nT1BvudBT547U4kZl24SGDx1Y2ucaFm__P3WUR7Fb-2iRQUuQ917e09WxoIIiWT_DFZGIluwGhFCxyxj2mZ_HNdr8P3-CQAA__9jqXiK',
+  PAGER: 'cat',
+  VSCODE_GIT_ASKPASS_MAIN: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass-main.js',
+  COGNITO_USER_POOL_ID: 'us-east-1_QUB0Ry43E',
+  VSCODE_GIT_ASKPASS_NODE: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node',
+  COGNITO_APP_CLIENT_ID: '1li1aa0558h1ugshooc4l69r6n',
+  DEEPSEEK_API_KEY: 'sk-a12e73b098574cffb66e34b83dcae0fe',
+  npm_config_userconfig: '/home/mstouffer/.npmrc',
+  npm_config_local_prefix: '/home/mstouffer/repos/textnav',
+  DBUS_SESSION_BUS_ADDRESS: 'unix:path=/run/user/1000/bus',
+  npm_config_engine_strict: 'true',
+  COLORTERM: 'truecolor',
+  WSL_DISTRO_NAME: 'Ubuntu',
+  API_ENDPOINT: 'https://drypicnke5.execute-api.us-east-1.amazonaws.com',
+  COLOR: '0',
+  NVM_DIR: '/home/mstouffer/.nvm',
+  DEBUGINFOD_URLS: 'https://debuginfod.ubuntu.com ',
+  TEST_URL: 'handterm.com',
+  WAYLAND_DISPLAY: 'wayland-0',
+  LOGNAME: 'mstouffer',
+  DIRENV_FILE: '/home/mstouffer/repos/textnav/.envrc',
+  NAME: 'Code',
+  WSL_INTEROP: '/run/WSL/3217_interop',
+  PULSE_SERVER: 'unix:/mnt/wslg/PulseServer',
+  _: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/npx',
+  npm_config_prefix: '/home/mstouffer/.nvm/versions/node/v20.18.1',
+  npm_config_npm_version: '11.0.0',
+  TERM: 'xterm-256color',
+  npm_config_cache: '/home/mstouffer/.npm',
+  STACK_NAME: 'HandTermCdkStack',
+  HISTCONTROL: 'ignoredups',
+  npm_config_node_gyp: '/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+  PATH: '/home/mstouffer/repos/textnav/node_modules/.bin:/home/mstouffer/repos/textnav/node_modules/.bin:/home/mstouffer/repos/node_modules/.bin:/home/mstouffer/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/bin/remote-cli:/home/mstouffer/.nvm/versions/node/v20.18.1/bin:/home/mstouffer/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin:/mnt/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/mnt/c/Users/xgenx/scoop/apps/jenv/current:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/LINQPad7:/mnt/c/Program Files/1Password CLI:/mnt/c/Program Files/Kubernetes/Minikube:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/gsudo/Current:/mnt/c/Program Files (x86)/gnupg/bin:/mnt/c/Program Files (x86)/GnuPG/bin:/mnt/c/Users/xgenx/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Program Files/Microsoft VS Code Insiders/bin:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Neovim/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files/PowerShell/7-preview/preview:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/xgenx/scoop/apps/yarn/current/global/node_modules/.bin:/mnt/c/Users/xgenx/scoop/apps/yarn/current/bin:/mnt/c/Users/xgenx/.console-ninja/.bin:/mnt/c/Users/xgenx/AppData/Roaming/flux:/mnt/c/Users/xgenx/scoop/apps/maven/current/bin:/mnt/c/Users/xgenx/scoop/apps/gcc/current/bin:/mnt/c/Users/xgenx/scoop/apps/openjdk8-redhat/current/bin:/mnt/c/Users/xgenx/scoop/apps/openssl/current/bin:/mnt/c/Users/xgenx/go/bin:/mnt/c/Users/xgenx/scoop/apps/nvm/current/nodejs/nodejs:/mnt/c/Users/xgenx/scoop/apps/rustup/current/.cargo/bin:/mnt/c/Users/xgenx/scoop/shims:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/xgenx/.dotnet/tools:/mnt/c/src/flutter/bin:/mnt/c/Users/xgenx/AppData/Local/Android/Sdk/emulator:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code Insiders/bin:/mnt/c/Users/xgenx/AppData/Roaming/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin:/mnt/c/Users/xgenx/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code Insiders/:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WinGet/Links:/mnt/c/Users/xgenx/.platformio/penv/Scripts:/mnt/c/Users/xgenx/Infineon/Developer Center Launcher:/mnt/c/Users/xgenx/Infineon/LauncherService:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/xgenx/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/xgenx/.jabba/jdk/adopt@1.8.0-292:/mnt/c/Users/xgenx/AppData/Local/Programs/Ollama:/mnt/c/Users/xgenx/miniconda3/:/mnt/c/Users/xgenx/miniconda3/Scripts/:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/xgenx/AppData/Local/Programs/nu/bin/:/mnt/c/Users/xgenx/AppData/Local/Programs/Windsurf/bin:/snap/bin:/home/mstouffer/.local/bin',
+  ANTHROPIC_API_KEY: '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',
+  DIRENV_WATCHES: 'eJx0zs1KxDAQAOB3ybns7HTys_buUfAuHmYmU1poG0mydUF8d--iL_DxvX25V-6LmxwsZTfYWy_3ebYK1T5Kg26PfvAJFzvOqm5wLyX3dTc3YfIjeR8pDe75sbbe3NTr3b6Hf8nLVpQ3aAtXg7xWO07gbSufkJF8Vp-YBX3SkDEGEQmioqRMGK8hclCZCUceiTDOzOkpiV053f6I4S2EX7H3nwAAAP__pCBMPw==',
+  NODE: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node',
+  npm_package_name: 'textnav',
+  WT_SESSION: '2d929ce9-04e2-4172-8603-e36eac957e67',
+  XDG_RUNTIME_DIR: '/run/user/1000/',
+  GITHUB_APP_PRIVATE_KEY: '46c2cd6b690043acca71f113f6383e9cb56b82fc',
+  DISPLAY: ':0',
+  GROQ_API_KEY: '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',
+  HISTSIZE: '10000',
+  LANG: 'C.UTF-8',
+  GITHUB_CLIENT_ID: 'Iv23li7gy43wuuUgck9v',
+  VSCODE_GIT_IPC_HANDLE: '/run/user/1000/vscode-git-e8c1e60947.sock',
+  TERM_PROGRAM: 'vscode',
+  npm_lifecycle_script: 'astro',
+  GITHUB_CLIENT_SECRET: '46c2cd6b690043acca71f113f6383e9cb56b82fc',
+  SHELL: '/usr/bin/bash',
+  AWS_PROFILE: 'mark',
+  npm_package_version: '0.0.1',
+  npm_lifecycle_event: 'npx',
+  AWS_REGION: 'us-east-1',
+  DIRENV_DIR: '-/home/mstouffer/repos/textnav',
+  VSCODE_INSPECTOR_OPTIONS: ':::{"inspectorIpc":"/tmp/node-cdp.7994-c4db96c8-0.sock.deferred","deferredMode":true,"waitForDebugger":"","execPath":"/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node","onlyEntrypoint":false,"autoAttachMode":"smart","mandatePortTracking":true,"aaPatterns":["/home/mstouffer/repos/textnav/**","!**/node_modules/**","**/$KNOWN_TOOLS$/**"]}',
+  VSCODE_GIT_ASKPASS_EXTRA_ARGS: '',
+  npm_config_globalconfig: '/home/mstouffer/.nvm/versions/node/v20.18.1/etc/npmrc',
+  npm_config_init_module: '/home/mstouffer/.npm-init.js',
+  PWD: '/home/mstouffer/repos/textnav',
+  npm_execpath: '/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/bin/npm-cli.js',
+  NVM_CD_FLAGS: '',
+  XDG_DATA_DIRS: '/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+  npm_config_global_prefix: '/home/mstouffer/.nvm/versions/node/v20.18.1',
+  STARSHIP_SESSION_KEY: '2918325575583777',
+  npm_command: 'exec',
+  API_URL: 'https://drypicnke5.execute-api.us-east-1.amazonaws.com',
+  WSL2_GUI_APPS_ENABLED: '1',
+  GITHUB_APP_ID: 'Iv23li7gy43wuuUgck9v',
+  VTE_VERSION: '0',
+  HOSTTYPE: 'x86_64',
+  WSLENV: 'ELECTRON_RUN_AS_NODE/w:WT_SESSION:WT_PROFILE_ID:',
+  INIT_CWD: '/home/mstouffer/repos/textnav',
+  EDITOR: 'vi',
+  DEBUG: 'astro:*,vite:*',
+  NODE_ENV: 'production'
+}
+2025-03-26T22:22:54.726Z vite:env loading env files: [
+  '/home/mstouffer/repos/textnav/.env',
+  '/home/mstouffer/repos/textnav/.env.local',
+  '/home/mstouffer/repos/textnav/.env.production',
+  '/home/mstouffer/repos/textnav/.env.production.local'
+]
+2025-03-26T22:22:54.726Z vite:env env files loaded in 0.30ms
+2025-03-26T22:22:54.727Z vite:env using resolved env: {
+  HISTFILESIZE: '10000',
+  OPENROUTER_API_KEY: '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',
+  USER: 'mstouffer',
+  npm_config_user_agent: 'npm/11.0.0 node/v20.18.1 linux x64 workspaces/false',
+  STARSHIP_SHELL: 'bash',
+  GIT_ASKPASS: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass.sh',
+  npm_node_execpath: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node',
+  SHLVL: '2',
+  WT_PROFILE_ID: '{51855cb2-8cce-5362-8f54-464b92b32386}',
+  npm_config_noproxy: '',
+  HOME: '/home/mstouffer',
+  TERM_PROGRAM_VERSION: '1.98.2',
+  NVM_BIN: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin',
+  VSCODE_IPC_HOOK_CLI: '/run/user/1000/vscode-ipc-592681c0-c509-4dab-b558-34b23b650b60.sock',
+  npm_package_json: '/home/mstouffer/repos/textnav/package.json',
+  NVM_INC: '/home/mstouffer/.nvm/versions/node/v20.18.1/include/node',
+  NODE_OPTIONS: ' --require /home/mstouffer/.vscode-server/data/User/workspaceStorage/70990cc2e83c47d6ea74399bf7c9e38c/ms-vscode.js-debug/bootloader.js ',
+  OPENAI_API_KEY: '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',
+  DIRENV_DIFF: 'eJx8y8kSmjAAANB_yVkKmrIMMx4iiyAoyiZ4YQQTpTYQ2dHx33vq9Nb7ex_AgPr5LkAF1A_Qbd84xJlu-0AFHP-oKeZp29U9IbjhG8zqlu_w1FXXASz-atN2DaCC_2r-B66GpviXzijULCMAKsC7SXi3S2fS0Ql5GzjnVStb4dxmeR8R1Fs0pdGS1VuBzrfIVG4cV7qZPg3JSow5yaXT2F5Ckp7nDOI8dZah6NxX0pEMaGe-B-9FxdGdE3gLC5gS-xf2FaZjWWzzHMND2MBcsohSuTE7wSvqkrs8nT1BvudBT547U4kZl24SGDx1Y2ucaFm__P3WUR7Fb-2iRQUuQ917e09WxoIIiWT_DFZGIluwGhFCxyxj2mZ_HNdr8P3-CQAA__9jqXiK',
+  PAGER: 'cat',
+  VSCODE_GIT_ASKPASS_MAIN: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/extensions/git/dist/askpass-main.js',
+  COGNITO_USER_POOL_ID: 'us-east-1_QUB0Ry43E',
+  VSCODE_GIT_ASKPASS_NODE: '/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node',
+  COGNITO_APP_CLIENT_ID: '1li1aa0558h1ugshooc4l69r6n',
+  DEEPSEEK_API_KEY: 'sk-a12e73b098574cffb66e34b83dcae0fe',
+  npm_config_userconfig: '/home/mstouffer/.npmrc',
+  npm_config_local_prefix: '/home/mstouffer/repos/textnav',
+  DBUS_SESSION_BUS_ADDRESS: 'unix:path=/run/user/1000/bus',
+  npm_config_engine_strict: 'true',
+  COLORTERM: 'truecolor',
+  WSL_DISTRO_NAME: 'Ubuntu',
+  API_ENDPOINT: 'https://drypicnke5.execute-api.us-east-1.amazonaws.com',
+  COLOR: '0',
+  NVM_DIR: '/home/mstouffer/.nvm',
+  DEBUGINFOD_URLS: 'https://debuginfod.ubuntu.com ',
+  TEST_URL: 'handterm.com',
+  WAYLAND_DISPLAY: 'wayland-0',
+  LOGNAME: 'mstouffer',
+  DIRENV_FILE: '/home/mstouffer/repos/textnav/.envrc',
+  NAME: 'Code',
+  WSL_INTEROP: '/run/WSL/3217_interop',
+  PULSE_SERVER: 'unix:/mnt/wslg/PulseServer',
+  _: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/npx',
+  npm_config_prefix: '/home/mstouffer/.nvm/versions/node/v20.18.1',
+  npm_config_npm_version: '11.0.0',
+  TERM: 'xterm-256color',
+  npm_config_cache: '/home/mstouffer/.npm',
+  STACK_NAME: 'HandTermCdkStack',
+  HISTCONTROL: 'ignoredups',
+  npm_config_node_gyp: '/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js',
+  PATH: '/home/mstouffer/repos/textnav/node_modules/.bin:/home/mstouffer/repos/textnav/node_modules/.bin:/home/mstouffer/repos/node_modules/.bin:/home/mstouffer/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/mstouffer/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/bin/remote-cli:/home/mstouffer/.nvm/versions/node/v20.18.1/bin:/home/mstouffer/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin:/mnt/c/Program Files/Microsoft SDKs/Azure/CLI2/wbin:/mnt/c/Users/xgenx/scoop/apps/jenv/current:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/LINQPad7:/mnt/c/Program Files/1Password CLI:/mnt/c/Program Files/Kubernetes/Minikube:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/gsudo/Current:/mnt/c/Program Files (x86)/gnupg/bin:/mnt/c/Program Files (x86)/GnuPG/bin:/mnt/c/Users/xgenx/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Amazon/AWSSAMCLI/bin/:/mnt/c/Program Files/Microsoft VS Code Insiders/bin:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Neovim/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files/PowerShell/7-preview/preview:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/xgenx/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/xgenx/scoop/apps/yarn/current/global/node_modules/.bin:/mnt/c/Users/xgenx/scoop/apps/yarn/current/bin:/mnt/c/Users/xgenx/.console-ninja/.bin:/mnt/c/Users/xgenx/AppData/Roaming/flux:/mnt/c/Users/xgenx/scoop/apps/maven/current/bin:/mnt/c/Users/xgenx/scoop/apps/gcc/current/bin:/mnt/c/Users/xgenx/scoop/apps/openjdk8-redhat/current/bin:/mnt/c/Users/xgenx/scoop/apps/openssl/current/bin:/mnt/c/Users/xgenx/go/bin:/mnt/c/Users/xgenx/scoop/apps/nvm/current/nodejs/nodejs:/mnt/c/Users/xgenx/scoop/apps/rustup/current/.cargo/bin:/mnt/c/Users/xgenx/scoop/shims:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/xgenx/.dotnet/tools:/mnt/c/src/flutter/bin:/mnt/c/Users/xgenx/AppData/Local/Android/Sdk/emulator:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code Insiders/bin:/mnt/c/Users/xgenx/AppData/Roaming/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin:/mnt/c/Users/xgenx/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code Insiders/:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WinGet/Links:/mnt/c/Users/xgenx/.platformio/penv/Scripts:/mnt/c/Users/xgenx/Infineon/Developer Center Launcher:/mnt/c/Users/xgenx/Infineon/LauncherService:/mnt/c/Users/xgenx/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/xgenx/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Users/xgenx/.jabba/jdk/adopt@1.8.0-292:/mnt/c/Users/xgenx/AppData/Local/Programs/Ollama:/mnt/c/Users/xgenx/miniconda3/:/mnt/c/Users/xgenx/miniconda3/Scripts/:/mnt/c/Users/xgenx/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/xgenx/AppData/Local/Programs/nu/bin/:/mnt/c/Users/xgenx/AppData/Local/Programs/Windsurf/bin:/snap/bin:/home/mstouffer/.local/bin',
+  ANTHROPIC_API_KEY: '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',
+  DIRENV_WATCHES: 'eJx0zs1KxDAQAOB3ybns7HTys_buUfAuHmYmU1poG0mydUF8d--iL_DxvX25V-6LmxwsZTfYWy_3ebYK1T5Kg26PfvAJFzvOqm5wLyX3dTc3YfIjeR8pDe75sbbe3NTr3b6Hf8nLVpQ3aAtXg7xWO07gbSufkJF8Vp-YBX3SkDEGEQmioqRMGK8hclCZCUceiTDOzOkpiV053f6I4S2EX7H3nwAAAP__pCBMPw==',
+  NODE: '/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node',
+  npm_package_name: 'textnav',
+  WT_SESSION: '2d929ce9-04e2-4172-8603-e36eac957e67',
+  XDG_RUNTIME_DIR: '/run/user/1000/',
+  GITHUB_APP_PRIVATE_KEY: '46c2cd6b690043acca71f113f6383e9cb56b82fc',
+  DISPLAY: ':0',
+  GROQ_API_KEY: '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',
+  HISTSIZE: '10000',
+  LANG: 'C.UTF-8',
+  GITHUB_CLIENT_ID: 'Iv23li7gy43wuuUgck9v',
+  VSCODE_GIT_IPC_HANDLE: '/run/user/1000/vscode-git-e8c1e60947.sock',
+  TERM_PROGRAM: 'vscode',
+  npm_lifecycle_script: 'astro',
+  GITHUB_CLIENT_SECRET: '46c2cd6b690043acca71f113f6383e9cb56b82fc',
+  SHELL: '/usr/bin/bash',
+  AWS_PROFILE: 'mark',
+  npm_package_version: '0.0.1',
+  npm_lifecycle_event: 'npx',
+  AWS_REGION: 'us-east-1',
+  DIRENV_DIR: '-/home/mstouffer/repos/textnav',
+  VSCODE_INSPECTOR_OPTIONS: ':::{"inspectorIpc":"/tmp/node-cdp.7994-c4db96c8-0.sock.deferred","deferredMode":true,"waitForDebugger":"","execPath":"/home/mstouffer/.nvm/versions/node/v20.18.1/bin/node","onlyEntrypoint":false,"autoAttachMode":"smart","mandatePortTracking":true,"aaPatterns":["/home/mstouffer/repos/textnav/**","!**/node_modules/**","**/$KNOWN_TOOLS$/**"]}',
+  VSCODE_GIT_ASKPASS_EXTRA_ARGS: '',
+  npm_config_globalconfig: '/home/mstouffer/.nvm/versions/node/v20.18.1/etc/npmrc',
+  npm_config_init_module: '/home/mstouffer/.npm-init.js',
+  PWD: '/home/mstouffer/repos/textnav',
+  npm_execpath: '/home/mstouffer/.nvm/versions/node/v20.18.1/lib/node_modules/npm/bin/npm-cli.js',
+  NVM_CD_FLAGS: '',
+  XDG_DATA_DIRS: '/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+  npm_config_global_prefix: '/home/mstouffer/.nvm/versions/node/v20.18.1',
+  STARSHIP_SESSION_KEY: '2918325575583777',
+  npm_command: 'exec',
+  API_URL: 'https://drypicnke5.execute-api.us-east-1.amazonaws.com',
+  WSL2_GUI_APPS_ENABLED: '1',
+  GITHUB_APP_ID: 'Iv23li7gy43wuuUgck9v',
+  VTE_VERSION: '0',
+  HOSTTYPE: 'x86_64',
+  WSLENV: 'ELECTRON_RUN_AS_NODE/w:WT_SESSION:WT_PROFILE_ID:',
+  INIT_CWD: '/home/mstouffer/repos/textnav',
+  EDITOR: 'vi',
+  DEBUG: 'astro:*,vite:*',
+  NODE_ENV: 'production'
+}
+2025-03-26T22:22:54.732Z vite:env loading env files: [
+  '/home/mstouffer/repos/textnav/.env',
+  '/home/mstouffer/repos/textnav/.env.local',
+  '/home/mstouffer/repos/textnav/.env.production',
+  '/home/mstouffer/repos/textnav/.env.production.local'
+]
+2025-03-26T22:22:54.732Z vite:env env files loaded in 0.37ms
+2025-03-26T22:22:54.733Z vite:env using resolved env: {}
+2025-03-26T22:22:54.744Z vite:config using resolved config: {
+  configFile: undefined,
+  mode: 'production',
+  cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite',
+  clearScreen: false,
+  customLogger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  appType: 'custom',
+  optimizeDeps: {
+    include: [
+      '@astrojs/react/client.js',
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime',
+      'astro > cssesc',
+      'astro > aria-query',
+      'astro > axobject-query'
+    ],
+    exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+    needsInterop: [],
+    extensions: [],
+    disabled: undefined,
+    holdUntilCrawlEnd: true,
+    force: false,
+    noDiscovery: true,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+    entries: [
+      '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+    ]
+  },
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'astro-manifest-plugin',
+    'astro:build',
+    'astro-env-plugin',
+    'astro:markdown',
+    'astro:head-metadata',
+    'astro-content-virtual-mod-plugin',
+    'astro:content-asset-propagation',
+    'astro:assets:esm',
+    'astro:vite-plugin-file-url',
+    'astro:i18n',
+    'astro:actions',
+    'astro:container',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'astro:build:normal',
+    'astro:scripts',
+    'astro:html',
+    'astro:postprocess',
+    'astro:integration-container',
+    'astro:content-imports',
+    '@astro/plugin-middleware',
+    'astro:assets',
+    'astro:prefetch',
+    'astro:transitions',
+    'astro:dev-toolbar',
+    '@astro/plugin-actions',
+    '@astrojs/react:opts',
+    'vite:wasm-fallback',
+    'astro:vite-plugin-env',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'astro:scripts:page-ssr',
+    'astro:scanner',
+    '@astrojs/vite-plugin-astro-ssr-manifest',
+    'astro:server-islands',
+    'astro:hmr-reload',
+    'vite:client-inject',
+    'vite:css-analysis',
+    'vite:import-analysis'
+  ],
+  publicDir: '/home/mstouffer/repos/textnav/public',
+  root: '/home/mstouffer/repos/textnav',
+  envPrefix: 'PUBLIC_',
+  define: {
+    'import.meta.env.SITE': 'undefined',
+    'import.meta.env.BASE_URL': '"/"',
+    'import.meta.env.ASSETS_PREFIX': 'undefined',
+    __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":false}'
+  },
+  server: {
+    port: 5173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {},
+    warmup: { clientFiles: [], ssrFiles: [] },
+    middlewareMode: true,
+    fs: {
+      strict: true,
+      deny: [ '.env', '.env.*', '*.{crt,pem}', '**/.git/**' ],
+      allow: [ '/home/mstouffer/repos/textnav' ]
+    },
+    preTransformRequests: true,
+    perEnvironmentStartEndDuringDev: false,
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    hmr: false,
+    watch: { ignored: [ '**' ] },
+    ws: false
+  },
+  resolve: {
+    externalConditions: [ 'node' ],
+    extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+    dedupe: [ 'astro', 'react', 'react-dom' ],
+    noExternal: [],
+    external: [],
+    preserveSymlinks: false,
+    alias: [
+      { find: 'randombytes', replacement: 'randombytes/browser' },
+      {
+        find: /^astro$/,
+        replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+      },
+      {
+        find: 'astro:middleware',
+        replacement: 'astro/virtual-modules/middleware.js'
+      },
+      { find: 'astro:schema', replacement: 'astro/zod' },
+      { find: 'astro:components', replacement: 'astro/components' },
+      {
+        find: /^\/?@vite\/env/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+      },
+      {
+        find: /^\/?@vite\/client/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+      }
+    ],
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+    builtins: []
+  },
+  ssr: {
+    target: 'node',
+    optimizeDeps: {
+      esbuildOptions: { preserveSymlinks: false },
+      include: [],
+      exclude: [],
+      needsInterop: [],
+      extensions: [],
+      holdUntilCrawlEnd: true,
+      force: false,
+      noDiscovery: true
+    },
+    noExternal: [
+      'astro',
+      'astro/components',
+      '@nanostores/preact',
+      '@fontsource/*',
+      '@astrojs/react',
+      '@astrojs/tailwind',
+      '@mui/material',
+      '@mui/base',
+      '@babel/runtime',
+      'use-immer',
+      '@material-tailwind/react'
+    ],
+    external: [],
+    resolve: {
+      conditions: [ 'module', 'node', 'development|production', 'astro' ],
+      externalConditions: [ 'node' ]
+    }
+  },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    polyfillModulePreload: true,
+    modulePreload: { polyfill: true },
+    outDir: 'dist',
+    assetsDir: '_astro',
+    assetsInlineLimit: 4096,
+    sourcemap: false,
+    terserOptions: {},
+    rollupOptions: { onwarn: [Function: onwarn] },
+    commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    ssr: false,
+    emitAssets: false,
+    createEnvironment: [Function: createEnvironment],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssMinify: true
+  },
+  css: {
+    transformer: 'postcss',
+    preprocessorMaxWorkers: 0,
+    devSourcemap: false,
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: 'tailwindcss',
+          plugins: [ [AsyncFunction (anonymous)] ]
+        },
+        {
+          browsers: undefined,
+          info: [Function: info],
+          options: {},
+          postcssPlugin: 'autoprefixer',
+          prepare: [Function: prepare]
+        }
+      ]
+    },
+    lightningcss: undefined
+  },
+  logLevel: 'silent',
+  esbuild: { jsxDev: false, jsx: 'automatic', jsxImportSource: undefined },
+  environments: {
+    client: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":false}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+        builtins: []
+      },
+      keepProcessEnv: false,
+      consumer: 'client',
+      optimizeDeps: {
+        include: [
+          '@astrojs/react/client.js',
+          'react',
+          'react-dom',
+          'react/jsx-dev-runtime',
+          'react/jsx-runtime',
+          'astro > cssesc',
+          'astro > aria-query',
+          'astro > axobject-query'
+        ],
+        exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: true,
+        esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+        entries: [
+          '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+        ]
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: true,
+        createEnvironment: [Function: defaultCreateClientDevEnvironment],
+        recoverable: true,
+        moduleRunnerTransform: false
+      },
+      build: {
+        target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: 'dist',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: { onwarn: [Function: onwarn] },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: null,
+        copyPublicDir: true,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: 'esbuild',
+        ssr: false,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        cssMinify: true
+      }
+    },
+    ssr: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":false}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [
+          'astro',
+          'astro/components',
+          '@nanostores/preact',
+          '@fontsource/*',
+          '@astrojs/react',
+          '@astrojs/tailwind',
+          '@mui/material',
+          '@mui/base',
+          '@babel/runtime',
+          'use-immer',
+          '@material-tailwind/react'
+        ],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'node', 'development|production', 'astro' ],
+        builtins: [
+          '_http_agent',         '_http_client',        '_http_common',
+          '_http_incoming',      '_http_outgoing',      '_http_server',
+          '_stream_duplex',      '_stream_passthrough', '_stream_readable',
+          '_stream_transform',   '_stream_wrap',        '_stream_writable',
+          '_tls_common',         '_tls_wrap',           'assert',
+          'assert/strict',       'async_hooks',         'buffer',
+          'child_process',       'cluster',             'console',
+          'constants',           'crypto',              'dgram',
+          'diagnostics_channel', 'dns',                 'dns/promises',
+          'domain',              'events',              'fs',
+          'fs/promises',         'http',                'http2',
+          'https',               'inspector',           'inspector/promises',
+          'module',              'net',                 'os',
+          'path',                'path/posix',          'path/win32',
+          'perf_hooks',          'process',             'punycode',
+          'querystring',         'readline',            'readline/promises',
+          'repl',                'stream',              'stream/consumers',
+          'stream/promises',     'stream/web',          'string_decoder',
+          'sys',                 'timers',              'timers/promises',
+          'tls',                 'trace_events',        'tty',
+          'url',                 'util',                'util/types',
+          'v8',                  'vm',                  'wasi',
+          'worker_threads',      'zlib',                /^node:/,
+          /^npm:/,               /^bun:/
+        ]
+      },
+      keepProcessEnv: true,
+      consumer: 'server',
+      optimizeDeps: {
+        include: [],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: true,
+        esbuildOptions: { preserveSymlinks: false }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: false,
+        createEnvironment: [Function: defaultCreateDevEnvironment],
+        recoverable: false,
+        moduleRunnerTransform: true
+      },
+      build: {
+        target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: 'dist',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: { onwarn: [Function: onwarn] },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: null,
+        copyPublicDir: true,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: false,
+        ssr: true,
+        emitAssets: false,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        cssMinify: 'esbuild'
+      }
+    }
+  },
+  configFileDependencies: [],
+  inlineConfig: {
+    configFile: false,
+    mode: 'production',
+    cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite/',
+    clearScreen: false,
+    customLogger: {
+      hasWarned: false,
+      info: [Function: info],
+      warn: [Function: warn],
+      warnOnce: [Function: warnOnce],
+      error: [Function: error],
+      clearScreen: [Function: clearScreen],
+      hasErrorLogged: [Function: hasErrorLogged]
+    },
+    appType: 'custom',
+    optimizeDeps: {
+      entries: [
+        '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+      ],
+      exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+      include: [ '@astrojs/react/client.js' ],
+      noDiscovery: true
+    },
+    plugins: [
+      {
+        enforce: 'pre',
+        name: 'astro-manifest-plugin',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      null,
+      false,
+      [
+        {
+          name: 'astro:build',
+          enforce: 'pre',
+          configEnvironment: [AsyncFunction: configEnvironment],
+          configResolved: [Function: configResolved],
+          configureServer: [Function: configureServer],
+          buildStart: [Function: buildStart],
+          load: [AsyncFunction: load],
+          transform: [AsyncFunction: transform],
+          handleHotUpdate: [AsyncFunction: handleHotUpdate]
+        },
+        {
+          name: 'astro:build:normal',
+          resolveId: [Function: resolveId]
+        }
+      ],
+      {
+        name: 'astro:scripts',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        buildStart: [Function: buildStart]
+      },
+      false,
+      {
+        name: 'astro:vite-plugin-env',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro-env-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        buildEnd: [Function: buildEnd],
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      {
+        enforce: 'pre',
+        name: 'astro:markdown',
+        buildEnd: [Function: buildEnd],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:html',
+        options: [Function: options],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:postprocess',
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:integration-container',
+        configureServer: [AsyncFunction: configureServer],
+        buildStart: [AsyncFunction: buildStart]
+      },
+      {
+        name: 'astro:scripts:page-ssr',
+        enforce: 'post',
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:head-metadata',
+        enforce: 'pre',
+        apply: 'serve',
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:scanner',
+        enforce: 'post',
+        transform: [AsyncFunction: transform],
+        handleHotUpdate: [AsyncFunction: handleHotUpdate]
+      },
+      {
+        name: 'astro-content-virtual-mod-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        configureServer: [Function: configureServer]
+      },
+      [
+        {
+          name: 'astro:content-imports',
+          config: [Function: config],
+          buildStart: [AsyncFunction: buildStart],
+          transform: [AsyncFunction: transform],
+          configureServer: [Function: configureServer]
+        }
+      ],
+      {
+        name: 'astro:content-asset-propagation',
+        enforce: 'pre',
+        resolveId: [AsyncFunction: resolveId],
+        configureServer: [Function: configureServer],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: '@astro/plugin-middleware',
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astrojs/vite-plugin-astro-ssr-manifest',
+        enforce: 'post',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      [
+        {
+          name: 'astro:assets',
+          config: [Function: config],
+          resolveId: [AsyncFunction: resolveId],
+          load: [Function: load],
+          buildStart: [Function: buildStart],
+          renderChunk: [AsyncFunction: renderChunk]
+        },
+        {
+          name: 'astro:assets:esm',
+          enforce: 'pre',
+          config: [Function: config],
+          configResolved: [Function: configResolved],
+          load: [AsyncFunction: load]
+        }
+      ],
+      {
+        name: 'astro:prefetch',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:transitions',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:dev-toolbar',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        configureServer: [Function: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:vite-plugin-file-url',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:i18n',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:actions',
+        enforce: 'pre',
+        resolveId: [Function: resolveId],
+        configureServer: [AsyncFunction: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astro/plugin-actions',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load]
+      },
+      {
+        name: 'astro:server-islands',
+        enforce: 'post',
+        config: [Function: config],
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transform: [Function: transform],
+        renderChunk: [Function: renderChunk]
+      },
+      {
+        name: 'astro:container',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:hmr-reload',
+        enforce: 'post',
+        hotUpdate: { order: 'post', handler: [Function: handler] }
+      },
+      {
+        name: 'vite:react-babel',
+        enforce: 'pre',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'vite:react-refresh',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transformIndexHtml: [Function: transformIndexHtml]
+      },
+      {
+        name: '@astrojs/react:opts',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      }
+    ],
+    publicDir: '/home/mstouffer/repos/textnav/public/',
+    root: '/home/mstouffer/repos/textnav/',
+    envPrefix: 'PUBLIC_',
+    define: {
+      'import.meta.env.SITE': 'undefined',
+      'import.meta.env.BASE_URL': '"/"',
+      'import.meta.env.ASSETS_PREFIX': 'undefined'
+    },
+    server: {
+      hmr: false,
+      watch: { ignored: [ '**' ] },
+      middlewareMode: true,
+      ws: false
+    },
+    resolve: {
+      alias: [
+        { find: 'randombytes', replacement: 'randombytes/browser' },
+        {
+          find: /^astro$/,
+          replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+        },
+        {
+          find: 'astro:middleware',
+          replacement: 'astro/virtual-modules/middleware.js'
+        },
+        { find: 'astro:schema', replacement: 'astro/zod' },
+        { find: 'astro:components', replacement: 'astro/components' }
+      ],
+      dedupe: [ 'astro' ]
+    },
+    ssr: {
+      noExternal: [
+        'astro',
+        'astro/components',
+        '@nanostores/preact',
+        '@fontsource/*',
+        '@astrojs/react',
+        '@astrojs/tailwind',
+        '@mui/material',
+        '@mui/base',
+        '@babel/runtime',
+        'use-immer',
+        '@material-tailwind/react'
+      ],
+      external: []
+    },
+    build: { assetsDir: '_astro' },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'tailwindcss',
+            plugins: [ [AsyncFunction (anonymous)] ]
+          },
+          {
+            browsers: undefined,
+            info: [Function: info],
+            options: {},
+            postcssPlugin: 'autoprefixer',
+            prepare: [Function: prepare]
+          }
+        ]
+      }
+    },
+    logLevel: 'silent'
+  },
+  base: '/',
+  decodedBase: '/',
+  rawBase: '/',
+  command: 'serve',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: true,
+  json: { namedExports: true, stringify: 'auto' },
+  builder: undefined,
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {}
+  },
+  envDir: '/home/mstouffer/repos/textnav',
+  env: { BASE_URL: '/', MODE: 'production', DEV: false, PROD: true },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_/home/mstouffer/repos/textnav' => {
+      dir: '/home/mstouffer/repos/textnav',
+      data: {
+        name: 'textnav',
+        type: 'module',
+        version: '0.0.1',
+        scripts: {
+          dev: 'astro dev',
+          build: 'rm -rf dist; npm cache clean --force; astro build',
+          preview: 'astro preview',
+          astro: 'astro',
+          enrich: 'npx tsx src/enrich.js',
+          test: 'npm cache clean --force; rm -rf dist; vitest --run',
+          'test:e2e': 'npx playwright test --headed --timeout=30000',
+          'test:unit-json': 'mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run',
+          'update-summaries': 'DEBUG_ONCE=true tsx src/lib/updateWebsiteSummaries.ts'
+        },
+        dependencies: {
+          '@astrojs/react': '^4.2.1',
+          '@astrojs/tailwind': '^6.0.1',
+          '@nanostores/react': '^0.8.4',
+          '@radix-ui/react-dialog': '^1.1.4',
+          '@radix-ui/react-dropdown-menu': '^2.1.4',
+          '@radix-ui/react-label': '^2.1.1',
+          '@radix-ui/react-separator': '^1.1.1',
+          '@radix-ui/react-slot': '^1.1.1',
+          '@radix-ui/react-tooltip': '^1.1.6',
+          '@types/react': '^19.0.1',
+          '@types/react-dom': '^19.0.2',
+          astro: '^5.5.4',
+          cheerio: '^1.0.0',
+          'class-variance-authority': '^0.7.1',
+          clsx: '^2.1.1',
+          'csv-parse': '^5.6.0',
+          'gray-matter': '^4.0.3',
+          'json-patch': '^0.7.0',
+          'lucide-react': '^0.468.0',
+          nanostores: '^0.11.3',
+          react: '^19.0.0',
+          'react-dom': '^19.0.0',
+          'tailwind-merge': '^2.5.5',
+          tailwindcss: '^3.4.17',
+          'tailwindcss-animate': '^1.0.7',
+          turndown: '^7.2.0',
+          'turndown-plugin-gfm': '^1.0.2',
+          typescript: '^5.7.2',
+          uuid: '^9.0.1',
+          vaul: '^1.1.2'
+        },
+        devDependencies: {
+          '@ianvs/prettier-plugin-sort-imports': '^4.4.0',
+          '@playwright/test': '^1.51.1',
+          '@testing-library/jest-dom': '^6.6.3',
+          '@testing-library/react': '^16.2.0',
+          '@types/node': '^22.13.10',
+          '@types/testing-library__jest-dom': '^5.14.9',
+          '@types/testing-library__react': '^10.0.1',
+          '@types/turndown': '^5.0.5',
+          '@types/uuid': '^9.0.8',
+          jsdom: '^26.0.0',
+          playwright: '^1.51.1',
+          'prettier-plugin-astro': '^0.14.1',
+          'prettier-plugin-merge': '^0.7.2',
+          'prettier-plugin-organize-imports': '^4.1.0',
+          'prettier-plugin-tailwindcss': '^0.6.9',
+          tsx: '^4.19.3',
+          vitest: '^3.0.8'
+        }
+      },
+      hasSideEffects: [Function: hasSideEffects],
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  future: undefined,
+  dev: {
+    warmup: [],
+    sourcemap: { js: true },
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    preTransformRequests: false,
+    createEnvironment: [Function: defaultCreateDevEnvironment],
+    recoverable: false,
+    moduleRunnerTransform: false
+  },
+  webSocketToken: 'JZyWvNDQMCyL',
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks],
+  createResolver: [Function: createResolver],
+  fsDenyGlob: [Function: arrayMatcher],
+  safeModulePaths: Set(0) {},
+  additionalAllowedHosts: []
+}
+2025-03-26T22:22:54.772Z vite:deps (client) Hash is consistent. Skipping. Use --force to override.
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: websites
+
+15:22:54 [content] Syncing content
+15:22:54 [content] Synced content
+15:22:54 [types] Generated 112ms
+15:22:54 [build] output: "static"
+15:22:54 [build] mode: "static"
+15:22:54 [build] directory: /home/mstouffer/repos/textnav/dist/
+15:22:54 [build] Collecting build info...
+2025-03-26T22:22:54.824Z astro:build ├── ✔ src/pages/index.astro → /index.html
+2025-03-26T22:22:54.824Z astro:build All pages loaded   1743027772.9s
+15:22:54 [build] ✓ Completed in 189ms.
+15:22:54 [build] Building static entrypoints...
+2025-03-26T22:22:54.889Z vite:env loading env files: [
+  '/home/mstouffer/repos/textnav/.env',
+  '/home/mstouffer/repos/textnav/.env.local',
+  '/home/mstouffer/repos/textnav/.env.production',
+  '/home/mstouffer/repos/textnav/.env.production.local'
+]
+2025-03-26T22:22:54.889Z vite:env env files loaded in 0.27ms
+2025-03-26T22:22:54.890Z vite:env using resolved env: {}
+2025-03-26T22:22:54.900Z vite:config using resolved config: {
+  configFile: undefined,
+  mode: 'production',
+  cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite',
+  clearScreen: false,
+  customLogger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  appType: 'custom',
+  optimizeDeps: {
+    include: [
+      '@astrojs/react/client.js',
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime',
+      'astro > cssesc',
+      'astro > aria-query',
+      'astro > axobject-query'
+    ],
+    exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+    needsInterop: [],
+    extensions: [],
+    disabled: undefined,
+    holdUntilCrawlEnd: true,
+    force: false,
+    noDiscovery: false,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+    entries: [
+      '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+    ]
+  },
+  plugins: [
+    'vite:build-metadata',
+    'vite:watch-package-data',
+    'alias',
+    'astro-manifest-plugin',
+    'astro:build',
+    'astro-env-plugin',
+    'astro:markdown',
+    'astro-content-virtual-mod-plugin',
+    'astro:content-asset-propagation',
+    'astro:assets:esm',
+    'astro:vite-plugin-file-url',
+    'astro:i18n',
+    'astro:actions',
+    'astro:container',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    '@astro/rollup-plugin-astro-analyzer',
+    '@astro/plugin-build-internals',
+    '@astro/plugin-renderers',
+    '@astro/plugin-middleware-build',
+    '@astro/plugin-actions-build',
+    '@astro/plugin-build-pages',
+    'astro:rollup-plugin-build-css',
+    'astro:rollup-plugin-css-scope-to',
+    'astro:head-metadata-build',
+    'astro:chunks',
+    'astro:build:normal',
+    'astro:scripts',
+    'astro:html',
+    'astro:postprocess',
+    'astro:integration-container',
+    'astro:content-imports',
+    '@astro/plugin-middleware',
+    'astro:assets',
+    'astro:prefetch',
+    'astro:transitions',
+    'astro:dev-toolbar',
+    '@astro/plugin-actions',
+    '@astrojs/react:opts',
+    'vite:wasm-fallback',
+    'astro:vite-plugin-env',
+    'vite:define',
+    'vite:css-post',
+    'vite:build-html',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:force-systemjs-wrap-complete',
+    'commonjs',
+    'vite:data-uri',
+    'vite:rollup-options-plugins',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    '@astro/plugin-build-manifest',
+    'astro:rollup-plugin-single-css',
+    'astro:rollup-plugin-inline-stylesheets',
+    '@astrojs/vite-plugin-astro-adapter',
+    'astro:scripts:page-ssr',
+    'astro:scanner',
+    '@astrojs/vite-plugin-astro-ssr-manifest',
+    'astro:server-islands',
+    'astro:hmr-reload',
+    'vite:build-import-analysis',
+    'vite:esbuild-transpile',
+    'vite:terser',
+    'vite:manifest',
+    'vite:ssr-manifest',
+    'vite:reporter',
+    'vite:load-fallback'
+  ],
+  publicDir: '/home/mstouffer/repos/textnav/public',
+  root: '/home/mstouffer/repos/textnav',
+  envPrefix: 'PUBLIC_',
+  define: {
+    'import.meta.env.SITE': 'undefined',
+    'import.meta.env.BASE_URL': '"/"',
+    'import.meta.env.ASSETS_PREFIX': 'undefined',
+    __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+  },
+  server: {
+    port: 5173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {},
+    warmup: { clientFiles: [], ssrFiles: [] },
+    middlewareMode: true,
+    fs: {
+      strict: true,
+      deny: [ '.env', '.env.*', '*.{crt,pem}', '**/.git/**' ],
+      allow: [ '/home/mstouffer/repos/textnav' ]
+    },
+    preTransformRequests: true,
+    perEnvironmentStartEndDuringDev: false,
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    hmr: false,
+    watch: { ignored: [ '**' ] }
+  },
+  resolve: {
+    externalConditions: [ 'node' ],
+    extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+    dedupe: [ 'astro', 'react', 'react-dom' ],
+    noExternal: [],
+    external: [],
+    preserveSymlinks: false,
+    alias: [
+      { find: 'randombytes', replacement: 'randombytes/browser' },
+      {
+        find: /^astro$/,
+        replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+      },
+      {
+        find: 'astro:middleware',
+        replacement: 'astro/virtual-modules/middleware.js'
+      },
+      { find: 'astro:schema', replacement: 'astro/zod' },
+      { find: 'astro:components', replacement: 'astro/components' },
+      {
+        find: /^\/?@vite\/env/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+      },
+      {
+        find: /^\/?@vite\/client/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+      }
+    ],
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+    builtins: []
+  },
+  ssr: {
+    target: 'node',
+    optimizeDeps: {
+      esbuildOptions: { preserveSymlinks: false },
+      include: [],
+      exclude: [],
+      needsInterop: [],
+      extensions: [],
+      holdUntilCrawlEnd: true,
+      force: false,
+      noDiscovery: true
+    },
+    noExternal: [
+      'astro',
+      'astro/components',
+      '@nanostores/preact',
+      '@fontsource/*',
+      '@astrojs/react',
+      '@astrojs/tailwind',
+      '@mui/material',
+      '@mui/base',
+      '@babel/runtime',
+      'use-immer',
+      '@material-tailwind/react',
+      'astro'
+    ],
+    external: [ 'sharp' ],
+    resolve: {
+      conditions: [ 'module', 'node', 'development|production', 'astro' ],
+      externalConditions: [ 'node' ]
+    }
+  },
+  build: {
+    target: 'esnext',
+    polyfillModulePreload: true,
+    modulePreload: { polyfill: false },
+    outDir: '/home/mstouffer/repos/textnav/dist/',
+    assetsDir: '_astro',
+    assetsInlineLimit: 4096,
+    sourcemap: false,
+    terserOptions: {},
+    rollupOptions: {
+      preserveEntrySignatures: 'exports-only',
+      input: [],
+      output: {
+        hoistTransitiveImports: false,
+        format: 'esm',
+        minifyInternalExports: true,
+        chunkFileNames: [Function: chunkFileNames],
+        assetFileNames: '_astro/[name].[hash][extname]',
+        entryFileNames: [Function: entryFileNames]
+      },
+      onwarn: [Function: onwarn]
+    },
+    commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+    write: true,
+    emptyOutDir: false,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssrManifest: false,
+    ssrEmitAssets: true,
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    cssCodeSplit: true,
+    minify: false,
+    ssr: true,
+    emitAssets: true,
+    createEnvironment: [Function: createEnvironment],
+    cssMinify: true,
+    cssTarget: 'esnext'
+  },
+  css: {
+    transformer: 'postcss',
+    preprocessorMaxWorkers: 0,
+    devSourcemap: false,
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: 'tailwindcss',
+          plugins: [ [AsyncFunction (anonymous)] ]
+        },
+        {
+          browsers: undefined,
+          info: [Function: info],
+          options: {},
+          postcssPlugin: 'autoprefixer',
+          prepare: [Function: prepare]
+        }
+      ]
+    },
+    lightningcss: undefined
+  },
+  logLevel: 'error',
+  base: '/',
+  esbuild: { jsxDev: false, jsx: 'automatic', jsxImportSource: undefined },
+  environments: {
+    client: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+        builtins: []
+      },
+      keepProcessEnv: false,
+      consumer: 'client',
+      optimizeDeps: {
+        include: [
+          '@astrojs/react/client.js',
+          'react',
+          'react-dom',
+          'react/jsx-dev-runtime',
+          'react/jsx-runtime',
+          'astro > cssesc',
+          'astro > aria-query',
+          'astro > axobject-query'
+        ],
+        exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: false,
+        esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+        entries: [
+          '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+        ]
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: true,
+        createEnvironment: [Function: defaultCreateClientDevEnvironment],
+        recoverable: true,
+        moduleRunnerTransform: false
+      },
+      build: {
+        target: 'esnext',
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: false },
+        outDir: '/home/mstouffer/repos/textnav/dist/',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: {
+          preserveEntrySignatures: 'exports-only',
+          input: [],
+          output: {
+            hoistTransitiveImports: false,
+            format: 'esm',
+            minifyInternalExports: true,
+            chunkFileNames: [Function: chunkFileNames],
+            assetFileNames: '_astro/[name].[hash][extname]',
+            entryFileNames: [Function: entryFileNames]
+          },
+          onwarn: [Function: onwarn]
+        },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: false,
+        copyPublicDir: true,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: true,
+        reportCompressedSize: false,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: false,
+        ssr: true,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssMinify: true,
+        cssTarget: 'esnext'
+      }
+    },
+    ssr: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [
+          'astro',
+          'astro/components',
+          '@nanostores/preact',
+          '@fontsource/*',
+          '@astrojs/react',
+          '@astrojs/tailwind',
+          '@mui/material',
+          '@mui/base',
+          '@babel/runtime',
+          'use-immer',
+          '@material-tailwind/react',
+          'astro'
+        ],
+        external: [ 'sharp' ],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'node', 'development|production', 'astro' ],
+        builtins: [
+          '_http_agent',         '_http_client',        '_http_common',
+          '_http_incoming',      '_http_outgoing',      '_http_server',
+          '_stream_duplex',      '_stream_passthrough', '_stream_readable',
+          '_stream_transform',   '_stream_wrap',        '_stream_writable',
+          '_tls_common',         '_tls_wrap',           'assert',
+          'assert/strict',       'async_hooks',         'buffer',
+          'child_process',       'cluster',             'console',
+          'constants',           'crypto',              'dgram',
+          'diagnostics_channel', 'dns',                 'dns/promises',
+          'domain',              'events',              'fs',
+          'fs/promises',         'http',                'http2',
+          'https',               'inspector',           'inspector/promises',
+          'module',              'net',                 'os',
+          'path',                'path/posix',          'path/win32',
+          'perf_hooks',          'process',             'punycode',
+          'querystring',         'readline',            'readline/promises',
+          'repl',                'stream',              'stream/consumers',
+          'stream/promises',     'stream/web',          'string_decoder',
+          'sys',                 'timers',              'timers/promises',
+          'tls',                 'trace_events',        'tty',
+          'url',                 'util',                'util/types',
+          'v8',                  'vm',                  'wasi',
+          'worker_threads',      'zlib',                /^node:/,
+          /^npm:/,               /^bun:/
+        ]
+      },
+      keepProcessEnv: true,
+      consumer: 'server',
+      optimizeDeps: {
+        include: [],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: true,
+        esbuildOptions: { preserveSymlinks: false }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: false,
+        createEnvironment: [Function: defaultCreateDevEnvironment],
+        recoverable: false,
+        moduleRunnerTransform: true
+      },
+      build: {
+        target: 'esnext',
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: false },
+        outDir: '/home/mstouffer/repos/textnav/dist/',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: {
+          preserveEntrySignatures: 'exports-only',
+          input: [],
+          output: {
+            hoistTransitiveImports: false,
+            format: 'esm',
+            minifyInternalExports: true,
+            chunkFileNames: [Function: chunkFileNames],
+            assetFileNames: '_astro/[name].[hash][extname]',
+            entryFileNames: [Function: entryFileNames]
+          },
+          onwarn: [Function: onwarn]
+        },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: false,
+        copyPublicDir: true,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: true,
+        reportCompressedSize: false,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: false,
+        ssr: true,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssMinify: true,
+        cssTarget: 'esnext'
+      }
+    }
+  },
+  configFileDependencies: [],
+  inlineConfig: {
+    configFile: false,
+    mode: 'production',
+    cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite/',
+    clearScreen: false,
+    customLogger: {
+      hasWarned: false,
+      info: [Function: info],
+      warn: [Function: warn],
+      warnOnce: [Function: warnOnce],
+      error: [Function: error],
+      clearScreen: [Function: clearScreen],
+      hasErrorLogged: [Function: hasErrorLogged]
+    },
+    appType: 'custom',
+    optimizeDeps: {
+      entries: [
+        '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+      ],
+      exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+      include: [ '@astrojs/react/client.js' ]
+    },
+    plugins: [
+      {
+        name: '@astro/rollup-plugin-astro-analyzer',
+        generateBundle: [AsyncFunction: generateBundle]
+      },
+      {
+        name: '@astro/plugin-build-internals',
+        config: [Function: config],
+        generateBundle: [AsyncFunction: generateBundle]
+      },
+      {
+        name: '@astro/plugin-build-manifest',
+        enforce: 'post',
+        options: [Function: options],
+        resolveId: [Function: resolveId],
+        augmentChunkHash: [Function: augmentChunkHash],
+        load: [AsyncFunction: load],
+        generateBundle: [AsyncFunction: generateBundle]
+      },
+      {
+        name: '@astro/plugin-renderers',
+        options: [Function: options],
+        resolveId: [Function: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astro/plugin-middleware-build',
+        options: [Function: options],
+        writeBundle: [Function: writeBundle]
+      },
+      {
+        name: '@astro/plugin-actions-build',
+        options: [Function: options],
+        writeBundle: [Function: writeBundle]
+      },
+      {
+        name: '@astro/plugin-build-pages',
+        options: [Function: options],
+        resolveId: [Function: resolveId],
+        load: [AsyncFunction: load]
+      },
+      [
+        {
+          name: 'astro:rollup-plugin-build-css',
+          outputOptions: [Function: outputOptions],
+          generateBundle: [AsyncFunction: generateBundle]
+        },
+        {
+          name: 'astro:rollup-plugin-css-scope-to',
+          renderChunk: [Function: renderChunk]
+        },
+        {
+          name: 'astro:rollup-plugin-single-css',
+          enforce: 'post',
+          configResolved: [Function: configResolved],
+          generateBundle: [Function: generateBundle]
+        },
+        {
+          name: 'astro:rollup-plugin-inline-stylesheets',
+          enforce: 'post',
+          configResolved: [Function: configResolved],
+          generateBundle: [AsyncFunction: generateBundle]
+        }
+      ],
+      {
+        name: 'astro:head-metadata-build',
+        generateBundle: [Function: generateBundle]
+      },
+      [
+        {
+          name: '@astrojs/vite-plugin-astro-adapter',
+          enforce: 'post',
+          resolveId: [Function: resolveId],
+          load: [AsyncFunction: load]
+        }
+      ],
+      {
+        name: 'astro:chunks',
+        outputOptions: [Function: outputOptions]
+      },
+      {
+        enforce: 'pre',
+        name: 'astro-manifest-plugin',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      null,
+      false,
+      [
+        {
+          name: 'astro:build',
+          enforce: 'pre',
+          configEnvironment: [AsyncFunction: configEnvironment],
+          configResolved: [Function: configResolved],
+          configureServer: [Function: configureServer],
+          buildStart: [Function: buildStart],
+          load: [AsyncFunction: load],
+          transform: [AsyncFunction: transform],
+          handleHotUpdate: [AsyncFunction: handleHotUpdate]
+        },
+        {
+          name: 'astro:build:normal',
+          resolveId: [Function: resolveId]
+        }
+      ],
+      {
+        name: 'astro:scripts',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        buildStart: [Function: buildStart]
+      },
+      false,
+      {
+        name: 'astro:vite-plugin-env',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro-env-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        buildEnd: [Function: buildEnd],
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      {
+        enforce: 'pre',
+        name: 'astro:markdown',
+        buildEnd: [Function: buildEnd],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:html',
+        options: [Function: options],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:postprocess',
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:integration-container',
+        configureServer: [AsyncFunction: configureServer],
+        buildStart: [AsyncFunction: buildStart]
+      },
+      {
+        name: 'astro:scripts:page-ssr',
+        enforce: 'post',
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:head-metadata',
+        enforce: 'pre',
+        apply: 'serve',
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:scanner',
+        enforce: 'post',
+        transform: [AsyncFunction: transform],
+        handleHotUpdate: [AsyncFunction: handleHotUpdate]
+      },
+      {
+        name: 'astro-content-virtual-mod-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        configureServer: [Function: configureServer]
+      },
+      [
+        {
+          name: 'astro:content-imports',
+          config: [Function: config],
+          buildStart: [AsyncFunction: buildStart],
+          transform: [AsyncFunction: transform],
+          configureServer: [Function: configureServer]
+        }
+      ],
+      {
+        name: 'astro:content-asset-propagation',
+        enforce: 'pre',
+        resolveId: [AsyncFunction: resolveId],
+        configureServer: [Function: configureServer],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: '@astro/plugin-middleware',
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astrojs/vite-plugin-astro-ssr-manifest',
+        enforce: 'post',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      [
+        {
+          name: 'astro:assets',
+          config: [Function: config],
+          resolveId: [AsyncFunction: resolveId],
+          load: [Function: load],
+          buildStart: [Function: buildStart],
+          renderChunk: [AsyncFunction: renderChunk]
+        },
+        {
+          name: 'astro:assets:esm',
+          enforce: 'pre',
+          config: [Function: config],
+          configResolved: [Function: configResolved],
+          load: [AsyncFunction: load]
+        }
+      ],
+      {
+        name: 'astro:prefetch',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:transitions',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:dev-toolbar',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        configureServer: [Function: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:vite-plugin-file-url',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:i18n',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:actions',
+        enforce: 'pre',
+        resolveId: [Function: resolveId],
+        configureServer: [AsyncFunction: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astro/plugin-actions',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load]
+      },
+      {
+        name: 'astro:server-islands',
+        enforce: 'post',
+        config: [Function: config],
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transform: [Function: transform],
+        renderChunk: [Function: renderChunk]
+      },
+      {
+        name: 'astro:container',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:hmr-reload',
+        enforce: 'post',
+        hotUpdate: { order: 'post', handler: [Function: handler] }
+      },
+      {
+        name: 'vite:react-babel',
+        enforce: 'pre',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'vite:react-refresh',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transformIndexHtml: [Function: transformIndexHtml]
+      },
+      {
+        name: '@astrojs/react:opts',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      }
+    ],
+    publicDir: '/home/mstouffer/repos/textnav/public/',
+    root: '/home/mstouffer/repos/textnav/',
+    envPrefix: 'PUBLIC_',
+    define: {
+      'import.meta.env.SITE': 'undefined',
+      'import.meta.env.BASE_URL': '"/"',
+      'import.meta.env.ASSETS_PREFIX': 'undefined'
+    },
+    server: { hmr: false, watch: { ignored: [ '**' ] }, middlewareMode: true },
+    resolve: {
+      alias: [
+        { find: 'randombytes', replacement: 'randombytes/browser' },
+        {
+          find: /^astro$/,
+          replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+        },
+        {
+          find: 'astro:middleware',
+          replacement: 'astro/virtual-modules/middleware.js'
+        },
+        { find: 'astro:schema', replacement: 'astro/zod' },
+        { find: 'astro:components', replacement: 'astro/components' }
+      ],
+      dedupe: [ 'astro' ]
+    },
+    ssr: {
+      noExternal: [
+        'astro',
+        'astro/components',
+        '@nanostores/preact',
+        '@fontsource/*',
+        '@astrojs/react',
+        '@astrojs/tailwind',
+        '@mui/material',
+        '@mui/base',
+        '@babel/runtime',
+        'use-immer',
+        '@material-tailwind/react'
+      ],
+      external: []
+    },
+    build: {
+      target: 'esnext',
+      cssMinify: true,
+      assetsDir: '_astro',
+      emptyOutDir: false,
+      manifest: false,
+      outDir: '/home/mstouffer/repos/textnav/dist/',
+      copyPublicDir: true,
+      rollupOptions: {
+        preserveEntrySignatures: 'exports-only',
+        input: [],
+        output: {
+          hoistTransitiveImports: false,
+          format: 'esm',
+          minifyInternalExports: true,
+          chunkFileNames: [Function: chunkFileNames],
+          assetFileNames: '_astro/[name].[hash][extname]',
+          entryFileNames: [Function: entryFileNames]
+        }
+      },
+      ssr: true,
+      ssrEmitAssets: true,
+      minify: false,
+      modulePreload: { polyfill: false },
+      reportCompressedSize: false
+    },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'tailwindcss',
+            plugins: [ [AsyncFunction (anonymous)] ]
+          },
+          {
+            browsers: undefined,
+            info: [Function: info],
+            options: {},
+            postcssPlugin: 'autoprefixer',
+            prepare: [Function: prepare]
+          }
+        ]
+      }
+    },
+    logLevel: 'error',
+    base: '/'
+  },
+  decodedBase: '/',
+  rawBase: '/',
+  command: 'build',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: true,
+  json: { namedExports: true, stringify: 'auto' },
+  builder: undefined,
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {}
+  },
+  envDir: '/home/mstouffer/repos/textnav',
+  env: { BASE_URL: '/', MODE: 'production', DEV: false, PROD: true },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_/home/mstouffer/repos/textnav' => {
+      dir: '/home/mstouffer/repos/textnav',
+      data: {
+        name: 'textnav',
+        type: 'module',
+        version: '0.0.1',
+        scripts: {
+          dev: 'astro dev',
+          build: 'rm -rf dist; npm cache clean --force; astro build',
+          preview: 'astro preview',
+          astro: 'astro',
+          enrich: 'npx tsx src/enrich.js',
+          test: 'npm cache clean --force; rm -rf dist; vitest --run',
+          'test:e2e': 'npx playwright test --headed --timeout=30000',
+          'test:unit-json': 'mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run',
+          'update-summaries': 'DEBUG_ONCE=true tsx src/lib/updateWebsiteSummaries.ts'
+        },
+        dependencies: {
+          '@astrojs/react': '^4.2.1',
+          '@astrojs/tailwind': '^6.0.1',
+          '@nanostores/react': '^0.8.4',
+          '@radix-ui/react-dialog': '^1.1.4',
+          '@radix-ui/react-dropdown-menu': '^2.1.4',
+          '@radix-ui/react-label': '^2.1.1',
+          '@radix-ui/react-separator': '^1.1.1',
+          '@radix-ui/react-slot': '^1.1.1',
+          '@radix-ui/react-tooltip': '^1.1.6',
+          '@types/react': '^19.0.1',
+          '@types/react-dom': '^19.0.2',
+          astro: '^5.5.4',
+          cheerio: '^1.0.0',
+          'class-variance-authority': '^0.7.1',
+          clsx: '^2.1.1',
+          'csv-parse': '^5.6.0',
+          'gray-matter': '^4.0.3',
+          'json-patch': '^0.7.0',
+          'lucide-react': '^0.468.0',
+          nanostores: '^0.11.3',
+          react: '^19.0.0',
+          'react-dom': '^19.0.0',
+          'tailwind-merge': '^2.5.5',
+          tailwindcss: '^3.4.17',
+          'tailwindcss-animate': '^1.0.7',
+          turndown: '^7.2.0',
+          'turndown-plugin-gfm': '^1.0.2',
+          typescript: '^5.7.2',
+          uuid: '^9.0.1',
+          vaul: '^1.1.2'
+        },
+        devDependencies: {
+          '@ianvs/prettier-plugin-sort-imports': '^4.4.0',
+          '@playwright/test': '^1.51.1',
+          '@testing-library/jest-dom': '^6.6.3',
+          '@testing-library/react': '^16.2.0',
+          '@types/node': '^22.13.10',
+          '@types/testing-library__jest-dom': '^5.14.9',
+          '@types/testing-library__react': '^10.0.1',
+          '@types/turndown': '^5.0.5',
+          '@types/uuid': '^9.0.8',
+          jsdom: '^26.0.0',
+          playwright: '^1.51.1',
+          'prettier-plugin-astro': '^0.14.1',
+          'prettier-plugin-merge': '^0.7.2',
+          'prettier-plugin-organize-imports': '^4.1.0',
+          'prettier-plugin-tailwindcss': '^0.6.9',
+          tsx: '^4.19.3',
+          vitest: '^3.0.8'
+        }
+      },
+      hasSideEffects: [Function: hasSideEffects],
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  future: undefined,
+  dev: {
+    warmup: [],
+    sourcemap: { js: true },
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    preTransformRequests: false,
+    createEnvironment: [Function: defaultCreateDevEnvironment],
+    recoverable: false,
+    moduleRunnerTransform: false
+  },
+  webSocketToken: '7B5bXWcyEBXZ',
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks],
+  createResolver: [Function: createResolver],
+  fsDenyGlob: [Function: arrayMatcher],
+  safeModulePaths: Set(0) {},
+  additionalAllowedHosts: []
+}
+15:23:04 [vite] ✓ built in 9.85s
+15:23:04 [build] ✓ Completed in 10.02s.
+
+ building client (vite) 
+2025-03-26T22:23:04.908Z vite:env loading env files: [
+  '/home/mstouffer/repos/textnav/.env',
+  '/home/mstouffer/repos/textnav/.env.local',
+  '/home/mstouffer/repos/textnav/.env.production',
+  '/home/mstouffer/repos/textnav/.env.production.local'
+]
+2025-03-26T22:23:04.908Z vite:env env files loaded in 0.31ms
+2025-03-26T22:23:04.909Z vite:env using resolved env: {}
+2025-03-26T22:23:04.920Z vite:config using resolved config: {
+  configFile: undefined,
+  mode: 'production',
+  cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite',
+  clearScreen: false,
+  customLogger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  appType: 'custom',
+  optimizeDeps: {
+    include: [
+      '@astrojs/react/client.js',
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime',
+      'astro > cssesc',
+      'astro > aria-query',
+      'astro > axobject-query'
+    ],
+    exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+    needsInterop: [],
+    extensions: [],
+    disabled: undefined,
+    holdUntilCrawlEnd: true,
+    force: false,
+    noDiscovery: false,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+    entries: [
+      '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+    ]
+  },
+  plugins: [
+    'vite:build-metadata',
+    'vite:watch-package-data',
+    'alias',
+    '@astro/plugin-component-entry',
+    'astro-manifest-plugin',
+    'astro:build',
+    'astro-env-plugin',
+    'astro:markdown',
+    'astro-content-virtual-mod-plugin',
+    'astro:content-asset-propagation',
+    'astro:assets:esm',
+    'astro:vite-plugin-file-url',
+    'astro:i18n',
+    'astro:actions',
+    'astro:container',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    '@astro/plugin-build-internals',
+    'astro:rollup-plugin-build-css',
+    'astro:rollup-plugin-css-scope-to',
+    '@astro/plugin-scripts',
+    'astro:build:normal',
+    'astro:scripts',
+    'astro:html',
+    'astro:postprocess',
+    'astro:integration-container',
+    'astro:content-imports',
+    '@astro/plugin-middleware',
+    'astro:assets',
+    'astro:prefetch',
+    'astro:transitions',
+    'astro:dev-toolbar',
+    '@astro/plugin-actions',
+    '@astrojs/react:opts',
+    'vite:wasm-fallback',
+    'astro:vite-plugin-env',
+    'vite:define',
+    'vite:css-post',
+    'vite:build-html',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:force-systemjs-wrap-complete',
+    'commonjs',
+    'vite:data-uri',
+    'vite:rollup-options-plugins',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'astro:rollup-plugin-single-css',
+    'astro:rollup-plugin-inline-stylesheets',
+    'astro:scripts:page-ssr',
+    'astro:scanner',
+    '@astrojs/vite-plugin-astro-ssr-manifest',
+    'astro:server-islands',
+    'astro:hmr-reload',
+    'vite:build-import-analysis',
+    'vite:esbuild-transpile',
+    'vite:terser',
+    'vite:manifest',
+    'vite:ssr-manifest',
+    'vite:reporter',
+    'vite:load-fallback'
+  ],
+  publicDir: '/home/mstouffer/repos/textnav/public',
+  root: '/home/mstouffer/repos/textnav',
+  envPrefix: 'PUBLIC_',
+  define: {
+    'import.meta.env.SITE': 'undefined',
+    'import.meta.env.BASE_URL': '"/"',
+    'import.meta.env.ASSETS_PREFIX': 'undefined',
+    __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+  },
+  server: {
+    port: 5173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {},
+    warmup: { clientFiles: [], ssrFiles: [] },
+    middlewareMode: true,
+    fs: {
+      strict: true,
+      deny: [ '.env', '.env.*', '*.{crt,pem}', '**/.git/**' ],
+      allow: [ '/home/mstouffer/repos/textnav' ]
+    },
+    preTransformRequests: true,
+    perEnvironmentStartEndDuringDev: false,
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    hmr: false,
+    watch: { ignored: [ '**' ] }
+  },
+  resolve: {
+    externalConditions: [ 'node' ],
+    extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+    dedupe: [ 'astro', 'react', 'react-dom' ],
+    noExternal: [],
+    external: [],
+    preserveSymlinks: false,
+    alias: [
+      { find: 'randombytes', replacement: 'randombytes/browser' },
+      {
+        find: /^astro$/,
+        replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+      },
+      {
+        find: 'astro:middleware',
+        replacement: 'astro/virtual-modules/middleware.js'
+      },
+      { find: 'astro:schema', replacement: 'astro/zod' },
+      { find: 'astro:components', replacement: 'astro/components' },
+      {
+        find: /^\/?@vite\/env/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+      },
+      {
+        find: /^\/?@vite\/client/,
+        replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+      }
+    ],
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+    builtins: []
+  },
+  ssr: {
+    target: 'node',
+    optimizeDeps: {
+      esbuildOptions: { preserveSymlinks: false },
+      include: [],
+      exclude: [],
+      needsInterop: [],
+      extensions: [],
+      holdUntilCrawlEnd: true,
+      force: false,
+      noDiscovery: true
+    },
+    noExternal: [
+      'astro',
+      'astro/components',
+      '@nanostores/preact',
+      '@fontsource/*',
+      '@astrojs/react',
+      '@astrojs/tailwind',
+      '@mui/material',
+      '@mui/base',
+      '@babel/runtime',
+      'use-immer',
+      '@material-tailwind/react'
+    ],
+    external: [],
+    resolve: {
+      conditions: [ 'module', 'node', 'development|production', 'astro' ],
+      externalConditions: [ 'node' ]
+    }
+  },
+  build: {
+    target: 'esnext',
+    polyfillModulePreload: true,
+    modulePreload: { polyfill: true },
+    outDir: '/home/mstouffer/repos/textnav/dist/',
+    assetsDir: '_astro',
+    assetsInlineLimit: 4096,
+    sourcemap: false,
+    terserOptions: {},
+    rollupOptions: {
+      input: [
+        '\x00astro-entry:/home/mstouffer/repos/textnav/src/components/Search',
+        '@astrojs/react/client.js',
+        '/home/mstouffer/repos/textnav/src/pages/index.astro?astro&type=script&index=0&lang.ts',
+        '/home/mstouffer/repos/textnav/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts'
+      ],
+      output: {
+        format: 'esm',
+        entryFileNames: '_astro/[name].[hash].js',
+        chunkFileNames: '_astro/[name].[hash].js',
+        assetFileNames: '_astro/[name].[hash][extname]'
+      },
+      preserveEntrySignatures: 'exports-only',
+      onwarn: [Function: onwarn]
+    },
+    commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+    write: true,
+    emptyOutDir: false,
+    copyPublicDir: false,
+    manifest: false,
+    lib: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    ssr: false,
+    emitAssets: true,
+    createEnvironment: [Function: createEnvironment],
+    cssTarget: 'esnext',
+    cssMinify: true
+  },
+  css: {
+    transformer: 'postcss',
+    preprocessorMaxWorkers: 0,
+    devSourcemap: false,
+    postcss: {
+      plugins: [
+        {
+          postcssPlugin: 'tailwindcss',
+          plugins: [ [AsyncFunction (anonymous)] ]
+        },
+        {
+          browsers: undefined,
+          info: [Function: info],
+          options: {},
+          postcssPlugin: 'autoprefixer',
+          prepare: [Function: prepare]
+        }
+      ]
+    },
+    lightningcss: undefined
+  },
+  base: '/',
+  esbuild: { jsxDev: false, jsx: 'automatic', jsxImportSource: undefined },
+  environments: {
+    client: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'browser', 'development|production', 'astro' ],
+        builtins: []
+      },
+      keepProcessEnv: false,
+      consumer: 'client',
+      optimizeDeps: {
+        include: [
+          '@astrojs/react/client.js',
+          'react',
+          'react-dom',
+          'react/jsx-dev-runtime',
+          'react/jsx-runtime',
+          'astro > cssesc',
+          'astro > aria-query',
+          'astro > axobject-query'
+        ],
+        exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: false,
+        esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' },
+        entries: [
+          '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+        ]
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: true,
+        createEnvironment: [Function: defaultCreateClientDevEnvironment],
+        recoverable: true,
+        moduleRunnerTransform: false
+      },
+      build: {
+        target: 'esnext',
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: '/home/mstouffer/repos/textnav/dist/',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: {
+          input: [
+            '\x00astro-entry:/home/mstouffer/repos/textnav/src/components/Search',
+            '@astrojs/react/client.js',
+            '/home/mstouffer/repos/textnav/src/pages/index.astro?astro&type=script&index=0&lang.ts',
+            '/home/mstouffer/repos/textnav/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts'
+          ],
+          output: {
+            format: 'esm',
+            entryFileNames: '_astro/[name].[hash].js',
+            chunkFileNames: '_astro/[name].[hash].js',
+            assetFileNames: '_astro/[name].[hash][extname]'
+          },
+          preserveEntrySignatures: 'exports-only',
+          onwarn: [Function: onwarn]
+        },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: false,
+        copyPublicDir: false,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: 'esbuild',
+        ssr: false,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: 'esnext',
+        cssMinify: true
+      }
+    },
+    ssr: {
+      define: {
+        'import.meta.env.SITE': 'undefined',
+        'import.meta.env.BASE_URL': '"/"',
+        'import.meta.env.ASSETS_PREFIX': 'undefined',
+        __ASTRO_INTERNAL_I18N_CONFIG__: '{"base":"/","format":"directory","trailingSlash":"ignore","isBuild":true}'
+      },
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [ '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json' ],
+        dedupe: [ 'astro', 'react', 'react-dom' ],
+        noExternal: [
+          'astro',
+          'astro/components',
+          '@nanostores/preact',
+          '@fontsource/*',
+          '@astrojs/react',
+          '@astrojs/tailwind',
+          '@mui/material',
+          '@mui/base',
+          '@babel/runtime',
+          'use-immer',
+          '@material-tailwind/react'
+        ],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          { find: 'randombytes', replacement: 'randombytes/browser' },
+          {
+            find: /^astro$/,
+            replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+          },
+          {
+            find: 'astro:middleware',
+            replacement: 'astro/virtual-modules/middleware.js'
+          },
+          { find: 'astro:schema', replacement: 'astro/zod' },
+          { find: 'astro:components', replacement: 'astro/components' },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/home/mstouffer/repos/textnav/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'node', 'development|production', 'astro' ],
+        builtins: [
+          '_http_agent',         '_http_client',        '_http_common',
+          '_http_incoming',      '_http_outgoing',      '_http_server',
+          '_stream_duplex',      '_stream_passthrough', '_stream_readable',
+          '_stream_transform',   '_stream_wrap',        '_stream_writable',
+          '_tls_common',         '_tls_wrap',           'assert',
+          'assert/strict',       'async_hooks',         'buffer',
+          'child_process',       'cluster',             'console',
+          'constants',           'crypto',              'dgram',
+          'diagnostics_channel', 'dns',                 'dns/promises',
+          'domain',              'events',              'fs',
+          'fs/promises',         'http',                'http2',
+          'https',               'inspector',           'inspector/promises',
+          'module',              'net',                 'os',
+          'path',                'path/posix',          'path/win32',
+          'perf_hooks',          'process',             'punycode',
+          'querystring',         'readline',            'readline/promises',
+          'repl',                'stream',              'stream/consumers',
+          'stream/promises',     'stream/web',          'string_decoder',
+          'sys',                 'timers',              'timers/promises',
+          'tls',                 'trace_events',        'tty',
+          'url',                 'util',                'util/types',
+          'v8',                  'vm',                  'wasi',
+          'worker_threads',      'zlib',                /^node:/,
+          /^npm:/,               /^bun:/
+        ]
+      },
+      keepProcessEnv: true,
+      consumer: 'server',
+      optimizeDeps: {
+        include: [],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: true,
+        esbuildOptions: { preserveSymlinks: false }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: false,
+        createEnvironment: [Function: defaultCreateDevEnvironment],
+        recoverable: false,
+        moduleRunnerTransform: true
+      },
+      build: {
+        target: 'esnext',
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: '/home/mstouffer/repos/textnav/dist/',
+        assetsDir: '_astro',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: {
+          input: [
+            '\x00astro-entry:/home/mstouffer/repos/textnav/src/components/Search',
+            '@astrojs/react/client.js',
+            '/home/mstouffer/repos/textnav/src/pages/index.astro?astro&type=script&index=0&lang.ts',
+            '/home/mstouffer/repos/textnav/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts'
+          ],
+          output: {
+            format: 'esm',
+            entryFileNames: '_astro/[name].[hash].js',
+            chunkFileNames: '_astro/[name].[hash].js',
+            assetFileNames: '_astro/[name].[hash][extname]'
+          },
+          preserveEntrySignatures: 'exports-only',
+          onwarn: [Function: onwarn]
+        },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: false,
+        copyPublicDir: false,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: false,
+        ssr: true,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: 'esnext',
+        cssMinify: 'esbuild'
+      }
+    }
+  },
+  configFileDependencies: [],
+  inlineConfig: {
+    configFile: false,
+    mode: 'production',
+    cacheDir: '/home/mstouffer/repos/textnav/node_modules/.vite/',
+    clearScreen: false,
+    customLogger: {
+      hasWarned: false,
+      info: [Function: info],
+      warn: [Function: warn],
+      warnOnce: [Function: warnOnce],
+      error: [Function: error],
+      clearScreen: [Function: clearScreen],
+      hasErrorLogged: [Function: hasErrorLogged]
+    },
+    appType: 'custom',
+    optimizeDeps: {
+      entries: [
+        '/home/mstouffer/repos/textnav/src/**/*.{jsx,tsx,vue,svelte,html,astro}'
+      ],
+      exclude: [ 'astro', 'node-fetch', '@astrojs/react/server.js' ],
+      include: [ '@astrojs/react/client.js' ]
+    },
+    plugins: [
+      {
+        name: '@astro/plugin-component-entry',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astro/plugin-build-internals',
+        config: [Function: config],
+        generateBundle: [AsyncFunction: generateBundle]
+      },
+      [
+        {
+          name: 'astro:rollup-plugin-build-css',
+          outputOptions: [Function: outputOptions],
+          generateBundle: [AsyncFunction: generateBundle]
+        },
+        {
+          name: 'astro:rollup-plugin-css-scope-to',
+          renderChunk: [Function: renderChunk]
+        },
+        {
+          name: 'astro:rollup-plugin-single-css',
+          enforce: 'post',
+          configResolved: [Function: configResolved],
+          generateBundle: [Function: generateBundle]
+        },
+        {
+          name: 'astro:rollup-plugin-inline-stylesheets',
+          enforce: 'post',
+          configResolved: [Function: configResolved],
+          generateBundle: [AsyncFunction: generateBundle]
+        }
+      ],
+      {
+        name: '@astro/plugin-scripts',
+        configResolved: [Function: configResolved],
+        generateBundle: [AsyncFunction: generateBundle]
+      },
+      {
+        enforce: 'pre',
+        name: 'astro-manifest-plugin',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      null,
+      false,
+      [
+        {
+          name: 'astro:build',
+          enforce: 'pre',
+          configEnvironment: [AsyncFunction: configEnvironment],
+          configResolved: [Function: configResolved],
+          configureServer: [Function: configureServer],
+          buildStart: [Function: buildStart],
+          load: [AsyncFunction: load],
+          transform: [AsyncFunction: transform],
+          handleHotUpdate: [AsyncFunction: handleHotUpdate]
+        },
+        {
+          name: 'astro:build:normal',
+          resolveId: [Function: resolveId]
+        }
+      ],
+      {
+        name: 'astro:scripts',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        buildStart: [Function: buildStart]
+      },
+      false,
+      {
+        name: 'astro:vite-plugin-env',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro-env-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        buildEnd: [Function: buildEnd],
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      {
+        enforce: 'pre',
+        name: 'astro:markdown',
+        buildEnd: [Function: buildEnd],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:html',
+        options: [Function: options],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:postprocess',
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'astro:integration-container',
+        configureServer: [AsyncFunction: configureServer],
+        buildStart: [AsyncFunction: buildStart]
+      },
+      {
+        name: 'astro:scripts:page-ssr',
+        enforce: 'post',
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:head-metadata',
+        enforce: 'pre',
+        apply: 'serve',
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:scanner',
+        enforce: 'post',
+        transform: [AsyncFunction: transform],
+        handleHotUpdate: [AsyncFunction: handleHotUpdate]
+      },
+      {
+        name: 'astro-content-virtual-mod-plugin',
+        enforce: 'pre',
+        config: [Function: config],
+        buildStart: [Function: buildStart],
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load],
+        configureServer: [Function: configureServer]
+      },
+      [
+        {
+          name: 'astro:content-imports',
+          config: [Function: config],
+          buildStart: [AsyncFunction: buildStart],
+          transform: [AsyncFunction: transform],
+          configureServer: [Function: configureServer]
+        }
+      ],
+      {
+        name: 'astro:content-asset-propagation',
+        enforce: 'pre',
+        resolveId: [AsyncFunction: resolveId],
+        configureServer: [Function: configureServer],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: '@astro/plugin-middleware',
+        resolveId: [AsyncFunction: resolveId],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astrojs/vite-plugin-astro-ssr-manifest',
+        enforce: 'post',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      },
+      [
+        {
+          name: 'astro:assets',
+          config: [Function: config],
+          resolveId: [AsyncFunction: resolveId],
+          load: [Function: load],
+          buildStart: [Function: buildStart],
+          renderChunk: [AsyncFunction: renderChunk]
+        },
+        {
+          name: 'astro:assets:esm',
+          enforce: 'pre',
+          config: [Function: config],
+          configResolved: [Function: configResolved],
+          load: [AsyncFunction: load]
+        }
+      ],
+      {
+        name: 'astro:prefetch',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:transitions',
+        config: [Function: config],
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load],
+        transform: [Function: transform]
+      },
+      {
+        name: 'astro:dev-toolbar',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        configureServer: [Function: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: 'astro:vite-plugin-file-url',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:i18n',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:actions',
+        enforce: 'pre',
+        resolveId: [Function: resolveId],
+        configureServer: [AsyncFunction: configureServer],
+        load: [AsyncFunction: load]
+      },
+      {
+        name: '@astro/plugin-actions',
+        resolveId: [AsyncFunction: resolveId],
+        load: [Function: load]
+      },
+      {
+        name: 'astro:server-islands',
+        enforce: 'post',
+        config: [Function: config],
+        configureServer: [Function: configureServer],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transform: [Function: transform],
+        renderChunk: [Function: renderChunk]
+      },
+      {
+        name: 'astro:container',
+        enforce: 'pre',
+        resolveId: [Function: resolveId]
+      },
+      {
+        name: 'astro:hmr-reload',
+        enforce: 'post',
+        hotUpdate: { order: 'post', handler: [Function: handler] }
+      },
+      {
+        name: 'vite:react-babel',
+        enforce: 'pre',
+        config: [Function: config],
+        configResolved: [Function: configResolved],
+        transform: [AsyncFunction: transform]
+      },
+      {
+        name: 'vite:react-refresh',
+        enforce: 'pre',
+        config: [Function: config],
+        resolveId: [Function: resolveId],
+        load: [Function: load],
+        transformIndexHtml: [Function: transformIndexHtml]
+      },
+      {
+        name: '@astrojs/react:opts',
+        resolveId: [Function: resolveId],
+        load: [Function: load]
+      }
+    ],
+    publicDir: '/home/mstouffer/repos/textnav/public/',
+    root: '/home/mstouffer/repos/textnav/',
+    envPrefix: 'PUBLIC_',
+    define: {
+      'import.meta.env.SITE': 'undefined',
+      'import.meta.env.BASE_URL': '"/"',
+      'import.meta.env.ASSETS_PREFIX': 'undefined'
+    },
+    server: { hmr: false, watch: { ignored: [ '**' ] }, middlewareMode: true },
+    resolve: {
+      alias: [
+        { find: 'randombytes', replacement: 'randombytes/browser' },
+        {
+          find: /^astro$/,
+          replacement: '/home/mstouffer/repos/textnav/node_modules/astro/dist/types/public/index.js'
+        },
+        {
+          find: 'astro:middleware',
+          replacement: 'astro/virtual-modules/middleware.js'
+        },
+        { find: 'astro:schema', replacement: 'astro/zod' },
+        { find: 'astro:components', replacement: 'astro/components' }
+      ],
+      dedupe: [ 'astro' ]
+    },
+    ssr: {
+      noExternal: [
+        'astro',
+        'astro/components',
+        '@nanostores/preact',
+        '@fontsource/*',
+        '@astrojs/react',
+        '@astrojs/tailwind',
+        '@mui/material',
+        '@mui/base',
+        '@babel/runtime',
+        'use-immer',
+        '@material-tailwind/react'
+      ],
+      external: []
+    },
+    build: {
+      target: 'esnext',
+      assetsDir: '_astro',
+      emptyOutDir: false,
+      outDir: '/home/mstouffer/repos/textnav/dist/',
+      copyPublicDir: false,
+      rollupOptions: {
+        input: [
+          '\x00astro-entry:/home/mstouffer/repos/textnav/src/components/Search',
+          '@astrojs/react/client.js',
+          '/home/mstouffer/repos/textnav/src/pages/index.astro?astro&type=script&index=0&lang.ts',
+          '/home/mstouffer/repos/textnav/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts'
+        ],
+        output: {
+          format: 'esm',
+          entryFileNames: '_astro/[name].[hash].js',
+          chunkFileNames: '_astro/[name].[hash].js',
+          assetFileNames: '_astro/[name].[hash][extname]'
+        },
+        preserveEntrySignatures: 'exports-only'
+      }
+    },
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'tailwindcss',
+            plugins: [ [AsyncFunction (anonymous)] ]
+          },
+          {
+            browsers: undefined,
+            info: [Function: info],
+            options: {},
+            postcssPlugin: 'autoprefixer',
+            prepare: [Function: prepare]
+          }
+        ]
+      }
+    },
+    base: '/'
+  },
+  decodedBase: '/',
+  rawBase: '/',
+  command: 'build',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: true,
+  json: { namedExports: true, stringify: 'auto' },
+  builder: undefined,
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: undefined,
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {}
+  },
+  envDir: '/home/mstouffer/repos/textnav',
+  env: { BASE_URL: '/', MODE: 'production', DEV: false, PROD: true },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_/home/mstouffer/repos/textnav' => {
+      dir: '/home/mstouffer/repos/textnav',
+      data: {
+        name: 'textnav',
+        type: 'module',
+        version: '0.0.1',
+        scripts: {
+          dev: 'astro dev',
+          build: 'rm -rf dist; npm cache clean --force; astro build',
+          preview: 'astro preview',
+          astro: 'astro',
+          enrich: 'npx tsx src/enrich.js',
+          test: 'npm cache clean --force; rm -rf dist; vitest --run',
+          'test:e2e': 'npx playwright test --headed --timeout=30000',
+          'test:unit-json': 'mkdir -p vitest-output; rm -rf vitest-output/*; vitest --run',
+          'update-summaries': 'DEBUG_ONCE=true tsx src/lib/updateWebsiteSummaries.ts'
+        },
+        dependencies: {
+          '@astrojs/react': '^4.2.1',
+          '@astrojs/tailwind': '^6.0.1',
+          '@nanostores/react': '^0.8.4',
+          '@radix-ui/react-dialog': '^1.1.4',
+          '@radix-ui/react-dropdown-menu': '^2.1.4',
+          '@radix-ui/react-label': '^2.1.1',
+          '@radix-ui/react-separator': '^1.1.1',
+          '@radix-ui/react-slot': '^1.1.1',
+          '@radix-ui/react-tooltip': '^1.1.6',
+          '@types/react': '^19.0.1',
+          '@types/react-dom': '^19.0.2',
+          astro: '^5.5.4',
+          cheerio: '^1.0.0',
+          'class-variance-authority': '^0.7.1',
+          clsx: '^2.1.1',
+          'csv-parse': '^5.6.0',
+          'gray-matter': '^4.0.3',
+          'json-patch': '^0.7.0',
+          'lucide-react': '^0.468.0',
+          nanostores: '^0.11.3',
+          react: '^19.0.0',
+          'react-dom': '^19.0.0',
+          'tailwind-merge': '^2.5.5',
+          tailwindcss: '^3.4.17',
+          'tailwindcss-animate': '^1.0.7',
+          turndown: '^7.2.0',
+          'turndown-plugin-gfm': '^1.0.2',
+          typescript: '^5.7.2',
+          uuid: '^9.0.1',
+          vaul: '^1.1.2'
+        },
+        devDependencies: {
+          '@ianvs/prettier-plugin-sort-imports': '^4.4.0',
+          '@playwright/test': '^1.51.1',
+          '@testing-library/jest-dom': '^6.6.3',
+          '@testing-library/react': '^16.2.0',
+          '@types/node': '^22.13.10',
+          '@types/testing-library__jest-dom': '^5.14.9',
+          '@types/testing-library__react': '^10.0.1',
+          '@types/turndown': '^5.0.5',
+          '@types/uuid': '^9.0.8',
+          jsdom: '^26.0.0',
+          playwright: '^1.51.1',
+          'prettier-plugin-astro': '^0.14.1',
+          'prettier-plugin-merge': '^0.7.2',
+          'prettier-plugin-organize-imports': '^4.1.0',
+          'prettier-plugin-tailwindcss': '^0.6.9',
+          tsx: '^4.19.3',
+          vitest: '^3.0.8'
+        }
+      },
+      hasSideEffects: [Function: hasSideEffects],
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  future: undefined,
+  dev: {
+    warmup: [],
+    sourcemap: { js: true },
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    preTransformRequests: false,
+    createEnvironment: [Function: defaultCreateDevEnvironment],
+    recoverable: false,
+    moduleRunnerTransform: false
+  },
+  webSocketToken: 'dE7hlpGErw7i',
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks],
+  createResolver: [Function: createResolver],
+  fsDenyGlob: [Function: arrayMatcher],
+  safeModulePaths: Set(0) {},
+  additionalAllowedHosts: []
+}
+15:23:04 [vite] transforming...
+15:23:05 [WARN] [vite] [plugin vite:resolve] Module "fs/promises" has been externalized for browser compatibility, imported by "/home/mstouffer/repos/textnav/src/lib/utils.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+15:23:08 [vite] ✓ 1604 modules transformed.
+15:23:09 [vite] rendering chunks...
+15:23:09 [vite] computing gzip size...
+15:23:09 [vite] dist/_astro/index.Dy6lLLXr.js     7.77 kB │ gzip:  3.00 kB
+15:23:09 [vite] dist/_astro/Search.B0B2iO-W.js   29.61 kB │ gzip: 10.30 kB
+15:23:09 [vite] dist/_astro/client.BO3Rm8ny.js  178.30 kB │ gzip: 56.48 kB
+15:23:09 [vite] ✓ built in 4.25s
+
+ generating static routes 
+15:23:09 ▶ src/pages/websites/[filename].astro
+2025-03-26T22:23:09.307Z astro:build ├── √ src/pages/websites/[filename].astro → [31 pages]
+2025-03-26T22:23:09.308Z astro:build Generating: /websites/adaptcommunitynetwork_org_service_options_technology
+15:23:09   ├─ /websites/adaptcommunitynetwork_org_service_options_technology/index.html2025-03-26T22:23:09.308Z astro:build Generating: /websites/adaptcommunitynetwork_org_service_options_technology
+ (+40ms) 
+2025-03-26T22:23:09.348Z astro:build Generating: /websites/berkinakkaya_medium_com_keyboard_driven_workflow_1c3603b95cb3
+15:23:09   ├─ /websites/berkinakkaya_medium_com_keyboard_driven_workflow_1c3603b95cb3/index.html2025-03-26T22:23:09.348Z astro:build Generating: /websites/berkinakkaya_medium_com_keyboard_driven_workflow_1c3603b95cb3
+ (+7ms) 
+2025-03-26T22:23:09.355Z astro:build Generating: /websites/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy
+15:23:09   ├─ /websites/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy/index.html2025-03-26T22:23:09.355Z astro:build Generating: /websites/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy
+ (+5ms) 
+2025-03-26T22:23:09.359Z astro:build Generating: /websites/buffer_com_library_keyboard_shortcuts_ultimate_list
+15:23:09   ├─ /websites/buffer_com_library_keyboard_shortcuts_ultimate_list/index.html2025-03-26T22:23:09.360Z astro:build Generating: /websites/buffer_com_library_keyboard_shortcuts_ultimate_list
+ (+6ms) 
+2025-03-26T22:23:09.366Z astro:build Generating: /websites/dev_to_nayetwolf_keyboard_centric_computing_m68
+15:23:09   ├─ /websites/dev_to_nayetwolf_keyboard_centric_computing_m68/index.html2025-03-26T22:23:09.366Z astro:build Generating: /websites/dev_to_nayetwolf_keyboard_centric_computing_m68
+ (+5ms) 
+2025-03-26T22:23:09.371Z astro:build Generating: /websites/github_com_pluja_awesome_privacy
+15:23:09   ├─ /websites/github_com_pluja_awesome_privacy/index.html2025-03-26T22:23:09.371Z astro:build Generating: /websites/github_com_pluja_awesome_privacy
+ (+3ms) 
+2025-03-26T22:23:09.374Z astro:build Generating: /websites/github_com_sillytavern_sillytavern
+15:23:09   ├─ /websites/github_com_sillytavern_sillytavern/index.html2025-03-26T22:23:09.374Z astro:build Generating: /websites/github_com_sillytavern_sillytavern
+ (+5ms) 
+2025-03-26T22:23:09.379Z astro:build Generating: /websites/insights_samsung_com_2024_09_20_first_responder_mobile_technology_increases_situational_awareness_2
+15:23:09   ├─ /websites/insights_samsung_com_2024_09_20_first_responder_mobile_technology_increases_situational_awareness_2/index.html2025-03-26T22:23:09.379Z astro:build Generating: /websites/insights_samsung_com_2024_09_20_first_responder_mobile_technology_increases_situational_awareness_2
+ (+4ms) 
+2025-03-26T22:23:09.383Z astro:build Generating: /websites/lte_callmc_com_solutions_first_responder_networks
+15:23:09   ├─ /websites/lte_callmc_com_solutions_first_responder_networks/index.html2025-03-26T22:23:09.383Z astro:build Generating: /websites/lte_callmc_com_solutions_first_responder_networks
+ (+4ms) 
+2025-03-26T22:23:09.388Z astro:build Generating: /websites/perimeterplatform_com_blog_first_responder_software
+15:23:09   ├─ /websites/perimeterplatform_com_blog_first_responder_software/index.html2025-03-26T22:23:09.388Z astro:build Generating: /websites/perimeterplatform_com_blog_first_responder_software
+ (+6ms) 
+2025-03-26T22:23:09.394Z astro:build Generating: /websites/pmc_ncbi_nlm_nih_gov_articles_pmc9589473
+15:23:09   ├─ /websites/pmc_ncbi_nlm_nih_gov_articles_pmc9589473/index.html2025-03-26T22:23:09.394Z astro:build Generating: /websites/pmc_ncbi_nlm_nih_gov_articles_pmc9589473
+ (+4ms) 
+2025-03-26T22:23:09.398Z astro:build Generating: /websites/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard
+15:23:09   ├─ /websites/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard/index.html2025-03-26T22:23:09.398Z astro:build Generating: /websites/superuser_com_questions_222893_solutions_for_one_handed_typing_on_a_regular_keyboard
+ (+4ms) 
+2025-03-26T22:23:09.401Z astro:build Generating: /websites/support_apple_com_en_us_102650
+15:23:09   ├─ /websites/support_apple_com_en_us_102650/index.html2025-03-26T22:23:09.402Z astro:build Generating: /websites/support_apple_com_en_us_102650
+ (+3ms) 
+2025-03-26T22:23:09.404Z astro:build Generating: /websites/www_allgeo_com_apps_field_inspection_mobile_smart_forms
+15:23:09   ├─ /websites/www_allgeo_com_apps_field_inspection_mobile_smart_forms/index.html2025-03-26T22:23:09.405Z astro:build Generating: /websites/www_allgeo_com_apps_field_inspection_mobile_smart_forms
+ (+4ms) 
+2025-03-26T22:23:09.409Z astro:build Generating: /websites/www_communitycommons_org_entities_652330ad_5fcf_41c9_bf42_dc568a713311
+15:23:09   ├─ /websites/www_communitycommons_org_entities_652330ad_5fcf_41c9_bf42_dc568a713311/index.html2025-03-26T22:23:09.409Z astro:build Generating: /websites/www_communitycommons_org_entities_652330ad_5fcf_41c9_bf42_dc568a713311
+ (+4ms) 
+2025-03-26T22:23:09.412Z astro:build Generating: /websites/www_digitala11y_com_accessibility_meetups_communities
+15:23:09   ├─ /websites/www_digitala11y_com_accessibility_meetups_communities/index.html2025-03-26T22:23:09.413Z astro:build Generating: /websites/www_digitala11y_com_accessibility_meetups_communities
+ (+3ms) 
+2025-03-26T22:23:09.415Z astro:build Generating: /websites/www_dmitryanisov_com_blog_building_a_keyboard_driven_development_environment
+15:23:09   ├─ /websites/www_dmitryanisov_com_blog_building_a_keyboard_driven_development_environment/index.html2025-03-26T22:23:09.415Z astro:build Generating: /websites/www_dmitryanisov_com_blog_building_a_keyboard_driven_development_environment
+ (+3ms) 
+2025-03-26T22:23:09.418Z astro:build Generating: /websites/www_infotechinc_com_mobile_inspector
+15:23:09   ├─ /websites/www_infotechinc_com_mobile_inspector/index.html2025-03-26T22:23:09.418Z astro:build Generating: /websites/www_infotechinc_com_mobile_inspector
+ (+3ms) 
+2025-03-26T22:23:09.421Z astro:build Generating: /websites/www_keyboard_university_100_courses_community_22xzn
+15:23:09   ├─ /websites/www_keyboard_university_100_courses_community_22xzn/index.html2025-03-26T22:23:09.422Z astro:build Generating: /websites/www_keyboard_university_100_courses_community_22xzn
+ (+3ms) 
+2025-03-26T22:23:09.424Z astro:build Generating: /websites/www_meetion_com_the_ultimate_guide_to_the_one_handed_keyboard_html
+15:23:09   ├─ /websites/www_meetion_com_the_ultimate_guide_to_the_one_handed_keyboard_html/index.html2025-03-26T22:23:09.424Z astro:build Generating: /websites/www_meetion_com_the_ultimate_guide_to_the_one_handed_keyboard_html
+ (+4ms) 
+2025-03-26T22:23:09.428Z astro:build Generating: /websites/www_reddit_com_r_ergomechkeyboards_comments_138jtq6_i_need_a_fully_capable_1_hand_keyboard
+15:23:09   ├─ /websites/www_reddit_com_r_ergomechkeyboards_comments_138jtq6_i_need_a_fully_capable_1_hand_keyboard/index.html2025-03-26T22:23:09.429Z astro:build Generating: /websites/www_reddit_com_r_ergomechkeyboards_comments_138jtq6_i_need_a_fully_capable_1_hand_keyboard
+ (+3ms) 
+2025-03-26T22:23:09.431Z astro:build Generating: /websites/www_reddit_com_r_linuxquestions_comments_4xv18k_how_to_have_a_keyboardcentric_setup
+15:23:09   ├─ /websites/www_reddit_com_r_linuxquestions_comments_4xv18k_how_to_have_a_keyboardcentric_setup/index.html2025-03-26T22:23:09.431Z astro:build Generating: /websites/www_reddit_com_r_linuxquestions_comments_4xv18k_how_to_have_a_keyboardcentric_setup
+ (+3ms) 
+2025-03-26T22:23:09.434Z astro:build Generating: /websites/www_reddit_com_r_linuxquestions_comments_nutmmc_are_there_studies_showing_that_keyboard_workflows
+15:23:09   ├─ /websites/www_reddit_com_r_linuxquestions_comments_nutmmc_are_there_studies_showing_that_keyboard_workflows/index.html2025-03-26T22:23:09.434Z astro:build Generating: /websites/www_reddit_com_r_linuxquestions_comments_nutmmc_are_there_studies_showing_that_keyboard_workflows
+ (+2ms) 
+2025-03-26T22:23:09.436Z astro:build Generating: /websites/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming
+15:23:09   ├─ /websites/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming/index.html2025-03-26T22:23:09.437Z astro:build Generating: /websites/www_researchgate_net_publication_308602298_position_paper_lack_of_keyboard_support_cripples_block_based_programming
+ (+3ms) 
+2025-03-26T22:23:09.440Z astro:build Generating: /websites/www_supportyourtech_com_articles_how_to_use_keyboard_without_mouse_in_windows_10_a_step_by_step_guide
+15:23:09   ├─ /websites/www_supportyourtech_com_articles_how_to_use_keyboard_without_mouse_in_windows_10_a_step_by_step_guide/index.html2025-03-26T22:23:09.440Z astro:build Generating: /websites/www_supportyourtech_com_articles_how_to_use_keyboard_without_mouse_in_windows_10_a_step_by_step_guide
+ (+3ms) 
+2025-03-26T22:23:09.443Z astro:build Generating: /websites/www_verizon_com_business_resources_articles_s_how_emergency_response_technology_can_help_first_responders_and_enhance_ems_operations
+15:23:09   ├─ /websites/www_verizon_com_business_resources_articles_s_how_emergency_response_technology_can_help_first_responders_and_enhance_ems_operations/index.html2025-03-26T22:23:09.443Z astro:build Generating: /websites/www_verizon_com_business_resources_articles_s_how_emergency_response_technology_can_help_first_responders_and_enhance_ems_operations
+ (+2ms) 
+2025-03-26T22:23:09.445Z astro:build Generating: /websites/www_vim_org_community_php
+15:23:09   ├─ /websites/www_vim_org_community_php/index.html2025-03-26T22:23:09.445Z astro:build Generating: /websites/www_vim_org_community_php
+ (+2ms) 
+2025-03-26T22:23:09.448Z astro:build Generating: /websites/www_wikihow_com_use_your_computer_without_a_mouse
+15:23:09   ├─ /websites/www_wikihow_com_use_your_computer_without_a_mouse/index.html2025-03-26T22:23:09.448Z astro:build Generating: /websites/www_wikihow_com_use_your_computer_without_a_mouse
+ (+3ms) 
+2025-03-26T22:23:09.451Z astro:build Generating: /websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse
+15:23:09   ├─ /websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse/index.html2025-03-26T22:23:09.451Z astro:build Generating: /websites/www_wired_com_story_quick_select_keyboard_shortcuts_no_mouse
+ (+3ms) 
+2025-03-26T22:23:09.454Z astro:build Generating: /websites/www_youtube_com_watch_v_jszor1kkq6s
+15:23:09   ├─ /websites/www_youtube_com_watch_v_jszor1kkq6s/index.html2025-03-26T22:23:09.454Z astro:build Generating: /websites/www_youtube_com_watch_v_jszor1kkq6s
+ (+3ms) 
+2025-03-26T22:23:09.457Z astro:build Generating: /websites/www_youtube_com_watch_v_tkyixg3_d8k
+15:23:09   └─ /websites/www_youtube_com_watch_v_tkyixg3_d8k/index.html2025-03-26T22:23:09.457Z astro:build Generating: /websites/www_youtube_com_watch_v_tkyixg3_d8k
+ (+2ms) 
+15:23:09 ▶ src/pages/websites/[id].astro
+2025-03-26T22:23:09.461Z astro:build ├── √ src/pages/websites/[id].astro → [2 pages]
+2025-03-26T22:23:09.461Z astro:build Generating: /websites/cidi-gatech-edu_center-for-inclusive-design-and-innovation
+15:23:09   ├─ /websites/cidi-gatech-edu_center-for-inclusive-design-and-innovation/index.html2025-03-26T22:23:09.461Z astro:build Generating: /websites/cidi-gatech-edu_center-for-inclusive-design-and-innovation
+ (+3ms) 
+2025-03-26T22:23:09.465Z astro:build Generating: /websites/test-uuid
+15:23:09   └─ /websites/test-uuid/index.html2025-03-26T22:23:09.465Z astro:build Generating: /websites/test-uuid
+ (+3ms) 
+15:23:09 ▶ src/pages/websites/[urlPath].astro
+2025-03-26T22:23:09.479Z astro:build ├── √ src/pages/websites/[urlPath].astro → [31 pages]
+15:23:12 ▶ src/pages/index.astro
+2025-03-26T22:23:12.008Z astro:build Generating: /
+15:23:12   └─ /index.html2025-03-26T22:23:12.008Z astro:build Generating: /
+Rendering Search component
+initialSearchQuery: 
+Rendering Search component
+initialSearchQuery: 
+ (+36ms) 
+15:23:12 ✓ Completed in 521ms.
+
+2025-03-26T22:23:12.051Z astro:build Additional assets copied   1743027775.2s
+15:23:12 [build] 34 page(s) built in 15.07s
+15:23:12 [build] Complete!

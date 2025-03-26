@@ -1,7 +1,7 @@
 [INIT].... → Crawl4AI 0.5.0.post4
-[FETCH]... ↓ https://www.wired.com/story/quick-select-keyboard-... | Status: True | Time: 16.53s
-[SCRAPE].. ◆ https://www.wired.com/story/quick-select-keyboard-... | Time: 0.35s
-[COMPLETE] ● https://www.wired.com/story/quick-select-keyboard-... | Status: True | Total: 16.89s
+[FETCH]... ↓ https://www.wired.com/story/quick-select-keyboard-... | Status: True | Time: 4.78s
+[SCRAPE].. ◆ https://www.wired.com/story/quick-select-keyboard-... | Time: 0.156s
+[COMPLETE] ● https://www.wired.com/story/quick-select-keyboard-... | Status: True | Total: 4.94s
 [Skip to main content](https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/#main-content)
 Open Navigation Menu
 Menu
@@ -52,7 +52,6 @@ Save this storySave
 The mouse and the trackpad are pretty fundamental to how we use our computers, but what if you're unable to use a mouse or a trackpad in the usual way? Or if your mouse or trackpad malfunctions? 
 You can actually do just about everything you use a mouse and trackpad for using your keyboard, if you know the right shortcuts.
 Windows
-![Screenshot of Windows File Explorer actions menu](https://media.wired.com/photos/61f43e4514ec8fbe076335fb/master/w_1600%2Cc_limit/Gear-Keyboard-Shortcuts-01-windows.jpg)
 Underlined characters show you which key to press to make selections.
 Windows via David Nield
 In Windows, the keyboard shortcuts you can use instead of a mouse or trackpad start off simple and can get quite advanced—to begin with, of course, there's the **Win** button to open the Start menu, the **Alt+Tab** shortcut to switch between your open applications, and **Alt+F4** to close down programs.
@@ -60,22 +59,22 @@ If you're inside a menu, program, or website, you can use **Tab** to jump betwee
 To control the behavior and position of open application windows, **Win+Up** maximizes them and **Win+Down** minimizes them. You can also tap **Win+Left** or **Win+Right** to snap the current window to the left or the right of the screen. **Alt+Space** gives you more options, including the ability to move windows (using the arrow keys).
 A couple of other keyboard shortcuts that you might not have come across: If you're not actually typing anything, you can use **Space** to scroll down long web pages or open documents. Also, if you need to access a right-click context menu without a mouse or a trackpad, **Shift+F10** is the keyboard combination you're looking for.
 Most Popular
-  * [![Toaster Ovens Are a Pain to Clean. Here's the Easy Way](https://media.wired.com/photos/67d46c57d0280d0a8220ea44/1:1/w_350%2Ch_350%2Cc_limit/undefined)](https://www.wired.com/story/how-to-clean-a-toaster-oven/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-Kitchen
-[Toaster Ovens Are a Pain to Clean. Here's the Easy Way](https://www.wired.com/story/how-to-clean-a-toaster-oven/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Matthew Korfhage
-  * [![The Best Android Phones, Tested and Reviewed](https://media.wired.com/photos/67d06e1d13ea1c98835c187f/1:1/w_350%2Ch_350%2Cc_limit/undefined)](https://www.wired.com/gallery/best-android-phones/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
+  * [![BYD's 5-Minute EV Charging Sounds Great. But How Useful Is it?](https://media.wired.com/photos/67dd941a668219d9359b0f1a/1:1/w_350%2Ch_350%2Cc_limit/undefined)](https://www.wired.com/story/byd-5-minute-ev-charging/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
 Gear
-[The Best Android Phones, Tested and Reviewed](https://www.wired.com/gallery/best-android-phones/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Julian Chokkattu
-  * [](https://www.wired.com/gallery/the-best-ipad/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
+[BYD's 5-Minute EV Charging Sounds Great. But How Useful Is it?](https://www.wired.com/story/byd-5-minute-ev-charging/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Aarian Marshall
+  * [![Nearly All Cybertrucks Have Been Recalled Because Tesla Used the Wrong Glue](https://media.wired.com/photos/67dc368ff2993b487f5302cd/1:1/w_350%2Ch_350%2Cc_limit/undefined)](https://www.wired.com/story/tesla-cybertrucks-made-with-the-wrong-glue-hit-with-yet-another-sticky-recall/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+Gear News and Events
+[Nearly All Cybertrucks Have Been Recalled Because Tesla Used the Wrong Glue](https://www.wired.com/story/tesla-cybertrucks-made-with-the-wrong-glue-hit-with-yet-another-sticky-recall/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Aarian Marshall
+  * [](https://www.wired.com/gallery/best-oleds/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
 Buying Guides
-[The Best iPad to Buy (and a Few to Avoid)](https://www.wired.com/gallery/the-best-ipad/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Brenda Stolyar
-  * [](https://www.wired.com/story/coperni-ray-ban-metas-longbow-evs-gozney-tread-pizzas-jbl-speakers/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-Gear
-[Designer Ray-Ban Metas, An EV to Mock Tesla, and Portable Pizzas—Here’s Your Gear News of the Week](https://www.wired.com/story/coperni-ray-ban-metas-longbow-evs-gozney-tread-pizzas-jbl-speakers/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Brenda Stolyar
+[The 6 Best OLED TVs We’ve Tested](https://www.wired.com/gallery/best-oleds/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Ryan Waniata
+  * [](https://www.wired.com/story/airport-theory-aka-what-happens-if-you-miss-your-flight/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+Lifestyle
+[‘Airport Theory’ Will Make You Miss Your Flight](https://www.wired.com/story/airport-theory-aka-what-happens-if-you-miss-your-flight/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Boutayna Chokrane 
 
 
 As you move through menus and dialogs, you'll often see certain characters underlined, tipping you off to the fact that the key can be used to select the item directly—this can save you a lot of time tapping around with the arrow keys. If you're selecting text, meanwhile, use **Shift** and an arrow key; to move one word at a time, use **Shift+Ctrl** and an arrow key.
@@ -86,22 +85,22 @@ Mouse Keys lets you control the pointer with a numeric keypad.
 Apple via David Nield
 A lot of keyboard shortcuts work the same across Windows and macOS, so some from the previous section apply to a Mac as well. Shortcuts that work the same include **Cmd+C** to copy, **Cmd+V** to paste, **Cmd+S** to save, and **Cmd+A** to select everything in the current field or document. You can also use **Cmd+W** to close down the current browser tab, document, or Finder window.
 Most Popular
-  * [](https://www.wired.com/story/how-to-clean-a-toaster-oven/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-Kitchen
-[Toaster Ovens Are a Pain to Clean. Here's the Easy Way](https://www.wired.com/story/how-to-clean-a-toaster-oven/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Matthew Korfhage
-  * [](https://www.wired.com/gallery/best-android-phones/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
+  * [](https://www.wired.com/story/byd-5-minute-ev-charging/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
 Gear
-[The Best Android Phones, Tested and Reviewed](https://www.wired.com/gallery/best-android-phones/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Julian Chokkattu
-  * [](https://www.wired.com/gallery/the-best-ipad/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
+[BYD's 5-Minute EV Charging Sounds Great. But How Useful Is it?](https://www.wired.com/story/byd-5-minute-ev-charging/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Aarian Marshall
+  * [](https://www.wired.com/story/tesla-cybertrucks-made-with-the-wrong-glue-hit-with-yet-another-sticky-recall/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+Gear News and Events
+[Nearly All Cybertrucks Have Been Recalled Because Tesla Used the Wrong Glue](https://www.wired.com/story/tesla-cybertrucks-made-with-the-wrong-glue-hit-with-yet-another-sticky-recall/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Aarian Marshall
+  * [](https://www.wired.com/gallery/best-oleds/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
 Buying Guides
-[The Best iPad to Buy (and a Few to Avoid)](https://www.wired.com/gallery/the-best-ipad/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Brenda Stolyar
-  * [](https://www.wired.com/story/coperni-ray-ban-metas-longbow-evs-gozney-tread-pizzas-jbl-speakers/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-Gear
-[Designer Ray-Ban Metas, An EV to Mock Tesla, and Portable Pizzas—Here’s Your Gear News of the Week](https://www.wired.com/story/coperni-ray-ban-metas-longbow-evs-gozney-tread-pizzas-jbl-speakers/#intcid=_wired-gear-right-rail_8b7e9023-3683-44b9-8205-ff194b6f1d04_popular4-2)
-By Brenda Stolyar
+[The 6 Best OLED TVs We’ve Tested](https://www.wired.com/gallery/best-oleds/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Ryan Waniata
+  * [](https://www.wired.com/story/airport-theory-aka-what-happens-if-you-miss-your-flight/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+Lifestyle
+[‘Airport Theory’ Will Make You Miss Your Flight](https://www.wired.com/story/airport-theory-aka-what-happens-if-you-miss-your-flight/#intcid=_wired-gear-right-rail_54ce2692-1337-4826-b036-ca37c54987a3_popular4-2)
+By Boutayna Chokrane 
 
 
 Other keys that work the same on macOS and Windows are the arrow keys to maneuver around menus and dialog boxes, the **Tab** key to jump between text fields and program sections, and **Space** to scroll down webpages and documents, as long as you're not inputting text. Use **Esc** to go back and **Enter** to confirm or select something.
@@ -125,7 +124,7 @@ More Great WIRED Stories
 [Back to TopTriangle](https://www.wired.com/story/quick-select-keyboard-shortcuts-no-mouse/#main-content)
 There aren’t any comments yet.
 Be the first to start the conversation! You need an account to add or like comments.
-[Sign in or create account](https://www.wired.com/auth/initiate?itm_campaign=BottomRelatedStories&amp%3Bitm_content=footer-recirc&redirectURL=%2Fstory%2Fquick-select-keyboard-shortcuts-no-mouse%2F%3Fitm_campaign%3DBottomRelatedStories%26amp%253Bitm_content%3Dfooter-recirc%26source%3DCOMMUNITY_LOGIN%23leave-a-rating&source=COMMUNITY_LOGIN)
+[Sign in or create account](https://www.wired.com/auth/initiate?redirectURL=%2Fstory%2Fquick-select-keyboard-shortcuts-no-mouse%2F%3Fsource%3DCOMMUNITY_LOGIN%23leave-a-rating&source=COMMUNITY_LOGIN)
 [David Nield](https://www.wired.com/author/david-nield/) is a tech journalist from Manchester in the UK, who has been writing about apps and gadgets for more than two decades. You can follow him on [X](https://twitter.com/davidnield). ... [Read more](https://www.wired.com/author/david-nield)
 Contributor
   * [X](https://www.twitter.com/davidnield)
@@ -133,55 +132,26 @@ Contributor
 
 Topics[operating systems](https://www.wired.com/tag/operating-systems/)[software](https://www.wired.com/tag/software/)[tips](https://www.wired.com/tag/tips/)[how-to](https://www.wired.com/tag/how-to/)
 More Like This
-[](https://www.wired.com/story/trump-million-dollar-candlelight-dinner-elon-musk/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[Donald Trump Held Another Million-Dollar ‘Candlelight’ Dinner—With Elon Musk in Tow](https://www.wired.com/story/trump-million-dollar-candlelight-dinner-elon-musk/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Unlike the previous fundraiser, this event did not appear on President Donald Trump’s official schedule.
-Leah Feiger
-[](https://www.wired.com/story/everything-you-say-to-your-echo-will-be-sent-to-amazon-starting-march-28/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[Everything You Say to Your Echo Will Soon Be Sent to Amazon, and You Can’t Opt Out](https://www.wired.com/story/everything-you-say-to-your-echo-will-be-sent-to-amazon-starting-march-28/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Amazon is killing its “Do Not Send Voice Recordings” privacy feature on March 28 as the company aims to bolster Alexa+, its new subscription assistant.
-Scharon Harding, Ars Technica
-[](https://www.wired.com/story/how-to-shop-for-vinyl-online/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[How to Shop for Vinyl Records Online](https://www.wired.com/story/how-to-shop-for-vinyl-online/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Don't just load up on Amazon! Here are the best ways to find your favorite records on wax.
-Parker Hall
-[](https://www.wired.com/gallery/best-video-doorbells/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[The Best Video Doorbell Cameras](https://www.wired.com/gallery/best-video-doorbells/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Never miss a delivery. These WIRED-tested picks will help you keep tabs on your front door from anywhere.
-Simon Hill
-Trending Stories
-[](https://www.wired.com/gallery/best-down-comforters/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[Our 8 Favorite Down Comforters](https://www.wired.com/gallery/best-down-comforters/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Snuggle up under our favorite comforters for every season and every budget.
-Louryn Strampe
-[](https://www.wired.com/story/how-do-i-find-a-mattress/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[How Do I Find a Mattress?](https://www.wired.com/story/how-do-i-find-a-mattress/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-After testing nearly two dozen mattresses, I have some tips on how you can find the best mattress for you, from firmness and materials to deciphering warranties.
-Molly Higgins
-[](https://www.wired.com/story/anti-dei-agenda-reprogramming-america/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[The Anti-DEI Agenda Is Reprogramming America](https://www.wired.com/story/anti-dei-agenda-reprogramming-america/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-President Trump’s anti-DEI playbook doesn’t just affect the makeup of America’s workplaces. It also impacts cultural production. Just ask Netflix’s former head of diversity.
-Jason Parham
-[](https://www.wired.com/story/usda-food-supply-chains/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[DOGE’s Cuts at the USDA Could Cause US Grocery Prices to Rise and Invasive Species to Spread](https://www.wired.com/story/usda-food-supply-chains/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Thousands of US Department of Agriculture employees, including food inspectors and disease-sniffing-dog trainers, remain out of work, leaving food to rot in ports and pests to proliferate.
-Kate Knibbs
-[](https://www.wired.com/story/renault-5-turbo-3e-first-look/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[The Renault 5 Turbo 3E, the World’s First Electric Mini-Supercar, Looks as Bonkers as We Hoped](https://www.wired.com/story/renault-5-turbo-3e-first-look/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-The electric return of Renault’s iconic sports car has just taken a step closer to reality—and we got our first glimpse of it.
-Verity Burns
-[](https://www.wired.com/gallery/best-alexa-and-amazon-echo-speakers/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[Which Amazon Echo or Alexa Speaker Is Best for You?](https://www.wired.com/gallery/best-alexa-and-amazon-echo-speakers/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-We’ve rounded up our favorite speakers that let you talk to Alexa, from the best Echo speakers to third-party options like the Sonos Era.
-Nena Farrell 
-[](https://www.wired.com/gallery/best-apple-3-in-1-wireless-chargers/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[These 3-in-1 Wireless Chargers Can Juice Up Your iPhone, Apple Watch, and AirPods at the Same Time](https://www.wired.com/gallery/best-apple-3-in-1-wireless-chargers/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Keep your iPhone, Apple Watch, and AirPods topped up with these WIRED-tested docking systems.
-Simon Hill
-[](https://www.wired.com/gallery/best-ram/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-[The Best RAM for Your PC](https://www.wired.com/gallery/best-ram/#intcid=_wired-article-bottom-recirc_d2c53374-71c1-412b-831d-cbb489ecaf6f_roberta-similarity1_fallback_cral-top2-2)
-Building a new computer or looking to upgrade your memory? Here are our favorite options right now.
-Brad Bourque
+[](https://www.wired.com/gallery/best-carry-on-luggage/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+[The Best Carry-On Luggage](https://www.wired.com/gallery/best-carry-on-luggage/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+Whether you need a roller bag for a work trip or a tote for a bachelorette, we tested the best bags to bring on a plane.
+Adrienne So
+[](https://www.wired.com/story/how-to-buy-keycaps-for-your-mechanical-keyboard/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+[How to Buy the Best Keycaps for Your Mechanical Keyboard](https://www.wired.com/story/how-to-buy-keycaps-for-your-mechanical-keyboard/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+Here’s everything you need to know—from keycap sculpts to materials—to make your typing experience more personalized.
+Henri Robbins
+[](https://www.wired.com/story/space-heater-safety-tips/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+[Are Space Heaters Safe? Here’s How Not to Start a Fire](https://www.wired.com/story/space-heater-safety-tips/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+Space heaters are safer than ever, but they can still start fires. Here’s how not to.
+Matthew Korfhage
+[](https://www.wired.com/story/the-chaos-of-nih-cuts-has-left-early-career-scientists-scrambling/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+[The Chaos of NIH Cuts Has Left Early-Career Scientists Scrambling](https://www.wired.com/story/the-chaos-of-nih-cuts-has-left-early-career-scientists-scrambling/#intcid=_wired-article-bottom-recirc_65489cec-f859-4635-aa60-8b7c6c4c1761_roberta-similarity1_fallback_cral-top2-2)
+As graduate programs lose spots and labs face shutdowns following Trump administration cuts to science funding, students and researchers are left to figure out what's next.
+Maggie Chen 
+Dots
+Trending
+## Wired Coupons
+[![https://www.wired.com/coupon-element/static/shop/52315/logo/_0058_WayFair-coupons.png](https://www.wired.com/coupon-element/static/shop/52315/logo/_0058_WayFair-coupons.png)Wayfair Coupons10% Off Wayfair Promo Code with sign-up](https://www.wired.com/story/wayfair-coupon/ "Wayfair Coupons")[![https://www.wired.com/coupon-element/static/shop/52273/logo/Dyson_Promo_Codes.png](https://www.wired.com/coupon-element/static/shop/52273/logo/Dyson_Promo_Codes.png)Dyson Promo Codes20% off Dyson Promo Code](https://www.wired.com/story/dyson-cordless-vacuum-promo-code/ "Dyson Promo Codes")[![https://www.wired.com/coupon-element/static/shop/52805/logo/HR_Block_Logo.png](https://www.wired.com/coupon-element/static/shop/52805/logo/HR_Block_Logo.png)H&R Block Coupon$50 Off In-Person Tax Prep When You Switch From Your Tax Current Provider](https://www.wired.com/story/hr-block-coupon/ "H&R Block Coupon")[![https://www.wired.com/coupon-element/static/shop/52272/logo/Canon_promo_code.png](https://www.wired.com/coupon-element/static/shop/52272/logo/Canon_promo_code.png)Canon CouponUp to $500 off cameras at Canon](https://www.wired.com/story/canon-promo-code/ "Canon Coupon")[![https://www.wired.com/coupon-element/static/shop/52806/logo/TurboTax_Logo.png](https://www.wired.com/coupon-element/static/shop/52806/logo/TurboTax_Logo.png)TurboTax Discount CodesSave extra 10% Off TurboTax](https://www.wired.com/story/turbotax-coupon/ "TurboTax Discount Codes")[![https://www.wired.com/coupon-element/static/shop/52316/logo/factor-discount-code.png](https://www.wired.com/coupon-element/static/shop/52316/logo/factor-discount-code.png)Factor Promo CodeExclusive: Up To 50% Off 6 Boxes With Factor Promo Code](https://www.wired.com/story/factor-promo-code/ "Factor Promo Code")
 [![WIRED](https://www.wired.com/verso/static/wired-us/assets/logo-reverse.svg)](https://www.wired.com/)
 WIRED is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The WIRED conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.
 More From WIRED
