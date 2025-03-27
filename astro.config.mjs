@@ -14,4 +14,9 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  vite: {
+    build: {
+      cssCodeSplit: false, // Add this line
+    },
+  },
 });
