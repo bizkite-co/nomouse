@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import "../../styles/globals.css"; // Added back per task.md
 
 export async function getStaticPaths() {
   const websiteEntries = await getCollection('websites', (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));

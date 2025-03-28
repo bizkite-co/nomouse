@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('Site-specific page styling', async ({ page }) => {
-  // Navigate to the specific page
-  await page.goto('/websites/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy');
+  // Navigate to the specific page (Reverted for Task 11 Step 5)
+  await page.goto('/websites/brothermobilesolutions_com_insights_article_mobile_building_inspection_accuracy'); 
 
   // Wait for the page to load (optional, adjust as needed)
   await page.waitForLoadState('networkidle');
@@ -10,9 +10,9 @@ test('Site-specific page styling', async ({ page }) => {
   // Take a screenshot to visually verify styling
   await page.screenshot({ path: 'test-results/website-page-screenshot.png', fullPage: true });
 
-  // Check for the presence of the Astro-generated CSS link tag in the head
-  const cssLink = page.locator('head link[rel="stylesheet"][href^="/_astro/"]').first();
-  await expect(cssLink).toHaveCount(1, { timeout: 10000 }); // Added timeout for potentially slow dev server builds
+  // Check for the presence of the Vite-injected style tag in the head (dev server)
+  const cssStyleTag = page.locator('head style[data-vite-dev-id]').first();
+  await expect(cssStyleTag).toHaveCount(1, { timeout: 10000 }); // Ensure the style block exists
 
   // Use a more specific locator for the main h1 element
   // const h1 = page.locator('main h1');

@@ -22,7 +22,10 @@ const image = "/public/preview.webp";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    {/* Link global stylesheet directly - REMOVED */}
+    {/* Add global styles via style tag */}
+    <style is:global>
+      @import "../styles/globals.css";
+    </style>
 
     <title>
       {title}

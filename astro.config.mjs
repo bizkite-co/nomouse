@@ -1,22 +1,8 @@
-// @ts-check
+// astro.config.mjs
 import { defineConfig } from "astro/config";
-
 import react from "@astrojs/react";
-
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    react(),
-    tailwind({
-      // Revert applyBaseStyles back to false
-      applyBaseStyles: false,
-    }),
-  ],
-  vite: {
-    build: {
-      cssCodeSplit: false, // Add this line
-    },
-  },
+  integrations: [react(), tailwind({ applyBaseStyles: false })],
 });
