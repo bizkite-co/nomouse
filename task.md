@@ -67,3 +67,7 @@ Playwright test `tests/website-page.spec.ts` updated successfully to check for t
     ```
 3.  **Save Changes:** Write the updated code back if modifications were made.
 4.  **Append Result to `task.md`:** Append a confirmation message indicating that the build configuration has been verified/updated.
+
+---
+**Task 13 Result (Executed 2025-03-28 ~12:05 AM PST):**
+The `astro.config.mjs` file was checked and updated to ensure `vite: { build: { cssCodeSplit: false } }` is present for production builds.
