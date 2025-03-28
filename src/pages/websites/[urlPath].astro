@@ -1,10 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content'; // Import CollectionEntry
 
 export async function getStaticPaths() {
-  const websiteEntries = await getCollection('websites', (entry) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));
-  return websiteEntries.map((entry) => {
+  // Explicitly type 'entry' in the filter function
+  const websiteEntries = await getCollection('websites', (entry: CollectionEntry<'websites'>) => !entry.id.endsWith('raw.md') && entry.id.endsWith('index.md'));
+  // Explicitly type 'entry' in the map function
+  const paths = websiteEntries.map((entry: CollectionEntry<'websites'>) => {
     // Correctly derive urlPath from entry.id
     const urlPath = entry.id.replace('/index.md', '');
     return {
@@ -12,16 +14,18 @@ export async function getStaticPaths() {
       props: { entry }, // Pass the full entry object
     };
   });
+  return paths;
 }
 
-const { entry } = Astro.props; // entry is passed via props
+// Type entry based on props from getStaticPaths
+const { entry }: { entry: CollectionEntry<'websites'> } = Astro.props;
 
 if (!entry) {
   // If entry is somehow missing, redirect (shouldn't happen with getStaticPaths)
   return Astro.redirect('/404');
 }
 
-// Use entry.render() - Ignore potential TS error, assuming runtime is correct
+// Use entry.render() - Types should be correct now
 const { Content } = await entry.render();
 
 ---
@@ -50,7 +54,8 @@ const { Content } = await entry.render();
         {entry.data.tags ? entry.data.tags.join(', ') : 'No tags'}
       </p>
       {/* Render the main content from the Markdown file */}
-      <div class="prose mt-8 dark:prose-invert max-w-none"> {/* Added max-w-none for prose */}
+      {/* Restore prose wrapper */}
+      <div class="prose mt-8 dark:prose-invert max-w-none">
          <Content />
       </div>
     </div>

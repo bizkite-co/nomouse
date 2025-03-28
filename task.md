@@ -38,36 +38,57 @@ Playwright test `tests/website-page.spec.ts` updated successfully to check for t
 ---
 
 # Task 12: Run Updated Playwright Test Against Dynamic Route (Dev Server)
-**Outcome:** Test **PASSED**. The updated locator found the injected `<style>` tag on the dynamic route served by the dev server. This confirms the dev server *is* applying styles correctly with the current baseline code. The initial user report was likely due to caching.
+**Outcome:** Test **PASSED**. The updated locator found the injected `<style>` tag on the dynamic route served by the dev server. Confirmed dev server applies styles correctly.
 
 ---
 
 # Task 13: Ensure Build Configuration for Production
+**Outcome:** `astro.config.mjs` updated successfully with `vite: { build: { cssCodeSplit: false } }`.
 
-**Goal:** Ensure the `astro.config.mjs` file contains the necessary setting (`cssCodeSplit: false`) for correct CSS linking in production builds.
+---
+
+# Task 14: Verify Markdown Rendering
+
+**Goal:** Diagnose why Markdown content fetched via content collections is not rendering as HTML in `[urlPath].astro`.
 
 **Steps:**
 
-1.  **Read `astro.config.mjs`:** Check the current content.
-2.  **Modify `astro.config.mjs` (If Necessary):** Add or ensure the `vite: { build: { cssCodeSplit: false } }` configuration is present. The final config should look similar to this:
-    ```javascript
-    // astro.config.mjs
-    import { defineConfig } from "astro/config";
-    import react from "@astrojs/react";
-    import tailwind from "@astrojs/tailwind";
-
-    export default defineConfig({
-      integrations: [react(), tailwind({ applyBaseStyles: false })], // Keep applyBaseStyles: false
-      vite: {
-        build: {
-          cssCodeSplit: false, // Ensure this is present
-        },
-      },
-    });
+1.  **Modify `[urlPath].astro`:**
+    *   Add `console.log('Markdown Body:', entry.body);` in the frontmatter to log the raw Markdown.
+    *   Temporarily remove the `div` wrapper with `prose` classes around the `<Content />` component to simplify.
+    ```astro
+    ---
+    // ... imports ...
+    const { entry } = Astro.props;
+    if (!entry) { /* ... */ }
+    console.log('Markdown Body:', entry.body); // Add log
+    const { Content } = await entry.render();
+    ---
+    <Layout title={entry.data.title || 'Website Details'}>
+      <main class="container mx-auto px-4 md:px-0 py-8">
+        {/* ... other elements ... */}
+        <div class="my-4">
+          {/* ... Tags ... */}
+          {/* Temporarily remove prose wrapper */}
+          <Content />
+        </div>
+        {/* ... Visit Website link ... */}
+      </main>
+    </Layout>
     ```
-3.  **Save Changes:** Write the updated code back if modifications were made.
-4.  **Append Result to `task.md`:** Append a confirmation message indicating that the build configuration has been verified/updated.
+2.  **Request User Action (Restart Server):** Ask the user to **stop** the current `npm run dev` process, clear caches (`rm -rf .astro`), **restart** the dev server (`npm run dev`), and clear browser cache.
+3.  **Verify Output:** Ask the user to:
+    *   Check the dynamic page (e.g., `/websites/github_com_pluja_awesome_privacy`) in the browser. Is the Markdown rendered as HTML now?
+    *   Check the terminal running the dev server for the "Markdown Body:" log output. Does it show the expected Markdown content?
+4.  **Document Result in `task.md`:** **Append the outcome of Task 14 to this file.** Note whether the Markdown rendered and if the log showed the expected content.
 
 ---
-**Task 13 Result (Executed 2025-03-28 ~12:05 AM PST):**
-The `astro.config.mjs` file was checked and updated to ensure `vite: { build: { cssCodeSplit: false } }` is present for production builds.
+**Task 14 Result (Executed 2025-03-28 ~8:12 AM PST):**
+**Outcome:** Markdown rendering **SUCCESSFUL**.
+
+**Diagnosis:**
+*   Initial debugging attempts on `src/pages/websites/[urlPath].astro` failed because a conflicting dynamic route file, `src/pages/websites/[filename].astro`, was actually handling the requests. This caused logs and changes in `[urlPath].astro` to have no effect.
+*   The active `[filename].astro` file used a manual `fs`/`gray-matter` approach, which did *not* include a step to convert the Markdown string to HTML before rendering with `set:html`, resulting in raw Markdown being displayed.
+*   **Resolution:** The conflicting `[filename].astro` and `[id].astro` files were removed. The `[urlPath].astro` file was confirmed to be using the Astro Content Collections API (`getCollection`, `entry.render()`, `<Content />`).
+*   After ensuring `[urlPath].astro` was the sole dynamic route and correctly using Content Collections, restarting the dev server confirmed that the `<Content />` component now correctly renders the Markdown content as HTML.
+*   Diagnostic logs were removed, and `prose` styling was restored to `[urlPath].astro`.
